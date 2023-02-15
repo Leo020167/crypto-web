@@ -215,14 +215,11 @@ export default {
     },
     // 充币、提币的相关链的信息
     getChainDetailData() {
-      assetsApi.getInfoDeposite().then((res) => {
-        this.chainList = res.data.infos;
-        if (this.dialogState === 1) {
-          this.$router.push({ name: 'topUps' });
-        } else {
-          this.$router.push({ name: 'bringUp' });
-        }
-      });
+      if (this.dialogState === 1) {
+        this.$router.push({ name: 'topUps' });
+      } else {
+        this.$router.push({ name: 'bringUp' });
+      }
     },
     // 充币弹窗
     showTopup() {

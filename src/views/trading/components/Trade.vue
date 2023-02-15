@@ -37,7 +37,7 @@
             </el-form-item>
           </div>
           <div class="EUR-tip">
-            <p class="EUR-right">≈{{ lookUpForm.EUR }}{{ transUnit }}11</p>
+            <p class="EUR-right">≈{{ lookUpForm.EUR }}{{ transUnit }}</p>
           </div>
           <div style="width: 78%; margin: 3px 0; margin-left: 20.5%">
             <el-select v-model="NewMultiNum1" placeholder="请选择">

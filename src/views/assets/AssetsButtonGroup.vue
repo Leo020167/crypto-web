@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import { assetsApi } from '@/server/axios.js';
-
 import TransferDialog from './balanceCompontent/TransferDialog.vue';
 
 export default {
@@ -42,18 +40,12 @@ export default {
       this.$router.push('/legalPurchase');
     },
     getChainDetailData() {
-      assetsApi.getInfoDeposite().then((res) => {
-        this.chainList = res.data.infos;
-        if (this.dialogState === 1) {
-          // this.isShowTopup = true
-          this.$router.push({ name: 'topUps' });
-        } else {
-          this.$router.push({ name: 'bringUp' });
-        }
-      });
-
-      //   }
-      // })
+      111;
+      if (this.dialogState === 1) {
+        this.$router.push({ name: 'topUps' });
+      } else {
+        this.$router.push({ name: 'bringUp' });
+      }
     },
   },
 };

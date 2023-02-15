@@ -38,11 +38,10 @@
       <div class="bg-white p-8 rounded-md mt-4">
         <div class="flex">
           <div class="w-[180px] h-[180px]">
-            <img
-              class="w-full h-full"
-              :src="currentAddress?.qrcode"
-              v-if="currentAddress?.qrcode"
-            />
+            <qrcode
+              :value="currentAddress?.address"
+              :options="{ width: 180, height: 180 }"
+            ></qrcode>
           </div>
 
           <div class="ml-5">
@@ -79,48 +78,6 @@
                 >
               </div>
             </div>
-
-            <div class="mt-5">
-              <span
-                >{{ $t('deposit.text6') }}
-
-                <span class="text-[#F32A44] text-xs ml-2.5"
-                  >{{ $t('deposit.text7') }} {{ symbol }}</span
-                >
-              </span>
-              <div
-                class="w-[550px] h-[40px] mt-4 text-[#2E8DED] flex items-center"
-              >
-                <el-input
-                  type="number"
-                  v-model="amount"
-                  :min="Number(chargeConfigs?.minChargeAmount ?? 0)"
-                  class="mr-5"
-                ></el-input>
-                <el-button type="primary" @click="handleSubmit">{{
-                  $t('deposit.text8')
-                }}</el-button>
-              </div>
-            </div>
-
-            <div class="mt-5">
-              <span>{{ $t('deposit.text9') }}</span>
-              <el-upload
-                class="avatar-uploader mt-4"
-                action="https://jsonplaceholder.typicode.com/posts/"
-                :show-file-list="false"
-                :auto-upload="false"
-                :on-change="handleAvatarSuccess"
-              >
-                <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-              </el-upload>
-            </div>
-
-            <div
-              class="bg-[#F6F7F9] py-4 px-5 mt-5 text-xs text-[#999999] rounded-md leading-6"
-              v-html="$t('deposit.text10')"
-            ></div>
           </div>
         </div>
       </div>
@@ -130,19 +87,11 @@
 
 <script>
 import Clipboard from 'clipboard';
-import {
-  coinList,
-  uploadImage,
-  getChargeConfigs,
-  chargeSubmit,
-} from '@/server/axios.js';
+import { coinList, getChargeConfigs, chargeSubmit } from '@/server/axios.js';
 
 export default {
   data() {
     return {
-      imageUrl: '',
-      file: '',
-
       chainTypeList: [],
       coinList: [],
       symbol: 'USDT',
@@ -162,7 +111,8 @@ export default {
         if (this.symbol) {
           getChargeConfigs({ symbol: this.symbol }).then((res) => {
             this.chargeConfigs = res.data;
-
+            this.chainTypeList = res.data?.addressList?.map((v) => v.chainType);
+            this.chainType = res.data?.addressList?.[0]?.chainType;
             this.amount = this.chargeConfigs.minChargeAmount;
           });
         }
@@ -173,7 +123,7 @@ export default {
     currentAddress() {
       if (this.symbol === 'USDT') {
         return this.chargeConfigs.addressList.find(
-          (v) => v.symbol === 'USDT' && v.chainType === this.chainType
+          (v) => v.chainType === this.chainType
         );
       }
       return this.chargeConfigs.addressList.find(
@@ -183,10 +133,7 @@ export default {
   },
   created() {
     coinList({ inOut: 1 }).then((res) => {
-      this.chainTypeList = res.data.chainTypeList;
       this.coinList = res.data.coinList;
-
-      this.chainType = this.chainTypeList?.[0];
     });
   },
   methods: {
@@ -195,32 +142,20 @@ export default {
         this.$message.error(this.$t('assets.text13'));
         return;
       }
-      if (this.file == '') {
-        this.$message.error(this.$t('assets.text15'));
-      }
 
-      let formData = new FormData();
-      formData.append('imageFiles', this.file);
+      chargeSubmit({
+        amount: this.amount,
+        address: this.currentAddress?.address ?? '',
 
-      uploadImage({
-        dir: 'common',
-        type: 'imageRetOriginal',
-        imageFiles: formData,
+        symbol: this.symbol,
+        chainType: this.symbol === 'USDT' ? this.chainType : '',
       }).then((res) => {
-        chargeSubmit({
-          amount: this.amount,
-          address: this.currentAddress?.address ?? '',
-          image: res.data.imageUrlList[0],
-          symbol: this.symbol,
-          chainType: this.symbol === 'USDT' ? this.chainType : '',
-        }).then((res1) => {
-          if (res1.code == 200) {
-            this.$message.success(res1.msg);
-            this.$router.go(-1);
-          } else {
-            this.$message.error(res1.msg);
-          }
-        });
+        if (res.code == 200) {
+          this.$message.success(res.msg);
+          this.$router.go(-1);
+        } else {
+          this.$message.error(res.msg);
+        }
       });
     },
     handleAvatarSuccess(res) {

@@ -1,107 +1,124 @@
 <template>
-  <div class="balance-container"
-       v-document-title
-       :data-title="documentTitle">
+  <div class="balance-container" v-document-title :data-title="documentTitle">
     <FadeComponent>
       <div class="main-container">
         <!-- 上层展示 -->
         <div class="top">
           <p class="top-title">
-            <img src="../../assets/logo.png"
-                 class="portrait" />
-            <span class="title">{{$t('header.balance_account')}}</span>
+            <img src="../../assets/logo.png" class="portrait" />
+            <span class="title">{{ $t('header.balance_account') }}</span>
           </p>
           <!-- 数据展示 -->
           <div class="top-data">
             <div class="left">
-              <p class="upper-title">{{$t('assets.total_assets')}}</p>
-              <p class="upper-data">{{balanceInfosVuex.assets}}<span class="transfor-usdt">{{balanceInfosVuex.assetsCny}}</span></p>
-              <p class="lower-title">{{$t('assets.has_use')}}(USDT)</p>
-              <p class="last-data">{{balanceInfosVuex.holdAmount}}</p>
+              <p class="upper-title">{{ $t('assets.total_assets') }}</p>
+              <p class="upper-data">
+                {{ balanceInfosVuex.assets
+                }}<span class="transfor-usdt">{{
+                  balanceInfosVuex.assetsCny
+                }}</span>
+              </p>
+              <p class="lower-title">{{ $t('assets.has_use') }}(USDT)</p>
+              <p class="last-data">{{ balanceInfosVuex.holdAmount }}</p>
             </div>
             <div class="center">
-              <p class="lower-title mt">{{$t('assets.freeze')}}(USDT)</p>
-              <p class="last-data">{{balanceInfosVuex.frozenAmount}}</p>
+              <p class="lower-title mt">{{ $t('assets.freeze') }}(USDT)</p>
+              <p class="last-data">{{ balanceInfosVuex.frozenAmount }}</p>
             </div>
             <div class="right">
-              <el-button type="primary"
-                         class="btns"
-                         @click="showTopup">{{$t('assets.deposit')}}</el-button>
-              <el-button type="primary"
-                         class="btns"
-                         @click="showMetion">{{$t('assets.withdraw')}}</el-button>
-              <el-button type="primary"
-                         class="btns"
-                         @click="showTransfer">{{$t('assets.transfer')}}</el-button>
-              <el-button type="primary"
-                         class="btns"
-                         @click="goOtcPage">OTC</el-button>
+              <el-button type="primary" class="btns" @click="showTopup">{{
+                $t('assets.deposit')
+              }}</el-button>
+              <el-button type="primary" class="btns" @click="showMetion">{{
+                $t('assets.withdraw')
+              }}</el-button>
+              <el-button type="primary" class="btns" @click="showTransfer">{{
+                $t('assets.transfer')
+              }}</el-button>
+              <el-button type="primary" class="btns" @click="goOtcPage"
+                >OTC</el-button
+              >
             </div>
           </div>
         </div>
         <!-- 下层：记录展示 -->
         <div class="bottom">
           <ul class="bul">
-            <li v-for="(item, index) in tablist"
-                :key="index"
-                :class="index === currentTabNumber ? 'actTab' : ''"
-                @click="changeTabIndex(index)">{{item}}</li>
+            <li
+              v-for="(item, index) in tablist"
+              :key="index"
+              :class="index === currentTabNumber ? 'actTab' : ''"
+              @click="changeTabIndex(index)"
+            >
+              {{ item }}
+            </li>
           </ul>
-          <div class="show-container"
-               v-loading="recordShow">
+          <div class="show-container" v-loading="recordShow">
             <!-- 提币记录 -->
-            <up-in-record v-if="currentTabNumber === 0 || currentTabNumber === 1"
-                          @changeUpInPage="changeUpInPage"
-                          :recordsList="CWrecordsList"
-                          :total="totalRecords"
-                          :pageNo="pageNo"
-                          :pageSize="pageSize"></up-in-record>
+            <up-in-record
+              v-if="currentTabNumber === 0 || currentTabNumber === 1"
+              @changeUpInPage="changeUpInPage"
+              :recordsList="CWrecordsList"
+              :total="totalRecords"
+              :pageNo="pageNo"
+              :pageSize="pageSize"
+            ></up-in-record>
             <!-- 划转记录 -->
-            <transfer-record v-if="currentTabNumber === 2"
-                             :transType="accountType"
-                             @changePage="changeTransferPage"
-                             :transferList="transferList"
-                             :total="totalRecords"
-                             :pageNo="pageNo"
-                             :pageSize="pageSize"></transfer-record>
+            <transfer-record
+              v-if="currentTabNumber === 2"
+              :transType="accountType"
+              @changePage="changeTransferPage"
+              :transferList="transferList"
+              :total="totalRecords"
+              :pageNo="pageNo"
+              :pageSize="pageSize"
+            ></transfer-record>
             <!-- 法币记录 -->
-            <otc-record v-if="currentTabNumber === 3"
-                        @showLoading="showLoading"></otc-record>
+            <otc-record
+              v-if="currentTabNumber === 3"
+              @showLoading="showLoading"
+            ></otc-record>
           </div>
         </div>
         <!-- 弹窗 -->
-        <top-up-dialog v-if="isShowTopup"
-                       :show-dialog="isShowTopup"
-                       @closeTopup="closeTopup"
-                       :radioValue="currentChainType"
-                       :chainList="chainList"
-                       :chainData="CWmessage"
-                       @changeRadioValue="changeChainType"></top-up-dialog>
-        <metion-dialog v-if="isShowMetion"
-                       :show-dialog="isShowMetion"
-                       @closeMetion="closeMetion"
-                       :radioValue="currentChainType"
-                       :chainList="chainList"
-                       :chainData="CWmessage"
-                       @changeRadioValue="changeChainType"></metion-dialog>
-        <transfer-dialog :show-dialog='isShowTransfer'
-                         @closeTransfer="closeTransfer"></transfer-dialog>
+        <top-up-dialog
+          v-if="isShowTopup"
+          :show-dialog="isShowTopup"
+          @closeTopup="closeTopup"
+          :radioValue="currentChainType"
+          :chainList="chainList"
+          :chainData="CWmessage"
+          @changeRadioValue="changeChainType"
+        ></top-up-dialog>
+        <metion-dialog
+          v-if="isShowMetion"
+          :show-dialog="isShowMetion"
+          @closeMetion="closeMetion"
+          :radioValue="currentChainType"
+          :chainList="chainList"
+          :chainData="CWmessage"
+          @changeRadioValue="changeChainType"
+        ></metion-dialog>
+        <transfer-dialog
+          :show-dialog="isShowTransfer"
+          @closeTransfer="closeTransfer"
+        ></transfer-dialog>
       </div>
     </FadeComponent>
   </div>
 </template>
 
 <script>
-import upInRecord from './balanceCompontent/upInRecord'//充提记录
-import TransferRecord from './compontent/TransferRecord' //划转记录 
-import TopUpDialog from './balanceCompontent/topUpDialog'//充币弹窗
-import MetionDialog from './balanceCompontent/MetionDialog'// 提币弹窗
-import TransferDialog from './balanceCompontent/TransferDialog'//划转弹窗
-import OtcRecord from "./compontent/OtcRecord"; // 法币记录
-import { assetsApi } from '@/server/axios.js'
-import { mapGetters } from "vuex";
+import upInRecord from './balanceCompontent/upInRecord'; //充提记录
+import TransferRecord from './compontent/TransferRecord'; //划转记录
+import TopUpDialog from './balanceCompontent/topUpDialog'; //充币弹窗
+import MetionDialog from './balanceCompontent/MetionDialog'; // 提币弹窗
+import TransferDialog from './balanceCompontent/TransferDialog'; //划转弹窗
+import OtcRecord from './compontent/OtcRecord'; // 法币记录
+import { assetsApi } from '@/server/axios.js';
+import { mapGetters } from 'vuex';
 export default {
-  data () {
+  data() {
     return {
       accountType: 'balance',
       currentTabNumber: 0,
@@ -119,110 +136,116 @@ export default {
       chainList: [], //链类型(子)
       currentChainType: '',
       CWmessage: { withdrawFee: '0.0000', address: '' }, //充币和提币的详细信息
-    }
+    };
   },
   computed: {
     ...mapGetters({
-      balanceInfosVuex: "getBalanceInfos"
+      balanceInfosVuex: 'getBalanceInfos',
     }),
-    tablist () {
-      if (this.$i18n.locale === "zh_CN") {
+    tablist() {
+      if (this.$i18n.locale === 'zh_CN') {
         return this.$t('newCommon.text54');
-      } else if (this.$i18n.locale === "zh_TW") {
+      } else if (this.$i18n.locale === 'zh_TW') {
         return this.$t('newCommon.text54');
       } else {
         return this.$t('newCommon.text54');
       }
     },
-    documentTitle () {
-      return this.getTitleValueByLang('余额账户', '餘額賬戶', 'Balance Account')
-    }
+    documentTitle() {
+      return this.getTitleValueByLang(
+        '余额账户',
+        '餘額賬戶',
+        'Balance Account'
+      );
+    },
   },
-  created () {
-    this.recordShow = true
+  created() {
+    this.recordShow = true;
     // 判断是否有指定特定的tab
     const query = this.$route.query;
     if (Object.keys(query).length > 0) {
       if (!!query.currentTabNumber) {
-        this.currentTabNumber = +query.currentTabNumber
+        this.currentTabNumber = +query.currentTabNumber;
       }
     }
-    this.getCWrecordData()
-
+    this.getCWrecordData();
   },
   methods: {
     // 获取充币、提币信息
-    getCWrecordData () {
-      let state = this.currentTabNumber === 0 ? '1' : '-1'
+    getCWrecordData() {
+      let state = this.currentTabNumber === 0 ? '1' : '-1';
       assetsApi.getCWRecord(state, this.pageNo).then((res) => {
         setTimeout(() => {
-          this.recordShow = false
+          this.recordShow = false;
         }, 500);
         if (res.code === '200') {
-          this.CWrecordsList = res.data.data
-          this.totalRecords = Number(res.data.total)
-          this.pageSize = Number(res.data.pageSize)
+          this.CWrecordsList = res.data.data;
+          this.totalRecords = Number(res.data.total);
+          this.pageSize = Number(res.data.pageSize);
         }
-      })
+      });
     },
     // 修改充币、提币的页码
-    changeUpInPage (i) {
-      this.pageNo = i
-      this.getCWrecordData()
+    changeUpInPage(i) {
+      this.pageNo = i;
+      this.getCWrecordData();
     },
     // 获取划转信息列表
-    getTransferRecordData () {
-      assetsApi.getTransferRecords(this.accountType, this.accountType, this.pageNo).then((res) => {
-        setTimeout(() => {
-          this.recordShow = false
-        }, 500);
-        if (res.code === '200') {
-          this.transferList = res.data.data
-          this.totalRecords = Number(res.data.total)
-          this.pageSize = Number(res.data.pageSize)
-        }
-      })
+    getTransferRecordData() {
+      assetsApi
+        .getTransferRecords(this.accountType, this.accountType, this.pageNo)
+        .then((res) => {
+          setTimeout(() => {
+            this.recordShow = false;
+          }, 500);
+          if (res.code === '200') {
+            this.transferList = res.data.data;
+            this.totalRecords = Number(res.data.total);
+            this.pageSize = Number(res.data.pageSize);
+          }
+        });
     },
     // 修改划转的页码
-    changeTransferPage (i) {
-      this.pageNo = i
-      this.getTransferRecordData()
+    changeTransferPage(i) {
+      this.pageNo = i;
+      this.getTransferRecordData();
     },
     // 切换tab标签
-    changeTabIndex (i) {
-      if (i === this.currentTabNumber) {//法币记录在自己页获得请求
-        return
+    changeTabIndex(i) {
+      if (i === this.currentTabNumber) {
+        //法币记录在自己页获得请求
+        return;
       } else {
-        this.recordShow = true
-        this.currentTabNumber = i
-        this.pageNo = 1
+        this.recordShow = true;
+        this.currentTabNumber = i;
+        this.pageNo = 1;
         if (i === 3) {
-          return
+          return;
         } else if (i === 2) {
           // 划转记录
-          this.getTransferRecordData()
+          this.getTransferRecordData();
         } else {
-          this.getCWrecordData()
+          this.getCWrecordData();
         }
       }
     },
     // 充币、提币的链类型改变，重新触发====充币、提币的相关链的信息
-    changeChainType (type) {
-      this.currentChainType = type
-      this.getChainDetailData()
+    changeChainType(type) {
+      this.currentChainType = type;
+      this.getChainDetailData();
     },
-    // 充币、提币的相关链的信息 
-    getChainDetailData () {
+    // 充币、提币的相关链的信息
+    getChainDetailData() {
       assetsApi.getInfoDeposite().then((res) => {
-        console.log(res)
-        this.chainList = res.data.infos
+        console.log(res);
+        this.chainList = res.data.infos;
         if (this.dialogState === 1) {
           // this.isShowTopup = true
-          this.$router.push({ name: "topUps" })
+          this.$router.push({ name: 'topUps' });
         } else {
-          this.$router.push({ name: "bringUp" })
+          this.$router.push({ name: 'bringUp' });
         }
-      })
+      });
       // assetsApi.getCWoprationInfo(this.dialogState, this.currentChainType).then((res) => {
       //   if (res.code === '200') {
       //     let data = res.data.coinResult
@@ -240,36 +263,36 @@ export default {
       // })
     },
     // 充币弹窗
-    showTopup () {
-      this.dialogState = 1
-      this.getChainDetailData()
+    showTopup() {
+      this.dialogState = 1;
+      this.getChainDetailData();
     },
-    closeTopup () {
-      this.isShowTopup = false
+    closeTopup() {
+      this.isShowTopup = false;
     },
     // 提币弹窗
-    showMetion () {
-      this.dialogState = -1
-      this.getChainDetailData()
+    showMetion() {
+      this.dialogState = -1;
+      this.getChainDetailData();
     },
-    closeMetion () {
-      this.isShowMetion = false
+    closeMetion() {
+      this.isShowMetion = false;
     },
     // 划转弹窗
-    showTransfer () {
-      this.isShowTransfer = true
+    showTransfer() {
+      this.isShowTransfer = true;
     },
-    closeTransfer () {
-      this.isShowTransfer = false
+    closeTransfer() {
+      this.isShowTransfer = false;
     },
     // 法币记录，关闭loading
-    showLoading () {
-      this.recordShow = false
+    showLoading() {
+      this.recordShow = false;
     },
     // 跳转到法币购买页面
-    goOtcPage () {
-      this.$router.push("/legalPurchase");
-    }
+    goOtcPage() {
+      this.$router.push('/legalPurchase');
+    },
   },
   components: {
     upInRecord,
@@ -277,9 +300,9 @@ export default {
     TopUpDialog,
     MetionDialog,
     TransferDialog,
-    OtcRecord
-  }
-}
+    OtcRecord,
+  },
+};
 </script>
 
 <style lang="scss" scope>

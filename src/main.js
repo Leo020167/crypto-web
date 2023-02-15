@@ -22,6 +22,10 @@ import '@/styles/index.scss';
 // element-ui
 import './styles/theme/index.css';
 
+import VueQrcode from '@chenfengyuan/vue-qrcode';
+
+Vue.component(VueQrcode.name, VueQrcode);
+
 Vue.use(ElementUI);
 
 /**

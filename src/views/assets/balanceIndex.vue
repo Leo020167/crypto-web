@@ -25,9 +25,7 @@
               <p class="title">{{ $t('assets.freeze') }}(USDT)</p>
               <p class="upper-data">{{ balanceInfosVuex.frozenAmount }}</p>
             </div>
-            <div class="right flex justify-end">
-              <AssetsButtonGroup />
-            </div>
+            <div class="right flex justify-end"><AssetsButtonGroup /></div>
           </div>
         </div>
         <!-- 下层：记录展示 -->
@@ -211,18 +209,12 @@ export default {
     },
     // 充币、提币的相关链的信息
     getChainDetailData() {
-      assetsApi.getInfoDeposite().then((res) => {
-        this.chainList = res.data.infos;
-        if (this.dialogState === 1) {
-          // this.isShowTopup = true
-          this.$router.push({ name: 'topUps' });
-        } else {
-          this.$router.push({ name: 'bringUp' });
-        }
-      });
-
-      //   }
-      // })
+      if (this.dialogState === 1) {
+        // this.isShowTopup = true
+        this.$router.push({ name: 'topUps' });
+      } else {
+        this.$router.push({ name: 'bringUp' });
+      }
     },
     // 充币弹窗
     showTopup() {
