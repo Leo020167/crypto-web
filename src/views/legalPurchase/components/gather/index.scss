@@ -1,0 +1,139 @@
+.gather-box{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    .top{
+        display: flex;
+        padding-top: 13px;
+        padding-bottom: 40px;
+        .left{
+            flex: 1;
+            .logo{
+                height: 22px;
+                vertical-align: -40%;
+            }
+            .my-name{
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-left: 10px;
+                color: black;
+            }
+        }
+        .right{
+            padding-top: 2px;
+            cursor: pointer;
+            .add-logo{
+                width: 12px;
+            }
+            .add-text{
+                display: inline-block;
+                font-size: 16px;
+                color: #6175AE;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+    }
+    .gather-list{
+        .type-logo{
+            width: 15px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .type-text{
+            font-size: 12px;
+            color: #3D3A50;
+        }
+        .ewm{
+            width: 150px;
+            height: 150px;
+        }
+        .edit-btn{
+            width: 16px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        .delete-btn{
+            width: 16px;
+            cursor: pointer;
+        }
+    }
+}
+.ways{
+    height: 54px;
+    display: flex;
+    .name{
+        line-height: 38px;
+        font-size: 14px;
+        color: #3D3A50;
+        font-weight: bold;
+        padding-right: 50px;
+    }
+    .checkbox{
+        flex: 1;
+        display: flex;
+        .check-item{
+            width: 106px;
+            height: 54px;
+            background: #F9F9FC;
+            border-radius: 2px;
+            margin-right: 44px;
+            cursor: pointer;
+            &.yes{
+                border: 1px solid #6175AE;
+            }
+            .check-name{
+                margin-top: 7px;
+                font-size: 12px;
+                color: #3D3A50;
+                .pay-type{
+                    margin-left: 6px;
+                    width: 15px;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+            .select-item{
+                margin-top: 7px;
+                padding-right: 7px;
+                text-align: right;
+                .true-logo{
+                    float: right;
+                    width: 14px;
+                }
+            }
+        }
+    }
+}
+.des{
+    margin-top: 30px;
+    display: flex;
+    .des-item{
+        width: 255px;
+        margin-right: 110px;
+        .item-name{
+            font-size: 14px;
+            color: #9A9A9A;
+            margin-bottom: 10px;
+        }
+    }
+}
+.ways-tips{
+    height: 57px;
+    background: #F2F5FF;
+    border: 1px dashed #6175AE;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #6175AE;
+    line-height: 57px;
+    margin-top: 30px;
+    .notice-img{
+        width: 14px;
+        vertical-align: middle;
+        margin-left: 18px;
+        margin-right: 8px;
+    }
+}

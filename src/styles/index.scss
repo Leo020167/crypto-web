@@ -1,0 +1,109 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./globalClass.scss";
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  color: $globalTextColor;
+  scroll-behavior: smooth;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+ul > li {
+  list-style: none;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+table {
+  border-collapse: collapse;
+} /* 边框会合并为一个单一的边框 */
+table,
+td,
+th {
+  border: none;
+} /* 去掉边框线 */
+// type=number的箭头去掉
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+.main-container {
+  background-color: #080808;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+input {
+  background: none;
+  border: none;
+  outline: none;
+  display: black;
+}

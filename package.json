@@ -1,0 +1,103 @@
+{
+  "name": "fireup-web",
+  "version": "0.0.0",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:staging": "vite build --mode staging",
+    "build:mac": "vite build && electron-builder --mac",
+    "build:win": "vite build && electron-builder --win",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^2.0.9",
+    "@vueuse/core": "^9.6.0",
+    "axios": "^1.2.0",
+    "clipboard": "^2.0.11",
+    "echarts": "4",
+    "element-ui": "^2.15.12",
+    "js-cookie": "^3.0.1",
+    "js-md5": "^0.7.3",
+    "moment": "^2.29.4",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.27",
+    "qs": "6",
+    "vue": "^2.7.7",
+    "vue-i18n": "8",
+    "vue-qriously": "^1.1.1",
+    "vue-router": "^3.5.4",
+    "vuex": "3"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vitejs/plugin-legacy": "^2.0.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.19",
+    "prettier": "^2.5.1",
+    "sass": "^1.56.1",
+    "tailwind-scrollbar": "^2.0.1",
+    "tailwindcss": "^3.2.4",
+    "terser": "^5.14.2",
+    "vite": "^3.0.2",
+    "vite-plugin-electron": "^0.10.4"
+  },
+  "build": {
+    "productName": "bitc",
+    "appId": "English",
+    "directories": {
+      "output": "release/${version}"
+    },
+    "files": [
+      "dist",
+      "dist-electron"
+    ],
+    "publish": [
+      {
+        "provider": "generic",
+        "url": ""
+      }
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  }
+}

@@ -1,0 +1,259 @@
+.easy-trade-container {
+  width: 460px;
+  height: 458px;
+  background: #00285c;
+  margin: 0 auto;
+  .easy-trade-header {
+    height: 50px;
+    line-height: 50px;
+    .left,
+    .right {
+      width: 229px;
+      text-align: center;
+      color: #6175ae;
+      font-size: 18px;
+      font-family: Segoe UI;
+      background-color: #fff;
+      border-radius: 5px 5px 0px 0px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .active-tab {
+      background: #6175ae;
+      color: #fff;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+  }
+  .easy-trade-content {
+    background-color: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    .trade-info {
+      color: #3d3a50;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .trade-amount,
+    .trade-price {
+      width: 100%;
+      border: 1px solid #e3e3e3;
+      height: 67px;
+      box-sizing: border-box;
+      padding: 5px 20px;
+      .trade-buy {
+        color: #9a9a9a;
+        font-size: 12px;
+        margin-top: 5px;
+        display: flex;
+        .right{
+          flex: 1;
+          font-size: 12px;
+          color: #9A9A9A;
+          text-align: right;
+          .transfer-btn{
+            margin-left: 12px;
+            font-size: 12px;
+            color: #6175AE;
+            cursor: pointer;
+            .transfer{
+              height: 10px;
+              margin-right: 3px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .trade-form {
+        width: 100%;
+        .el-form-item__content {
+          width: 100%;
+        }
+      }
+      .trade-content {
+        width: 100%;
+        .el-form-item__content {
+          width: 100%;
+          justify-content: space-between;
+          display: flex;
+        }
+        // 添加2021.4.21
+        .left1{
+          display: flex;
+          align-items: center;
+          width: 280px;
+          .trade-coin{
+            .el-input__inner {
+              border: none;
+              font-size: 14px !important;
+              padding: 0;
+              color: #9a9a9a;
+            }
+          }
+          .trade-coin-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+          }
+          .price {
+            color: #000;
+          }
+        }
+        .left {
+          display: flex;
+          align-items: center;
+          width: 350px;
+          .trade-coin {
+            .el-input__inner {
+              border: none;
+              font-size: 14px !important;
+              padding: 0;
+              color: #9a9a9a;
+            }
+          }
+          .trade-coin-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+          }
+          .price {
+            color: #000;
+          }
+        }
+        .trade-coin-font {
+          display: inline-block;
+          flex: 1;
+          color: #000;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        .all-in-btn{
+          font-size: 12px;
+          color: #6175AE;
+          
+          .in{
+            padding-left: 10px;
+            border-left: 1px solid #9A9A9A;
+          }
+        }
+      }
+    }
+    .trade-price {
+      margin-top: 30px;
+    }
+    .pay-way {
+      margin: 30px 0 15px;
+      color: #3d3a50;
+      font-size: 12px;
+    }
+    .pay-way-container {
+      display: flex;
+      .pay-way-item {
+        min-width: 116px;
+        height: 58px;
+        background: #f9f9fc;
+        border: 1px solid #F9F9FC;
+        border-radius: 2px;
+        padding: 10px 3px;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #3D3A50;
+        cursor: pointer;
+        margin-right: 20px;
+        .line1 {
+            display: flex;
+            align-items: center;
+            .bank-icon {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+            .recommend {
+                margin-left: 8px;
+                display: inline-block;
+                box-sizing: border-box;
+                height: 18px;
+                padding: 0 5px;
+                line-height: 18px;
+                font-size: 10px;
+                text-align: center;
+                border: 1px solid #6175AE;
+                border-radius: 2px;
+            }
+        }
+        .add1{
+          text-align: center;
+          .addPng{
+            height: 20px;
+          }
+        }
+        .add-tip{
+          font-size: 12px;
+          color: #9A9A9A;
+          margin-top: 5px;
+          text-align: center;
+        }
+        .line2 {
+            display: flex;
+            margin-top: 8px;
+            width: 100%;
+            .price {
+                color: #6175AE;
+                font-size: 10px;
+                margin-left: 10px;
+                
+            }
+            .select-item{
+              flex: 1;
+              padding-right: 7px;
+              text-align: right;
+              .true-logo{
+                  float: right;
+                  width: 14px;
+              }
+            }
+        }
+      }
+    }
+    .sumit-button {
+        margin-top: 30px;
+        width: 400px;
+        height: 48px;
+        cursor: pointer;
+        background: #6175AE;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 48px;
+        text-align: center;
+    }
+  }
+}
+
+// popover样式
+.item {
+  display: inline-block;
+  width: 90px;
+  height: 28px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #3d3a50;
+  line-height: 28px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  &.choose {
+    border: 1px solid #6175ae;
+    background-color: white;
+    color: #6175ae;
+  }
+}
+.changeColor {
+  color: #6175ae;
+}

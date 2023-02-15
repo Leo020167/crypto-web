@@ -1,0 +1,185 @@
+$item-background: #171b2b;
+.trading-container {
+  .trading-top-left-top {
+    .el-table tbody .cell {
+      padding-right: 0 !important;
+      color: #b0b8db !important;
+    }
+    .el-table th,
+    .el-table td {
+      height: 30px !important;
+      line-height: 30px !important;
+    }
+  }
+
+  .trading-bottom {
+    .el-table tbody .cell {
+      color: #b0b8db !important;
+    }
+
+    .el-table th,
+    .el-table td {
+      height: 58px !important;
+    }
+  }
+
+  .trading-top-right {
+    .el-table th,
+    .el-table td {
+      height: 16px !important;
+      line-height: 16px !important;
+    }
+  }
+
+  .trading-top-left-top,
+  .trading-top-right,
+  .trading-bottom {
+    .header-search {
+      .el-input__inner {
+        background-color: #171b2b !important;
+        border: none !important;
+        height: 27px !important;
+        line-height: 27px !important;
+        color: #ffffff;
+        font-size: 12px !important;
+      }
+    }
+
+    .el-table {
+      background-color: #171b2b !important;
+    }
+    .el-table::before {
+      background-color: #171b2b !important;
+      color: #171b2b !important;
+    }
+
+    .el-table .sort-caret.ascending {
+      border-bottom-color: #3b4660;
+    }
+    .el-table .ascending .sort-caret.ascending {
+      border-bottom-color: #357ce1;
+    }
+    .el-table .sort-caret.descending {
+      border-top-color: #3b4660;
+    }
+    .el-table .descending .sort-caret.descending {
+      border-top-color: #357ce1;
+    }
+    .el-table td,
+    .el-table th.is-leaf {
+      border-bottom: none !important;
+    }
+
+    .el-table__body-wrapper {
+      @include scrollBar;
+    }
+
+    .el-table .cell,
+    .el-table th div,
+    .el-table--border td:first-child .cell,
+    .el-table--border th:first-child .cell {
+      padding-left: 0 !important;
+    }
+
+    .el-table th,
+    .el-table tr {
+      background-color: #171b2b !important;
+      border: none;
+      padding: 0;
+    }
+
+    .el-table td,
+    .el-table th {
+      padding: 0 !important;
+    }
+
+    .el-table th > .cell {
+      font-size: 12px;
+    }
+
+    .el-table tbody .cell {
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .el-table tbody tr:hover > td {
+      background-color: rgb(30, 34, 55) !important;
+    }
+    .el-table tbody .act_row {
+      background-color: #21263b !important;
+    }
+    .amount-cell .cell {
+      text-align: right !important;
+      color: #b0b8db !important;
+    }
+
+    .dish-price .cell {
+      color: rgb(204, 53, 53) !important;
+    }
+
+    .dish-buy-price .cell {
+      color: #41b37d !important;
+    }
+
+    .dish-buy-table {
+      margin-top: 45px !important;
+
+      thead {
+        display: none !important;
+      }
+    }
+  }
+
+  .choose-leverage {
+    .el-input__inner {
+      background-color: #171b2b !important;
+      border: none !important;
+      height: 29px !important;
+      line-height: 29px !important;
+      color: #ffffff;
+      font-size: 12px !important;
+    }
+
+    .el-input__prefix,
+    .el-input__suffix {
+      top: 7px !important;
+    }
+
+    .el-select .el-input .el-select__caret.is-reverse {
+      -webkit-transform: rotateZ(180deg) !important;
+      transform: rotateZ(180deg) !important;
+    }
+  }
+  .trade-form {
+    .el-input__inner {
+      background-color: #171b2b !important;
+      border: 1px solid #374265;
+      color: #ffffff;
+      font-size: 12px !important;
+    }
+    .el-form-item {
+      margin-bottom: 10px !important;
+    }
+    .el-form-item__label {
+      color: $color_info !important;
+    }
+    .el-input-group__append {
+      background-color: #171b2b !important;
+      color: $color_info !important;
+      border: 1px solid #374265;
+      border-left: none;
+    }
+  }
+
+  .el-table__body tr.hover-row.current-row > td,
+  .el-table__body tr.hover-row.el-table__row--striped.current-row > td,
+  .el-table__body tr.hover-row.el-table__row--striped > td,
+  .el-table__body tr.hover-row > td {
+    background-color: rgb(30, 34, 55);
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    background-color: #171b2b;
+  }
+}
