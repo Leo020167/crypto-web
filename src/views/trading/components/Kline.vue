@@ -257,15 +257,13 @@ export default {
       });
     },
     getLocalLang() {
-      let lang;
-      if (this.$i18n.locale == 'zh_CN') {
-        lang = 'zh';
-      } else if (this.$i18n.locale == 'zh_TW') {
-        lang = 'zh_TW';
-      } else {
-        lang = 'en';
-      }
-      return lang;
+      const map = {
+        'zh-CN': 'zh',
+        'zh-TW': 'zh_TW',
+      };
+      return map[this.$i18n.locale]
+        ? map[this.$i18n.locale]
+        : this.$i18n.locale;
     },
     TVjsApisibling(elem) {
       var r = [];
