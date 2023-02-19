@@ -72,7 +72,7 @@
       { "title": "1周", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": "充币记录', '提币记录', '划转记录', '法币记录'",
+    "text54": "充币记录', '提币记录', '划转记录', '余额提现记录'",
     "text55": "冻结保证金（USDT）",
     "text56": "+852 香港",
     "text57": "请输入邮箱",
@@ -167,9 +167,9 @@
     "trading": "交易",
     "followList": "跟单",
     "subscribe": "金牌机构",
-    "otc": "法币交易",
+    "otc": "余额提现",
     "new_purchase": "新币申购",
-    "chuangxinshiyanqu": "创新试验区",
+    "chuangxinshiyanqu": "新币申购",
     "assets": "总资产",
     "digital_account": "数字货币账户",
     "stock_account": "股指期货账户",
@@ -272,7 +272,7 @@
   "assets": {
     "no_data": "暂无平仓详细数据",
     "input_transferSymbol": "请选择币种",
-    "fiat-currency-purchase": "法币购买",
+    "fiat-currency-purchase": "余额提现",
     "bibizhanghu": "币币帐户",
     "total_assets": "总资产",
     "eableBail": "可用",
@@ -637,7 +637,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "自选交易",
-    "yijianmaimai": "一键买卖",
+    "yijianmaimai": "一键充提",
     "myadv": "我的广告",
     "certificate": "商家认证",
     "management": "收款管理",
@@ -668,8 +668,8 @@
     "appealFreeze": "提起申诉后资产将会冻结，申诉专员将介入本次交易，直至申诉结束。恶意申诉属于扰乱平台正常运营秩序的行为，情节严重将冻结账户。",
     "submitAppeal": "提交申诉",
     "chooseAppealReason": "请选择申诉理由",
-    "buy": "购买",
-    "sell": "出售",
+    "buy": "充值",
+    "sell": "提现",
     "tradeInfo": "交易信息",
     "price": "单价",
     "inputBuyAmount": "请输入购买数量",
@@ -752,7 +752,7 @@
     "offLine": "已下架",
     "selling": "出售中",
     "buying": "购买中",
-    "noOtcRecord": "还没有法币记录哦",
+    "noOtcRecord": "还没有余额提现记录哦",
     "time": "时间",
     "state": "状态",
     "operate": "操作",
@@ -881,7 +881,7 @@
   },
   "capital-account": {
     "title": "余额账户",
-    "tabs": ["资产", "充币记录", "提币记录", "法币记录"]
+    "tabs": ["资产", "充币记录", "提币记录", "余额提现记录"]
   },
   "currency-account": {
     "title": "余额账户",

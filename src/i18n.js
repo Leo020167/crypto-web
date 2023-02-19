@@ -25,7 +25,7 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: localStorage.getItem('locale')
     ? localStorage.getItem('locale')
-    : 'zh-TW',
+    : 'zh-CN',
   messages: {
     en: Object.assign(en, enLocale),
     es: Object.assign(es, esLocale),
@@ -39,5 +39,5 @@ const i18n = new VueI18n({
 });
 
 ElementLocale.i18n((key, value) => i18n.t(key, value));
-console.log(Object.assign(ru, ruRULocale));
+
 export default i18n;

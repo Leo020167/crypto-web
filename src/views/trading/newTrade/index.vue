@@ -314,7 +314,6 @@ export default {
         for (let i = 0; i < this.resoulist1.length; i++) {
           this.getEndTime1(this.resoulist0[i].endTime, i);
         }
-        console.log(this.resoulist);
       });
     },
   },
