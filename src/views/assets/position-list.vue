@@ -10,28 +10,38 @@
         </el-table-column>
         <el-table-column
           prop="amount"
-          :label="$t('position-list.text2')"
+          :label="$t('position-list.text13')"
+          align="center"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.amount }}/{{ scope.row.availableAmount }}
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="price"
+          :label="$t('position-list.text14')"
           align="center"
         >
         </el-table-column>
         <el-table-column
-          prop="availableAmount"
-          :label="$t('position-list.text3')"
+          prop="profit"
+          :label="$t('position-list.text15')"
           align="center"
         >
+          <template slot-scope="scope">
+            <span
+              :class="
+                scope.row.profit > 0
+                  ? 'redText'
+                  : scope.row.profit < 0
+                  ? 'greenText'
+                  : ''
+              "
+              >{{ scope.row.profit }}/{{ scope.row.profitRate ?? 0 }}%</span
+            >
+          </template>
         </el-table-column>
-        <el-table-column
-          prop="frozenAmount"
-          :label="$t('position-list.text4')"
-          align="center"
-        >
-        </el-table-column>
-        <el-table-column
-          prop="usdtAmount"
-          :label="$t('position-list.text5')"
-          align="center"
-        >
-        </el-table-column>
+
         <el-table-column
           fixed="right"
           :label="$t('position-list.text6')"
@@ -44,14 +54,6 @@
               type="text"
               size="small"
               >{{ $t('position-list.text7') }}</el-button
-            >
-
-            <el-button
-              v-if="showTrading"
-              type="text"
-              size="small"
-              @click="$router.replace('/trading')"
-              >{{ $t('position-list.text12') }}</el-button
             >
           </template>
         </el-table-column>
@@ -150,4 +152,11 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style lang="scss" scoped>
+.redText {
+  color: #e2214e;
+}
+.greenText {
+  color: #00ad88;
+}
+</style>
