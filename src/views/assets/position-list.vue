@@ -132,6 +132,7 @@ export default {
         orderType: 'limit',
         price: this.formData.price ?? '0',
         hand: this.formData.hand ?? '0',
+        type: '2',
       }).then((data) => {
         if (data.code === '200') {
           this.$message.success(data.msg);
