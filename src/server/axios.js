@@ -560,6 +560,14 @@ export const assetsApi = {
       payPass: payPsw,
     });
   },
+  cancelOrder2: (orderId) => {
+    let url = baseUrl + '/pro/order/cancel.do';
+
+    return func.axiosPost(url, {
+      orderId: orderId,
+      type: 2,
+    });
+  },
   // 设置跟单倍数
   setFollowTimes: (multiple) => {
     let url = baseUrl + '/follow/updateMultiple.do';

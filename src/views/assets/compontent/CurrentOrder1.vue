@@ -20,7 +20,7 @@
           <span class="item-des">{{ $t('assets.shuliang') }}</span>
           <span class="item-des">{{ $t('assets.weituojia') }}</span>
           <span class="item-des">{{ $t('assets.zongjineusdt') }}</span>
-          <span class="item-des"> </span>
+          <span class="item-des">{{ $t('assets.operation') }}</span>
         </li>
 
         <li
@@ -46,7 +46,14 @@
               {{ item.sum }}
             </div>
 
-            <div class="item-des spec"></div>
+            <div class="item-des normal">
+              <el-button
+                @click="columnClick(item)"
+                size="small"
+                type="primary"
+                >{{ $t('assets.cancelTrade') }}</el-button
+              >
+            </div>
           </div>
           <div class="arrow-data" v-show="index === currentArrowIndex">
             <!-- 平仓下拉弹出层 -->
@@ -204,6 +211,60 @@ export default {
     }
   },
   methods: {
+    enterCancle() {
+      assetsApi.cancelOrder2(this.orderId).then((res) => {
+        if (res.code === '200') {
+          this.$message.success(res.msg);
+          this.showPayPwd = false;
+          if (this.returnChange) {
+            this.$emit('cancelOrder');
+          }
+        } else if (res.code == '40030') {
+          //提示支付密码没设置
+          this.showPayPwd = true;
+          this.showError = false;
+        } else if (res.code == '40032') {
+          //支付密码错误
+          this.message = res.msg;
+          this.showError = true;
+        } else if (res.code == '40031') {
+          //用户没设置过交易密码
+          this.$confirm(this.$t('payDialog.message2'), this.$t('assets.tips'), {
+            confirmButtonText: this.$t('payDialog.toSetPwd'),
+            cancelButtonText: this.$t('payDialog.cancel_set'),
+            type: 'warning',
+          })
+            .then(() => {
+              this.$router.push('/user/safePassword');
+            })
+            .catch(() => {
+              this.$message({
+                type: 'info',
+                message: this.$t('payDialog.cancel_set'),
+              });
+            });
+        } else {
+          this.$message.error(res.msg);
+        }
+      });
+    },
+    columnClick(data) {
+      this.$confirm(this.$t('assets.cencel_order'), this.$t('assets.tips'), {
+        confirmButtonText: this.$t('assets.sure'),
+        cancelButtonText: this.$t('assets.cancel'),
+        type: 'warning',
+      })
+        .then(() => {
+          this.orderId = data.orderId;
+          this.enterCancle();
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: this.$t('assets.already_cancel'),
+          });
+        });
+    },
     getRecords() {
       assetsApi
         .getCorrespondRecords('', 'spot', '1', '', '0', '2', 1)
