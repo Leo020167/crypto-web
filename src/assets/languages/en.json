@@ -73,11 +73,12 @@
       { "title": "1 week", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
+
     "text54": [
       "Charge record",
       "Withdrawal record",
       "Transfer record",
-      "Balance withdrawal record"
+      "Fiat record"
     ],
     "text55": "Frozen Margin (USDT)",
     "text56": "+852 Hong Kong",
