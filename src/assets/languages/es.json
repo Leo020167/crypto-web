@@ -72,7 +72,12 @@
       { "title": "1 semana", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "Min5",
-    "text54": "Registro de carga ',' Registro de retiro ',' Registro de transferencia ',' Fiat Record '",
+    "text54": [
+      "Registro de carga",
+      "Registro de retiro",
+      "Registro de transferencia",
+      "Registro de retiro de saldo"
+    ],
     "text55": "Margen congelado (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Ingrese su buzón",
@@ -909,7 +914,10 @@
     "text9": "Cantidad",
     "text10": "Cancelar",
     "text11": "OK",
-    "text12": "Transacción"
+    "text12": "Transacción",
+    "text13": "Cantidad/Disponible",
+    "text14": "Costo",
+    "text15": "Pérdidas y ganancias"
   },
   "Subscription": {
     "type": "Tipo",

@@ -73,7 +73,12 @@
       { "title": "1 week", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": "Charge record', 'Withdrawal record', 'Transfer record', 'Fiat record'",
+    "text54": [
+      "Charge record",
+      "Withdrawal record",
+      "Transfer record",
+      "Balance withdrawal record"
+    ],
     "text55": "Frozen Margin (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Please enter your mailbox",
@@ -911,7 +916,10 @@
     "text9": "Quantity",
     "text10": "Cancel",
     "text11": "OK",
-    "text12": "Transaction"
+    "text12": "Transaction",
+    "text13": "Quantity/Available",
+    "text14": "Cost",
+    "text15": "Profit and loss"
   },
   "Subscription": {
     "type": "Type",
