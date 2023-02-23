@@ -35,7 +35,7 @@
     "text22": "Confirmar",
     "text23": "Cancelación",
     "text24": "Puntas",
-    "text25": "Nuevo pedido de divisas",
+    "text25": "Suscripción USD",
     "text26": "Tipo de orden",
     "text27": "Participación en las ganancias",
     "text28": "Subsidio de pérdida",
@@ -72,7 +72,12 @@
       { "title": "1 semana", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "Min5",
-    "text54": "Registro de carga ',' Registro de retiro ',' Registro de transferencia ',' Fiat Record '",
+    "text54": [
+      "Registro de carga",
+      "Registro de retiro",
+      "Registro de transferencia",
+      "Registro de retiro de saldo"
+    ],
     "text55": "Margen congelado (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Ingrese su buzón",
@@ -124,7 +129,7 @@
     "text22": "Confirmar",
     "text23": "Cancelación",
     "text24": "Puntas",
-    "text25": "Nueva compra de moneda",
+    "text25": "Suscripción USD",
     "text26": "Progreso",
     "text27": "Cantidad restante",
     "text28": "Cantidad total disponible para la compra",
@@ -167,9 +172,9 @@
     "trading": "Comercio",
     "followList": "Pedir seguidores",
     "subscribe": "Instituciones de oro",
-    "otc": "Comercio de divisas fiduciarias",
-    "new_purchase": "Nueva suscripción de monedas",
-    "chuangxinshiyanqu": "Zona piloto de innovación",
+    "otc": "retiro de saldo",
+    "new_purchase": "Suscripción USD",
+    "chuangxinshiyanqu": "Suscripción USD",
     "assets": "Los activos totales",
     "digital_account": "Cuenta de división digital",
     "stock_account": "Cuenta de futuros del índice de acciones",
@@ -272,7 +277,7 @@
   "assets": {
     "no_data": "No hay datos detallados de posiciones de cierre",
     "input_transferSymbol": "Seleccione una moneda",
-    "fiat-currency-purchase": "Compra de moneda fiduciaria",
+    "fiat-currency-purchase": "retiro de saldo",
     "bibizhanghu": "Cuenta corriente",
     "total_assets": "Los activos totales",
     "eableBail": "Disponible",
@@ -642,7 +647,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "Comercio personalizado",
-    "yijianmaimai": "Comercio de un solo clic",
+    "yijianmaimai": "Depósito y retiro con un solo clic",
     "myadv": "Mis anuncios",
     "certificate": "Autenticación comercial",
     "management": "Gestión de pagos",
@@ -757,15 +762,15 @@
     "offLine": "Retirado de los estantes",
     "selling": "En venta",
     "buying": "En el proceso de compra",
-    "noOtcRecord": "¡Todavía no hay registro de dinero fiduciario!",
+    "noOtcRecord": "Aún no hay registro de retiro de saldo!",
     "time": "Tiempo",
     "state": "Estado",
     "operate": "Operación",
     "details": "Ver detalles"
   },
   "orderDetail": {
-    "buy": "Comprar",
-    "sell": "Vender",
+    "buy": "recargar",
+    "sell": "retirar",
     "orderNumber": "Número de orden",
     "orderTime": "Tiempo de la orden",
     "amount": "Cantidad",
@@ -890,7 +895,7 @@
       "Activos",
       "Registros de depósitos",
       "Registros de retiros",
-      "Registros de moneda fiduciaria"
+      "Registro de retiro de saldo"
     ]
   },
   "currency-account": {
@@ -909,7 +914,10 @@
     "text9": "Cantidad",
     "text10": "Cancelar",
     "text11": "OK",
-    "text12": "Transacción"
+    "text12": "Transacción",
+    "text13": "Cantidad/Disponible",
+    "text14": "Costo",
+    "text15": "Pérdidas y ganancias"
   },
   "Subscription": {
     "type": "Tipo",

@@ -35,7 +35,7 @@
     "text22": "확인하다",
     "text23": "해제",
     "text24": "팁",
-    "text25": "새로운 통화 주문",
+    "text25": "KRW 구독",
     "text26": "주문 유형",
     "text27": "이익 분배",
     "text28": "손실 보조금",
@@ -76,7 +76,7 @@
       { "title": "1 주", "resolution": "1W", "ChartType": 1 }
     ],
     "text53": "Min5",
-    "text54": "머니 레코드 ','철수 기록 ','이송 레코드 ','피아트 통화 레코드 '",
+    "text54": ["머니 레코드", "철수 기록", "이송 레코드", "잔액 인출 기록"],
     "text55": "냉동 여백 (USDT)",
     "text56": "+852 홍콩",
     "text57": "사서함을 입력하십시오",
@@ -128,7 +128,7 @@
     "text22": "확인하다",
     "text23": "해제",
     "text24": "팁",
-    "text25": "새로운 통화 구매",
+    "text25": "KRW 구독",
     "text26": "진전",
     "text27": "나머지 수량",
     "text28": "구매 가능한 총 금액",
@@ -170,9 +170,9 @@
     "trading": "거래",
     "followList": "추종자를 주문하십시오",
     "subscribe": "금 기관",
-    "otc": "화폐 통화 거래",
-    "new_purchase": "새로운 코인 구독",
-    "chuangxinshiyanqu": "혁신 파일럿 존",
+    "otc": "잔액 인출",
+    "new_purchase": "KRW 구독",
+    "chuangxinshiyanqu": "KRW 구독",
     "assets": "총 자산",
     "digital_account": "디지털 통화 계정",
     "stock_account": "주식 지수 선물 계정",
@@ -275,7 +275,7 @@
   "assets": {
     "no_data": "마감 포지션에 대한 자세한 데이터가 없습니다",
     "input_transferSymbol": "통화를 선택하세요",
-    "fiat-currency-purchase": "법정 화폐 구매",
+    "fiat-currency-purchase": "잔액 인출",
     "bibizhanghu": "통화 계정",
     "total_assets": "총 자산",
     "eableBail": "사용 가능",
@@ -640,7 +640,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "맞춤형 거래",
-    "yijianmaimai": "한 번의 클릭 거래",
+    "yijianmaimai": "원클릭 입출금",
     "myadv": "내 광고",
     "certificate": "가맹점 인증",
     "management": "지불 관리",
@@ -671,8 +671,8 @@
     "appealFreeze": "불만을 제기하면 자산이 동결되고 옴부즈맨은 불만이 종결 될 때까지 거래에 개입합니다. 악의적 인 불만은 플랫폼의 정상적인 운영을 방해하는 것으로 간주되며 심각한 경우 계정이 동결됩니다.",
     "submitAppeal": "불만을 제출하십시오",
     "chooseAppealReason": "불만의 이유를 선택하십시오",
-    "buy": "구입",
-    "sell": "팔다",
+    "buy": "재충전",
+    "sell": "철회하다",
     "tradeInfo": "거래 정보",
     "price": "가격",
     "inputBuyAmount": "구매 수량을 입력하십시오",
@@ -755,7 +755,7 @@
     "offLine": "선반에서 제거되었습니다",
     "selling": "판매 중",
     "buying": "구매 과정에서",
-    "noOtcRecord": "피아트 돈의 기록은 아직 없습니다!",
+    "noOtcRecord": "아직 잔액 인출 기록이 없습니다!",
     "time": "시간",
     "state": "상태",
     "operate": "작업",
@@ -884,7 +884,7 @@
   },
   "capital-account": {
     "title": "잔액 계정",
-    "tabs": ["자산", "입금 기록", "출금 기록", "법정 통화 기록"]
+    "tabs": ["자산", "입금 기록", "출금 기록", "잔액 인출 기록"]
   },
   "currency-account": {
     "title": "잔액 계정",
@@ -902,7 +902,10 @@
     "text9": "수량",
     "text10": "취소",
     "text11": "확인",
-    "text12": "거래"
+    "text12": "거래",
+    "text13": "수량/사용 가능",
+    "text14": "비용",
+    "text15": "손익"
   },
   "Subscription": {
     "type": "유형",

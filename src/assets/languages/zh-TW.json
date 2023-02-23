@@ -72,7 +72,7 @@
       { "title": "1周", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": "充幣記錄', '提幣記錄', '劃轉記錄', '法币记录'",
+    "text54": ["充幣記錄", "提幣記錄", "劃轉記錄", "餘額提現記錄"],
     "text55": "凍結保證金（USDT）",
     "text56": "+852 香港",
     "text57": "請輸入郵箱",
@@ -167,9 +167,9 @@
     "trading": "交易",
     "followList": "跟單",
     "subscribe": "金牌機构",
-    "otc": "法幣交易",
-    "new_purchase": "新币申购",
-    "chuangxinshiyanqu": "創新試驗區",
+    "otc": "餘額提現",
+    "new_purchase": "新幣申購",
+    "chuangxinshiyanqu": "新幣申購",
     "assets": "總資產",
     "digital_account": "數字貨幣賬戶",
     "stock_account": "股指期貨賬戶",
@@ -379,7 +379,7 @@
     "freeze": "凍結",
     "deposit": "充幣",
     "withdraw": "提幣",
-    "fiat-currency-purchase": "法幣購買",
+    "fiat-currency-purchase": "餘額提現",
     "depositHistory": "充幣記錄",
     "withdrawalRecords": "提幣記錄",
     "transferRecord": "划轉記錄",
@@ -637,7 +637,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "自選交易",
-    "yijianmaimai": "一鍵買賣",
+    "yijianmaimai": "一鍵充提",
     "myadv": "我的廣告",
     "certificate": "商家認證",
     "management": "收款管理",
@@ -668,8 +668,8 @@
     "appealFreeze": "提起申訴後資產將會凍結，申訴專員將介入本次交易，直至申訴結束。惡意申訴屬於擾亂平台正常運營秩序的行為，情節嚴重將凍結賬戶。",
     "submitAppeal": "提交申訴",
     "chooseAppealReason": "請選擇申訴理由",
-    "buy": "購買",
-    "sell": "出售",
+    "buy": "充值",
+    "sell": "提現",
     "tradeInfo": "交易信息",
     "price": "單價",
     "inputBuyAmount": "請輸入購買數量",
@@ -752,7 +752,7 @@
     "offLine": "已下架",
     "selling": "出售中",
     "buying": "購買中",
-    "noOtcRecord": "還沒有法幣記錄哦",
+    "noOtcRecord": "還沒有餘額提現記錄哦",
     "time": "時間",
     "state": "狀態",
     "operate": "操作",
@@ -882,7 +882,7 @@
 
   "capital-account": {
     "title": "餘額賬戶",
-    "tabs": ["資產", "充幣記錄", "提幣記錄", "法币记录"]
+    "tabs": ["資產", "充幣記錄", "提幣記錄", "餘額提現記錄"]
   },
   "currency-account": {
     "title": "餘額賬戶",
@@ -900,7 +900,10 @@
     "text9": "數量",
     "text10": "取 消",
     "text11": "确 定",
-    "text12": "交易"
+    "text12": "交易",
+    "text13": "數量/可用",
+    "text14": "成本",
+    "text15": "盈虧"
   },
   "Subscription": {
     "type": "類型",

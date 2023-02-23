@@ -35,7 +35,7 @@
     "text22": "Confirmer",
     "text23": "Annulation",
     "text24": "Des astuces",
-    "text25": "Nouvelle commande de devise",
+    "text25": "SGD Abonnement",
     "text26": "Type de commande",
     "text27": "Partage des profits",
     "text28": "Subvention des pertes",
@@ -72,7 +72,12 @@
       { "title": "1 semaine", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": "Record de charge «,« Retal Record »,« Transfer Record »,« Fiat Record »",
+    "text54": [
+      "Record de charge",
+      "Retal Record ",
+      "Transfer Record",
+      "Enregistrement de retrait de solde"
+    ],
     "text55": "Marge congelée (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Veuillez saisir votre boîte aux lettres",
@@ -124,7 +129,7 @@
     "text22": "Confirmer",
     "text23": "Annulation",
     "text24": "Des astuces",
-    "text25": "Nouvel achat de devise",
+    "text25": "SGD Abonnement",
     "text26": "Progrès",
     "text27": "Quantité restante",
     "text28": "Montant total disponible à l'achat",
@@ -166,9 +171,9 @@
     "trading": "Commerce",
     "followList": "Commander des adeptes",
     "subscribe": "Institutions d'or",
-    "otc": "Trading de monnaie fiduciaire",
-    "new_purchase": "Nouvel abonnement",
-    "chuangxinshiyanqu": "Zone pilote d'innovation",
+    "otc": "retrait du solde",
+    "new_purchase": "SGD Abonnement",
+    "chuangxinshiyanqu": "SGD Abonnement",
     "assets": "Actif total",
     "digital_account": "Compte de monnaie numérique",
     "stock_account": "Compte à terme sur indice boursier",
@@ -273,7 +278,7 @@
   "assets": {
     "no_data": "Il n'y a pas de données détaillées sur les positions de clôture",
     "input_transferSymbol": "Veuillez sélectionner une devise",
-    "fiat-currency-purchase": "Achat de monnaie fiduciaire",
+    "fiat-currency-purchase": "retrait du solde",
     "bibizhanghu": "Compte de devises",
     "total_assets": "Actif total",
     "eableBail": "Disponible",
@@ -643,7 +648,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "Trading personnalisé",
-    "yijianmaimai": "Trading en un clic",
+    "yijianmaimai": "Dépôt et retrait en un clic",
     "myadv": "Mes annonces",
     "certificate": "Authentification marchand",
     "management": "Gestion des paiements",
@@ -674,8 +679,8 @@
     "appealFreeze": "Après avoir déposé une plainte, les actifs seront gelés et le Médiateur interviendra dans la transaction jusqu'à la clôture de la plainte. Les plaintes malveillantes sont considérées comme perturbant le fonctionnement normal de la plate-forme et entraîneront la congélation du compte dans les cas graves.",
     "submitAppeal": "Soumettre une plainte",
     "chooseAppealReason": "Veuillez sélectionner la raison de votre plainte",
-    "buy": "Acheter",
-    "sell": "Vendre",
+    "buy": "recharger",
+    "sell": "retirer",
     "tradeInfo": "Informations sur les transactions",
     "price": "Prix",
     "inputBuyAmount": "Veuillez saisir la quantité d'achat",
@@ -758,7 +763,7 @@
     "offLine": "Retiré des étagères",
     "selling": "En soldes",
     "buying": "En cours d'achat",
-    "noOtcRecord": "Il n'y a pas encore d'enregistrement de l'argent fiduciaire!",
+    "noOtcRecord": "Il n'y a pas encore d'enregistrement de retrait de solde!",
     "time": "Temps",
     "state": "Statut",
     "operate": "Opération",
@@ -891,7 +896,7 @@
       "Actifs",
       "Enregistrements de dépôt",
       "Enregistrements de retrait",
-      "Enregistrements de devises fiduciaires"
+      "Enregistrement de retrait de solde"
     ]
   },
   "currency-account": {
@@ -910,7 +915,10 @@
     "text9": "Quantité",
     "text10": "Annuler",
     "text11": "D'accord",
-    "text12": "Transaction"
+    "text12": "Transaction",
+    "text13": "Quantité/Disponible",
+    "text14": "Coût",
+    "text15": "Profit et perte"
   },
   "Subscription": {
     "type": "Type",

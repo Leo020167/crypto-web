@@ -35,7 +35,7 @@
     "text22": "Confirm",
     "text23": "Cancellation",
     "text24": "Tips",
-    "text25": "New Currency Order",
+    "text25": "SGD Subscription",
     "text26": "Order Type",
     "text27": "Profit Sharing",
     "text28": "Loss Subsidy",
@@ -73,7 +73,12 @@
       { "title": "1 week", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": "Charge record', 'Withdrawal record', 'Transfer record', 'Fiat record'",
+    "text54": [
+      "Charge record",
+      "Withdrawal record",
+      "Transfer record",
+      "Balance withdrawal record"
+    ],
     "text55": "Frozen Margin (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Please enter your mailbox",
@@ -125,7 +130,7 @@
     "text22": "Confirm",
     "text23": "Cancellation",
     "text24": "Tips",
-    "text25": "New Currency Purchase",
+    "text25": "SGD Subscription",
     "text26": "Progress",
     "text27": "Remaining quantity",
     "text28": "Total amount available for purchase",
@@ -167,9 +172,9 @@
     "trading": "Trading",
     "followList": "Order Followers",
     "subscribe": "Gold Institutions",
-    "otc": "Fiat Currency Trading",
-    "new_purchase": "New Coin Subscription",
-    "chuangxinshiyanqu": "Innovation Pilot Zone",
+    "otc": "balance withdrawal",
+    "new_purchase": "SGD Subscription",
+    "chuangxinshiyanqu": "SGD Subscription",
     "assets": "Total Assets",
     "digital_account": "Digital Currency Account",
     "stock_account": "Stock Index Futures Account",
@@ -272,7 +277,7 @@
   "assets": {
     "no_data": "There is no detailed data of closing positions",
     "input_transferSymbol": "Please select a currency",
-    "fiat-currency-purchase": "Fiat currency purchase",
+    "fiat-currency-purchase": "balance withdrawal",
     "bibizhanghu": "Currency Account",
     "total_assets": "Total Assets",
     "eableBail": "Available",
@@ -644,7 +649,7 @@
   },
   "otc": {
     "zixuanjiaoyi": "Customized Trading",
-    "yijianmaimai": "One-Click Trading",
+    "yijianmaimai": "One-click deposit and withdrawal",
     "myadv": "My Ads",
     "certificate": "Merchant authentication",
     "management": "Payment Management",
@@ -759,15 +764,15 @@
     "offLine": "Removed from the shelves",
     "selling": "On Sale",
     "buying": "In the process of purchase",
-    "noOtcRecord": "There is no record of fiat money yet!",
+    "noOtcRecord": "There is no balance withdrawal record yet!",
     "time": "Time",
     "state": "Status",
     "operate": "Operation",
     "details": "View Details"
   },
   "orderDetail": {
-    "buy": "Buy",
-    "sell": "Sell",
+    "buy": "Recharge",
+    "sell": "Withdraw",
     "orderNumber": "Order Number",
     "orderTime": "Order Time",
     "amount": "Quantity",
@@ -892,7 +897,7 @@
       "Assets",
       "Deposit Records",
       "Withdrawal Records",
-      "Fiat Currency Records"
+      "Balance withdrawal record"
     ]
   },
   "currency-account": {
@@ -911,7 +916,10 @@
     "text9": "Quantity",
     "text10": "Cancel",
     "text11": "OK",
-    "text12": "Transaction"
+    "text12": "Transaction",
+    "text13": "Quantity/Available",
+    "text14": "Cost",
+    "text15": "Profit and loss"
   },
   "Subscription": {
     "type": "Type",
