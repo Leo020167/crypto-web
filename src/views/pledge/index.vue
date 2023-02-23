@@ -112,6 +112,8 @@ export default {
           if (data.code === '200') {
             this.$message.success(data.msg);
             this.visible = false;
+          } else {
+            this.$message.error(data.msg);
           }
         }
       );
