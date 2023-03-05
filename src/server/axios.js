@@ -51,12 +51,12 @@ export const security = {
     });
   },
   // 获取手机验证码
-  getSms: (phone, countryCode, locationx, dragImgKey, types) => {
+  getSms: (phone, countryCode, locationx, dragImgKey, type) => {
     let url = baseUrl + '/sms/get.do';
     return func.axiosPost(url, {
       phone: phone, // 旧版本手机号
       sendAddr: phone, //新手机号或者邮箱
-      type: types, // type == 1 手机  type == 2 邮箱
+      type: type, // type == 1 手机  type == 2 邮箱
       countryCode: countryCode,
       locationx: locationx,
       dragImgKey: dragImgKey,

@@ -163,12 +163,17 @@ export default {
     },
     // 正式获取手机验证码
     getSmsCode() {
+      const isEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/.test(
+        this.currentUserInfos.user.phone
+      );
+      console.log(this.currentUserInfos);
       security
         .getSms(
           this.currentUserInfos.user.phone,
-          '',
+          this.currentUserInfos.user.countryCode,
           this.locationx,
-          this.dragImgKey
+          this.dragImgKey,
+          isEmail ? 2 : 1
         )
         .then((res) => {
           if (res.code == 200) {
