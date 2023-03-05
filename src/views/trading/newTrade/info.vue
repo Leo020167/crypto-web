@@ -7,39 +7,8 @@
           <p style="font-weight: bold; margin-top: 10px; width: 80%">
             {{ detail.title }}
           </p>
-          <p
-            v-if="detail.state == 0"
-            style="background-color: #ffc43e; color: #fff"
-            class="tardeIndexNav_status"
-          >
-            {{ $t('newCommon2.text4') }}
-          </p>
-          <p
-            v-if="detail.state == 1"
-            style="background-color: #00ad88; color: #fff"
-            class="tardeIndexNav_status"
-          >
-            {{ $t('newCommon2.text5') }}
-          </p>
-          <p
-            v-if="detail.state == 2"
-            style="background-color: #a6a6a6; color: #fff"
-            class="tardeIndexNav_status"
-          >
-            {{ $t('newCommon2.text6') }}
-          </p>
         </div>
         <div v-html="detail.content" style="margin: 15px 0"></div>
-        <!-- <p style="margin:15px 0;font-weight:bold;"
-           v-if="detail.state == 0"> {{$t('newCommon2.text7')}}:{{killTime.h}}:{{killTime.m}}:{{killTime.s}}</p>
-        <p style="margin:15px 0;font-weight:bold;"
-           v-if="detail.state == 1">{{$t('newCommon2.text8')}}:{{killTime.h}}:{{killTime.m}}:{{killTime.s}}</p> -->
-        <!-- 開始申購時間 -->
-        <!-- <p style="margin:15px 0;font-weight:bold;opacity: 0.6;">{{$t('newCommon2.text13')}}:{{detail.startTime | formatDate('-')}}</p> -->
-        <!-- 結束申購時間 -->
-        <!-- <p style="margin:15px 0;font-weight:bold;opacity: 0.6;">{{$t('newCommon2.text14')}}:{{detail.endTime | formatDate('-')}}</p> -->
-        <!-- <p style="margin:15px 0;font-weight:bold;">{{$t('newCommon2.text12')}}:{{detail.sum}}USDT</p> -->
-        <!-- <p style="margin:15px 0;font-weight:bold;margin-top:30px;"> <span style="color:#00AD88;margin-right:30px;">{{$t('newCommon2.text10')}}:{{detail.alCount}}USDT</span> {{$t('newCommon2.text11')}}：{{userCount}}USDT</p> -->
         <el-button
           style="width: 200px; background: #ffc43e; border: none"
           v-if="detail.state == 0"
@@ -66,7 +35,7 @@
       <div>
         <p class="progress-title">
           <span>{{ $t('newCommon2.text26') }}</span>
-          <span>{{ $t('newCommon2.text27') }}</span>
+          <span>{{ $t('newCommon2.text42') }}</span>
         </p>
         <el-progress
           :percentage="percentage"
@@ -77,188 +46,53 @@
       </div>
 
       <div>
-        <p class="details-title">{{ $t('newCommon2.text28') }}:</p>
-        <p class="details-desc">{{ detail.sum }}</p>
-      </div>
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text29') }}:</p>
-        <p class="details-desc">{{ detail.alCount }}</p>
-      </div>
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text27') }}:</p>
-        <p class="details-desc">{{ detail.sum - detail.alCount }}</p>
-      </div>
-      <div v-if="detail.state == 1">
-        <p class="details-title">{{ $t('newCommon2.text30') }}:</p>
+        <p class="details-title">{{ $t('newCommon2.text43') }}:</p>
         <p class="details-desc">
-          {{ killTime.h }}:{{ killTime.m }}:{{ killTime.s }}
-        </p>
-      </div>
-      <div v-if="detail.state == 0">
-        <p class="details-title">{{ $t('newCommon2.text7') }}:</p>
-        <p class="details-desc">
-          {{ killTime.h }}:{{ killTime.m }}:{{ killTime.s }}
+          {{ $t(`newCommon2.text43_${detail.state}`) }}
         </p>
       </div>
       <div>
-        <p class="details-title">{{ $t('newCommon2.text31') }}:</p>
+        <p class="details-title">{{ $t('newCommon2.text42') }}:</p>
         <p class="details-desc">{{ detail.allSum }}</p>
       </div>
       <div>
-        <p class="details-title">{{ $t('newCommon2.text32') }}:</p>
+        <p class="details-title">{{ $t('newCommon2.text44') }}:</p>
+        <p class="details-desc">{{ detail?.rate }}USDT</p>
+      </div>
+
+      <div>
+        <p class="details-title">{{ $t('newCommon2.text45') }}:</p>
+        <p class="details-desc">USDT</p>
+      </div>
+      <div>
+        <p class="details-title">{{ $t('newCommon2.text46') }}:</p>
         <p class="details-desc">
-          {{ detail.startTime | formatDate('-')
-          }}<span>{{ $t('newCommon2.text40') }}</span>
+          {{ detail.startTime | formatDate() }}
         </p>
       </div>
       <div>
-        <p class="details-title">{{ $t('newCommon2.text33') }}:</p>
+        <p class="details-title">{{ $t('newCommon2.text47') }}:</p>
         <p class="details-desc">
-          {{ detail.endTime | formatDate('-')
-          }}<span>{{ $t('newCommon2.text40') }}</span>
+          {{ detail.endTime | formatDate() }}
         </p>
-      </div>
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text34') }}:</p>
-        <p class="details-desc">
-          {{ detail.tradeTime | formatDate('-')
-          }}<span>{{ $t('newCommon2.text40') }}</span>
-        </p>
-      </div>
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text35') }}:</p>
-        <p class="details-desc">
-          {{ detail.liftBanTime | formatDate('-')
-          }}<span>{{ $t('newCommon2.text40') }}</span>
-        </p>
-      </div>
-      <!-- <div>
-        <p class="details-title">{{ $t("newCommon2.text36") }}:</p>
-        <p class="details-desc">1{{ detail.symbol }} = {{ detail.rate }}USDT</p>
-      </div> -->
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text36') }}:</p>
-        <p class="details-desc">{{ detail.rate }}USDT</p>
-      </div>
-      <div>
-        <p class="details-title">{{ $t('newCommon2.text37') }}:</p>
-        <p class="details-desc">{{ detail.userCount }}</p>
-      </div>
-      <!--发起成员-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text17') }}:
-        </p>
-        <div v-html="detail.authorSummary" class="indexInfo"></div>
-      </div>
-      <!--      项目介绍-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text20') }}:
-        </p>
-        <div v-html="detail.summary" class="indexInfo"></div>
-      </div>
-      <!--      币种介绍-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text39') }}:
-        </p>
-        <div v-html="detail.content" class="indexInfo"></div>
-      </div>
-      <!--      项目参与条件-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text18') }}:
-        </p>
-        <div v-html="detail.condition" class="indexInfo"></div>
-      </div>
-      <!--风险提示-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text19') }}:
-        </p>
-        <div v-html="detail.warning" class="indexInfo"></div>
-      </div>
-      <!--申购说明-->
-      <div>
-        <p style="margin-top: 30px; margin-bottom: 15px; font-weight: bold">
-          {{ $t('newCommon2.text38') }}:
-        </p>
-        <div v-html="detail.description" class="indexInfo"></div>
       </div>
     </div>
 
     <div style="width: 100%; height: 400px"></div>
-
-    <!-- <div class="tardeIndexNav">
-      <div class="tardeIndexNav_nav">
-        <img style="width: 600px;height:300px;"
-             :src="detail.image"
-             alt="">
-        <div class="tardeIndexNav_nav_top">
-    
-        </div>
-        <div></div>
-        <p style="margin:15px 0;font-weight:bold;">{{$t('newCommon2.text10')}}:{{detail.alCount}}USDT {{$t('newCommon2.text11')}}：{{userCount}}USDT</p>
-        <p style="margin:15px 0;font-weight:bold;"
-           v-if="detail.state == 0">{{$t('newCommon2.text7')}}:{{killTime.h}}.{{killTime.m}}.{{killTime.s}}</p>
-        <p style="margin:15px 0;font-weight:bold;"
-           v-if="detail.state == 1">{{$t('newCommon2.text8')}}:{{killTime.h}}.{{killTime.m}}.{{killTime.s}}</p>
-        <p style="margin:15px 0;font-weight:bold;">{{$t('newCommon2.text12')}}:{{detail.sum}}USDT</p>
-        <p style="margin:15px 0;font-weight:bold;">{{$t('newCommon2.text13')}}:{{detail.createTime}}</p>
-        <p style="margin:15px 0;font-weight:bold;">{{$t('newCommon2.text14')}}:{{detail.endTime}}</p>
-        <el-button style="width:200px;background:#FFC43E;border:none"
-                   v-if="detail.state ==0"
-                   type="danger">{{$t('newCommon2.text15')}}</el-button>
-        <el-button style="width:200px;background:#00AD88;border:none"
-                   v-if="detail.state ==1"
-                   type="danger"
-                   @click="getShengou()">{{$t('newCommon2.text16')}}</el-button>
-        <el-button v-if="detail.state ==2"
-                   style="width:200px;background-color:#A6A6A6;border:none"
-                   type="warning">{{$t('newCommon2.text6')}}</el-button>
-
-        <p style="margin-top:30px;margin-bottom:15px;font-weight:bold;">{{$t('newCommon2.text17')}}</p>
-        <div v-html="detail.createTime"
-             class="indexInfo"></div>
-
-        <p style="margin-top:30px;margin-bottom:15px;font-weight:bold;">{{$t('newCommon2.text18')}}</p>
-        <div v-html="detail.condition"
-             class="indexInfo"></div>
-
-        <p style="margin-top:30px;margin-bottom:15px;font-weight:bold;">{{$t('newCommon2.text19')}}</p>
-        <div v-html="detail.warning"
-             class="indexInfo"></div>
-
-        <p style="margin-top:30px;margin-bottom:15px;font-weight:bold;">{{$t('newCommon2.text20')}}</p>
-        <div v-html="detail.summary"
-             class="indexInfo"></div>
-
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import { assetsApi } from '@/server/axios.js';
+import moment from 'moment';
 export default {
   filters: {
     // 时间戳处理
-    formatDate: function (value, spe = '/') {
-      value = value * 1000;
-      let data = new Date(value);
-      let year = data.getFullYear();
-      let month = data.getMonth() + 1;
-      let day = data.getDate();
-      let h = data.getHours();
-      let mm = data.getMinutes();
-      let s = data.getSeconds();
-      month = month > 10 ? month : +month;
-      day = day > 10 ? day : +day;
-      console.log(month, day);
-      return (
-        `${year}${spe}${month}${spe}${day}` + '      ' + `${h}时${mm}分${s}秒`
-      );
+    formatDate: function (value, format = 'YYYY-MM-DD HH:mm') {
+      if (value) {
+        return moment(new Date(Number(value) * 1000)).format(format);
+      }
+      return '';
     },
   },
   data() {
@@ -299,43 +133,41 @@ export default {
       }, 1000);
     },
     getShengou() {
-      console.log('1');
-      this.$prompt(this.$t('newCommon2.text21'), this.$t('newCommon2.text24'), {
-        confirmButtonText: this.$t('newCommon2.text22'),
-        cancelButtonText: this.$t('newCommon2.text23'),
-      })
-        .then(({ value }) => {
-          assetsApi
-            .getDataListSubInfoApply(
-              this.subscribeId,
-              value,
-              this.$store.state.user.userInfos.user.userId
-            )
-            .then((res) => {
-              console.log(res);
-              if (res.code == 400) {
-                this.$message.error(res.msg);
-              } else {
-                this.$message.success(res.msg);
-                this.gerInfo();
-              }
-            });
-        })
-        .catch(() => {
-          this.$message({
-            type: 'info',
-            message: '取消输入',
-          });
-        });
+      this.$router.replace('/trading');
+      // this.$prompt(this.$t('newCommon2.text21'), this.$t('newCommon2.text24'), {
+      //   confirmButtonText: this.$t('newCommon2.text22'),
+      //   cancelButtonText: this.$t('newCommon2.text23'),
+      // })
+      //   .then(({ value }) => {
+      //     assetsApi
+      //       .getDataListSubInfoApply(
+      //         this.subscribeId,
+      //         value,
+      //         this.$store.state.user.userInfos.user.userId
+      //       )
+      //       .then((res) => {
+      //         console.log(res);
+      //         if (res.code == 400) {
+      //           this.$message.error(res.msg);
+      //         } else {
+      //           this.$message.success(res.msg);
+      //           this.gerInfo();
+      //         }
+      //       });
+      //   })
+      //   .catch(() => {
+      //     this.$message({
+      //       type: 'info',
+      //       message: '取消输入',
+      //     });
+      //   });
     },
     gerInfo() {
       assetsApi.getDataListSubInfo(this.subscribeId).then((res) => {
-        console.log(res);
         this.detail = res.data.detail;
         this.getEndTime(res.data.detail.endTime);
         this.userCount = res.data.userCount;
-        this.percentage =
-          ((this.detail.alCount / this.detail.sum) * 100).toFixed(2) * 1;
+        this.percentage = res.data.progress || 0;
       });
     },
   },

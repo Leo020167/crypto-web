@@ -25,7 +25,7 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: localStorage.getItem('locale')
     ? localStorage.getItem('locale')
-    : 'zh-TW',
+    : 'en',
   messages: {
     en: Object.assign(en, enLocale),
     es: Object.assign(es, esLocale),

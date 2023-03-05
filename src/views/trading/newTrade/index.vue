@@ -31,29 +31,25 @@
                   <el-tag size="mini">进行中</el-tag>
                 </div>
                 <el-progress
-                  :percentage="setPercentage(item)"
+                  :percentage="item.progress || 0"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">
                   <p class="title_left">
                     <span>{{ $t('newCommon2.text31') }}:</span
-                    ><span>{{ item.sumAmount }}</span>
+                    ><span>{{ item.sumAmount }} {{ item.symbol }}</span>
                   </p>
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text28') }}:</span
-                    ><span>{{ item.amount }}</span>
+                    <span>{{ $t('newCommon2.text41') }}:</span
+                    ><span>{{ item.rate }} USDT</span>
                   </p>
                 </div>
                 <div class="title_left_box">
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text32') }}:</span
-                    ><span>{{ item.startTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
-                  </p>
-                  <p class="title_left">
-                    <span>{{ $t('newCommon2.text33') }}:</span
-                    ><span>{{ item.endTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
+                    <span
+                      >{{ item.startTime | formatDate('YYYY-MM-DD') }} ~
+                      {{ item.endTime | formatDate('YYYY-MM-DD') }}</span
+                    >
                   </p>
                 </div>
               </div>
@@ -87,29 +83,25 @@
                   <el-tag size="mini">待开始</el-tag>
                 </div>
                 <el-progress
-                  :percentage="setPercentage(item)"
+                  :percentage="item.progress || 0"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">
                   <p class="title_left">
                     <span>{{ $t('newCommon2.text31') }}:</span
-                    ><span>{{ item.sumAmount }}</span>
+                    ><span>{{ item.sumAmount }} {{ item.symbol }}</span>
                   </p>
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text28') }}:</span
-                    ><span>{{ item.amount }}</span>
+                    <span>{{ $t('newCommon2.text41') }}:</span
+                    ><span>{{ item.rate }} USDT</span>
                   </p>
                 </div>
                 <div class="title_left_box">
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text32') }}:</span
-                    ><span>{{ item.startTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
-                  </p>
-                  <p class="title_left">
-                    <span>{{ $t('newCommon2.text33') }}:</span
-                    ><span>{{ item.endTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
+                    <span
+                      >{{ item.startTime | formatDate('YYYY-MM-DD') }} ~
+                      {{ item.endTime | formatDate('YYYY-MM-DD') }}</span
+                    >
                   </p>
                 </div>
               </div>
@@ -143,29 +135,25 @@
                   <el-tag size="mini">已结束</el-tag>
                 </div>
                 <el-progress
-                  :percentage="setPercentage(item)"
+                  :percentage="item.progress || 0"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">
                   <p class="title_left">
                     <span>{{ $t('newCommon2.text31') }}:</span
-                    ><span>{{ item.sumAmount }}</span>
+                    ><span>{{ item.sumAmount }} {{ item.symbol }}</span>
                   </p>
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text28') }}:</span
-                    ><span>{{ item.amount }}</span>
+                    <span>{{ $t('newCommon2.text41') }}:</span
+                    ><span>{{ item.rate }} USDT</span>
                   </p>
                 </div>
                 <div class="title_left_box">
                   <p class="title_left">
-                    <span>{{ $t('newCommon2.text32') }}:</span
-                    ><span>{{ item.startTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
-                  </p>
-                  <p class="title_left">
-                    <span>{{ $t('newCommon2.text33') }}:</span
-                    ><span>{{ item.endTime | formatDate('-') }}</span
-                    ><span>{{ $t('newCommon2.text40') }}</span>
+                    <span
+                      >{{ item.startTime | formatDate('YYYY-MM-DD') }} ~
+                      {{ item.endTime | formatDate('YYYY-MM-DD') }}</span
+                    >
                   </p>
                 </div>
               </div>
@@ -180,27 +168,15 @@
 
 <script>
 import { assetsApi } from '@/server/axios.js';
+import moment from 'moment';
 export default {
   filters: {
     // 时间戳处理
-    formatDate: function (value, spe = '/') {
-      console.log(value, 999);
-      value = value * 1000;
-
-      let data = new Date(value);
-      console.log(data, 'datadatadata');
-      let year = data.getFullYear();
-      let month = data.getMonth() + 1;
-      let day = data.getDate();
-      let h = data.getHours();
-      let mm = data.getMinutes();
-      let s = data.getSeconds();
-      month = month > 10 ? month : +month;
-      day = day > 10 ? day : +day;
-      console.log(month, day);
-      return (
-        `${year}${spe}${month}${spe}${day}` + '      ' + `${h}时${mm}分${s}秒`
-      );
+    formatDate: function (value, format = 'YYYY-MM-DD HH:mm') {
+      if (value) {
+        return moment(new Date(Number(value) * 1000)).format(format);
+      }
+      return '';
     },
   },
   data() {
@@ -212,7 +188,7 @@ export default {
         { name: this.$t('newCommon2.text6'), type: 0 },
       ],
       acitveIndex: 1,
-
+      html1: '<p>碉堡了</p>',
       resoulist0: [],
       resoulist1: [],
       resoulist2: [],
@@ -276,9 +252,11 @@ export default {
       this.getList();
     },
     getInfo(item) {
+      console.log(item);
       this.$router.push({ name: 'newTradeIndexInfo', query: { id: item.id } });
     },
     getList() {
+      var that = this;
       this.resoulist = [];
       assetsApi.getDataListSub().then((res) => {
         console.log(res.data);
@@ -306,12 +284,12 @@ export default {
         // for (var i = 0; i < this.resoulist1.length; i++) {
         //   this.getEndTime(this.resoulist1[i].endTime, i)
         // }
-        for (let i = 0; i < this.resoulist1.length; i++) {
+        for (var i = 0; i < this.resoulist1.length; i++) {
           console.log('1');
           this.getEndTime1(this.resoulist0[i].createTime, i);
         }
 
-        for (let i = 0; i < this.resoulist1.length; i++) {
+        for (var i = 0; i < this.resoulist1.length; i++) {
           this.getEndTime1(this.resoulist0[i].endTime, i);
         }
         console.log(this.resoulist);

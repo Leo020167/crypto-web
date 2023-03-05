@@ -36,7 +36,7 @@ export const useLocaleStore = defineStore({
   id: 'locale',
   state: () => ({
     locales: Object.freeze(locales),
-    locale: useStorage('locale', 'zh-TW'),
+    locale: useStorage('locale', 'en'),
   }),
   getters: {},
   actions: {
