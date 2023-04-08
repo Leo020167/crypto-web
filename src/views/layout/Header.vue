@@ -7,16 +7,8 @@
       <li class="nav-item">
         <router-link to="/trading">{{ $t('header.trading') }}</router-link>
       </li>
-      <li class="nav-item" v-if="currentUserInfos.token">
-        <router-link to="/focusBrand">{{ $t('header.subscribe') }}</router-link>
-      </li>
       <li class="nav-item">
-        <router-link to="/legalPurchase">{{ $t('header.otc') }}</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/newTradeIndex">{{
-          $t('header.chuangxinshiyanqu')
-        }}</router-link>
+        <router-link to="/newTradeIndex">{{ $t('header.chuangxinshiyanqu') }}</router-link>
       </li>
       <li class="nav-item">
         <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
@@ -29,22 +21,16 @@
           <img
             alt=""
             :src="`/languages/${localeStorage.locale}.png`"
-            class="w-6 h-6 flex items-center justify-center cursor-pointer"
+            class="flex h-6 w-6 cursor-pointer items-center justify-center"
           />
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item
-              v-for="locale in localeStorage.locales"
-              :key="locale.value"
-            >
+            <el-dropdown-item v-for="locale in localeStorage.locales" :key="locale.value">
               <a
-                class="flex items-center justify-between text-[#333333] w-44"
+                class="flex w-44 items-center justify-between text-[#333333]"
                 @click="localeStorage.setLocale(locale.value)"
               >
                 <span>{{ locale.label }}</span>
-                <span
-                  class="el-icon-check"
-                  v-if="locale.value === localeStorage.locale"
-                ></span>
+                <span class="el-icon-check" v-if="locale.value === localeStorage.locale"></span>
               </a>
             </el-dropdown-item>
           </el-dropdown-menu>
@@ -62,32 +48,10 @@
       </template>
       <template v-else>
         <li class="nav-item">
-          <el-dropdown @command="handleCommand">
-            <span class="el-dropdown-link">
-              {{ $t('header.assets') }}
-              <span class="total-asset"
-                >({{ fixedNumber(userAsssetInfos.totalAssets) }}USDT)</span
-              >
-            </span>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item command="d">{{
-                $t('newCommon.text41')
-              }}</el-dropdown-item>
-
-              <el-dropdown-item command="g">{{
-                $t('newCommon.text66')
-              }}</el-dropdown-item>
-              <el-dropdown-item command="h">{{
-                $t('newCommon.text68')
-              }}</el-dropdown-item>
-              <el-dropdown-item command="k">{{
-                $t('newCommon.text69')
-              }}</el-dropdown-item>
-              <el-dropdown-item command="l">{{
-                $t('newCommon.text70')
-              }}</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
+          <span class="el-dropdown-link" @click="handleCommand('l')">
+            {{ $t('header.assets') }}
+            <span class="total-asset">({{ fixedNumber(userAsssetInfos.totalAssets) }}USDT)</span>
+          </span>
         </li>
         <li class="nav-header">
           <el-dropdown @command="handleCommand">
@@ -101,40 +65,25 @@
                   <p class="uid">UID:{{ currentUserInfos.user.userId }}</p>
                 </div>
                 <div class="dropdown-right">
-                  <img
-                    :src="currentUserInfos.user.headUrl"
-                    class="phone-avatar"
-                  />
+                  <img :src="currentUserInfos.user.headUrl" class="phone-avatar" />
                 </div>
               </div>
               <router-link to="/user/authentication">
-                <el-dropdown-item divided>{{
-                  $t('header.verify')
-                }}</el-dropdown-item>
+                <el-dropdown-item divided>{{ $t('header.verify') }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/myCommunity">
-                <el-dropdown-item>{{
-                  $t('header.my_community')
-                }}</el-dropdown-item>
+                <el-dropdown-item>{{ $t('header.my_community') }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/changeLoginPassword">
-                <el-dropdown-item>{{
-                  $t('header.modify_pw')
-                }}</el-dropdown-item>
+                <el-dropdown-item>{{ $t('header.modify_pw') }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/changePhone">
-                <el-dropdown-item>{{
-                  $t('header.modify_phone')
-                }}</el-dropdown-item>
+                <el-dropdown-item>{{ $t('header.modify_phone') }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/safePassword">
-                <el-dropdown-item>{{
-                  $t('header.set_password')
-                }}</el-dropdown-item>
+                <el-dropdown-item>{{ $t('header.set_password') }}</el-dropdown-item>
               </router-link>
-              <el-dropdown-item command="layOut">{{
-                $t('header.logout')
-              }}</el-dropdown-item>
+              <el-dropdown-item command="layOut">{{ $t('header.logout') }}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </li>
@@ -226,12 +175,7 @@ export default {
     // 跳转
     handleToOtherWeb() {
       // 跳转到其他web页面
-      let lang =
-        this.$i18n.locale == 'zh_CN'
-          ? 'cn'
-          : this.$i18n.locale == 'zh_TW'
-          ? 'tw'
-          : 'en';
+      let lang = this.$i18n.locale == 'zh_CN' ? 'cn' : this.$i18n.locale == 'zh_TW' ? 'tw' : 'en';
       window.location.href = `https://www.wwctrade.com/?lang=${lang}`;
     },
   },
@@ -240,23 +184,23 @@ export default {
 
 <style lang="scss" scope>
 .header-container {
-  width: 100%;
-  height: 56px;
-  position: relative;
-  line-height: 56px;
-  padding-left: 45px;
-  background: #1b2945;
-  box-shadow: 3px 0 3px #1b2945;
-  color: #ffffff;
   display: flex;
+  position: relative;
   align-items: center;
   z-index: 5;
+  box-shadow: 3px 0 3px #1b2945;
+  background: #1b2945;
+  padding-left: 45px;
+  width: 100%;
+  height: 56px;
+  color: #ffffff;
+  line-height: 56px;
   .header-logo {
     cursor: pointer;
     .gzlogo {
-      height: 30px;
-      margin-right: 20px;
       vertical-align: middle;
+      margin-right: 20px;
+      height: 30px;
     }
     .gzname {
       font-size: $h3;
@@ -267,50 +211,50 @@ export default {
     display: flex;
     margin-left: 40px;
     .nav-item {
-      margin-left: 24px;
-      font-size: 14px;
-      color: #aeb9d8;
-      transition: all 0.4s;
-      vertical-align: top;
       display: inline-block;
+      vertical-align: top;
+      transition: all 0.4s;
+      margin-left: 24px;
       height: 56px;
+      color: #aeb9d8;
+      font-size: 14px;
       line-height: 56px;
       &:hover {
         color: #ffffff;
       }
       .activeNav {
-        color: #ffffff;
         display: inline-block;
-        height: 56px;
-        line-height: 56px;
         border-bottom: 3px solid $color_main;
+        height: 56px;
+        color: #ffffff;
+        line-height: 56px;
       }
     }
   }
   .login-and-register-container {
-    float: right;
     display: flex;
     position: absolute;
-    right: 30px;
     top: 0px;
+    right: 30px;
+    float: right;
     .else-tab {
       display: flex;
     }
     .total-asset {
-      color: $color_info;
       display: inline-block;
+      color: $color_info;
       font-size: 12px;
     }
     .nav-item {
-      margin-left: 24px;
-      font-size: 14px;
-      color: #aeb9d8;
-      transition: all 0.4s;
-      vertical-align: top;
       display: inline-block;
-      height: 56px;
-      line-height: 56px;
+      vertical-align: top;
+      transition: all 0.4s;
       cursor: pointer;
+      margin-left: 24px;
+      height: 56px;
+      color: #aeb9d8;
+      font-size: 14px;
+      line-height: 56px;
       &:hover {
         color: #ffffff;
       }
@@ -328,45 +272,45 @@ export default {
       list-style-type: none;
     }
     .register {
+      margin-top: 15px;
       border: 1px solid $color_main;
+      border-radius: 2px;
+      padding-right: 16px;
+      padding-left: 16px;
       height: 28px;
       line-height: 28px;
-      margin-top: 15px;
-      padding-left: 16px;
-      padding-right: 16px;
-      border-radius: 2px;
       &:hover {
-        color: #ffffff;
         background: $color_main;
+        color: #ffffff;
       }
     }
     .downLoad {
       position: relative;
     }
     .qrcode-container {
+      display: flex;
       position: absolute;
       top: 46px;
-      background: #ffffff;
       right: 0;
-      display: flex;
-      padding: 10px;
-      width: 100px;
       z-index: 10000;
       transition: all 0.5s ease-in-out;
+      background: #ffffff;
+      padding: 10px;
+      width: 100px;
       .qrcode {
         width: 80px;
         height: 80px;
       }
       .downLoadTips {
-        font-size: 15px;
-        color: #000;
         margin-left: 15px;
+        color: #000;
+        font-size: 15px;
         line-height: 20px;
       }
     }
     .el-dropdown-links {
-      color: #aeb9d8;
       cursor: pointer;
+      color: #aeb9d8;
       &:hover {
         color: white;
       }
@@ -374,13 +318,13 @@ export default {
   }
 }
 .pop-title {
-  font-size: 16px;
   font-weight: bold;
+  font-size: 16px;
   .io {
-    font-size: 20px;
-    color: $color_main;
     vertical-align: middle;
     margin-right: 5px;
+    color: $color_main;
+    font-size: 20px;
   }
 }
 .pointerin {
@@ -392,18 +336,18 @@ export default {
     position: absolute;
     top: 18px;
     right: 0;
-    height: 5px;
-    width: 5px;
-    background-color: red;
     border-radius: 50%;
+    background-color: red;
+    width: 5px;
+    height: 5px;
   }
 }
 .lang {
   margin-left: 20px;
 }
 .dropdown-people-tab {
-  cursor: pointer;
   display: flex;
+  cursor: pointer;
   padding: 5px 18px 8px;
   .dropdown-left {
     flex: 1;
@@ -412,16 +356,16 @@ export default {
     }
     .uid {
       margin-top: 8px;
-      font-size: 12px;
       color: $color_info;
+      font-size: 12px;
     }
   }
   .dropdown-right {
     margin-left: 15px;
     .phone-avatar {
-      height: 30px;
-      width: 30px;
       border-radius: 50%;
+      width: 30px;
+      height: 30px;
     }
   }
 }

@@ -12,7 +12,14 @@
           <li :class="activeNav === 2 ? 'activeNav' : ''" @click="handleChangeNav(2)">股指期货</li>
         </ul>
         <div class="header-search">
-          <el-input type="text" v-model="coinname" @keyup.enter.native='searchCoin' prefix-icon="el-icon-search" placeholder="搜索" size="small"></el-input>
+          <el-input
+            type="text"
+            v-model="coinname"
+            @keyup.enter.native="searchCoin"
+            prefix-icon="el-icon-search"
+            placeholder="搜索"
+            size="small"
+          ></el-input>
         </div>
       </div>
       <Optional @showDrawer="handleShowDrawer" v-if="activeNav === 1"></Optional>
@@ -30,37 +37,37 @@
 </template>
 
 <script>
-import IntroductionDrawer from "./IntroductionDrawer";
+import IntroductionDrawer from './IntroductionDrawer';
 import Digital from './Digital';
 import Stock from './Stock';
 import Optional from './Optional';
-import {findMyCoin,getCoinInfo, seachCoin} from '@/server/axios';
+import { findMyCoin, getCoinInfo, seachCoin } from '@/server/axios';
 export default {
   data() {
     return {
       activeNav: 3, // 当前导航栏
       getMyCoinInterval: '',
-      coinname: "",
+      coinname: '',
       ifShowDrawer: false, // 是否显示币种介绍弹框
-      coinIntroduction: {} // 币种介绍
+      coinIntroduction: {}, // 币种介绍
     };
   },
   created() {
     // 获取自选
-    this.$store.dispatch('getMyOptionals')
-  },  
+    this.$store.dispatch('getMyOptionals');
+  },
   methods: {
     handleChangeNav(navItem) {
       this.activeNav = navItem;
     },
     // 点击某一行，弹出介绍
     handleShowDrawer(symbol) {
-      getCoinInfo(symbol).then(res => {
+      getCoinInfo(symbol).then((res) => {
         if (res.code == 200) {
-          this.coinIntroduction = res.data.coin
+          this.coinIntroduction = res.data.coin;
           this.ifShowDrawer = true;
         }
-      })
+      });
     },
     // 关闭弹框
     handleCloseDrawer() {
@@ -68,50 +75,50 @@ export default {
     },
     // 前往交易页面
     handleToTrade(coinIntroduction) {
-      let path = ''
+      let path = '';
       this.$router.push({
-          path: '/trading',
-          query: {
-            symbol: coinIntroduction.symbol
-          }
-      })
+        path: '/trading',
+        query: {
+          symbol: coinIntroduction.symbol,
+        },
+      });
     },
     // 搜索
     searchCoin() {
       if (this.coinname === '') {
-        return
+        return;
       } else {
         seachCoin(this.coinname).then((res) => {
           if (res.code === '200' && res.data.searchResultList.length !== 0) {
-            let list = res.data.searchResultList[0]
-            if (list.marketType === "digital") {
+            let list = res.data.searchResultList[0];
+            if (list.marketType === 'digital') {
               this.$router.push({
-                  path: '/digitaltrading',
-                  query: {
-                    symbol: list.symbolPair
-                  }
-              })
+                path: '/digitaltrading',
+                query: {
+                  symbol: list.symbolPair,
+                },
+              });
             } else {
               this.$router.push({
-                  path: '/futurestrading',
-                  query: {
-                    symbol: list.symbolPair
-                  }
-              })
+                path: '/futurestrading',
+                query: {
+                  symbol: list.symbolPair,
+                },
+              });
             }
           } else {
-            this.$message.error('搜索失败，请确认所输入的币种是否存在')
+            this.$message.error('搜索失败，请确认所输入的币种是否存在');
           }
-        })
+        });
       }
-    }
+    },
   },
   components: {
     IntroductionDrawer,
     Digital,
     Stock,
-    Optional
-  }
+    Optional,
+  },
 };
 </script>
 
@@ -158,7 +165,6 @@ export default {
       }
     }
   }
-  
 }
 </style>
 
@@ -172,42 +178,42 @@ export default {
     }
   }
   .el-table tbody {
-   .cell {
-     font-size: 14px !important;
-   }
- }
-}
-.marketTrendingTable {
-    max-width: 94%;
-    margin: 0 auto;
-    .icon-star {
-      margin-right: 8px;
-      cursor: pointer;
-      color: #d3dfe6;
-    }
-    tbody {
-      .cell {
-        cursor: pointer;
-      }
-      .roudlyPrice {
-        color: #9ca9b5;
-        font-size: 12px;
-      }
-      .positiveNumber,
-      .negativeNumber {
-        color: #0da88b;
-        background-color: rgba(13, 168, 139, 0.1);
-        width: 90px;
-        padding: 3px 14px;
-        text-align: center;
-        border-radius: 2px;
-        font-weight: 400;
-        display: inline-block;
-      }
-      .negativeNumber {
-        color: #ef5656;
-        background-color: rgba(239, 86, 86, 0.1);
-      }
+    .cell {
+      font-size: 14px !important;
     }
   }
+}
+.marketTrendingTable {
+  max-width: 94%;
+  margin: 0 auto;
+  .icon-star {
+    margin-right: 8px;
+    cursor: pointer;
+    color: #d3dfe6;
+  }
+  tbody {
+    .cell {
+      cursor: pointer;
+    }
+    .roudlyPrice {
+      color: #9ca9b5;
+      font-size: 12px;
+    }
+    .positiveNumber,
+    .negativeNumber {
+      color: #0da88b;
+      background-color: rgba(13, 168, 139, 0.1);
+      width: 90px;
+      padding: 3px 14px;
+      text-align: center;
+      border-radius: 2px;
+      font-weight: 400;
+      display: inline-block;
+    }
+    .negativeNumber {
+      color: #ef5656;
+      background-color: rgba(239, 86, 86, 0.1);
+    }
+  }
+}
 </style>

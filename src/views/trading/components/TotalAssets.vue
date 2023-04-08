@@ -241,7 +241,6 @@ export default {
       sortField: '', // 将要排序的列名
       sortType: 0, // 排序方式：0正常， 2升序，1降序
       riskRateDesc: '', //风险率
-      // coinType: ["optional", "stock", "digital"],
       coinType: ['stock', 'digital', 'spot'],
       sortTypes: 'digital',
       pageNo: 1,
@@ -324,18 +323,18 @@ export default {
             });
           }
           this.quotes = arr;
-          // console.log("this.quotes=======>", this.quotes)
+
           if (this.ceshiTest) {
             this.$emit(
               'returnFirstSymbol',
-              res.data.quotes[0].symbol,
-              res.data.quotes[0],
+              res.data?.quotes?.[0]?.symbol,
+              res.data?.quotes?.[0],
               this.ceshiTest
             );
             this.ceshiTest = false;
           }
           if (!this.currentCoinType) {
-            this.$emit('returnFirstSymbol', res.data.quotes[0].symbol); //返回上级，获取相应的k线、历史记录、开仓记录等
+            this.$emit('returnFirstSymbol', res.data.quotes?.[0]?.symbol); //返回上级，获取相应的k线、历史记录、开仓记录等
           }
         }
       });
@@ -470,7 +469,6 @@ export default {
           this.$store.dispatch('changeAssetTab', i);
         }
       }
-      // ["stock", "digital", "spot"]
       if (i === 0) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
@@ -516,22 +514,22 @@ export default {
   }
 }
 .tabList {
-  margin-top: 15px;
   display: flex;
+  margin-top: 15px;
   padding: 0 17px;
   .tabList-item {
+    cursor: pointer;
+    margin-right: 15px;
     font-size: 12px;
     line-height: 20px;
-    margin-right: 15px;
-    cursor: pointer;
     &.act {
       border-bottom: 2px solid #6175ae;
     }
   }
 }
 .table-list-box {
-  width: 260px;
   margin: 0 auto;
+  width: 260px;
 }
 .coinTable {
   .el-loading-mask {
@@ -540,9 +538,9 @@ export default {
 }
 .io {
   display: inline-block;
-  font-size: 12px;
-  margin-left: -4px;
   transform: scale(0.7);
+  margin-left: -4px;
   color: #b0b8db42;
+  font-size: 12px;
 }
 </style>

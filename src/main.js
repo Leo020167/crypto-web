@@ -75,7 +75,7 @@ library.add(
   faUserEdit,
   faPhoneAlt,
   faMapMarkerAlt,
-  faTrashAlt
+  faTrashAlt,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

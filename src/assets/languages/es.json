@@ -47,7 +47,7 @@
     "text34": "Cuenta de comercio de futuros internacionales",
     "text35": "Cuenta comercial de divisas",
     "text36": "Futuros internacionales",
-    "text37": ["Futuros globales", "contratos", "monedas"],
+    "text37": ["monedas"],
     "text38": "Activos de la cuenta de saldo total",
     "text39": "Activos de cuenta total de divisas",
     "text40": "Futuros internacionales activos totales",
@@ -633,12 +633,7 @@
     "zhanghushouyi": "Ganancias de la cuenta",
     "followNum": "Seguidores",
     "tradeNum": "Número de oficios",
-    "tabName": [
-      "El mes pasado",
-      "Últimos tres meses",
-      "Últimos seis meses",
-      "el año pasado"
-    ],
+    "tabName": ["El mes pasado", "Últimos tres meses", "Últimos seis meses", "el año pasado"],
     "radius1": "Ganancias con pedidos",
     "radius2": "Popularidad",
     "radius3": "Tomar la tasa de ganancia",

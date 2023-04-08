@@ -372,7 +372,7 @@ export default {
     },
     marketType: {
       type: String,
-      default: 'digital',
+      default: 'spot',
     },
     compots: {
       type: String,

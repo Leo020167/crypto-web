@@ -184,7 +184,7 @@ import { assetsApi, legalPurchaseApi } from '@/server/axios.js';
 export default {
   data() {
     return {
-      accountType: 'stock',
+      accountType: 'spot',
       currentTabNumber: 0,
       coinType: '', //搜索币种
       directionLabel: '',

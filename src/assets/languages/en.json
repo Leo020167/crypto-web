@@ -47,7 +47,7 @@
     "text34": "International Futures Trading Account",
     "text35": "Foreign Exchange Trading Account",
     "text36": "International Futures",
-    "text37": ["Global Futures", "Contracts", "Currencies"],
+    "text37": ["Currencies"],
     "text38": "Total Balance Account Assets",
     "text39": "Total Foreign Exchange Account Assets",
     "text40": "International Futures Total Assets",
@@ -74,12 +74,7 @@
     ],
     "text53": "min5",
 
-    "text54": [
-      "Charge record",
-      "Withdrawal record",
-      "Transfer record",
-      "Fiat record"
-    ],
+    "text54": ["Charge record", "Withdrawal record", "Transfer record", "Fiat record"],
     "text55": "Frozen Margin (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Please enter your mailbox",
@@ -636,12 +631,7 @@
     "zhanghushouyi": "Account Earnings",
     "followNum": "Followers",
     "tradeNum": "Number of trades",
-    "tabName": [
-      "Last month",
-      "Last three months",
-      "Last six months",
-      "Last year"
-    ],
+    "tabName": ["Last month", "Last three months", "Last six months", "Last year"],
     "radius1": "Profits with orders",
     "radius2": "Popularity",
     "radius3": "Take profit rate",
@@ -894,12 +884,7 @@
   },
   "capital-account": {
     "title": "Balance Account",
-    "tabs": [
-      "Assets",
-      "Deposit Records",
-      "Withdrawal Records",
-      "Fiat Currency Records"
-    ]
+    "tabs": ["Assets", "Deposit Records", "Withdrawal Records", "Fiat Currency Records"]
   },
   "currency-account": {
     "title": "Balance Account",

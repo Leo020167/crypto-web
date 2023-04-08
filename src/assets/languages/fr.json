@@ -47,7 +47,7 @@
     "text34": "Compte de trading à terme international",
     "text35": "Compte de trading de change",
     "text36": "Futurs international",
-    "text37": ["Global Futures", "Contracts", "Currencs"],
+    "text37": ["Currencs"],
     "text38": "Actifs totaux de compte de solde",
     "text39": "Actifs totaux du compte de change",
     "text40": "Actifs totaux à terme international",
@@ -72,12 +72,7 @@
       { "title": "1 semaine", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
-    "text54": [
-      "Record de charge",
-      "Retal Record ",
-      "Transfer Record",
-      "Fiat Record"
-    ],
+    "text54": ["Record de charge", "Retal Record ", "Transfer Record", "Fiat Record"],
     "text55": "Marge congelée (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Veuillez saisir votre boîte aux lettres",
@@ -634,12 +629,7 @@
     "zhanghushouyi": "Géré dans les comptes",
     "followNum": "Suiveurs",
     "tradeNum": "Nombre de métiers",
-    "tabName": [
-      "Le mois dernier",
-      "TROIS MOIS",
-      "Six derniers mois",
-      "l'année dernière"
-    ],
+    "tabName": ["Le mois dernier", "TROIS MOIS", "Six derniers mois", "l'année dernière"],
     "radius1": "Bénéfices avec les commandes",
     "radius2": "Popularité",
     "radius3": "Prendre le taux de profit",

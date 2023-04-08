@@ -179,7 +179,7 @@ import CurrentOrder from './compontent/CurrentOrder.vue';
 export default {
   data() {
     return {
-      accountType: 'stock',
+      accountType: 'spot',
       bundlingState: false, //绑定状态
       openSwitch: true, //跟单状态修改操作
       currentAssets: 0,

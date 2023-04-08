@@ -1,17 +1,8 @@
 <template>
   <div class="flex items-center">
-    <el-button type="primary" class="btns" @click="showTopup">{{
-      $t('assets.deposit')
-    }}</el-button>
+    <el-button type="primary" class="btns" @click="showTopup">{{ $t('assets.deposit') }}</el-button>
     <el-button type="primary" class="btns" @click="showMetion">{{
       $t('assets.withdraw')
-    }}</el-button>
-
-    <el-button type="primary" class="btns" @click="transfer = true">{{
-      $t('assets.transfer')
-    }}</el-button>
-    <el-button type="primary" class="btns" @click="goOtcPage">{{
-      $t('assets.fiat-currency-purchase')
     }}</el-button>
 
     <TransferDialog :show-dialog="transfer" @closeTransfer="transfer = false" />

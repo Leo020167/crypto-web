@@ -432,7 +432,7 @@ export default {
     },
     marketType: {
       type: String,
-      default: 'digital',
+      default: 'spot',
     },
   },
   watch: {

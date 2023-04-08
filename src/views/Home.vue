@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Header from "./layout/Header.vue";
-import { mapGetters } from "vuex";
-import { ReflashAccountSeconds } from "@/utils/Enums";
-import { security } from "@/server/axios.js";
+import Header from './layout/Header.vue';
+import { mapGetters } from 'vuex';
+import { ReflashAccountSeconds } from '@/utils/Enums';
+import { security } from '@/server/axios.js';
 export default {
   components: {
     VHeader: Header,
@@ -21,12 +21,12 @@ export default {
   data() {
     return {
       // 定时器
-      intervalSetter: "",
+      intervalSetter: '',
     };
   },
   computed: {
     ...mapGetters({
-      currentUserInfos: "getCurrentUserInfos",
+      currentUserInfos: 'getCurrentUserInfos',
     }),
   },
   created() {
@@ -41,13 +41,13 @@ export default {
   methods: {
     // 在登录的状态下，全局获取资产账户页
     getGloblAccountData() {
-      this.$store.dispatch("getGlobalAccountData");
+      this.$store.dispatch('getGlobalAccountData');
     },
     getDangerRate() {
       security.getDangerRateInfo().then((res) => {
         if (res.code == 200) {
           let text = res.data.riskRateDesc;
-          sessionStorage.setItem("riskRateDesc", text);
+          sessionStorage.setItem('riskRateDesc', text);
         }
       });
     },

@@ -14,16 +14,17 @@
               <p class="upper-title">{{ $t('assets.total_assets') }}</p>
               <p class="upper-data">
                 {{ spotAccountVuex.assets
-                }}<span class="transfor-usdt">{{
-                  spotAccountVuex.assetsCny
-                }}</span>
+                }}<span class="transfor-usdt">{{ spotAccountVuex.assetsCny }}</span>
               </p>
               <p class="lower-title">{{ $t('assets.has_use') }}(USDT)</p>
               <p class="last-data">{{ spotAccountVuex.holdAmount }}</p>
+
+              <p class="lower-title">{{ $t('assets.frozen_amount') }}(USDT)</p>
+              <p class="last-data">{{ spotAccountVuex.frozenAmount }}</p>
             </div>
             <div class="center">
               <p class="upper-title">{{ $t('assets.text23') }}(USDT)</p>
-              <p class="upper-data">{{ spotAccountVuex.frozenAmount }}</p>
+              <p class="upper-data">{{ spotAccountVuex.frozenBail }}</p>
               <p class="upper-title" style="margin-top: 26px">
                 {{ $t('assets.zongyingkui') }}
               </p>
@@ -47,15 +48,9 @@
             </li>
           </ul>
           <div class="show-container" v-loading="recordShow">
-            <PositionList
-              v-if="currentTabNumber === 0"
-              :row-data="spotAccountVuex?.openList"
-            />
+            <PositionList v-if="currentTabNumber === 0" :row-data="spotAccountVuex?.openList" />
 
-            <Subscription
-              v-if="currentTabNumber === 1"
-              @showLoading="showLoading"
-            ></Subscription>
+            <Subscription v-if="currentTabNumber === 1" @showLoading="showLoading"></Subscription>
           </div>
         </div>
         <!-- 弹窗 -->
@@ -171,18 +166,16 @@ export default {
     },
     // 获取划转信息列表
     getTransferRecordData() {
-      assetsApi
-        .getTransferRecords(this.accountType, this.accountType, this.pageNo)
-        .then((res) => {
-          setTimeout(() => {
-            this.recordShow = false;
-          }, 500);
-          if (res.code === '200') {
-            this.transferList = res.data.data;
-            this.totalRecords = Number(res.data.total);
-            this.pageSize = Number(res.data.pageSize);
-          }
-        });
+      assetsApi.getTransferRecords(this.accountType, this.accountType, this.pageNo).then((res) => {
+        setTimeout(() => {
+          this.recordShow = false;
+        }, 500);
+        if (res.code === '200') {
+          this.transferList = res.data.data;
+          this.totalRecords = Number(res.data.total);
+          this.pageSize = Number(res.data.pageSize);
+        }
+      });
     },
     // 修改划转的页码
     changeTransferPage(i) {

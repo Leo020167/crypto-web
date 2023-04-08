@@ -299,8 +299,8 @@ export default {
       widthChangeClass: 'min', //min===一列, max===两列
       showDishTitle: false,
       dishTabIndex: 0,
-      assetTabIndex: 1,
-      symbolType: 'digital',
+      assetTabIndex: 0,
+      symbolType: 'spot',
       documentTitle: '',
       // 动态控制top的交易比例
       topHeight: 0,

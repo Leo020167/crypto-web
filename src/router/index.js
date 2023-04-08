@@ -25,6 +25,10 @@ const router = new VueRouter({
       redirect: '/Login',
       children: [
         {
+          path: '',
+          component: () => import('@/views/home-new.vue'),
+        },
+        {
           path: '/f',
           name: 'f',
           component: () => import('@/views/assets/f.vue'),
@@ -539,7 +543,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   // nprogress start
   NProgress.start();
-
+  console.log(to);
   if (to.matched.some((res) => res.meta.requireAuth)) {
     // 判断是否需要登录权限
     if (store.getters.getCurrentUserInfos.token) {

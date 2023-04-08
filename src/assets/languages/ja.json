@@ -47,7 +47,7 @@
     "text34": "国際先物取引口座",
     "text35": "外国為替取引口座",
     "text36": "国際フューチャーズ",
-    "text37": ["グローバル先物", "契約", "通貨"],
+    "text37": ["通貨"],
     "text38": "残高合計 口座資産",
     "text39": "外国為替 資産合計",
     "text40": "国際先物取引 資産合計",
@@ -886,12 +886,7 @@
   },
   "capital-account": {
     "title": "残高口座",
-    "tabs": [
-      "Assets",
-      "Deposit Records",
-      "Withdrawal Records",
-      "Fiat Currency Records"
-    ]
+    "tabs": ["Assets", "Deposit Records", "Withdrawal Records", "Fiat Currency Records"]
   },
   "currency-account": {
     "title": "残高口座",
