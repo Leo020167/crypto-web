@@ -20,7 +20,8 @@
             </div>
             <div class="flex items-center gap-2 py-6">
               <button
-                class="btn bg-primary hover:bg-primary1 w-5/12 rounded-sm px-8 py-1 hover:text-white"
+                @click="handleClick"
+                class="btn bg-blue-600 hover:bg-blue-500 w-5/12 rounded-sm px-8 py-1 text-white"
                 style="height: 40px"
               >
                 去交易
@@ -102,9 +103,24 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {};
+  },
+  computed: {
+    ...mapGetters({
+      currentUserInfos: 'getCurrentUserInfos',
+    }),
+  },
+  methods: {
+    handleClick() {
+      if (this.currentUserInfos.token) {
+        this.$router.push('/trading');
+      } else {
+        this.$router.push('/Login');
+      }
+    },
   },
 };
 </script>

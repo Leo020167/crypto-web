@@ -5,10 +5,15 @@
     </div>
     <ul class="nav-container">
       <li class="nav-item">
+        <router-link to="/">{{ $t('header.home') }}</router-link>
+      </li>
+      <li class="nav-item">
         <router-link to="/trading">{{ $t('header.trading') }}</router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/newTradeIndex">{{ $t('header.chuangxinshiyanqu') }}</router-link>
+        <router-link to="/newTradeIndex">{{
+          $t('header.chuangxinshiyanqu')
+        }}</router-link>
       </li>
       <li class="nav-item">
         <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
@@ -24,13 +29,19 @@
             class="flex h-6 w-6 cursor-pointer items-center justify-center"
           />
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item v-for="locale in localeStorage.locales" :key="locale.value">
+            <el-dropdown-item
+              v-for="locale in localeStorage.locales"
+              :key="locale.value"
+            >
               <a
                 class="flex w-44 items-center justify-between text-[#333333]"
                 @click="localeStorage.setLocale(locale.value)"
               >
                 <span>{{ locale.label }}</span>
-                <span class="el-icon-check" v-if="locale.value === localeStorage.locale"></span>
+                <span
+                  class="el-icon-check"
+                  v-if="locale.value === localeStorage.locale"
+                ></span>
               </a>
             </el-dropdown-item>
           </el-dropdown-menu>
@@ -50,7 +61,9 @@
         <li class="nav-item">
           <span class="el-dropdown-link" @click="handleCommand('l')">
             {{ $t('header.assets') }}
-            <span class="total-asset">({{ fixedNumber(userAsssetInfos.totalAssets) }}USDT)</span>
+            <span class="total-asset"
+              >({{ fixedNumber(userAsssetInfos.totalAssets) }}USDT)</span
+            >
           </span>
         </li>
         <li class="nav-header">
@@ -65,25 +78,40 @@
                   <p class="uid">UID:{{ currentUserInfos.user.userId }}</p>
                 </div>
                 <div class="dropdown-right">
-                  <img :src="currentUserInfos.user.headUrl" class="phone-avatar" />
+                  <img
+                    :src="currentUserInfos.user.headUrl"
+                    class="phone-avatar"
+                  />
                 </div>
               </div>
               <router-link to="/user/authentication">
-                <el-dropdown-item divided>{{ $t('header.verify') }}</el-dropdown-item>
+                <el-dropdown-item divided>{{
+                  $t('header.verify')
+                }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/myCommunity">
-                <el-dropdown-item>{{ $t('header.my_community') }}</el-dropdown-item>
+                <el-dropdown-item>{{
+                  $t('header.my_community')
+                }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/changeLoginPassword">
-                <el-dropdown-item>{{ $t('header.modify_pw') }}</el-dropdown-item>
+                <el-dropdown-item>{{
+                  $t('header.modify_pw')
+                }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/changePhone">
-                <el-dropdown-item>{{ $t('header.modify_phone') }}</el-dropdown-item>
+                <el-dropdown-item>{{
+                  $t('header.modify_phone')
+                }}</el-dropdown-item>
               </router-link>
               <router-link to="/user/safePassword">
-                <el-dropdown-item>{{ $t('header.set_password') }}</el-dropdown-item>
+                <el-dropdown-item>{{
+                  $t('header.set_password')
+                }}</el-dropdown-item>
               </router-link>
-              <el-dropdown-item command="layOut">{{ $t('header.logout') }}</el-dropdown-item>
+              <el-dropdown-item command="layOut">{{
+                $t('header.logout')
+              }}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </li>
@@ -175,7 +203,12 @@ export default {
     // 跳转
     handleToOtherWeb() {
       // 跳转到其他web页面
-      let lang = this.$i18n.locale == 'zh_CN' ? 'cn' : this.$i18n.locale == 'zh_TW' ? 'tw' : 'en';
+      let lang =
+        this.$i18n.locale == 'zh_CN'
+          ? 'cn'
+          : this.$i18n.locale == 'zh_TW'
+          ? 'tw'
+          : 'en';
       window.location.href = `https://www.wwctrade.com/?lang=${lang}`;
     },
   },
