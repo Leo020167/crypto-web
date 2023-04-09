@@ -81,7 +81,6 @@ export default {
   },
   methods: {
     drawChart() {
-      // TODO 域名调整为动态
       const widgetOptions = {
         symbol: this.symbol,
         // BEWARE: no trailing slash is expected in feed URL
@@ -166,11 +165,6 @@ export default {
           'mainSeriesProperties.lineStyle.linewidth': 1,
           'mainSeriesProperties.lineStyle.priceSource': 'close',
         },
-        // studies_overrides: {
-        //   "volume.volume.color.0": "#00b38f",
-        //   "volume.volume.color.1": "#e34c4c",
-        //   "volume.volume.transparency": 30,
-        // },
         customFormatters: {
           timeFormatter: {
             format: function (date) {
@@ -207,7 +201,6 @@ export default {
         that.createStudy();
         tvWidget.headerReady().then(() => {
           this.buttons.forEach(function (v) {
-            console.log(v);
             var button = tvWidget.createButton();
             if (v.resolution == '1' && v.chartType == '3') {
               button.classList.add('active');
@@ -219,8 +212,6 @@ export default {
             button.setAttribute('data-chart-type', v.chartType);
             button.setAttribute('data-resolution', v.resolution);
             button.addEventListener('click', function () {
-              // tvWidget.chart().setChartType(v.chartType);
-              // tvWidget.chart().setResolution(v.resolution)
               let chartType = button.getAttribute('data-chart-type') * 1;
               button.classList.add('active');
               var list = that.TVjsApisibling(this.parentNode.parentNode);
@@ -319,7 +310,7 @@ export default {
           if (this.tvWidget == null && this.ifMounted && val) {
             this.drawChart();
           }
-          if (this.tvWidget !== null) {
+          if (this.tvWidget && val) {
             this.tvWidget.setSymbol(val, this.interval);
           }
         } catch (error) {

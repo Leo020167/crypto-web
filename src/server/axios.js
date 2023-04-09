@@ -663,9 +663,7 @@ export const findMyCoin = (postData) => {
   return func.axiosPost(marketUrl + '/quote/marketData.do', postData);
 };
 // 自选行情、数字货币行情、股指期货行情
-export const findMyCoin1 = (postData) => {
-  return func.axiosPost(marketUrlDance + '/quote/marketData.do', postData);
-};
+
 export const findMyCoin2 = (postData) => {
   return func.axiosPost(marketUrl2 + '/quote/marketData.do', postData);
 };
@@ -991,4 +989,21 @@ export const delAddress = (data) => {
 
 export const withdrawSubmit = (data) => {
   return func.axiosPost(baseUrl + '/depositeWithdraw/withdrawSubmit.do', data);
+};
+
+export const setPayPass = (values) => {
+  let url = baseUrl + '/user/security/setPayPass.do';
+
+  const data = {
+    payPass: md5(values.payPass).toUpperCase(),
+    configPayPass: md5(values.configPayPass).toUpperCase(),
+  };
+
+  if (values.oldPayPass) {
+    data.oldPayPass = md5(values.oldPayPass).toUpperCase();
+  }
+
+  return func.axiosPost(url, {
+    ...values,
+  });
 };

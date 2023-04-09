@@ -1,6 +1,6 @@
 import './style.css';
 import { createPinia, PiniaVuePlugin } from 'pinia';
-import Vue from 'vue';
+import Vue, { provide } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -75,7 +75,7 @@ library.add(
   faUserEdit,
   faPhoneAlt,
   faMapMarkerAlt,
-  faTrashAlt,
+  faTrashAlt
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
@@ -123,6 +123,9 @@ const pinia = createPinia();
 
 new Vue({
   router,
+  setup() {
+    provide('vuex-store', store);
+  },
   store,
   i18n,
   pinia,

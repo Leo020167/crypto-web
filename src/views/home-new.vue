@@ -21,7 +21,7 @@
             <div class="flex items-center gap-2 py-6">
               <button
                 @click="handleClick"
-                class="btn bg-blue-600 hover:bg-blue-500 w-5/12 rounded-sm px-8 py-1 text-white"
+                class="btn w-5/12 rounded-sm bg-blue-600 px-8 py-1 text-white hover:bg-blue-500"
                 style="height: 40px"
               >
                 去交易
@@ -31,6 +31,28 @@
         </div>
       </div>
     </section>
+
+    <section class="py-12">
+      <div class="grid-col-3 container mt-8 grid grid-cols-3 gap-x-6 pb-8">
+        <img
+          src="/img/lQDPJxejoC1Xcm7NAU3NAyCw5MdNT4-b574EI4TFD0D-AA_800_333.jpg_720x720q90g.jpg"
+          alt=""
+          class="block w-full rounded-lg"
+        />
+        <img
+          src="/img/lQDPJwY7GhPlR47NAU3NAyCw8U4AKG9x4sAEI4naccDMAA_800_333.jpg_720x720q90g.jpg"
+          alt=""
+          class="block w-full rounded-lg"
+        />
+        <img
+          src="/img/lQDPJx1S0TVHva7NAU3NAyCwx0zDV9qDox8EI4atPcB8AA_800_333.jpg_720x720q90g.jpg"
+          alt=""
+          class="block w-full rounded-lg"
+        />
+      </div>
+    </section>
+
+    <MarketTrend />
 
     <section class="py-8">
       <div class="container mx-auto">
@@ -103,6 +125,7 @@
 </template>
 
 <script>
+import MarketTrend from '@/components/MarketTrend.vue';
 import { mapGetters } from 'vuex';
 export default {
   data() {
@@ -122,6 +145,7 @@ export default {
       }
     },
   },
+  components: { MarketTrend },
 };
 </script>
 

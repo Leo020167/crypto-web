@@ -241,7 +241,7 @@ export default {
       sortField: '', // 将要排序的列名
       sortType: 0, // 排序方式：0正常， 2升序，1降序
       riskRateDesc: '', //风险率
-      coinType: ['stock', 'digital', 'spot'],
+      coinType: ['spot'],
       sortTypes: 'digital',
       pageNo: 1,
       contentIndex: 1,
@@ -297,9 +297,8 @@ export default {
     },
     // 获取列表
     getMyCoin() {
-      let type = this.coinType[this.tabIndexNum];
       findMyCoin({
-        tab: type,
+        tab: 'spot',
         sortField: this.sortField,
         sortType: this.sortType,
         page: this.pageNo,
