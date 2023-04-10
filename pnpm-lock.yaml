@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@chenfengyuan/vue-qrcode':
-    specifier: '1'
-    version: 1.0.0(vue@2.7.14)
+    specifier: ^1.0.2
+    version: 1.0.2(vue@2.7.14)
   '@fortawesome/fontawesome-svg-core':
     specifier: ^6.4.0
     version: 6.4.0
@@ -11,14 +11,14 @@ dependencies:
     specifier: ^6.4.0
     version: 6.4.0
   '@fortawesome/vue-fontawesome':
-    specifier: ^2.0.9
-    version: 2.0.9(@fortawesome/fontawesome-svg-core@6.4.0)(vue@2.7.14)
+    specifier: ^2.0.10
+    version: 2.0.10(@fortawesome/fontawesome-svg-core@6.4.0)(vue@2.7.14)
   '@vueuse/core':
     specifier: ^9.13.0
     version: 9.13.0(vue@2.7.14)
   axios:
-    specifier: ^1.2.0
-    version: 1.2.0
+    specifier: ^1.3.5
+    version: 1.3.5
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
@@ -1309,10 +1309,10 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@chenfengyuan/vue-qrcode@1.0.0(vue@2.7.14):
-    resolution: {integrity: sha512-Ph+W4ltPIyn9YjjITuLewhw8MeEXxJ1L5z6ZM+trmVWcKLfoIDi3yLHDPFKFjesWqsdH8irIX67PCBZ80TY8kw==}
+  /@chenfengyuan/vue-qrcode@1.0.2(vue@2.7.14):
+    resolution: {integrity: sha512-hwy1d4YMJAyEh+V7dLPG8eAKACRvugzSB4ylwb6QNqo84KHTF50/5EJcBYdUhTRPfAqrxG0i6jDAXONWOGyQbQ==}
     peerDependencies:
-      vue: ^2.2.0
+      vue: ^2.6.0
     dependencies:
       qrcode: 1.5.1
       vue: 2.7.14
@@ -1575,8 +1575,8 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.4.0
     dev: false
 
-  /@fortawesome/vue-fontawesome@2.0.9(@fortawesome/fontawesome-svg-core@6.4.0)(vue@2.7.14):
-    resolution: {integrity: sha512-tUmO92PFHbLOplitjHNBVGMJm6S57vp16tBXJVPKSI/6CfjrgLycqKxEpC6f7qsOqUdoXs5nIv4HLUfrOMHzuw==}
+  /@fortawesome/vue-fontawesome@2.0.10(@fortawesome/fontawesome-svg-core@6.4.0)(vue@2.7.14):
+    resolution: {integrity: sha512-OTETSXz+3ygD2OK2/vy82cmUBpuJqeOAg4gfnnv+f2Rir1tDIhQg026Q3NQxznq83ZLz8iNqGG9XJm26inpDeg==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
       vue: ~2
@@ -1856,8 +1856,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /axios@1.2.0:
-    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
+  /axios@1.3.5:
+    resolution: {integrity: sha512-glL/PvG/E+xCWwV8S6nCHcrfg1exGx7vxyUIivIA1iL7BIh6bePylCfVHwp6k13ao7SATxB6imau2kqY+I67kw==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
