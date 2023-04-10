@@ -230,6 +230,7 @@ export const uploadImage = ({
   dir: dir,
   type: type,
   imageFiles: imageFiles,
+  config = {},
 }) => {
   let url = uploadFileUrl + '/upload/file.do';
   let array = params.signParametersToURL({
@@ -244,6 +245,7 @@ export const uploadImage = ({
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
+      ...config,
     })
     .then((resData) => {
       resData = resData.data;
@@ -989,6 +991,16 @@ export const delAddress = (data) => {
 
 export const withdrawSubmit = (data) => {
   return func.axiosPost(baseUrl + '/depositeWithdraw/withdrawSubmit.do', data);
+};
+
+export const identityGet = (data) => {
+  return func.axiosPost(baseUrl + '/identity/get.do', data);
+};
+export const identityConfig = () => {
+  return func.axiosPost(baseUrl + '/identity/config.do', {});
+};
+export const identitySubmit = (data) => {
+  return func.axiosPost(baseUrl + '/identity/submit.do', data);
 };
 
 export const setPayPass = (values) => {
