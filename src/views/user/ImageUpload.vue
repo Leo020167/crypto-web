@@ -23,8 +23,6 @@ import { computed } from 'vue';
 const props = defineProps({ value: String, disabled: Boolean });
 const emit = defineEmits(['input']);
 
-console.log(props);
-
 const value = computed({
   get() {
     return props.value;
@@ -35,17 +33,15 @@ const value = computed({
 });
 
 const handleHttpRequest = async (e) => {
+  console.log(e);
   let formData = new FormData();
   formData.append('imageFiles', e.file);
   return await uploadImage({
     dir: 'identityImage',
     type: 'imageRetOriginal',
     imageFiles: formData,
-    data: {
-      onUploadProgress: (progressEvent) => {
-        let num = ((progressEvent.loaded / progressEvent.total) * 100) | 0; //百分比
-        e.onProgress({ percent: num }); //进度条
-      },
+    onUploadProgress: (event) => {
+      e.onProgress({ percent: (event.loaded / event.total) * 100 });
     },
   });
 };

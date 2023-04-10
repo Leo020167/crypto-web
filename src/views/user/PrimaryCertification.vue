@@ -97,7 +97,7 @@ const submitForm = () => {
   formRef.value.validate((valid) => {
     if (valid) {
       loading.value = true;
-      identitySubmit(model).then(async (res) => {
+      identitySubmit(model.value).then(async (res) => {
         console.log(res);
         if (res.code === '200') {
           await getPrimaryCertification();

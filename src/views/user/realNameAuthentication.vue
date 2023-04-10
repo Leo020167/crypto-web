@@ -26,39 +26,39 @@ import { computed, onMounted, ref, watchEffect } from 'vue';
 import PrimaryCertification from './PrimaryCertification.vue';
 import AdvancedCertification from './AdvancedCertification.vue';
 import { useCertificationStore } from '@/stores/certification';
+import { storeToRefs } from 'pinia';
 // primaryCertification
 // advancedCertification
 
-const tab = ref('advancedCertification');
+const tab = ref('primaryCertification');
 
-const {
-  primaryCertification,
-  advancedCertification,
-  getPrimaryCertification,
-  getAdvancedCertification,
-} = useCertificationStore();
+const store = useCertificationStore();
 
-onMounted(() => {
-  getPrimaryCertification();
-  getAdvancedCertification();
+const { primaryCertification, advancedCertification } = storeToRefs(store);
+
+const { getPrimaryCertification, getAdvancedCertification } = store;
+
+onMounted(async () => {
+  await getPrimaryCertification();
+  await getAdvancedCertification();
 });
 
 const primaryCertificationStatus = computed(() => {
-  if (primaryCertification) {
-    return primaryCertification.stateDesc;
+  if (primaryCertification.value) {
+    return primaryCertification.value.stateDesc;
   }
   return '未认证';
 });
 
 const advancedCertificationStatus = computed(() => {
-  if (advancedCertification) {
-    return advancedCertification.stateDesc;
+  if (advancedCertification.value) {
+    return advancedCertification.value.stateDesc;
   }
   return '未认证';
 });
 
 watchEffect(() => {
-  if (primaryCertification?.state === '1') {
+  if (primaryCertification.value?.state === '1') {
     tab.value = 'advancedCertification';
   }
 });

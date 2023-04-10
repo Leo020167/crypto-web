@@ -124,6 +124,7 @@
 import { mapGetters } from 'vuex';
 import { security } from '@/server/axios.js';
 import { useLocaleStore } from '../../stores/locale';
+import { useCertificationStore } from '@/stores/certification';
 export default {
   setup() {
     const localeStorage = useLocaleStore();
@@ -177,8 +178,12 @@ export default {
       } else if (command == 'layOut') {
         security.loginOut().then((res) => {
           if (res.code === '200') {
+            const store = useCertificationStore();
+            store.primaryCertification = null;
+            store.advancedCertification = null;
             this.$store.dispatch('removeCurrentUserInfo'); // vuex备存
             this.$router.push('/peopleList');
+
             // this.$router.push("/login");
           }
         });

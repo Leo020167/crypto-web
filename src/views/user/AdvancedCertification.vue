@@ -60,6 +60,7 @@ import { useCertificationStore } from '@/stores/certification';
 import { Message } from 'element-ui';
 import { computed, onMounted, reactive, ref, watchEffect } from 'vue';
 import ImageUpload from './ImageUpload.vue';
+import { storeToRefs } from 'pinia';
 
 const model = ref({
   certType: '',
@@ -95,17 +96,19 @@ onMounted(async () => {
   }
 });
 
-const { advancedCertification, getAdvancedCertification } =
-  useCertificationStore();
+const store = useCertificationStore();
+
+const { advancedCertification } = storeToRefs(store);
+const { getAdvancedCertification } = store;
 
 watchEffect(() => {
-  if (advancedCertification) {
-    model.value = advancedCertification;
+  if (advancedCertification.value) {
+    model.value = advancedCertification.value;
   }
 });
 
 const isValid = computed(() =>
-  ['0', '1'].includes(advancedCertification?.state ?? '')
+  ['0', '1'].includes(advancedCertification.value?.state ?? '')
 );
 
 const loading = ref(false);
@@ -113,10 +116,10 @@ const submitForm = () => {
   formRef.value.validate((valid) => {
     if (valid) {
       loading.value = true;
-      identitySubmit({ type: '2', ...model }).then(async (res) => {
+      identitySubmit({ type: '2', ...model.value }).then(async (res) => {
         if (res.code === '200') {
           await getAdvancedCertification();
-          loading.value = true;
+          loading.value = false;
           Message.success(res.msg);
         } else {
           Message.error(res.msg);

@@ -230,7 +230,7 @@ export const uploadImage = ({
   dir: dir,
   type: type,
   imageFiles: imageFiles,
-  config = {},
+  onUploadProgress,
 }) => {
   let url = uploadFileUrl + '/upload/file.do';
   let array = params.signParametersToURL({
@@ -245,7 +245,7 @@ export const uploadImage = ({
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
-      ...config,
+      onUploadProgress,
     })
     .then((resData) => {
       resData = resData.data;
