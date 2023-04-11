@@ -38,7 +38,7 @@
               @click="submit"
               :loading="loading"
             >
-              {{ $('tijiao') }}</el-button
+              {{ $t('tijiao') }}</el-button
             >
           </el-form-item>
         </el-form>

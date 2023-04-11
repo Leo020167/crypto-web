@@ -1,4 +1,40 @@
 {
+  "shouye": "Homepage",
+  "zhiyashengxi": "Pledge interest",
+  "chujirenzheng": "Primary Certification",
+  "gaojirenzheng": "Advanced Certification",
+  "weirenzheng": "Unauthenticated",
+  "zhengjianleixing": "Certificate Type",
+  "qingxuanzezhengjianleixing": "Please select the type of certificate",
+  "xingming": "Name",
+  "qingshuruxingming": "Please enter your name",
+  "zhengjianhaoma": "Document number",
+  "qingshuruzhenjianhaoma": "Please enter the ID number",
+  "zhengjianzhengmianzhao": "Certificate front photo",
+  "zhengjianfanmianzhao": "Reverse photo of the certificate",
+  "zhengjianshouchizhaopian": "Hand-held photo of ID card",
+  "tijiao": "Submit",
+  "home": {
+    "title": "A trusted cryptocurrency trading platform",
+    "description": "Strive to guarantee the safety of users with strict protocols and industry-leading technical measures"
+  },
+  "qujiaoyi": "Go to trade",
+  "quanqiuyouzhishuzizichan": "Global high-quality digital assets",
+  "shichangqushi": "market trend",
+  "chanpinhefuwu": "Products and Services",
+  "chanpinhefuwu2": "Provide safe and reliable digital asset transactions and asset management services for millions of users around the world, help the evolution of blockchain economy, and reshape the new ecological pattern of the industry",
+  "quanqiubuju": "Global Layout",
+  "quanqiubuju2": "Local service centers have been established in many countries around the world, integrating various business forms",
+  "xitonganquan": "System Security",
+  "xitongganquan2": "Professional distributed architecture and anti-DoS attack system, separation of hot and cold wallets, multi-dimensional protection of user assets",
+  "liuchangdejiaoyitiyan": "Smooth trading experience",
+  "liuchangdejiaoyitiyan2": "Use an efficient matching transaction engine to ensure a smooth transaction experience, process millions of orders per second, and pay for the smooth operation of more than 20 million online users",
+  "qingshuruyuanmima": "Please enter the original password",
+  "qingshuruxinmima": "Please enter a new password",
+  "qingshuru6weishumima": "Please enter a 6-digit password",
+  "qingshuruquerenmima": "Please enter the confirmation password",
+  "liangcimimashurubuyizhi": "The two passwords entered are inconsistent!",
+  "querenxinmima": "Confirm new password",
   "common": {
     "login_btn": "Login",
     "regist_btn": "Register",
@@ -74,7 +110,12 @@
     ],
     "text53": "min5",
 
-    "text54": ["Charge record", "Withdrawal record", "Transfer record", "Fiat record"],
+    "text54": [
+      "Charge record",
+      "Withdrawal record",
+      "Transfer record",
+      "Fiat record"
+    ],
     "text55": "Frozen Margin (USDT)",
     "text56": "+852 Hong Kong",
     "text57": "Please enter your mailbox",
@@ -631,7 +672,12 @@
     "zhanghushouyi": "Account Earnings",
     "followNum": "Followers",
     "tradeNum": "Number of trades",
-    "tabName": ["Last month", "Last three months", "Last six months", "Last year"],
+    "tabName": [
+      "Last month",
+      "Last three months",
+      "Last six months",
+      "Last year"
+    ],
     "radius1": "Profits with orders",
     "radius2": "Popularity",
     "radius3": "Take profit rate",
@@ -884,7 +930,12 @@
   },
   "capital-account": {
     "title": "Balance Account",
-    "tabs": ["Assets", "Deposit Records", "Withdrawal Records", "Fiat Currency Records"]
+    "tabs": [
+      "Assets",
+      "Deposit Records",
+      "Withdrawal Records",
+      "Fiat Currency Records"
+    ]
   },
   "currency-account": {
     "title": "Balance Account",

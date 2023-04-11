@@ -1,4 +1,40 @@
 {
+  "shouye": "ホームページ",
+  "zhiyashengxi": "利子を誓う",
+  "chujirenzheng": "一次認証",
+  "gaojirenzheng": "高度な認定",
+  "weirenzheng": "認証されていません",
+  "zhengjianleixing": "証明書の種類",
+  "qingxuanzhengjianleixing": "証明書の種類を選択してください",
+  "xingming": "名前",
+  "qingshuruxingming": "あなたの名前を入力してください",
+  "zhengjianhaoma": "文書番号",
+  "qingshuruzhenjianhaoma": "ID番号を入力してください",
+  "zhengjianzhengmianzhao": "証明書の正面写真",
+  "zhengjianfanmianzhao": "証明書の裏面の写真",
+  "zhengjianshouchizhaopian": "ID カードの手持ち写真",
+  "tijiao": "送信",
+  "home": {
+    "title": "信頼できる暗号通貨取引プラットフォーム",
+    "description": "厳格なプロトコルと業界をリードする技術的対策により、ユーザーの安全を保証するよう努めます"
+  },
+  "qujiaoyi": "取引に行く",
+  "quanqiuyouzhishuzizichan": "グローバルな高品質デジタル資産",
+  "shichangqushi": "市場動向",
+  "chanpinhefuwu": "製品とサービス",
+  "chanpinhefuwu2": "世界中の何百万人ものユーザーに安全で信頼性の高いデジタル資産取引と資産管理サービスを提供し、ブロックチェーン経済の進化を助け、業界の新しいエコロジカル パターンを作り直します",
+  "quanqiubuju": "グローバルレイアウト",
+  "quanqiubuju2": "ローカル サービス センターが世界中の多くの国に設立され、さまざまなビジネス形態が統合されています",
+  "xitonganquan": "システム セキュリティ",
+  "xitongganquan2": "プロフェッショナルな分散アーキテクチャとアンチ DoS 攻撃システム、ホット ウォレットとコールド ウォレットの分離、ユーザー資産の多次元保護",
+  "liuchangdejiaoyitiyan": "スムーズな取引体験",
+  "liuchangdejiaoyitiyan2": "効率的なマッチング トランザクション エンジンを使用して、スムーズなトランザクション エクスペリエンスを確保し、1 秒あたり数百万件の注文を処理し、2,000 万人を超えるオンライン ユーザーのスムーズな操作に支払います",
+  "qingshuruyuanmima": "元のパスワードを入力してください",
+  "qingshuruxinmima": "新しいパスワードを入力してください",
+  "qingshuru6weishumima": "6桁のパスワードを入力してください",
+  "qingshuruquerenmima": "確認パスワードを入力してください",
+  "liangcimimashurubuyizhi": "入力された 2 つのパスワードが一致しません!",
+  "querenxinmima": "新しいパスワードを確認してください",
   "common": {
     "login_btn": "ログインする",
     "regist_btn": "登録する",
@@ -886,7 +922,12 @@
   },
   "capital-account": {
     "title": "残高口座",
-    "tabs": ["Assets", "Deposit Records", "Withdrawal Records", "Fiat Currency Records"]
+    "tabs": [
+      "Assets",
+      "Deposit Records",
+      "Withdrawal Records",
+      "Fiat Currency Records"
+    ]
   },
   "currency-account": {
     "title": "残高口座",

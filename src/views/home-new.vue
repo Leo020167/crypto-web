@@ -51,7 +51,7 @@
     <section class="py-8">
       <div class="container mx-auto">
         <div class="text-center">
-          <div class="block-title text-4xl">{{ $('chanpinhefuwu') }}</div>
+          <div class="block-title text-4xl">{{ $t('chanpinhefuwu') }}</div>
           <div class="block-subtitle mx-auto mt-3 w-1/2 text-base">
             {{ $t('chanpinhefuwu2') }}
           </div>
@@ -64,9 +64,9 @@
               class="mx-auto my-4 mb-8 h-40 w-60"
             />
             <div>
-              <p class="text-xl">{{ $('quanqiubuju') }}</p>
+              <p class="text-xl">{{ $t('quanqiubuju') }}</p>
               <p class="mt-1 px-4 text-sm leading-7 text-gray-400">
-                {{ $('quanqiubuju2') }}
+                {{ $t('quanqiubuju2') }}
               </p>
             </div>
           </div>
@@ -90,9 +90,9 @@
               class="my-4 mb-8 h-40 w-auto"
             />
             <div style="width: 100%; text-align: center">
-              <p class="text-xl">{{ $('liuchangdejiaoyitiyan') }}</p>
+              <p class="text-xl">{{ $t('liuchangdejiaoyitiyan') }}</p>
               <p class="mt-1 px-4 text-sm leading-7 text-gray-400">
-                {{ $('liuchangdejiaoyitiyan2') }}
+                {{ $t('liuchangdejiaoyitiyan2') }}
               </p>
             </div>
           </div>
