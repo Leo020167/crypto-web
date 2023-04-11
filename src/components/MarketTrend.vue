@@ -1,7 +1,7 @@
 <template>
   <section class="relative z-40 -mt-6">
     <div class="container">
-      <div class="my-8 text-center text-4xl">市场趋势</div>
+      <div class="my-8 text-center text-4xl">{{ $t('shichangqushi') }}</div>
       <div class="p-4">
         <div class="grid grid-cols-4 gap-4">
           <div

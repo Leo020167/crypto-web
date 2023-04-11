@@ -7,10 +7,10 @@
       ref="formRef"
       label-width="100px"
     >
-      <el-form-item label="证件类型" prop="certType">
+      <el-form-item :label="$t('zhengjianleixing')" prop="certType">
         <el-select
           v-model="model.certType"
-          placeholder="请选择证件证件类型"
+          :placeholder="$t('qingxuanzezhengjianleixing')"
           :disabled="isValid"
         >
           <el-option
@@ -22,22 +22,22 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item label="姓名" prop="name">
+      <el-form-item :label="$t('xingming')" prop="name">
         <el-input
           v-model="model.name"
-          placeholder="请输入姓名"
+          :placeholder="$t('qingshuruxingming')"
           :disabled="isValid"
         ></el-input>
       </el-form-item>
 
-      <el-form-item label="证件正面照" prop="frontImgUrl">
+      <el-form-item :label="$t('zhengjianzhengmianzhao')" prop="frontImgUrl">
         <ImageUpload v-model="model.frontImgUrl" :disabled="isValid" />
       </el-form-item>
 
-      <el-form-item label="证件反面照" prop="backImgUrl">
+      <el-form-item :label="$t('zhengjianfanmianzhao')" prop="backImgUrl">
         <ImageUpload v-model="model.backImgUrl" :disabled="isValid" />
       </el-form-item>
-      <el-form-item label="证件手持照片" prop="holdImgUrl">
+      <el-form-item :label="$t('zhengjianshouchizhaopian')" prop="holdImgUrl">
         <ImageUpload v-model="model.holdImgUrl" :disabled="isValid" />
       </el-form-item>
 
@@ -47,7 +47,7 @@
           @click="submitForm"
           :disabled="isValid"
           :loading="loading"
-          >提交</el-button
+          >{{ $t('tijiao') }}</el-button
         >
       </el-form-item>
     </el-form>
@@ -61,6 +61,9 @@ import { Message } from 'element-ui';
 import { computed, onMounted, reactive, ref, watchEffect } from 'vue';
 import ImageUpload from './ImageUpload.vue';
 import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n-composable';
+
+const { t } = useI18n();
 
 const model = ref({
   certType: '',
@@ -72,7 +75,13 @@ const model = ref({
 });
 
 const rules = reactive({
-  certType: [{ required: true, message: '请选择证件类型', trigger: 'blur' }],
+  certType: [
+    {
+      required: true,
+      message: t('qingxuanzezhengjianleixing'),
+      trigger: 'blur',
+    },
+  ],
   name: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
   certNo: [{ required: true, message: '请输入证件号码', trigger: 'blur' }],
   frontImgUrl: [

@@ -3,14 +3,14 @@
     <div class="container bg-white mt-10 p-4">
       <el-tabs v-model="tab" type="card">
         <el-tab-pane
-          :label="`初级认证(${primaryCertificationStatus})`"
+          :label="primaryCertificationStatus"
           name="primaryCertification"
           :disabled="primaryCertification?.state === '1'"
         >
           <PrimaryCertification />
         </el-tab-pane>
         <el-tab-pane
-          :label="`高级认证(${advancedCertificationStatus})`"
+          :label="advancedCertificationStatus"
           name="advancedCertification"
           :disabled="primaryCertification?.state !== '1'"
         >
@@ -27,6 +27,10 @@ import PrimaryCertification from './PrimaryCertification.vue';
 import AdvancedCertification from './AdvancedCertification.vue';
 import { useCertificationStore } from '@/stores/certification';
 import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n-composable';
+
+const { t } = useI18n();
+
 // primaryCertification
 // advancedCertification
 
@@ -45,16 +49,16 @@ onMounted(async () => {
 
 const primaryCertificationStatus = computed(() => {
   if (primaryCertification.value) {
-    return primaryCertification.value.stateDesc;
+    return `${t('chujirenzheng')}(${primaryCertification.value.stateDesc})`;
   }
-  return '未认证';
+  return t('weirenzheng');
 });
 
 const advancedCertificationStatus = computed(() => {
   if (advancedCertification.value) {
-    return advancedCertification.value.stateDesc;
+    return `${t('gaojirenzheng')}(${advancedCertification.value.stateDesc})`;
   }
-  return '未认证';
+  return t('weirenzheng');
 });
 
 watchEffect(() => {

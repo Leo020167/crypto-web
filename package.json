@@ -31,6 +31,7 @@
     "vue": "^2.7.14",
     "vue-echarts": "^6.5.4",
     "vue-i18n": "^8.28.2",
+    "vue-i18n-composable": "^2.0.0",
     "vue-qriously": "^1.1.1",
     "vue-router": "^3.6.5",
     "vuex": "^3.6.2"
@@ -51,7 +52,7 @@
     "sass": "^1.61.0",
     "tailwind-scrollbar": "^3.0.0",
     "tailwindcss": "^3.3.1",
-    "terser": "^5.16.8",
+    "terser": "^5.16.9",
     "vite": "^4.2.1"
   }
 }

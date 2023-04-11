@@ -13,21 +13,21 @@
             <el-input
               v-model="model.oldPayPass"
               type="password"
-              placeholder="请输入原密码"
+              :placeholder="t('qingshuruyuanmima')"
             />
           </el-form-item>
           <el-form-item prop="payPass">
             <el-input
               v-model="model.payPass"
               type="password"
-              placeholder="请输入新密码"
+              :placeholder="t('qingshuruxinmima')"
             />
           </el-form-item>
           <el-form-item prop="configPayPass">
             <el-input
               v-model="model.configPayPass"
               type="password"
-              placeholder="确认新密码"
+              :placeholder="t('querenxinmima')"
             />
           </el-form-item>
 
@@ -38,7 +38,7 @@
               @click="submit"
               :loading="loading"
             >
-              提交</el-button
+              {{ $('tijiao') }}</el-button
             >
           </el-form-item>
         </el-form>
@@ -52,6 +52,9 @@ import { computed, inject, reactive, ref } from 'vue';
 import { setPayPass } from '@/server/axios';
 import { Message } from 'element-ui';
 import { useRouter } from 'vue-router/composables';
+import { useI18n } from 'vue-i18n-composable';
+
+const { t } = useI18n();
 
 const model = reactive({
   payPass: '',
@@ -66,16 +69,18 @@ const store = inject('vuex-store'); // TODO
 const userInfo = computed(() => store.getters.getCurrentUserInfos);
 
 const rules = reactive({
-  oldPayPass: [{ required: true, message: '请输入原密码', trigger: 'blur' }],
+  oldPayPass: [
+    { required: true, message: t('qingshuruyuanmima'), trigger: 'blur' },
+  ],
   payPass: [
     {
       validator: (rule, value, callback) => {
         if (!value) {
-          return callback('请输入新密码');
+          return callback(t('qingshuruxinmima'));
         }
 
         if (value.length !== 6) {
-          return callback('请输入6位数密码');
+          return callback(t('qingshuru6weishumima'));
         }
 
         return callback();
@@ -87,11 +92,11 @@ const rules = reactive({
     {
       validator: (rule, value, callback) => {
         if (!value) {
-          return callback('请输入确认密码');
+          return callback(t('qingshuruquerenmima'));
         }
 
         if (value !== model.payPass) {
-          return callback('两次密码输入不一致!');
+          return callback(t('liangcimimashurubuyizhi'));
         }
 
         return callback();

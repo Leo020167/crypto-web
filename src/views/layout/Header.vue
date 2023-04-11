@@ -5,7 +5,7 @@
     </div>
     <ul class="nav-container">
       <li class="nav-item">
-        <router-link to="/">{{ $t('header.home') }}</router-link>
+        <router-link to="/home">{{ $t('shouye') }}</router-link>
       </li>
       <li class="nav-item">
         <router-link to="/trading">{{ $t('header.trading') }}</router-link>
@@ -16,7 +16,7 @@
         }}</router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
+        <router-link to="/pledge">{{ $t('zhiyashengxi') }}</router-link>
       </li>
     </ul>
 

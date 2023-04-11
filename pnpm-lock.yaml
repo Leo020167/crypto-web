@@ -58,6 +58,9 @@ dependencies:
   vue-i18n:
     specifier: ^8.28.2
     version: 8.28.2(vue@2.7.14)
+  vue-i18n-composable:
+    specifier: ^2.0.0
+    version: 2.0.0(vue-i18n@8.28.2)(vue@2.7.14)
   vue-qriously:
     specifier: ^1.1.1
     version: 1.1.1(vue@2.7.14)
@@ -74,7 +77,7 @@ devDependencies:
     version: 4.1.1(prettier@2.8.7)
   '@vitejs/plugin-legacy':
     specifier: ^4.0.2
-    version: 4.0.2(terser@5.16.8)(vite@4.2.1)
+    version: 4.0.2(terser@5.16.9)(vite@4.2.1)
   '@vitejs/plugin-vue2':
     specifier: ^2.2.0
     version: 2.2.0(vite@4.2.1)(vue@2.7.14)
@@ -115,11 +118,11 @@ devDependencies:
     specifier: ^3.3.1
     version: 3.3.1(postcss@8.4.21)
   terser:
-    specifier: ^5.16.8
-    version: 5.16.8
+    specifier: ^5.16.9
+    version: 5.16.9
   vite:
     specifier: ^4.2.1
-    version: 4.2.1(sass@1.61.0)(terser@5.16.8)
+    version: 4.2.1(sass@1.61.0)(terser@5.16.9)
 
 packages:
 
@@ -1691,7 +1694,7 @@ packages:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: false
 
-  /@vitejs/plugin-legacy@4.0.2(terser@5.16.8)(vite@4.2.1):
+  /@vitejs/plugin-legacy@4.0.2(terser@5.16.9)(vite@4.2.1):
     resolution: {integrity: sha512-ivnt9sCkgwJTYTWLjuvY6H/HTuiQC1EgzAPkiAvi0yNAssiqOJjyjhG3hAK5LFUUorE0w9kGxn8K0f/74DlbxQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1705,8 +1708,8 @@ packages:
       magic-string: 0.30.0
       regenerator-runtime: 0.13.11
       systemjs: 6.14.1
-      terser: 5.16.8
-      vite: 4.2.1(sass@1.61.0)(terser@5.16.8)
+      terser: 5.16.9
+      vite: 4.2.1(sass@1.61.0)(terser@5.16.9)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1718,7 +1721,7 @@ packages:
       vite: ^3.0.0 || ^4.0.0
       vue: ^2.7.0-0
     dependencies:
-      vite: 4.2.1(sass@1.61.0)(terser@5.16.8)
+      vite: 4.2.1(sass@1.61.0)(terser@5.16.9)
       vue: 2.7.14
     dev: true
 
@@ -3534,8 +3537,8 @@ packages:
       - ts-node
     dev: true
 
-  /terser@5.16.8:
-    resolution: {integrity: sha512-QI5g1E/ef7d+PsDifb+a6nnVgC4F22Bg6T0xrBrz6iloVB4PUkkunp6V8nzoOOZJIzjWVdAGqCdlKlhLq/TbIA==}
+  /terser@5.16.9:
+    resolution: {integrity: sha512-HPa/FdTB9XGI2H1/keLFZHxl6WNvAI4YalHGtDQTlMnJcoqSab1UwL4l1hGEhs6/GmLHBZIg/YgB++jcbzoOEg==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -3651,7 +3654,7 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite@4.2.1(sass@1.61.0)(terser@5.16.8):
+  /vite@4.2.1(sass@1.61.0)(terser@5.16.9):
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3681,7 +3684,7 @@ packages:
       resolve: 1.22.2
       rollup: 3.20.2
       sass: 1.61.0
-      terser: 5.16.8
+      terser: 5.16.9
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3735,6 +3738,16 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-i18n-composable@2.0.0(vue-i18n@8.28.2)(vue@2.7.14):
+    resolution: {integrity: sha512-oCiX+xoNZKISv7/G1ZtSpi4/E16mQnI5DkZlBlEt++YVj6PZBCyqaiNotfzqDXz8TODnugi8sM39x+MRe+8ziA==}
+    peerDependencies:
+      vue: '>=2.7 <3'
+      vue-i18n: '>=8 <9'
+    dependencies:
+      vue: 2.7.14
+      vue-i18n: 8.28.2(vue@2.7.14)
+    dev: false
 
   /vue-i18n@8.28.2(vue@2.7.14):
     resolution: {integrity: sha512-C5GZjs1tYlAqjwymaaCPDjCyGo10ajUphiwA922jKt9n7KPpqR7oM1PCwYzhB/E7+nT3wfdG3oRre5raIT1rKA==}

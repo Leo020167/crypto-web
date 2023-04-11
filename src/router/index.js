@@ -25,7 +25,7 @@ const router = new VueRouter({
       redirect: '/Login',
       children: [
         {
-          path: '',
+          path: '/home',
           component: () => import('@/views/home-new.vue'),
         },
         {

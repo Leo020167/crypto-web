@@ -7,10 +7,10 @@
       ref="formRef"
       label-width="100px"
     >
-      <el-form-item label="证件类型" prop="certType">
+      <el-form-item :label="t('zhengjianleixing')" prop="certType">
         <el-select
           v-model="model.certType"
-          placeholder="请选择证件证件类型"
+          :placeholder="t('qingxuanzezhengjianleixing')"
           :disabled="isValid"
         >
           <el-option
@@ -22,18 +22,18 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item label="姓名" prop="name">
+      <el-form-item :label="t('xingming')" prop="name">
         <el-input
           v-model="model.name"
-          placeholder="请输入姓名"
+          :placeholder="t('qingshuruxingming')"
           :disabled="isValid"
         ></el-input>
       </el-form-item>
 
-      <el-form-item label="证件号码" prop="certNo">
+      <el-form-item :label="t('zhengjianhaoma')" prop="certNo">
         <el-input
           v-model="model.certNo"
-          placeholder="请输入证件号码"
+          :placeholder="t('qingshuruzhengjianhaoma')"
           :disabled="isValid"
         ></el-input>
       </el-form-item>
@@ -44,7 +44,7 @@
           @click="submitForm"
           :disabled="isValid"
           :loading="loading"
-          >提交</el-button
+          >{{ t('tijiao') }}</el-button
         >
       </el-form-item>
     </el-form>
@@ -56,6 +56,9 @@ import { identityConfig, identitySubmit } from '@/server/axios';
 import { useCertificationStore } from '@/stores/certification';
 import { Message } from 'element-ui';
 import { computed, onMounted, reactive, ref, watchEffect } from 'vue';
+import { useI18n } from 'vue-i18n-composable';
+
+const { t } = useI18n();
 
 const model = ref({
   certType: '',
@@ -64,9 +67,17 @@ const model = ref({
 });
 
 const rules = reactive({
-  certType: [{ required: true, message: '请选择证件类型', trigger: 'blur' }],
-  name: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
-  certNo: [{ required: true, message: '请输入证件号码', trigger: 'blur' }],
+  certType: [
+    {
+      required: true,
+      message: t('qingxuanzezhengjianleixing'),
+      trigger: 'blur',
+    },
+  ],
+  name: [{ required: true, message: t('qingshuruxingming'), trigger: 'blur' }],
+  certNo: [
+    { required: true, message: t('qingshuruzhengjianhaoma'), trigger: 'blur' },
+  ],
 });
 
 const formRef = ref(null);

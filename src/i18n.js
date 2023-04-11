@@ -19,10 +19,11 @@ import zhTWLocale from 'element-ui/lib/locale/lang/zh-TW';
 import ElementLocale from 'element-ui/lib/locale';
 import VueI18n from 'vue-i18n';
 import Vue from 'vue';
+import { createI18n } from 'vue-i18n-composable';
 
 Vue.use(VueI18n);
 
-const i18n = new VueI18n({
+const i18n = createI18n({
   locale: localStorage.getItem('locale')
     ? localStorage.getItem('locale')
     : 'en',
@@ -39,5 +40,5 @@ const i18n = new VueI18n({
 });
 
 ElementLocale.i18n((key, value) => i18n.t(key, value));
-console.log(Object.assign(ru, ruRULocale));
+
 export default i18n;
