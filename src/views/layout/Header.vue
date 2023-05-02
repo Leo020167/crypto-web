@@ -84,11 +84,9 @@
                   />
                 </div>
               </div>
-              <router-link to="/user/authentication">
-                <el-dropdown-item divided>{{
-                  $t('header.verify')
-                }}</el-dropdown-item>
-              </router-link>
+
+              <PrimaryCertificationDropdownItem />
+              <AdvancedCertificationDropdownItem />
               <router-link to="/user/myCommunity">
                 <el-dropdown-item>{{
                   $t('header.my_community')
@@ -125,10 +123,11 @@ import { mapGetters } from 'vuex';
 import { security } from '@/server/axios.js';
 import { useLocaleStore } from '../../stores/locale';
 import { useCertificationStore } from '@/stores/certification';
+import PrimaryCertificationDropdownItem from './PrimaryCertificationDropdownItem.vue';
+import AdvancedCertificationDropdownItem from './AdvancedCertificationDropdownItem.vue';
 export default {
   setup() {
     const localeStorage = useLocaleStore();
-
     return {
       localeStorage,
     };
@@ -150,7 +149,6 @@ export default {
       getMsgState: 'getMsgState',
     }),
   },
-
   methods: {
     getMymessage() {
       this.$router.push('/user/message');
@@ -183,12 +181,9 @@ export default {
             store.advancedCertification = null;
             this.$store.dispatch('removeCurrentUserInfo'); // vuex备存
             this.$router.push('/peopleList');
-
             // this.$router.push("/login");
           }
         });
-      } else {
-        this.$router.push('/assets/balance');
       }
     },
     // 切换语言
@@ -216,6 +211,10 @@ export default {
           : 'en';
       window.location.href = `https://www.wwctrade.com/?lang=${lang}`;
     },
+  },
+  components: {
+    PrimaryCertificationDropdownItem,
+    AdvancedCertificationDropdownItem,
   },
 };
 </script>

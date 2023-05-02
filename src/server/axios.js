@@ -178,6 +178,7 @@ export const security = {
     let url = baseUrl + '/identity/get.do';
     return func.axiosPost(url, {});
   },
+
   // 实名验证,先上传图片
   submitRealname: (name, certNo, frontImgUrl, backImgUrl, birth) => {
     let url = baseUrl + '/identity/submit.do';

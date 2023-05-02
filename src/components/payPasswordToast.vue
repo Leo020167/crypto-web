@@ -40,7 +40,7 @@
       </form>
       <div class="pwd-tips">
         <p :class="errormsg ? 'Msg error' : 'Msg'">
-          {{ errormsg ? errormsg : "请输入6位交易密码" }}
+          {{ errormsg ? errormsg : '请输入6位交易密码' }}
         </p>
         <span class="forget" @click="forgetPwd">交易密码管理</span>
       </div>
@@ -52,28 +52,28 @@
 export default {
   data() {
     return {
-      pwd1: "",
+      pwd1: '',
       showPwd1Brink: false,
     };
   },
-  props: ["errormsg", "showError"],
+  props: ['errormsg', 'showError'],
   mounted() {
     this.focusPwd1();
   },
   watch: {
-    errormsg(val) {
-      this.pwd1 = "";
+    errormsg() {
+      this.pwd1 = '';
       this.focusPwd1();
     },
   },
   methods: {
     hidePwd() {
-      this.$emit("hidePwd");
+      this.$emit('hidePwd');
     },
     changePwd1() {
       if (this.pwd1.length >= 6) {
         this.pwd1 = this.pwd1.slice(0, 6);
-        this.$emit("getPwd", this.pwd1);
+        this.$emit('getPwd', this.pwd1);
       }
     },
     focusPwd1() {
@@ -81,7 +81,7 @@ export default {
       this.showPwd1Brink = true;
     },
     forgetPwd() {
-      this.$router.push("/user/safePassword");
+      this.$router.push('/user/safePassword');
     },
   },
 };
@@ -163,7 +163,7 @@ export default {
       }
       .psd-blink {
         display: inline-block;
-        background: url("../assets/blink.gif") no-repeat center;
+        background: url('../assets/blink.gif') no-repeat center;
       }
       .pwd-wrap {
         width: 80%;

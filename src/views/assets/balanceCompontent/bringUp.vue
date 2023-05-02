@@ -52,23 +52,21 @@
         <div>
           <span
             >{{ $t('withdrawCoins.text4') }}
-
             <router-link class="text-[#2E8DED] text-xs ml-2.5" to="/address">{{
               $t('withdrawCoins.text5')
             }}</router-link>
           </span>
           <div class="mt-4 w-[550px]">
-            <el-select v-model="addressId">
-              <el-option
-                v-for="item in addressList"
-                :key="item.id"
-                :label="`${[item.symbol, item.address, item.remark]
-                  .filter(Boolean)
-                  .join(' ')}`"
-                :value="item.id"
-              >
-              </el-option>
-            </el-select>
+            <el-autocomplete
+              v-model="addressStr"
+              :fetch-suggestions="querySearch"
+              @select="handleSelect"
+              :placeholder="$t('transfer_dialog.please_choose')"
+              style="width: 100%"
+              @clear="handleClear"
+              @change="handleChange"
+              clearable
+            ></el-autocomplete>
           </div>
         </div>
 
@@ -196,6 +194,7 @@ export default {
   },
   data() {
     return {
+      addressStr: '',
       smsText: this.$t('login.sms_tip1'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
@@ -270,6 +269,23 @@ export default {
     });
   },
   methods: {
+    handleChange() {
+      this.addressId = null;
+    },
+    handleClear() {
+      this.addressId = null;
+    },
+    handleSelect(item) {
+      this.addressId = item.id;
+    },
+    querySearch(queryString, cb) {
+      cb(
+        this.addressList.map((v) => ({
+          ...v,
+          value: `${[v.symbol, v.address, v.remark].filter(Boolean).join(' ')}`,
+        }))
+      );
+    },
     onSymbolChanged() {
       this.addressId = '';
     },
@@ -343,7 +359,10 @@ export default {
         .then(() => {
           withdrawSubmit({
             amount: this.amount,
-            addressId: this.addressId,
+            symbol: this.symbol,
+            address: this.addressStr,
+            chainType: this.chainType ?? '',
+            addressId: this.addressId ?? '0',
           }).then((res1) => {
             if (res1.code == 200) {
               this.$message.success(res1.msg);
@@ -381,7 +400,6 @@ export default {
             2
           )
           .then((res) => {
-            console.log(res);
             if (res.code === '200') {
               // this.countDown();
               this.$message.success(res.msg);
@@ -410,7 +428,6 @@ export default {
             1
           )
           .then((res) => {
-            console.log(res);
             if (res.code === '200') {
               // this.countDown();
               this.$message.success(res.msg);
@@ -467,10 +484,11 @@ export default {
     },
 
     onSubmit() {
-      if (!this.addressId) {
+      if (!this.addressStr && !this.addressId) {
         this.$message.error('請選擇提幣地址');
         return;
       }
+
       if (!this.amount || !this.amount.trim().length) {
         this.$message.error('請輸入提幣數量');
         return;

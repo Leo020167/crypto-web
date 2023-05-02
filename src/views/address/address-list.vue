@@ -117,6 +117,7 @@ import {
 } from '@/server/axios.js';
 
 import PayPasswordToast from '@/components/payPasswordToast.vue';
+import md5 from 'js-md5';
 
 export default {
   components: { PayPasswordToast },
@@ -192,6 +193,7 @@ export default {
         chainType: this.symbol === 'USDT' ? this.chainType : '',
         remark: this.formData.remark ?? '',
         symbol: this.symbol,
+        payPass: md5(this.payPass).toUpperCase(),
       }).then(this.handleResult);
     },
     handleResult(res) {
