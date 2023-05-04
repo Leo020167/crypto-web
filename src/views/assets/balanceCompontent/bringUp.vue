@@ -94,11 +94,7 @@
           <div class="flex items-center justify-between mt-3">
             <span>{{ $t('withdrawCoins.text9') }}({{ symbol }})</span>
             <span>
-              {{
-                amount
-                  ? (Number(amount) - Number(configs?.fee)).toFixed(2)
-                  : '0.00'
-              }}
+              {{ price }}
             </span>
           </div>
         </div>
@@ -174,6 +170,14 @@
         >
       </el-card>
     </div>
+
+    <pay-password-toast
+      v-if="showPayPwd"
+      :showError="showError"
+      :errormsg="message"
+      @hidePwd="hidePwd"
+      @getPwd="getPwd"
+    />
   </div>
 </template>
 
@@ -187,10 +191,13 @@ import {
 } from '@/server/axios.js';
 
 import Validation from '../../layout/Validation.vue';
+import PayPasswordToast from '@/components/payPasswordToast.vue';
+import md5 from 'js-md5';
 
 export default {
   components: {
     Validation,
+    PayPasswordToast,
   },
   data() {
     return {
@@ -201,14 +208,11 @@ export default {
       codeSms: '',
       getValid: false,
       radio: 0,
-      radioList: [],
-      activeIndex: 0,
       imageUrl: '',
       number: '',
       file: '',
       balance: 0,
       allNumber: '',
-      price: 0,
       url: '',
       locationx: 0,
       dragImgKey: '',
@@ -229,6 +233,11 @@ export default {
       amount: '',
       addressList: [],
       addressId: '',
+      //
+      showPayPwd: false,
+      showError: false, //40032
+      message: 'Please enter the 6-digit payment password',
+      payPass: '',
     };
   },
   watch: {
@@ -252,6 +261,11 @@ export default {
     },
   },
   computed: {
+    price() {
+      return this.amount
+        ? (Number(this.amount) - Number(this.configs?.fee)).toFixed(2)
+        : '0.00';
+    },
     addressParams() {
       return { symbol: this.symbol, chainType: this.chainType };
     },
@@ -268,7 +282,47 @@ export default {
       this.chainType = this.chainTypeList?.[0];
     });
   },
+  mounted() {
+    if (!this.userInfo.payPass) {
+      //用户没设置过交易密码
+      this.$confirm(this.$t('payDialog.message2'), this.$t('assets.tips'), {
+        confirmButtonText: this.$t('payDialog.toSetPwd'),
+        cancelButtonText: this.$t('payDialog.cancel_set'),
+        type: 'warning',
+      })
+        .then(() => {
+          this.$router.push('/user/safePassword');
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: this.$t('payDialog.cancel_set'),
+          });
+        });
+    }
+  },
   methods: {
+    // 支付弹窗消失
+    hidePwd() {
+      this.showPayPwd = false;
+    },
+    // 支付弹窗的回调事件
+    getPwd(psw) {
+      this.payPass = psw;
+      withdrawSubmit({
+        amount: this.amount,
+        symbol: this.symbol,
+        address: this.addressStr,
+        chainType: this.chainType ?? '',
+        addressId: this.addressId ?? '0',
+        payPass: md5(this.payPass).toUpperCase(),
+      }).then((res) => {
+        if (res.code == 200) {
+          this.$message.success(res.msg);
+          this.$router.go(-1);
+        }
+      });
+    },
     handleChange() {
       this.addressId = null;
     },
@@ -347,7 +401,7 @@ export default {
       this.$confirm(
         this.$t('assets.text16') +
           this.price +
-          this.radioList[this.activeIndex].type +
+          this.symbol +
           this.$t('assets.text17'),
         this.$t('assets.tips'),
         {
@@ -363,17 +417,10 @@ export default {
             address: this.addressStr,
             chainType: this.chainType ?? '',
             addressId: this.addressId ?? '0',
-          }).then((res1) => {
-            if (res1.code == 200) {
-              this.$message.success(res1.msg);
-              setTimeout(() => {
-                this.$router.go(-1);
-              }, 1000);
-            } else {
-              this.$message.error(res1.msg);
-              setTimeout(() => {
-                this.$router.go(-1);
-              }, 1000);
+          }).then((res) => {
+            if (res.code == 200) {
+              this.$message.success(res.msg);
+              this.$router.go(-1);
             }
           });
         })
@@ -498,7 +545,7 @@ export default {
         return;
       }
 
-      this.showFlag = true;
+      this.showPayPwd = true;
     },
   },
 };

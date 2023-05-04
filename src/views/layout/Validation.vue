@@ -18,7 +18,7 @@
           :width="loadingWidth"
         ></div>
         <p v-show="isError" class="tips" @click="renew">
-          {{ $t("login.sms_tip2") }}
+          {{ $t('login.sms_tip2') }}
         </p>
       </div>
       <div class="top-img" :style="dragBgStyle">
@@ -43,17 +43,17 @@
 </template>
 
 <script>
-import { imgVerify } from "../../server/axios";
+import { imgVerify } from '../../server/axios';
 
-import dragS from "../../assets/dragS.png";
-import dragMove from "../../assets/dragMove.png";
+import dragS from '../../assets/dragS.png';
+import dragMove from '../../assets/dragMove.png';
 export default {
-  name: "Validation",
+  name: 'Validation',
   props: {
     validTitle: {
       type: String,
       default() {
-        return this.$t("drag.title");
+        return this.$t('drag.title');
       },
     },
   },
@@ -65,41 +65,41 @@ export default {
       isLoading: true,
       // errorLoading
       isError: false,
-      loadingColor: "#fe5400",
-      loadingHeight: "140px",
-      loadingWidth: "140px",
+      loadingColor: '#fe5400',
+      loadingHeight: '140px',
+      loadingWidth: '140px',
       showdragTip: false,
-      drgeTip: "",
+      drgeTip: '',
       showProgress: false,
       // 颜色
       progressR: true,
       commonStyle: {
-        width: "297px",
+        width: '297px',
       },
       dragBgStyle: {
-        backgroundImage: "",
-        width: "297px",
-        height: "180px",
+        backgroundImage: '',
+        width: '297px',
+        height: '180px',
       },
       dragMiniStyle: {
-        backgroundImage: "",
-        width: "0",
-        height: "0",
-        top: "0",
-        left: "0",
+        backgroundImage: '',
+        width: '0',
+        height: '0',
+        top: '0',
+        left: '0',
       },
       touchStyle: {
-        width: "0",
-        left: "0",
-        backgroundImage: "",
+        width: '0',
+        left: '0',
+        backgroundImage: '',
       },
       progressWidth: {
-        width: "0",
+        width: '0',
       },
       // 方块图
-      dragImg: "",
+      dragImg: '',
       // 此时的图片验证码的key
-      dragImgKey: "",
+      dragImgKey: '',
       // 当前屏幕的宽度
       screenWidth: document.body.clientWidth,
       // 缩放比例(大小的背景)
@@ -138,8 +138,8 @@ export default {
           newBI.onload = () => {
             this.dragBgStyle = {
               backgroundImage: `url("${newBI.src}")`,
-              width: bgWidth + "px",
-              height: bgHeight + "px",
+              width: bgWidth + 'px',
+              height: bgHeight + 'px',
             };
             this.showLoading = false;
           };
@@ -150,18 +150,18 @@ export default {
           let miniTop = data.locationy / this.dragLis;
           this.dragMiniStyle = {
             backgroundImage: `url("${data.smallImgName}")`,
-            height: miniH + "px",
-            width: miniW + "px",
-            top: miniTop + "px",
-            left: "0",
+            height: miniH + 'px',
+            width: miniW + 'px',
+            top: miniTop + 'px',
+            left: '0',
           };
           // 拖动条
           this.touchStyle = {
-            width: miniW + "px",
+            width: miniW + 'px',
             left: 0,
-            backgroundImage: "url(" + dragMove + ")",
+            backgroundImage: 'url(' + dragMove + ')',
           };
-          this.commonStyle = { width: bgWidth + 20 + "px" };
+          this.commonStyle = { width: bgWidth + 20 + 'px' };
           this.placeWidth = bgWidth;
           this.touchWidth = miniW;
           this.isError = false;
@@ -188,16 +188,16 @@ export default {
       let lefts = e.clientX - dragLeft - 50;
       let maxLf = this.placeWidth - this.touchWidth;
       if (lefts <= 0) {
-        this.dragMiniStyle.left = "0";
-        this.touchStyle.left = "0";
-        this.locationX = "0";
+        this.dragMiniStyle.left = '0';
+        this.touchStyle.left = '0';
+        this.locationX = '0';
       } else if (lefts > 0 && lefts < maxLf) {
-        this.dragMiniStyle.left = lefts + "px";
-        this.touchStyle.left = lefts + "px";
+        this.dragMiniStyle.left = lefts + 'px';
+        this.touchStyle.left = lefts + 'px';
         this.locationX = Math.round(lefts * this.dragLis);
       } else {
-        this.dragMiniStyle.left = maxLf + "px";
-        this.touchStyle.left = maxLf + "px";
+        this.dragMiniStyle.left = maxLf + 'px';
+        this.touchStyle.left = maxLf + 'px';
         this.locationX = Math.round(maxLf * this.dragLis);
       }
       this.progressWidth.width = this.touchStyle.left;
@@ -219,11 +219,11 @@ export default {
         if (res.code == 200) {
           let maxLf = this.placeWidth - this.touchWidth;
           setTimeout(() => {
-            this.touchStyle.left = maxLf + "px";
+            this.touchStyle.left = maxLf + 'px';
             this.progressR = false;
-            this.touchStyle.backgroundImage = "url(" + dragS + ")";
-            this.progressWidth.width = maxLf + "px";
-            this.$emit("dragSuccess", this.locationX, this.dragImgKey);
+            this.touchStyle.backgroundImage = 'url(' + dragS + ')';
+            this.progressWidth.width = maxLf + 'px';
+            this.$emit('dragSuccess', this.locationX, this.dragImgKey);
           }, 800);
         } else {
           this.showdragTip = true;
@@ -244,7 +244,7 @@ export default {
     },
     // 关闭
     hideVaild() {
-      this.$emit("closeValid");
+      this.$emit('closeValid');
     },
   },
 };

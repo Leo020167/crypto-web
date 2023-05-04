@@ -363,6 +363,8 @@ export default {
       this.getRecords();
       this.getDishData();
     }, ReflashRealSeconds);
+
+    console.log(this.symbolType);
   },
 
   computed: {

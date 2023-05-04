@@ -463,7 +463,6 @@ export default {
   },
   created() {
     this.getConfigData();
-    console.log(this.compots);
     this.checkOutOpen('buy');
     this.checkOutOpen('sell');
   },
