@@ -188,6 +188,7 @@ import {
   getWithdrawConfigs,
   addressList,
   withdrawSubmit,
+  getUserInfo,
 } from '@/server/axios.js';
 
 import Validation from '../../layout/Validation.vue';
@@ -274,7 +275,29 @@ export default {
     },
   },
   created() {
-    this.userInfo = this.$store.state.user.userInfos.user;
+    getUserInfo().then((res) => {
+      if (res.code == 200) {
+        this.userInfo = res.data;
+
+        if (!this.userInfo.payPass) {
+          //用户没设置过交易密码
+          this.$confirm(this.$t('payDialog.message2'), this.$t('assets.tips'), {
+            confirmButtonText: this.$t('payDialog.toSetPwd'),
+            cancelButtonText: this.$t('payDialog.cancel_set'),
+            type: 'warning',
+          })
+            .then(() => {
+              this.$router.push('/user/safePassword');
+            })
+            .catch(() => {
+              this.$message({
+                type: 'info',
+                message: this.$t('payDialog.cancel_set'),
+              });
+            });
+        }
+      }
+    });
 
     coinList({ inOut: -1 }).then((res) => {
       this.chainTypeList = res.data.chainTypeList;
@@ -282,25 +305,7 @@ export default {
       this.chainType = this.chainTypeList?.[0];
     });
   },
-  mounted() {
-    if (!this.userInfo.payPass) {
-      //用户没设置过交易密码
-      this.$confirm(this.$t('payDialog.message2'), this.$t('assets.tips'), {
-        confirmButtonText: this.$t('payDialog.toSetPwd'),
-        cancelButtonText: this.$t('payDialog.cancel_set'),
-        type: 'warning',
-      })
-        .then(() => {
-          this.$router.push('/user/safePassword');
-        })
-        .catch(() => {
-          this.$message({
-            type: 'info',
-            message: this.$t('payDialog.cancel_set'),
-          });
-        });
-    }
-  },
+
   methods: {
     // 支付弹窗消失
     hidePwd() {
@@ -320,6 +325,8 @@ export default {
         if (res.code == 200) {
           this.$message.success(res.msg);
           this.$router.go(-1);
+        } else {
+          this.$message.error(res.msg);
         }
       });
     },

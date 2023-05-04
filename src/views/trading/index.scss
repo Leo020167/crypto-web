@@ -1,5 +1,5 @@
 $item-background: #171b2b;
-.colorGray{
+.colorGray {
   color: #ffffff52;
 }
 .trading-container {
@@ -24,7 +24,7 @@ $item-background: #171b2b;
       .trading-top-left-top {
         padding: 20px 0;
         background-color: $item-background;
-        &.changeHeight{
+        &.changeHeight {
           height: 100%;
         }
         .symbol-and-option {
@@ -33,12 +33,12 @@ $item-background: #171b2b;
           .symbol-content {
             line-height: 18px;
             margin: 5px 0 5px 5px;
-            .symbol{
+            .symbol {
               font-size: 14px;
             }
             .name {
               font-size: 12px;
-              color: #A2A3AA;
+              color: #a2a3aa;
             }
           }
         }
@@ -70,7 +70,7 @@ $item-background: #171b2b;
           border: 1px solid #747680;
           background: #171b2b;
           margin: 0 17px;
-         
+
           .icon-search {
             margin-top: 7px;
             color: #747680;
@@ -85,7 +85,6 @@ $item-background: #171b2b;
             &:hover {
               background-color: $item-background;
             }
-            
           }
           .coinTableCellClass {
             text-align: right;
@@ -175,17 +174,17 @@ $item-background: #171b2b;
     .trading-top-middle {
       width: 56%;
       margin-right: 6px;
-      &.centerMax{
+      &.centerMax {
         width: 63.2%;
       }
       // 新加当前symbol
-      .symbol-text{
+      .symbol-text {
         background-color: $item-background;
         padding: 21px 20px 12px 20px;
         display: flex;
         background-color: #171b2b;
         align-items: center;
-        .symbol-name{
+        .symbol-name {
           font-size: 16px;
           color: white;
           text-align: center;
@@ -194,13 +193,13 @@ $item-background: #171b2b;
             margin-top: 5px;
           }
         }
-        .now-price{
+        .now-price {
           margin-left: 30px;
-          .usdt-price{
+          .usdt-price {
             font-size: 18px;
             font-weight: bold;
-            .tips-cny{
-              color: #FFFFFF;
+            .tips-cny {
+              color: #ffffff;
               font-size: 12px;
               margin-left: 10px;
               display: inline-block;
@@ -208,28 +207,20 @@ $item-background: #171b2b;
               opacity: 0.4;
             }
             .currentCoinType {
-              color: #FFFFFF;
+              color: #ffffff;
               margin-left: 10px;
               font-size: 12px;
             }
-            &.color-green{
-              // color: rgb(204, 53, 53);
-              color:#41b37d;
-            }
-            &.color-red{
-              // color:#41b37d;
-              color: rgb(204, 53, 53);
-            }
           }
-          .cny-price{
+          .cny-price {
             margin-top: 9px;
             font-size: 13px;
             color: #73767f;
-            .margin-data{
+            .margin-data {
               margin-right: 14px;
             }
             .openMarketStr {
-              background: #6175AE;
+              background: #6175ae;
               color: #fff;
               margin-left: 10px;
               border-radius: 2px;
@@ -237,24 +228,16 @@ $item-background: #171b2b;
             }
           }
         }
-        .symbol-other{
+        .symbol-other {
           margin-left: 26px;
-          .other-name{
+          .other-name {
             font-size: 14px;
             color: #fff;
           }
-          .symbol-state{
+          .symbol-state {
             font-size: 13px;
             color: #a2a3aa;
             margin-top: 10px;
-            &.color-green{
-              // color: rgb(204, 53, 53);
-              color:#41b37d;
-            }
-            &.color-red{
-              // color:#41b37d;
-              color: rgb(204, 53, 53);
-            }
           }
         }
       }
@@ -267,7 +250,8 @@ $item-background: #171b2b;
         margin-top: 6px;
         background-color: $item-background;
 
-        .trade-container,.trade-spot-container {
+        .trade-container,
+        .trade-spot-container {
           .trade-header {
             padding: 18px 20px 0px;
             display: flex;
@@ -324,25 +308,25 @@ $item-background: #171b2b;
                 width: 50%;
                 padding-right: 4%;
                 padding-top: 10px;
-                .cny-tip{
+                .cny-tip {
                   font-size: 12px;
                   color: $color_info;
                   margin-top: -14px;
                   margin-bottom: -2px;
                   height: 20px;
                   line-height: 20px;
-                  padding-left:70px;
-                  .cny-right{
+                  padding-left: 70px;
+                  .cny-right {
                     padding-left: 15px;
                     background-color: #2f3448;
                   }
                 }
-                .buy-tip{
+                .buy-tip {
                   display: flex;
                   font-size: 12px;
                   color: $color_info;
                   padding-bottom: 10px;
-                  .buy-open{
+                  .buy-open {
                     flex: 1;
                   }
                 }
@@ -354,25 +338,25 @@ $item-background: #171b2b;
               .el-form-down {
                 width: 46%;
                 padding-top: 10px;
-                .cny-tip{
+                .cny-tip {
                   font-size: 12px;
                   color: $color_info;
                   margin-top: -14px;
                   margin-bottom: -2px;
                   height: 20px;
                   line-height: 20px;
-                  padding-left:70px;
-                  .cny-right{
+                  padding-left: 70px;
+                  .cny-right {
                     padding-left: 15px;
                     background-color: #2f3448;
                   }
                 }
-                .sell-tip{
+                .sell-tip {
                   display: flex;
                   font-size: 12px;
                   color: $color_info;
                   padding-bottom: 10px;
-                  .sell-open{
+                  .sell-open {
                     flex: 1;
                   }
                 }
@@ -380,7 +364,6 @@ $item-background: #171b2b;
                   width: 100%;
                 }
               }
-
             }
           }
         }
@@ -392,17 +375,17 @@ $item-background: #171b2b;
       width: 28%;
       padding: 20px 10px 20px 20px;
       position: relative;
-      &.rightMin{
+      &.rightMin {
         width: 18%;
       }
-      .max-trading{
+      .max-trading {
         display: flex;
         width: 100%;
-        .dishClass{
+        .dishClass {
           flex: 1;
-          padding-right: 10px
+          padding-right: 10px;
         }
-        .intimeClass{
+        .intimeClass {
           height: 809px;
           overflow: hidden;
           // @include scrollBar;
@@ -411,24 +394,23 @@ $item-background: #171b2b;
           flex: 1;
         }
       }
-      .min-trading{
+      .min-trading {
         width: 100%;
-        .dish-min-tab{
+        .dish-min-tab {
           padding-bottom: 14px;
-          .dish-tab{
+          .dish-tab {
             margin-right: 15px;
             padding-bottom: 2px;
             cursor: pointer;
-            &.act{
+            &.act {
               border-bottom: 2px solid #6175ae;
             }
           }
         }
-        .min-intimeClass{
+        .min-intimeClass {
           overflow: hidden;
         }
       }
-      
     }
   }
 
@@ -445,66 +427,66 @@ $item-background: #171b2b;
       }
     }
     .current-stocks {
-      background-color:$item-background;
+      background-color: $item-background;
       min-height: 370px;
       padding: 0 20px;
-      .ul-tab{
+      .ul-tab {
         display: flex;
         background-color: $item-background;
         margin-bottom: 15px;
-        .tab-title{
+        .tab-title {
           color: #a2a3aa;
           padding: 8px 0;
           cursor: pointer;
           margin-right: 20px;
-          &.act{
+          &.act {
             color: white;
             border-bottom: 2px solid #4f5f8f;
           }
         }
       }
-      .table-list-item{
+      .table-list-item {
         border-bottom: 1px solid #374265;
-        &.des-title{
+        &.des-title {
           color: #a2a3aa;
           font-size: 12px;
         }
-        &.des{
+        &.des {
           font-size: 12px;
-          &:hover{
-              background-color: rgb(30, 34, 55);
+          &:hover {
+            background-color: rgb(30, 34, 55);
           }
         }
-        .item-des{
+        .item-des {
           color: #b0b8db;
-          &.normal{
-             line-height: 60px;
+          &.normal {
+            line-height: 60px;
           }
-          .scope-ptext{
-              margin-top: 10px;
-              padding-bottom: 5px;
+          .scope-ptext {
+            margin-top: 10px;
+            padding-bottom: 5px;
           }
         }
-        .arrow-data{
-            border: none;
-            background-color: #0c1125;
-            color: #b0b8db;
+        .arrow-data {
+          border: none;
+          background-color: #0c1125;
+          color: #b0b8db;
         }
       }
     }
-    .table-list-more{
+    .table-list-more {
       background-color: #0c1125;
       border: none;
-      .more-title{
+      .more-title {
         font-size: 15px;
         color: white;
         font-weight: bold;
       }
-      .title{
+      .title {
         color: #616572;
         background-color: #0c1125;
       }
-      .des-item{
+      .des-item {
         flex: 1;
         color: white;
       }
@@ -513,8 +495,8 @@ $item-background: #171b2b;
       min-height: 370px;
       margin-top: 6px;
       padding: 10px 20px;
-      background-color:$item-background;
-      .history-all{
+      background-color: $item-background;
+      .history-all {
         float: right;
         font-size: 12px;
         cursor: pointer;
@@ -522,10 +504,10 @@ $item-background: #171b2b;
     }
   }
 }
-.form-item{
-  .choose{
+.form-item {
+  .choose {
     display: flex;
-    .choose-item{
+    .choose-item {
       flex: 1;
       margin-right: 5px;
       text-align: center;
@@ -534,7 +516,7 @@ $item-background: #171b2b;
       line-height: 35px;
       cursor: pointer;
       border: 1px solid #374265;
-      &.act{
+      &.act {
         background-color: #374265;
       }
     }

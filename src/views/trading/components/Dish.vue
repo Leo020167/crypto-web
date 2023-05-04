@@ -2,12 +2,12 @@
 <template>
   <div class="dish-container">
     <h5 class="dish-title" v-show="showDishTitle">
-      {{ $t("trade.dish.title") }}
+      {{ $t('trade.dish.title') }}
     </h5>
     <p class="titles">
-      <span class="price">{{ $t("trade.dish.price") }}</span>
-      <span class="amount">{{ $t("trade.dish.amount") }}</span>
-      <span class="amount-all">{{ $t("trade.dish.total") }}</span>
+      <span class="price">{{ $t('trade.dish.price') }}</span>
+      <span class="amount">{{ $t('trade.dish.amount') }}</span>
+      <span class="amount-all">{{ $t('trade.dish.total') }}</span>
     </p>
     <div class="sell-positionBox" :style="{ height: height + 'px' }">
       <ul class="sell-box">
@@ -55,7 +55,7 @@ export default {
     dishData: {
       type: Object,
       default: function () {
-        return { buys: [], sells: [], symbol: "BTC" };
+        return { buys: [], sells: [], symbol: 'BTC' };
       },
     },
     showDishTitle: {
@@ -69,11 +69,11 @@ export default {
   },
   methods: {
     handleDishSellRowClick(data) {
-      this.$emit("sellDish", data);
+      this.$emit('sellDish', data);
     },
     // 买的操作
     handleDishBuyRowClick(data) {
-      this.$emit("buyDish", data);
+      this.$emit('buyDish', data);
     },
   },
 };
@@ -154,12 +154,7 @@ export default {
       font-size: 15px;
     }
   }
-  .color-green {
-    color: #41b37d;
-  }
-  .color-red {
-    color: #cc3535;
-  }
+
   .buy-box {
     overflow: hidden;
     .table-list {

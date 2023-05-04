@@ -162,10 +162,4 @@ export default {
     }
   }
 }
-.color-green {
-  color: $color_success;
-}
-.color-red {
-  color: $color_danger;
-}
 </style>

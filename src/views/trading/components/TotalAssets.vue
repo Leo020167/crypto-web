@@ -97,14 +97,12 @@
             <template slot-scope="scope">
               <span v-if="scope.row.rate == 'noData'"></span>
               <span
-                style="color: #d74e5a"
-                v-else-if="parseFloat(scope.row.rate) > 0"
-                >+{{ scope.row.rate }}%</span
+                :class="[
+                  parseFloat(scope.row.rate) > 0 ? 'color-red' : 'color-green',
+                ]"
               >
-              <span
-                style="color: #41b37d"
-                v-else-if="parseFloat(scope.row.rate) <= 0"
-                >{{ scope.row.rate }}%</span
+                {{ parseFloat(scope.row.rate) > 0 ? '+' : '' }}
+                {{ scope.row.rate }}%</span
               >
             </template>
           </el-table-column>

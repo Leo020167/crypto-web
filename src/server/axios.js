@@ -1017,6 +1017,10 @@ export const setPayPass = (values) => {
   }
 
   return func.axiosPost(url, {
-    ...values,
+    ...data,
   });
+};
+
+export const getUserInfo = () => {
+  return func.axiosPost(baseUrl + '/user/info.do', {});
 };
