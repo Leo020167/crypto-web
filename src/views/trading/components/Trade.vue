@@ -206,6 +206,7 @@
           </div>
         </el-form>
       </div>
+
       <!-- 市价 -->
       <div class="trade-form" v-else>
         <el-form
@@ -398,6 +399,7 @@
         </el-form>
       </div>
     </div>
+
     <pay-password-toast
       v-if="showPayPwd"
       :showError="showError"
