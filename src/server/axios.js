@@ -1028,3 +1028,13 @@ export const getUserInfo = () => {
 export const proOrderConfig = (data) => {
   return func.axiosPost(baseUrl + '/pro/order/config.do', data);
 };
+
+export const getEmail = (data) => {
+  return func.axiosPost(baseUrl + '/email/get.do', data);
+};
+export const updateEmail = (data) => {
+  return func.axiosPost(baseUrl + '/user/security/updateEmail.do', data);
+};
+export const checkEmailCode = (data) => {
+  return func.axiosPost(baseUrl + '/user/security/checkEmailCode.do', data);
+};

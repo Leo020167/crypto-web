@@ -25,6 +25,22 @@ const router = new VueRouter({
       redirect: '/Login',
       children: [
         {
+          path: '/email-auth-code',
+          component: () => import('@/views/email/EmailAuthCode.vue'),
+        },
+        {
+          path: '/email-auth',
+          component: () => import('@/views/email/EmailAuth.vue'),
+        },
+        {
+          path: '/bind-email-code',
+          component: () => import('@/views/email/BindEmailCode.vue'),
+        },
+        {
+          path: '/bind-email',
+          component: () => import('@/views/email/BindEmail.vue'),
+        },
+        {
           path: '/home',
           component: () => import('@/views/home-new.vue'),
         },

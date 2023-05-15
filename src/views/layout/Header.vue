@@ -102,6 +102,7 @@
                   $t('header.modify_phone')
                 }}</el-dropdown-item>
               </router-link>
+              <BindEmailDropdownItem />
               <router-link to="/user/safePassword">
                 <el-dropdown-item>{{
                   $t('header.set_password')
@@ -125,6 +126,7 @@ import { useLocaleStore } from '../../stores/locale';
 import { useCertificationStore } from '@/stores/certification';
 import PrimaryCertificationDropdownItem from './PrimaryCertificationDropdownItem.vue';
 import AdvancedCertificationDropdownItem from './AdvancedCertificationDropdownItem.vue';
+import BindEmailDropdownItem from './BindEmailDropdownItem.vue';
 export default {
   setup() {
     const localeStorage = useLocaleStore();
@@ -215,6 +217,7 @@ export default {
   components: {
     PrimaryCertificationDropdownItem,
     AdvancedCertificationDropdownItem,
+    BindEmailDropdownItem,
   },
 };
 </script>
