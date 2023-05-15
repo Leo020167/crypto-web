@@ -19,7 +19,6 @@
     <div class="trade-content">
       <!-- 限价 -->
       <div class="trade-form" v-if="activeNav === 1">
-        <!-- v-if="compots !='local'" -->
         <el-form class="el-form-up" v-model="lookUpForm" label-width="70px">
           <div class="form-item">
             <el-form-item
@@ -40,17 +39,7 @@
           <div class="cny-tip">
             <p class="cny-right">≈{{ lookUpForm.cny }}{{ transUnit }}</p>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item prop="amount"
-                          :label="$t('trade.transaction.buy_amount_label')">
-              <ul class="choose">
-                <li v-for="(item, index) in amountList"
-                    @click="handleClickAmount('limit', 'buy', item)"
-                    :key="index"
-                    :class="item == limitBuyAmount ? 'choose-item act' : 'choose-item'">{{item}}</li>
-              </ul>
-            </el-form-item>
-          </div> -->
+
           <div class="form-item">
             <el-form-item prop="amount" label="">
               <el-input
@@ -61,22 +50,21 @@
                 :placeholder="$t('trade.transaction.enterQuantity')"
                 v-model.number="lookUpForm.amount"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item :label="$t('trade.transaction.ggbs_label')">
-              <el-select v-model="leverageBuy" size="medium" @change="changeleverageBuyLimit" :placeholder="$t('trade.transaction.ggbs_ph')">
-                <el-option
-                  v-for="item in leverageList"
-                  :key="item.label"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
+
+          <div class="form-item">
+            <el-form-item label="">
+              <open-rate-list
+                :rates="openRateList"
+                :maxHand="buyLimit.maxHand"
+                @change="checkOutOpenRate($event, 'buy')"
+              />
             </el-form-item>
-          </div> -->
+          </div>
+
           <div style="margin-top: 30px">
             <p class="buy-tip">
               <span class="buy-open"
@@ -119,17 +107,7 @@
           <div class="cny-tip">
             <p class="cny-right">≈{{ lookDownForm.cny }}{{ transUnit }}</p>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item prop="amount"
-                          :label="$t('trade.transaction.sell_amount_label')">
-              <ul class="choose">
-                <li v-for="(item, index) in amountList"
-                    @click="handleClickAmount('limit', 'sell', item)"
-                    :key="index"
-                    :class="item == limitSellAmount ? 'choose-item act' : 'choose-item'">{{item}}</li>
-              </ul>
-            </el-form-item>
-          </div> -->
+
           <div class="form-item">
             <el-form-item prop="amount" label="">
               <el-input
@@ -139,22 +117,21 @@
                 @input="checkOutOpen('sell')"
                 v-model.number="lookDownForm.amount"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item :label="$t('trade.transaction.ggbs_label')">
-              <el-select v-model="leverageSell" size="medium" @change="changeleverageSellLimit" :placeholder="$t('trade.transaction.ggbs_ph')">
-                <el-option
-                  v-for="item in leverageList"
-                  :key="item.label"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
+
+          <div class="form-item">
+            <el-form-item label="">
+              <open-rate-list
+                :rates="openRateList"
+                :maxHand="sellLimit.maxHand"
+                @change="checkOutOpenRate($event, 'sell')"
+              />
             </el-form-item>
-          </div> -->
+          </div>
+
           <div style="margin-top: 30px">
             <p class="sell-tip">
               <span class="sell-open"
@@ -180,11 +157,7 @@
       </div>
       <!-- 市价 -->
       <div class="trade-form" v-else>
-        <el-form
-          class="el-form-up"
-          v-model="lookUpFormMarket"
-          label-width="70px"
-        >
+        <el-form class="el-form-up" label-width="70px">
           <div class="form-item">
             <el-form-item
               prop="price"
@@ -199,17 +172,6 @@
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item prop="amount"
-                          :label="$t('trade.transaction.buy_amount_label')">
-              <ul class="choose">
-                <li v-for="(item, index) in amountList"
-                    @click="handleClickAmount('market', 'buy', item)"
-                    :key="index"
-                    :class="item == marketBuyAmount ? 'choose-item act' : 'choose-item'">{{item}}23</li>
-              </ul>
-            </el-form-item>
-          </div> -->
           <div class="form-item">
             <el-form-item prop="amount" label="">
               <el-input
@@ -220,22 +182,20 @@
                 :placeholder="$t('trade.transaction.enterQuantity')"
                 v-model.number="lookUpFormMarket.amount"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item :label="$t('trade.transaction.ggbs_label')">
-              <el-select v-model="leverageBuy" size="medium" @change="changeleverageBuyLimit" :placeholder="$t('trade.transaction.ggbs_ph')">
-                <el-option
-                  v-for="item in leverageList"
-                  :key="item.label"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
+          <div class="form-item">
+            <el-form-item label="">
+              <open-rate-list
+                :rates="openRateList"
+                :maxHand="buyMarket.maxHand"
+                @change="checkOutOpenRate($event, 'buy')"
+              />
             </el-form-item>
-          </div> -->
+          </div>
+
           <div style="margin-top: 30px">
             <p class="buy-tip">
               <span class="buy-open"
@@ -258,7 +218,6 @@
             >
           </div>
         </el-form>
-        <!-- v-if="compots !='local'" -->
         <el-form
           class="el-form-down"
           v-model="lookDownFormMarket"
@@ -274,21 +233,11 @@
                 :disabled="true"
                 :placeholder="lookDownFormMarket.price"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item prop="amount"
-                          :label="$t('trade.transaction.sell_amount_label')">
-              <ul class="choose">
-                <li v-for="(item, index) in amountList"
-                    @click="handleClickAmount('market', 'sell', item)"
-                    :key="index"
-                    :class="item == marketSellAmount ? 'choose-item act' : 'choose-item'">{{item}}</li>
-              </ul>
-            </el-form-item>
-          </div> -->
+
           <div class="form-item">
             <el-form-item prop="amount" label="">
               <el-input
@@ -298,22 +247,21 @@
                 @input="checkOutOpen('sell')"
                 v-model.number="lookDownFormMarket.amount"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>
-          <!-- <div class="form-item">
-            <el-form-item :label="$t('trade.transaction.ggbs_label')">
-              <el-select v-model="leverageSell" size="medium" @change="changeleverageSellLimit" :placeholder="$t('trade.transaction.ggbs_ph')">
-                <el-option
-                  v-for="item in leverageList"
-                  :key="item.label"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
+
+          <div class="form-item">
+            <el-form-item label="">
+              <open-rate-list
+                :rates="openRateList"
+                :maxHand="sellMarket.maxHand"
+                @change="checkOutOpenRate($event, 'sell')"
+              />
             </el-form-item>
-          </div> -->
+          </div>
+
           <div style="margin-top: 30px">
             <p class="sell-tip">
               <span class="sell-open"
@@ -322,6 +270,7 @@
               >
               <span class="sell-margin">{{ sellMarket.usdtAmount }}USDT</span>
             </p>
+
             <el-button
               class="buy-btn"
               type="success"
@@ -338,6 +287,7 @@
         </el-form>
       </div>
     </div>
+
     <pay-password-toast
       v-if="showPayPwd"
       :showError="showError"
@@ -349,9 +299,11 @@
 </template>
 
 <script>
-import { assetsApi, getConfigTrad } from '@/server/axios.js';
+import { assetsApi, proOrderConfig } from '@/server/axios.js';
 import PayPasswordToast from '@/components/payPasswordToast.vue';
 import { mapGetters } from 'vuex';
+import OpenRateList from './OpenRateList.vue';
+
 export default {
   props: {
     buyData: {
@@ -380,7 +332,6 @@ export default {
     },
   },
   watch: {
-    compots: 'chnageCompots',
     buyData: 'changeBuyNum',
     sellData: 'changeSellNum',
     coinType: 'changeCoinType',
@@ -432,22 +383,22 @@ export default {
       },
       buyLimit: {
         //限价买的可开最大手数、保证金
-        maxHand: 0,
+        maxHand: '0',
         openBail: '0 USDT',
       },
       sellLimit: {
         //限价卖的可开最大手数、保证金
-        availableAmount: 0,
+        availableAmount: '0',
         usdtAmount: '0 USDT',
       },
       buyMarket: {
         //市场买的可开最大手数、保证金
-        maxHand: 0,
+        maxHand: '0',
         openBail: '0 USDT',
       },
       sellMarket: {
         //市场买的可开最大手数、保证金
-        availableAmount: 0,
+        availableAmount: '0',
         usdtAmount: '0 USDT',
       },
       // 支付弹窗
@@ -459,6 +410,8 @@ export default {
       currentType: null,
       unit: 'USDT',
       transUnit: 'HKD',
+      // 百分比
+      openRateList: [],
     };
   },
   created() {
@@ -467,13 +420,9 @@ export default {
     this.checkOutOpen('sell');
   },
   methods: {
-    chnageCompots() {
-      console.log('wc变化了---', this.compots);
-    },
     // 获取页面基本页面信息
     getConfigData() {
-      console.log(this.coinType);
-      getConfigTrad(this.coinType).then((res) => {
+      proOrderConfig({ symbol: this.coinType, type: '2' }).then((res) => {
         if (res.code === '200') {
           let list = res.data.multiNumList;
           let datas = [];
@@ -490,6 +439,8 @@ export default {
           this.leverageSellVal = list[0];
           this.usdtRate = Number(res.data.usdtRate); //汇率
           this.priceDecimals = res.data.priceDecimals;
+
+          this.openRateList = res.data.openRateList;
         }
       });
     },
@@ -536,10 +487,6 @@ export default {
     },
     // 类型转变（货币）
     changeCoinType() {
-      console.log('变化了buyData======', this.buyData);
-      console.log('变化了sellData======', this.sellData);
-      console.log('变化了coinType======', this.coinType);
-      console.log('变化了marketType======', this.marketType);
       this.getConfigData();
       this.checkOutOpen('buy');
       this.checkOutOpen('sell');
@@ -622,6 +569,19 @@ export default {
       let val = value.replace(/^(-)*(\d+)\.(\d{2}).*$/, '$1$2.$3'); //只能输入scale个小数
       return val;
     },
+    checkOutOpenRate(hand, buySell) {
+      if (buySell === 'buy' && this.activeNav === 1) {
+        this.lookUpForm.amount = hand;
+      } else if (buySell === 'sell' && this.activeNav === 1) {
+        //    this.lookDownForm.amount = hand;
+      } else if (buySell === 'buy' && this.activeNav === 2) {
+        this.lookUpFormMarket.amount = hand;
+      } else {
+        this.lookDownFormMarket.amount = hand;
+      }
+
+      this.checkOutOpen(buySell);
+    },
     // 获取输入数量、价格以及杠杆改变时的最大手数、开仓保证金
     // symbol, price, buySell, hand, multiNum, orderType
     checkOutOpen(buySell) {
@@ -630,9 +590,9 @@ export default {
       }
       let price = 0;
       let hand = 0;
-      let leverageVal =
-        buySell === 'buy' ? this.leverageBuyVal : this.leverageSellVal;
+
       let orderType = this.activeNav === 1 ? 'limit' : 'market';
+
       if (buySell === 'buy' && this.activeNav === 1) {
         //限价买
         price = this.lookUpForm.price ? Number(this.lookUpForm.price) : 0;
@@ -660,15 +620,7 @@ export default {
           hand == this.marketSellAmount ? this.marketSellAmount : 0;
       }
       assetsApi
-        .openCheckOut(
-          this.coinType,
-          price,
-          buySell,
-          hand,
-          leverageVal,
-          orderType,
-          2
-        )
+        .openCheckOut(this.coinType, price, buySell, hand, '', orderType, 2)
         .then((res) => {
           if (res.code === '200') {
             if (buySell === 'buy' && this.activeNav === 1) {
@@ -685,6 +637,7 @@ export default {
           }
         });
     },
+
     // 支付弹窗的回调事件
     getPwd(psw) {
       this.payPass = psw;
@@ -863,6 +816,7 @@ export default {
   },
   components: {
     PayPasswordToast,
+    OpenRateList,
   },
 };
 </script>
