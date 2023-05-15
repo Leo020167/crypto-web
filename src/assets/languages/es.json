@@ -108,7 +108,7 @@
       { "title": "1 día", "resolution": "1D", "chartType": 1 },
       { "title": "1 semana", "resolution": "1W", "chartType": 1 }
     ],
-    "text53": "Min5",
+    "text53": "min5",
     "text54": [
       "Registro de carga",
       "Registro de retiro",

@@ -72,7 +72,7 @@
       { "title": "1 день", "resolution": "1D", "chartType": 1 },
       { "title": "1 неделя", "resolution": "1W", "chartType": 1 }
     ],
-    "text53": "мин5",
+    "text53": "min5",
     "text54": [
       "Запись платы",
       "Запись о снятии",

@@ -19,7 +19,6 @@
     <div class="trade-content">
       <!-- 限价 -->
       <div class="trade-form" v-if="activeNav === 1">
-        <!-- v-if="compots !='local'" -->
         <el-form class="el-form-up" v-model="lookUpForm" label-width="70px">
           <div class="form-item">
             <el-form-item
@@ -567,8 +566,7 @@ export default {
     },
     // 调整小数
     justNum(value) {
-      let dec = Number(this.priceDecimals);
-      let val = value.replace(/^(\-)*(\d+)\.(\d{2}).*$/, '$1$2.$3'); //只能输入scale个小数
+      let val = value.replace(/^(-)*(\d+)\.(\d{2}).*$/, '$1$2.$3'); //只能输入scale个小数
       return val;
     },
     checkOutOpenRate(hand, buySell) {
