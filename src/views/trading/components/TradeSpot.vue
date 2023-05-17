@@ -119,6 +119,7 @@
           <div class="cny-tip">
             <p class="cny-right">≈{{ lookDownForm.cny }}{{ transUnit }}</p>
           </div>
+
           <!-- <div class="form-item">
             <el-form-item prop="amount"
                           :label="$t('trade.transaction.sell_amount_label')">
@@ -163,6 +164,7 @@
               >
               <span class="sell-margin">{{ sellLimit.usdtAmount }}USDT</span>
             </p>
+
             <el-button
               class="buy-btn"
               style="background: #c4183c; border: none"

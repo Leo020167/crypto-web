@@ -20,6 +20,10 @@ export const locales = [
     label: '日本語',
   },
   {
+    value: 'ko',
+    label: '한국인',
+  },
+  {
     value: 'ru',
     label: 'Русский язык',
   },

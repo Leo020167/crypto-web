@@ -52,9 +52,15 @@ dependencies:
   qs:
     specifier: ^6.11.1
     version: 6.11.1
+  swiper:
+    specifier: ^5.4.5
+    version: 5.4.5
   vue:
     specifier: ^2.7.14
     version: 2.7.14
+  vue-awesome-swiper:
+    specifier: '4'
+    version: 4.1.1(swiper@5.4.5)(vue@2.7.14)
   vue-echarts:
     specifier: ^6.5.4
     version: 6.5.4(echarts@5.4.2)(vue@2.7.14)
@@ -2185,6 +2191,12 @@ packages:
       esutils: 2.0.3
     dev: true
 
+  /dom7@2.1.5:
+    resolution: {integrity: sha512-xnhwVgyOh3eD++/XGtH+5qBwYTgCm0aW91GFgPJ3XG+jlsRLyJivnbP0QmUBFhI+Oaz9FV0s7cxgXHezwOEBYA==}
+    dependencies:
+      ssr-window: 2.0.0
+    dev: false
+
   /echarts@5.4.2:
     resolution: {integrity: sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==}
     dependencies:
@@ -3445,6 +3457,10 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
+  /ssr-window@2.0.0:
+    resolution: {integrity: sha512-NXzN+/HPObKAx191H3zKlYomE5WrVIkoCB5IaSdvKokxTpjBdWfr0RaP+1Z5KOfDT0ZVz+2tdtiBkhsEQ9p+0A==}
+    dev: false
+
   /string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -3497,6 +3513,15 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /swiper@5.4.5:
+    resolution: {integrity: sha512-7QjA0XpdOmiMoClfaZ2lYN6ICHcMm72LXiY+NF4fQLFidigameaofvpjEEiTQuw3xm5eksG5hzkaRsjQX57vtA==}
+    engines: {node: '>= 4.7.0'}
+    requiresBuild: true
+    dependencies:
+      dom7: 2.1.5
+      ssr-window: 2.0.0
+    dev: false
 
   /sync-threads@1.0.1:
     resolution: {integrity: sha512-hIdwt/c/e1ONnr2RJmfBxEAj/J6KQQWKdToF3Qw8ZNRsTNNteGkOe63rQy9I7J5UNlr8Yl0wkzIr9wgLY94x0Q==}
@@ -3701,6 +3726,17 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-awesome-swiper@4.1.1(swiper@5.4.5)(vue@2.7.14):
+    resolution: {integrity: sha512-50um10t6N+lJaORkpwSi1wWuMmBI1sgFc9Znsi5oUykw2cO5DzLaBHcO2JNX21R+Ue4TGoIJDhhxjBHtkFrTEQ==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      swiper: ^5.2.0
+      vue: 2.x
+    dependencies:
+      swiper: 5.4.5
+      vue: 2.7.14
+    dev: false
 
   /vue-demi@0.13.11(vue@2.7.14):
     resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}

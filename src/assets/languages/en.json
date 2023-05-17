@@ -624,7 +624,7 @@
       "buy": "Bullish (long)",
       "sell": "Bearish (short)",
       "login": "Click to download app and client trading",
-      "sell_price_label": "Open position price:",
+      "sell_price_label": "Open price:",
       "sell_price_ph": "Please enter opening price",
       "sell_amount_label": "Open lot size:",
       "sell_amount_ph": "Please enter the opening lot size",

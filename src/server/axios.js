@@ -1032,9 +1032,15 @@ export const proOrderConfig = (data) => {
 export const getEmail = (data) => {
   return func.axiosPost(baseUrl + '/email/get.do', data);
 };
+
 export const updateEmail = (data) => {
   return func.axiosPost(baseUrl + '/user/security/updateEmail.do', data);
 };
+
 export const checkEmailCode = (data) => {
   return func.axiosPost(baseUrl + '/user/security/checkEmailCode.do', data);
+};
+
+export const homeConfig = (data) => {
+  return func.axiosPost(baseUrl + '/home/config.do', data);
 };

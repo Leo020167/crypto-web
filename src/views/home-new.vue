@@ -26,25 +26,7 @@
       </div>
     </section>
 
-    <section class="py-12">
-      <div class="grid-col-3 container mt-8 grid grid-cols-3 gap-x-6 pb-8">
-        <img
-          src="/img/lQDPJxejoC1Xcm7NAU3NAyCw5MdNT4-b574EI4TFD0D-AA_800_333.jpg_720x720q90g.jpg"
-          alt=""
-          class="block w-full rounded-lg"
-        />
-        <img
-          src="/img/lQDPJwY7GhPlR47NAU3NAyCw8U4AKG9x4sAEI4naccDMAA_800_333.jpg_720x720q90g.jpg"
-          alt=""
-          class="block w-full rounded-lg"
-        />
-        <img
-          src="/img/lQDPJx1S0TVHva7NAU3NAyCwx0zDV9qDox8EI4atPcB8AA_800_333.jpg_720x720q90g.jpg"
-          alt=""
-          class="block w-full rounded-lg"
-        />
-      </div>
-    </section>
+    <HomeBanner />
 
     <MarketTrend />
 
@@ -121,6 +103,7 @@
 </template>
 
 <script>
+import HomeBanner from '@/components/HomeBanner.vue';
 import MarketTrend from '@/components/MarketTrend.vue';
 import { mapGetters } from 'vuex';
 export default {
@@ -141,7 +124,7 @@ export default {
       }
     },
   },
-  components: { MarketTrend },
+  components: { MarketTrend, HomeBanner },
 };
 </script>
 
