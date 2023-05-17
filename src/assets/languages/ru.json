@@ -1,4 +1,8 @@
 {
+  "fasongyanzhengma": "Отправить код подтверждения",
+  "youxiang": "Почтовый ящик",
+  "qingshuruyouxiang": "Пожалуйста, введите ваш адрес электронной почты",
+  "qingshuruyouxiangyanzhengma": "Пожалуйста, введите код подтверждения электронной почты",
   "qingxianwanchengchujirenzheng": "Сначала пройдите первичную сертификацию",
   "common": {
     "login_btn": "Авторизоваться",
