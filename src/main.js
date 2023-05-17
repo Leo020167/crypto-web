@@ -1,4 +1,5 @@
 import './style.css';
+import 'swiper/css/swiper.css';
 import { createPinia, PiniaVuePlugin } from 'pinia';
 import Vue, { provide } from 'vue';
 import App from './App.vue';

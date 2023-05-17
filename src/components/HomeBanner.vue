@@ -18,8 +18,7 @@
 
 <script setup>
 import { homeConfig } from '@/server/axios';
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 import { onMounted, ref } from 'vue';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
