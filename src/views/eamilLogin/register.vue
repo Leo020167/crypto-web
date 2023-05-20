@@ -5,20 +5,10 @@
       v-document-title
       :data-title="documentTitle"
     >
-      <h4 class="register-title">邮箱注册</h4>
+      <h4 class="register-title">{{ $t('youxiangzhuce') }}</h4>
       <el-form ref="registerForm" :model="registerForm" class="register-form">
         <!-- 手机号码 -->
         <el-row>
-          <!-- <el-col :span="8"
-                  class="prephone"> -->
-          <!-- <el-select v-model="countryValue">
-              <el-option v-for="item in countryArray"
-                         :key="item.name"
-                         :label="item.label"
-                         :value="item.value">
-              </el-option>
-            </el-select> -->
-          <!-- </el-col> -->
           <el-col :span="24" :offset="0">
             <el-form-item>
               <el-input
@@ -83,13 +73,13 @@
               :rules="[
                 {
                   required: true,
-                  message: '请输入邮箱验证码',
+                  message: $t('qingshuruyouxiangyanzhengma'),
                   trigger: 'blur',
                 },
               ]"
             >
               <el-input
-                placeholder="请输入邮箱验证码"
+                :placeholder="$t('qingshuruyouxiangyanzhengma')"
                 v-model="registerForm.smsCode"
               ></el-input>
             </el-form-item>
@@ -178,11 +168,11 @@
 </template>
 
 <script>
-import { validateCode } from '@/utils/RegVerify.js';
 import { security } from '@/server/axios.js';
+import { validateCode } from '@/utils/RegVerify.js';
 import Validation from '../layout/Validation.vue';
 export default {
-  data() {
+  data(vm) {
     return {
       countryArray: [{ label: '+86 中国', value: '+86', name: '中国' }], //国家集合
       countryValue: this.$t('newCommon.text56'),
@@ -199,7 +189,7 @@ export default {
       getValid: false, // 是否开始拖动验证
       locationx: 0,
       dragImgKey: '',
-      smsText: '点击获取邮箱码', // 验证码文字
+      smsText: vm.$t('dianjihuoquyouxiangma'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
       inviteCode: '', // 邀请码（暂时没有）
@@ -347,7 +337,7 @@ export default {
             this.isCoding = false;
             clearInterval(this.timer);
             this.timer = null;
-            this.smsText = '点击获取邮箱码';
+            this.smsText = this.$t('dianjihuoquyouxiangma');
           }
         }, 1000);
       }

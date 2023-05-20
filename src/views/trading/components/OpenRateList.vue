@@ -1,5 +1,5 @@
 <template>
-  <div class="flex hands">
+  <div class="hands flex">
     <a
       v-for="item in props.rates"
       :key="item"
@@ -11,40 +11,26 @@
 </template>
 
 <script setup>
-import currency from 'currency.js';
 const props = defineProps({
   rates: {
     type: Array,
     default: () => [],
-  },
-  maxHand: {
-    type: [String, Number],
-    default: '0',
-    required: true,
   },
 });
 
 const emit = defineEmits(['change']);
 
 const handleClick = (value) => {
-  const precision = Number(String(props.maxHand).split('.')?.[1]?.length ?? 2);
-  const hand = currency(props.maxHand, {
-    symbol: '',
-    separator: '',
-    precision,
-  })
-    .multiply(value / 100)
-    .format();
-
-  emit('change', hand);
+  const rate = value / 100;
+  emit('change', rate);
 };
 </script>
 
 <style lang="scss" scoped>
 .hands {
-  height: 36px;
   border: 1px solid #374265;
   border-radius: 4px;
+  height: 36px;
   a {
     color: #a2a3aa;
     &:not(:last-child) {

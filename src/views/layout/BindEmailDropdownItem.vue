@@ -1,6 +1,8 @@
 <template>
   <a @click="handleClick">
-    <el-dropdown-item>绑定邮箱</el-dropdown-item>
+    <el-dropdown-item>
+      {{ $t('bangdingyouxiang') }}
+    </el-dropdown-item>
   </a>
 </template>
 

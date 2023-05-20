@@ -6,7 +6,7 @@
     <!-- 内容 -->
     <div class="newCollege">
       <el-tabs v-model="activeName" class="demo-tabs">
-        <el-tab-pane label="进行中" name="first">
+        <el-tab-pane :label="$t('newCommon2.text5')" name="first">
           <div v-if="resoulist1.length > 0" class="newCollege_fors">
             <div
               class="newCollege_for"
@@ -28,7 +28,7 @@
                   >
                     {{ item.summary }}
                   </p>
-                  <el-tag size="mini">进行中</el-tag>
+                  <el-tag size="mini">{{ $t('newCommon2.text5') }}</el-tag>
                 </div>
                 <el-progress
                   :percentage="item.progress || 0"
@@ -57,7 +57,7 @@
           </div>
           <div style="" v-else>暂无....</div>
         </el-tab-pane>
-        <el-tab-pane label="待开始" name="second">
+        <el-tab-pane :label="$t('newCommon2.text4')" name="second">
           <div class="newCollege_fors" v-if="resoulist0.length > 0">
             <div
               class="newCollege_for"
@@ -80,7 +80,7 @@
                   >
                     {{ item.summary }}
                   </p>
-                  <el-tag size="mini">待开始</el-tag>
+                  <el-tag size="mini">{{ $t('newCommon2.text4') }}</el-tag>
                 </div>
                 <el-progress
                   :percentage="item.progress || 0"
@@ -109,7 +109,7 @@
           </div>
           <div style="" v-else>暂无....</div>
         </el-tab-pane>
-        <el-tab-pane label="已结束" name="third">
+        <el-tab-pane :label="$('newCommon2.text6')" name="third">
           <div class="newCollege_fors" v-if="resoulist2.length > 0">
             <div
               class="newCollege_for"
@@ -132,7 +132,7 @@
                   >
                     {{ item.summary }}
                   </p>
-                  <el-tag size="mini">已结束</el-tag>
+                  <el-tag size="mini">{{ $('newCommon2.text6') }}</el-tag>
                 </div>
                 <el-progress
                   :percentage="item.progress || 0"
@@ -256,7 +256,6 @@ export default {
       this.$router.push({ name: 'newTradeIndexInfo', query: { id: item.id } });
     },
     getList() {
-      var that = this;
       this.resoulist = [];
       assetsApi.getDataListSub().then((res) => {
         console.log(res.data);
@@ -284,15 +283,13 @@ export default {
         // for (var i = 0; i < this.resoulist1.length; i++) {
         //   this.getEndTime(this.resoulist1[i].endTime, i)
         // }
-        for (var i = 0; i < this.resoulist1.length; i++) {
-          console.log('1');
+        for (let i = 0; i < this.resoulist1.length; i++) {
           this.getEndTime1(this.resoulist0[i].createTime, i);
         }
 
-        for (var i = 0; i < this.resoulist1.length; i++) {
+        for (let i = 0; i < this.resoulist1.length; i++) {
           this.getEndTime1(this.resoulist0[i].endTime, i);
         }
-        console.log(this.resoulist);
       });
     },
   },

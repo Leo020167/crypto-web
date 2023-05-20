@@ -80,7 +80,7 @@
           </el-col>
         </el-row>
         <!-- 验证码 -->
-        <el-row>
+        <el-row class="mb-1">
           <el-col :span="14">
             <el-form-item
               prop="smsCode"
@@ -184,10 +184,18 @@
 </template>
 
 <script>
-import { validateCode } from '@/utils/RegVerify.js';
 import { security } from '@/server/axios.js';
+import { useLocaleStore } from '@/stores/locale';
+import { validateCode } from '@/utils/RegVerify.js';
+import { storeToRefs } from 'pinia';
 import Validation from '../layout/Validation.vue';
 export default {
+  setup() {
+    const store = useLocaleStore();
+    const { locale } = storeToRefs(store);
+
+    return { locale };
+  },
   data() {
     return {
       countryArray: [], //国家集合
@@ -211,6 +219,14 @@ export default {
       inviteCode: '', // 邀请码（暂时没有）
       showRegistBtnLoading: false,
     };
+  },
+  watch: {
+    locale() {
+      this.isCoding = false;
+      clearInterval(this.timer);
+      this.timer = null;
+      this.smsText = this.$t('regist.smsText2');
+    },
   },
   computed: {
     documentTitle() {
@@ -242,20 +258,6 @@ export default {
           this.countryArray = arr;
         }
       });
-      // security.getNewCountryCode().then((res) => {
-      //   if (res.code === '200') {
-      //     let data = res.data
-      //     let arr = []
-      //     for (let i = 0; i < data.length; i++) {
-      //       let label = `${data[i].areaCode}  ${data[i].tcName}`
-      //       let value = data[i].areaCode
-      //       let name = data[i].tcName
-      //       let obj = { label: label, value: value, name: name }
-      //       arr.push(obj)
-      //     }
-      //     this.countryArray = arr
-      //   }
-      // })
     },
     // 验证密码
     checkPassword(rule, value, callback) {
@@ -413,6 +415,10 @@ export default {
     }
     .agreen-button {
       width: 100%;
+    }
+
+    .el-button {
+      white-space: pre-wrap;
     }
   }
 }

@@ -1,8 +1,8 @@
-import md5 from 'js-md5';
-import * as params from './params';
 import store from '@/store';
 import axios from 'axios';
+import md5 from 'js-md5';
 import each from './each';
+import * as params from './params';
 // 封装了fetch请求
 import func from './func';
 
@@ -701,12 +701,11 @@ export const getKline = (postData) => {
 
 /**
  * 获取盘口数据
- * @params {
- *  symbol, // 交易对
+ *
+ * @param {symbol, // 交易对
  *  depth, // 买卖挡深度，默认5挡
- *  klineType // K线类型，通过接口可以实时获取K线最新1根数据：min1,min15,hour1,hour4,day,week,month
- * }
- * */
+ *  klineType // K线类型，通过接口可以实时获取K线最新1根数据：min1,min15,hour1,hour4,day,week,month}
+ */
 export const getDish = (symbol, depth, klineType) => {
   let url = marketUrl + '/quote/real.do';
   return func.axiosPost(url, {
@@ -931,6 +930,7 @@ export const legalPurchaseApi = {
 
 /**
  * 【我的广告】获取广告最高最低价格
+ *
  * @param {buy购买，sell出售} buySell
  * @returns
  */
@@ -1043,4 +1043,33 @@ export const checkEmailCode = (data) => {
 
 export const homeConfig = (data) => {
   return func.axiosPost(baseUrl + '/home/config.do', data);
+};
+
+/**
+ * @template T
+ * @typedef Response<T>
+ * @property {string} code
+ * @property {T} data
+ */
+
+/**
+ * @typedef ProOrderCheckOutUsdtResponse
+ * @type {Object}
+ * @property {string} maxOpenBail - 可输入的最大usdt数量,20% 40%等取这个值的乘积
+ * @property {string} openHand - 可以买入的币的数量，调用/pro/order/open.do这个接口时的hand参数取这个值
+ */
+
+/**
+ * @param {Object} data
+ * @param {string} data.symbol
+ * @param {string} data.price
+ * @param {'buy' | 'sell'} data.buySell
+ * @param {string} data.hand - 输入的usdt数量
+ * @param {string} data.multiNum
+ * @param {string} data.orderType
+ * @param {string} data.type
+ * @returns {Promise<Response<ProOrderCheckOutUsdtResponse>>}
+ */
+export const proOrderCheckOutUsdt = (data) => {
+  return func.axiosPost(baseUrl + '/pro/order/checkOutUsdt.do', data);
 };
