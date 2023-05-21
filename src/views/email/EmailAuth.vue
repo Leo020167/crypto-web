@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="container bg-white mt-10 p-4">
-      <div class="mb-5 text-orange-400">爲了保證你的賬號安全，請驗證身份</div>
+      <div class="mb-5 text-orange-400">
+        {{ $t('weilebaozhengnidezhanghaoanquanqingyanzhengshenfen') }}
+      </div>
       <div class="mb-5 font-bold text-black">
         {{ userInfo?.user?.email }}
       </div>
