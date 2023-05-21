@@ -109,7 +109,7 @@
           </div>
           <div style="" v-else>暂无....</div>
         </el-tab-pane>
-        <el-tab-pane :label="$('newCommon2.text6')" name="third">
+        <el-tab-pane :label="$t('newCommon2.text6')" name="third">
           <div class="newCollege_fors" v-if="resoulist2.length > 0">
             <div
               class="newCollege_for"
@@ -132,7 +132,7 @@
                   >
                     {{ item.summary }}
                   </p>
-                  <el-tag size="mini">{{ $('newCommon2.text6') }}</el-tag>
+                  <el-tag size="mini">{{ $t('newCommon2.text6') }}</el-tag>
                 </div>
                 <el-progress
                   :percentage="item.progress || 0"

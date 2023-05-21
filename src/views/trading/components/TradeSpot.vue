@@ -115,7 +115,7 @@
                 @input="checkOutOpen('sell')"
                 v-model.number="lookDownForm.amount"
               >
-                <template slot="suffix">USDT</template>
+                <template slot="suffix">{{ coinType }}</template>
               </el-input>
             </el-form-item>
           </div>
@@ -242,7 +242,7 @@
                 @input="checkOutOpen('sell')"
                 v-model.number="lookDownFormMarket.amount"
               >
-                <template slot="suffix">USDT</template>
+                <template slot="suffix">{{ coinType }}</template>
               </el-input>
             </el-form-item>
           </div>
