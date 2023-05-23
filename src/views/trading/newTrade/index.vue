@@ -55,7 +55,7 @@
               </div>
             </div>
           </div>
-          <div style="" v-else>暂无....</div>
+          <div style="" v-else>{{ $t('assets.noset') }}</div>
         </el-tab-pane>
         <el-tab-pane :label="$t('newCommon2.text4')" name="second">
           <div class="newCollege_fors" v-if="resoulist0.length > 0">
@@ -107,7 +107,7 @@
               </div>
             </div>
           </div>
-          <div style="" v-else>暂无....</div>
+          <div style="" v-else>{{ $t('assets.noset') }}</div>
         </el-tab-pane>
         <el-tab-pane :label="$t('newCommon2.text6')" name="third">
           <div class="newCollege_fors" v-if="resoulist2.length > 0">
