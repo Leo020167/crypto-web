@@ -620,7 +620,7 @@
     "transaction": {
       "title1": "Market Trading",
       "title2": "Limit trade",
-      "buy_price_label": "Open price:",
+      "buy_price_label": "price:",
       "buy_price_ph": "Please enter an opening price",
       "buy_amount_label": "Open lot size:",
       "buy_amount_ph": "Please enter the open lot size",
@@ -632,7 +632,7 @@
       "buy": "Bullish (long)",
       "sell": "Bearish (short)",
       "login": "Click to download app and client trading",
-      "sell_price_label": "Open price:",
+      "sell_price_label": "price:",
       "sell_price_ph": "Please enter opening price",
       "sell_amount_label": "Open lot size:",
       "sell_amount_ph": "Please enter the opening lot size",
