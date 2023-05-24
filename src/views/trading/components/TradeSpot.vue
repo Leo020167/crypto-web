@@ -163,7 +163,7 @@
               <el-input
                 size="medium"
                 :disabled="true"
-                :placeholder="lookUpFormMarket.price"
+                :placeholder="$t('trade.transaction.buy_on_best_price')"
               >
                 <template slot="suffix">USDT</template>
               </el-input>
@@ -226,7 +226,7 @@
               <el-input
                 size="medium"
                 :disabled="true"
-                :placeholder="lookDownFormMarket.price"
+                :placeholder="$t('trade.transaction.sell_on_best_price')"
               >
                 <template slot="suffix">USDT</template>
               </el-input>
@@ -299,11 +299,19 @@ import {
   proOrderCheckOutUsdt,
   proOrderConfig,
 } from '@/server/axios.js';
+import { useLocaleStore } from '@/stores/locale';
 import currency from 'currency.js';
+import { storeToRefs } from 'pinia';
 import { mapGetters } from 'vuex';
 import OpenRateList from './OpenRateList.vue';
 
 export default {
+  setup() {
+    const store = useLocaleStore();
+    const { locale } = storeToRefs(store);
+
+    return { locale };
+  },
   props: {
     buyData: {
       type: Object,
@@ -335,6 +343,13 @@ export default {
     sellData: 'changeSellNum',
     coinType: 'changeCoinType',
     marketType: 'changeMarkettype',
+
+    locale() {
+      this.isCoding = false;
+      clearInterval(this.timer);
+      this.timer = null;
+      this.smsText = this.$t('regist.smsText2');
+    },
   },
   computed: {
     ...mapGetters({
@@ -384,13 +399,11 @@ export default {
       },
       // 买多表单---------------------------------市价
       lookUpFormMarket: {
-        price: this.$t('trade.transaction.buy_on_best_price'),
         amount: null,
         symbol: '',
       },
       // 买跌
       lookDownFormMarket: {
-        price: this.$t('trade.transaction.sell_on_best_price'),
         amount: null,
         symbol: '',
       },
@@ -510,12 +523,10 @@ export default {
       this.lookUpForm = { price: '', amount: null, cny: 0 };
       this.lookDownForm = { price: '', amount: null, cny: 0 };
       this.lookUpFormMarket = {
-        price: this.$t('trade.transaction.buy_on_best_price'),
         amount: null,
         symbol: '',
       };
       this.lookDownFormMarket = {
-        price: this.$t('trade.transaction.sell_on_best_price'),
         amount: null,
         symbol: '',
       };
