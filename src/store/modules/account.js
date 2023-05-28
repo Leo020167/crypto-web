@@ -19,6 +19,7 @@ const account = {
   mutations: {
     // 修改全局的资产账户
     changeGlobalAccountInfo(state, newAccountInfos) {
+      state.spotAccount = newAccountInfos.spotAccount;
       state.fxAccount = newAccountInfos.fxAccount;
       state.stockAccount = newAccountInfos.stockAccount;
       state.userFollow = newAccountInfos.userFollow;
@@ -82,6 +83,9 @@ const account = {
     },
   },
   getters: {
+    getSpotAccount(state) {
+      return state.spotAccount;
+    },
     getDigitalAccountInfos(state) {
       //获取数字货币账户信息
       return state.digitalAccount;

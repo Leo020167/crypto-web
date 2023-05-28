@@ -67,8 +67,8 @@
           <div style="margin-top: 30px">
             <p class="buy-tip">
               <span class="buy-open"
-                >{{ $t('trade.transaction.canJoin') }}: {{ buyLimit.openHand
-                }}{{ coinType }}</span
+                >{{ $t('trade.transaction.canJoin') }}:
+                {{ spotAccount.holdAmount }}USDT</span
               >
             </p>
             <el-button
@@ -195,8 +195,8 @@
           <div style="margin-top: 30px">
             <p class="buy-tip">
               <span class="buy-open"
-                >{{ $t('trade.transaction.canJoin') }}: {{ buyMarket.openHand
-                }}{{ coinType }}</span
+                >{{ $t('trade.transaction.canJoin') }}:
+                {{ spotAccount.holdAmount }}USDT</span
               >
             </p>
             <el-button
@@ -354,6 +354,7 @@ export default {
   computed: {
     ...mapGetters({
       currentUserInfos: 'getCurrentUserInfos',
+      spotAccount: 'getSpotAccount',
     }),
     orderType() {
       return this.activeNav === 1 ? 'limit' : 'market';
