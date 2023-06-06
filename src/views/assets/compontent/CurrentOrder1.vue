@@ -158,11 +158,11 @@
 </template>
 
 <script>
-import { transforTime } from '@/utils/time.js';
-import { assetsApi } from '@/server/axios.js';
+import PayPasswordToast from '@/components/payPasswordToast.vue';
 import StopLossDialog from '@/components/stopLoss.vue';
 import StopWinDialog from '@/components/stopWin.vue';
-import PayPasswordToast from '@/components/payPasswordToast.vue';
+import { assetsApi } from '@/server/axios.js';
+import { transforTime } from '@/utils/time.js';
 import PositionList from '../position-list.vue';
 export default {
   name: 'CurrentOrder',

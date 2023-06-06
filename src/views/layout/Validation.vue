@@ -45,8 +45,8 @@
 <script>
 import { imgVerify } from '../../server/axios';
 
-import dragS from '../../assets/dragS.png';
 import dragMove from '../../assets/dragMove.png';
+import dragS from '../../assets/dragS.png';
 export default {
   name: 'Validation',
   props: {

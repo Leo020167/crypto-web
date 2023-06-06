@@ -1,7 +1,7 @@
 <template>
   <FadeComponent>
     <div class="login-container" v-document-title :data-title="documentTitle">
-      <h4 class="login-title">{{ $t("login.title") }}</h4>
+      <h4 class="login-title">{{ $t('login.title') }}</h4>
       <el-form ref="loginForm" :model="loginForm" class="login-form">
         <!-- 账号 -->
         <el-row>
@@ -78,25 +78,26 @@
               class="forget-pwd"
               style="color: #357ce1"
               @click="getEamil()"
-              >{{ this.$t("newCommon.login_btn_email_message") }}</span
+              >{{ this.$t('newCommon.login_btn_email_message') }}</span
             >
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
             <span class="forget-pwd" @click="handleForget"
-              >{{ $t("login.reset_pw") }}？</span
+              >{{ $t('login.reset_pw') }}？</span
             >
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
             <el-button
+              :loading="loading"
               type="primary"
               class="agreen-button"
               size="large"
               @click="handleClickLogin"
-              >{{ $t("common.login_btn") }}</el-button
+              >{{ $t('common.login_btn') }}</el-button
             >
           </el-col>
         </el-row>
@@ -111,39 +112,40 @@
 </template>
 
 <script>
-import { security } from "@/server/axios.js";
-import Validation from "../layout/Validation.vue";
+import { security } from '@/server/axios.js';
+import Validation from '../layout/Validation.vue';
 export default {
   data() {
     return {
-      countryValue: "",
+      countryValue: '',
       loginForm: {
-        phone: "", // 手机号码
-        password: "", // 密码
-        smsCode: "",
+        phone: '', // 手机号码
+        password: '', // 密码
+        smsCode: '',
       },
       showPassword: true,
       getValid: false, // 拖动滑块验证事件
       locationx: 0,
-      dragImgKey: "",
+      dragImgKey: '',
       showSmsBox: false, // 验证码书写框的出现（40015）
       smsRequireRule: [], //出现时要求输入[{ required: true, message: '请输入验证码', trigger: 'blur' }]
-      smsText: this.$t("login.sms_tip1"), // 验证码文字
+      smsText: this.$t('login.sms_tip1'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
       triggeringState: 0, //触发滑动事件： 0 登录过程触发 1 发送验证码触发
       passwordError: false, //密码错误
-      fromPath: "",
+      fromPath: '',
+      loading: false,
     };
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       // 通过 `vm` 访问组件实例
       if (
-        from.fullPath === "/forgetPassword" ||
-        from.fullPath === "/register"
+        from.fullPath === '/forgetPassword' ||
+        from.fullPath === '/register'
       ) {
-        vm.fromPath = "/trading";
+        vm.fromPath = '/trading';
       } else {
         vm.fromPath = from.fullPath;
       }
@@ -151,12 +153,12 @@ export default {
   },
   computed: {
     documentTitle() {
-      return this.getTitleValueByLang("登录", "登錄", "Login");
+      return this.getTitleValueByLang('登录', '登錄', 'Login');
     },
   },
   methods: {
     getEamil() {
-      this.$router.push({ name: "loginEamil" });
+      this.$router.push({ name: 'loginEamil' });
     },
     // 拖动滑块验证事件
     closeValid() {
@@ -182,7 +184,7 @@ export default {
       this.$refs.loginForm.validate((valid) => {
         // 存在答应,滑动验证
         if (valid && !this.passwordError) {
-          this.getValid = true;
+          this.gotoLogin();
         } else if (valid && this.passwordError) {
           this.gotoLogin();
         }
@@ -190,6 +192,7 @@ export default {
       });
     },
     gotoLogin() {
+      this.loading = true;
       // phone, userPass, smsCode, locationx, dragImgKey
       security
         .login(
@@ -199,32 +202,35 @@ export default {
           this.locationx,
           this.dragImgKey,
           1,
-          ""
+          ''
         )
         .then((res) => {
-          if (res.code === "200") {
-            this.$store.dispatch("changeCurrentUerInfos", res.data); // vuex备存
+          if (res.code === '200') {
+            this.$store.dispatch('changeCurrentUerInfos', res.data); // vuex备存
             // if (this.fromPath) {
             //   this.$router.push(this.fromPath);
             // } else {
             //   this.$router.replace("/trading"); // 页面跳转到行情页
             // }
-            this.$router.replace("/trading"); // 页面跳转到行情页
-          } else if (res.code === "40016") {
+            this.$router.replace('/trading'); // 页面跳转到行情页
+          } else if (res.code === '40016') {
             // 滑块拖动验证
             this.getValid = true;
-          } else if (res.code === "40015") {
+          } else if (res.code === '40015') {
             // 错误次数过多，需要验证码
             this.showSmsBox = true;
             this.smsRequireRule = [
-              { required: true, message: "请输入验证码", trigger: "blur" },
+              { required: true, message: '请输入验证码', trigger: 'blur' },
             ];
-          } else if (res.msg === "密码错误，请重新输入！") {
+          } else if (res.msg === '密码错误，请重新输入！') {
             this.$message.error(res.msg);
             this.passwordError = true;
           } else {
             this.$message.error(res.msg);
           }
+        })
+        .finally(() => {
+          this.loading = false;
         });
     },
     // 获取验证码
@@ -241,10 +247,10 @@ export default {
             1
           )
           .then((res) => {
-            if (res.code === "200") {
+            if (res.code === '200') {
               this.countDown();
               this.$message.success(res.msg);
-            } else if (res.code === "40016") {
+            } else if (res.code === '40016') {
               // 滑块拖动验证
               this.getValid = true;
               this.triggeringState = 1;
@@ -269,14 +275,14 @@ export default {
             this.isCoding = false;
             clearInterval(this.timer);
             this.timer = null;
-            this.smsText = "点击获取验证码";
+            this.smsText = '点击获取验证码';
           }
         }, 1000);
       }
     },
     // 忘记密码
     handleForget() {
-      this.$router.push("/forgetPassword");
+      this.$router.push('/forgetPassword');
     },
   },
   components: {

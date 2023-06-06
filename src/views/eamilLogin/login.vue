@@ -124,6 +124,7 @@ export default {
       triggeringState: 0, //触发滑动事件： 0 登录过程触发 1 发送验证码触发
       passwordError: false, //密码错误
       fromPath: '',
+      loading: false,
     };
   },
   beforeRouteEnter(to, from, next) {
@@ -172,7 +173,7 @@ export default {
       this.$refs.loginForm.validate((valid) => {
         // 存在答应,滑动验证
         if (valid && !this.passwordError) {
-          this.getValid = true;
+          this.gotoLogin();
         } else if (valid && this.passwordError) {
           this.gotoLogin();
         }
@@ -180,6 +181,7 @@ export default {
       });
     },
     gotoLogin() {
+      this.loading = true;
       // phone, userPass, smsCode, locationx, dragImgKey
       security
         .login(
@@ -214,6 +216,9 @@ export default {
           } else {
             this.$message.error(res.msg);
           }
+        })
+        .finally(() => {
+          this.loading = false;
         });
     },
     // 获取验证码
