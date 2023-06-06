@@ -630,7 +630,7 @@
       "buy": "Haussier (long)",
       "sell": "Baissier (court)",
       "login": "Cliquez pour télécharger l'application et le trading client",
-      "sell_price_label": "Prix en position ouverte:",
+      "sell_price_label": "Prix ouvert:",
       "sell_price_ph": "Veuillez saisir le prix d'ouverture",
       "sell_amount_label": "Taille du lot ouvert:",
       "sell_amount_ph": "Veuillez saisir la taille du lot d'ouverture",
