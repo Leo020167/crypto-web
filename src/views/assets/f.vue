@@ -10,7 +10,9 @@
           <div class="assets-data">
             <div class="left">
               <!-- 总资产(USDT) -->
-              <p class="upper-title">{{ $t('assets.total_assets') }}（TVC）</p>
+              <p class="upper-title">
+                {{ $t('assets.total_assets') }}（AiCoin）
+              </p>
               <p class="upper-data">
                 {{ digitalAccountVuex.assets }}
                 <span class="transfor-usdt">{{
@@ -18,7 +20,7 @@
                 }}</span>
               </p>
               <!-- 可用保证金(USDT) -->
-              <p class="lower-title">{{ $t('assets.eableBail') }}（TVC）</p>
+              <p class="lower-title">{{ $t('assets.eableBail') }}（AiCoin）</p>
               <p class="last-data">{{ digitalAccountVuex.eableBail }}</p>
             </div>
             <div class="center">

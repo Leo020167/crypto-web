@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'TradingView',
+  name: 'AiCoin',
 };
 </script>
 
