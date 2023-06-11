@@ -78,8 +78,8 @@
 </template>
 
 <script>
-import { transforTime } from '@/utils/time.js';
 import { assetsApi } from '@/server/axios.js';
+import { transforTime } from '@/utils/time.js';
 
 export default {
   name: 'OTCOdrder',

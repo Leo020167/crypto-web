@@ -11,6 +11,7 @@
         >
           <el-form-item prop="oldPayPass" v-if="userInfo.user.payPass">
             <el-input
+              oninput="value=value.replace(/[^0-9]/g, '')"
               v-model="model.oldPayPass"
               type="password"
               :placeholder="t('qingshuruyuanmima')"
@@ -18,6 +19,7 @@
           </el-form-item>
           <el-form-item prop="payPass">
             <el-input
+              oninput="value=value.replace(/[^0-9]/g, '')"
               v-model="model.payPass"
               type="password"
               :placeholder="t('qingshuruxinmima')"
@@ -25,6 +27,7 @@
           </el-form-item>
           <el-form-item prop="configPayPass">
             <el-input
+              oninput="value=value.replace(/[^0-9]/g, '')"
               v-model="model.configPayPass"
               type="password"
               :placeholder="t('querenxinmima')"
@@ -48,11 +51,11 @@
 </template>
 
 <script setup>
-import { computed, inject, reactive, ref } from 'vue';
 import { setPayPass } from '@/server/axios';
 import { Message } from 'element-ui';
-import { useRouter } from 'vue-router/composables';
+import { computed, inject, reactive, ref } from 'vue';
 import { useI18n } from 'vue-i18n-composable';
+import { useRouter } from 'vue-router/composables';
 
 const { t } = useI18n();
 

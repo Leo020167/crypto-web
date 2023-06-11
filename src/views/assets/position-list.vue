@@ -1,5 +1,9 @@
 <template lang="">
   <div>
+    <div class="mt-4">
+      <el-switch v-model="zeroAssets"></el-switch>
+      <span class="ml-2">{{ $t('yincangxiaoyue') }}</span>
+    </div>
     <div class="py-4">
       <el-table :data="items" style="width: 100%">
         <el-table-column
@@ -116,9 +120,7 @@ export default {
   computed: {
     items() {
       if (this.zeroAssets) {
-        return this.rowData.filter(
-          (v) => Number(v.holdAmount) > 0 || Number(v.frozenAmount) > 0
-        );
+        return this.rowData.filter((v) => Number(v.availableAmount) > 0);
       }
       return this.rowData;
     },

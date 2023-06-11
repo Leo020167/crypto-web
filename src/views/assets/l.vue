@@ -37,6 +37,7 @@
             </div>
           </div>
         </div>
+
         <!-- 下层：记录展示 -->
         <div class="bottom">
           <ul class="bul">
@@ -90,14 +91,14 @@
 </template>
 
 <script>
-import TopUpDialog from './balanceCompontent/topUpDialog.vue'; //充币弹窗
-import MetionDialog from './balanceCompontent/MetionDialog.vue'; // 提币弹窗
-import TransferDialog from './balanceCompontent/TransferDialog.vue'; //划转弹窗
-import Subscription from './compontent/Subscription.vue'; // 申请记录
 import { assetsApi, legalPurchaseApi } from '@/server/axios.js';
-import PositionList from './position-list.vue';
 import { mapGetters } from 'vuex';
 import AssetsButtonGroup from './AssetsButtonGroup.vue';
+import MetionDialog from './balanceCompontent/MetionDialog.vue'; // 提币弹窗
+import TransferDialog from './balanceCompontent/TransferDialog.vue'; //划转弹窗
+import TopUpDialog from './balanceCompontent/topUpDialog.vue'; //充币弹窗
+import Subscription from './compontent/Subscription.vue'; // 申请记录
+import PositionList from './position-list.vue';
 
 export default {
   data() {

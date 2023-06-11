@@ -138,8 +138,6 @@
             $t('newCommon.text70')
           }}</span>
 
-          <!-- <span class="content-item1-span"
-                v-if="contentIndex == 3">{{$t('newCommon.text41')}}</span> -->
           <el-popover
             placement="left-end"
             title=""
@@ -159,16 +157,16 @@
         </div>
         <div class="content-item item2">
           <span class="content-item3-span">{{
-            accountInfo && accountInfo.assets
+            this.totalAsset && this.totalAsset.totalAssets
           }}</span>
           <span class="content-item4-span"
-            >{{ accountInfo && accountInfo.riskRate }}%</span
-          >
+            >{{ accountInfo && accountInfo.riskRate }}%
+          </span>
         </div>
         <div class="content-item item2-1">
-          <span class="content-item21-span">{{
-            accountInfo && accountInfo.assetsCny
-          }}</span>
+          <span class="content-item21-span"
+            >{{ this.totalAsset && this.totalAsset.tolAssetsCny }}
+          </span>
         </div>
         <div class="content-item item3">
           <span class="content-item1-span">{{
@@ -219,10 +217,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { findMyCoin, seachCoin, legalPurchaseApi } from '@/server/axios';
-import { ReflashRealSeconds } from '@/utils/Enums';
 import OptionalIcon from '@/components/Optional/OptionalIcon.vue';
+import { findMyCoin, legalPurchaseApi, seachCoin } from '@/server/axios';
+import { ReflashRealSeconds } from '@/utils/Enums';
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {

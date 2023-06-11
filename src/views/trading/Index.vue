@@ -85,7 +85,7 @@
               <p class="symbol-state">{{ symbolData.low }}</p>
             </div>
             <div class="symbol-other">
-              <p class="other-name">{{ $t('trade.amount') }}</p>
+              <p class="other-name">{{ $t('trade.amount') }}(m)</p>
               <p class="symbol-state">{{ symbolData.amount }}</p>
             </div>
           </div>
@@ -248,12 +248,12 @@ import TradeSpot from './components/TradeSpot.vue';
 import CurrentOrder from '../assets/compontent/CurrentOrder.vue';
 import CurrentOrder1 from '../assets/compontent/CurrentOrder1.vue';
 // 历史开仓
+import { assetsApi, getDish, legalPurchaseApi } from '@/server/axios.js';
+import { ReflashRealSeconds } from '@/utils/Enums';
+import { mapGetters } from 'vuex';
+import TransferDialog from '../assets/balanceCompontent/TransferDialog.vue'; //划转弹窗
 import HistoryOrder from '../assets/compontent/HistoryOrder.vue';
 import SpotHistoryOrder from '../assets/compontent/SpotHistoryOrder.vue';
-import TransferDialog from '../assets/balanceCompontent/TransferDialog.vue'; //划转弹窗
-import { mapGetters } from 'vuex';
-import { ReflashRealSeconds } from '@/utils/Enums';
-import { assetsApi, getDish, legalPurchaseApi } from '@/server/axios.js';
 export default {
   components: {
     Kline,

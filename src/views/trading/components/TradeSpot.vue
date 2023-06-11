@@ -48,7 +48,7 @@
                 @input="checkOutOpen('buy')"
                 autocomplete="off"
                 :placeholder="$t('trade.transaction.enterQuantity')"
-                v-model.number="lookUpForm.amount"
+                v-model="lookUpForm.amount"
               >
                 <template slot="suffix">USDT</template>
               </el-input>
@@ -113,7 +113,7 @@
                 type="number"
                 :placeholder="$t('trade.transaction.enterQuantity')"
                 @input="checkOutOpen('sell')"
-                v-model.number="lookDownForm.amount"
+                v-model="lookDownForm.amount"
               >
                 <template slot="suffix">{{ coinType }}</template>
               </el-input>
@@ -177,7 +177,7 @@
                 @input="checkOutOpen('buy')"
                 autocomplete="off"
                 :placeholder="$t('trade.transaction.enterQuantity')"
-                v-model.number="lookUpFormMarket.amount"
+                v-model="lookUpFormMarket.amount"
               >
                 <template slot="suffix">USDT</template>
               </el-input>
@@ -240,7 +240,7 @@
                 type="number"
                 :placeholder="$t('trade.transaction.enterQuantity')"
                 @input="checkOutOpen('sell')"
-                v-model.number="lookDownFormMarket.amount"
+                v-model="lookDownFormMarket.amount"
               >
                 <template slot="suffix">{{ coinType }}</template>
               </el-input>
@@ -606,10 +606,14 @@ export default {
             Number(this.buyMarket.maxOpenBail) * rate;
         }
       } else {
+        const availableAmount =
+          this.orderType === 'limit'
+            ? this.sellLimit.availableAmount
+            : this.sellMarket.availableAmount;
         const precision = Number(
-          String(this.maxHand).split('.')?.[1]?.length ?? 2
+          String(availableAmount).split('.')?.[1]?.length ?? 2
         );
-        const hand = currency(this.maxHand, {
+        const hand = currency(availableAmount, {
           symbol: '',
           separator: '',
           precision,
