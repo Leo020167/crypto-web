@@ -13,16 +13,18 @@ export default defineConfig({
     proxy: {
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
+      
       '/procoin-market': {
-        target: 'http://market.bjchjscl.com',
+        target: 'https://web.kaobaochina.cn/market',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.bjchjscl.com',
+        target: 'http://upload.cryptographeex.com',
         changeOrigin: true,
       },
+      //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'http://api.bjchjscl.com',
+        target: 'https://web.kaobaochina.cn/api',
         changeOrigin: true,
       },
     },
