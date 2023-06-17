@@ -115,7 +115,6 @@
       { "title": "15 minutes", "resolution": "15", "chartType": 1 },
       { "title": "1 hour", "resolution": "60", "chartType": 1 },
       { "title": "4 hours", "resolution": "240", "chartType": 1 },
-      { "title": "4 hours", "resolution": "240", "chartType": 1 },
       { "title": "1 day", "resolution": "1D", "chartType": 1 },
       { "title": "1 week", "resolution": "1W", "chartType": 1 }
     ],
