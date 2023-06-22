@@ -184,7 +184,7 @@
   },
   "community": {
     "team_count": "社區人數",
-    "sum_amount": "總傭金(AOI)",
+    "sum_amount": "總傭金(ATC)",
     "shequzongjiangli": "社區總獎勵",
     "invite_count": "邀請碼數量",
     "table": {
@@ -281,7 +281,7 @@
     "weishixianyingkui": "未實現盈虧",
     "openBail": "凍結",
     "kaicangbaozhengjin": "開倉保證金",
-    "openBailTfu": "凍結(AOI)",
+    "openBailTfu": "凍結(ATC)",
     "chicangbaozhengjin": "持倉保證金",
     "zongyingkui": "總盈虧",
     "weituojine": "委託金額",

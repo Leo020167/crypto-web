@@ -54,7 +54,7 @@
     "text41": "Le solde du compte",
     "text42": "Compte de change",
     "text43": "Compte à terme international",
-    "text44": "Compte AOI",
+    "text44": "Compte ATC",
     "text45": "Journées",
     "text46": "Commandez des paramètres multiplicateurs",
     "text47": "Pointe",
@@ -95,7 +95,7 @@
     "text69": "Compte de contrat",
     "text70": "Compte de devises",
     "text71": "Lots de trading total",
-    "text72": "Obtenez AOI",
+    "text72": "Obtenez ATC",
     "text73": "Formulaire de divulgation des risques",
     "text74": "J'ai lu et accepté",
     "text75": "Les actifs totaux du compte à terme mondial"
@@ -188,14 +188,14 @@
   },
   "community": {
     "team_count": "Taille de la communauté",
-    "sum_amount": "Commission totale (AOI)",
+    "sum_amount": "Commission totale (ATC)",
     "shequzongjiangli": "Récompenses communautaires totales",
     "invite_count": "Nombre de codes d'invitation",
     "table": {
       "label1": "Code d'invitation",
       "label2": "«Status»",
       "label3": "«membre»",
-      "label4": "Award (AOI)"
+      "label4": "Award (ATC)"
     },
     "used": "Utilisé",
     "notUsed": "Inutilisé",
@@ -288,7 +288,7 @@
     "weishixianyingkui": "Bénéfice et perte non réalisés",
     "openBail": "Gel",
     "kaicangbaozhengjin": "Marge d'ouverture",
-    "openBailTfu": "Gel (AOI)",
+    "openBailTfu": "Gel (ATC)",
     "chicangbaozhengjin": "Marge de position",
     "zongyingkui": "Total P&L",
     "weituojine": "Montant confié",
