@@ -24,7 +24,7 @@ export default defineConfig({
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://api.kaobaochina.cn',
+        target: 'https://web.kaobaochina.cn/api/',
         changeOrigin: true,
       },
     },

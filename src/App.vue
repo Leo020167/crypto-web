@@ -5,9 +5,7 @@
 </template>
 
 <script>
-export default {
-  name: 'AI Trading Center',
-};
+export default {};
 </script>
 
 <style>
