@@ -54,7 +54,7 @@
     "text41": "余額賬戶",
     "text42": "外匯賬戶",
     "text43": "國際期貨賬戶",
-    "text44": "AI Trading Center帳戶",
+    "text44": "Fwdetsc帳戶",
     "text45": "天",
     "text46": "跟單倍數設置",
     "text47": "提示",
@@ -169,7 +169,7 @@
     "subscribe": "金牌機构",
     "otc": "法幣交易",
     "new_purchase": "新币申购",
-    "chuangxinshiyanqu": "創新試驗區",
+    "chuangxinshiyanqu": "新幣申購",
     "assets": "總資產",
     "digital_account": "數字貨幣賬戶",
     "stock_account": "股指期貨賬戶",
@@ -191,7 +191,7 @@
       "label1": "邀請碼",
       "label2": "狀態",
       "label3": "成員",
-      "label4": "獎勵（AI Trading Center）"
+      "label4": "獎勵（Fwdetsc）"
     },
     "used": "已使用",
     "notUsed": "未使用",

@@ -110,11 +110,11 @@ Vue.use(func);
 Vue.prototype.getTitleValueByLang = function (cnValue, twValue, enValue) {
   if (typeof this.$i18n == 'undefined') return '';
   if (this.$i18n.locale == 'zh_CN') {
-    return cnValue + ' - AI Trading Center';
+    return cnValue + ' - Fwdetsc';
   } else if (this.$i18n.locale == 'zh_TW') {
-    return twValue + ' - AI Trading Center';
+    return twValue + ' - Fwdetsc';
   } else {
-    return enValue + ' AI Trading Center';
+    return enValue + ' Fwdetsc';
   }
 };
 
