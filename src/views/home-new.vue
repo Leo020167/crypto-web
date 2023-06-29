@@ -90,10 +90,10 @@
           <img src="/img/logo.png" alt="" class="h-6 lg:h-12" />
           <div class="lg:text-right">
             <div class="mt-4">
-              Cryptographe{{ $t('quanqiuyouzhishuzizichan') }}
+              Financingy{{ $t('quanqiuyouzhishuzizichan') }}
             </div>
             <div class="mt-2">
-              Copyright © 2021 - Cryptographe All rights reserved.
+              Copyright © 2021 - Financingy All rights reserved.
             </div>
           </div>
         </div>

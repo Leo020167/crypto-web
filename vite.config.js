@@ -1,12 +1,12 @@
-import { fileURLToPath, URL } from 'node:url';
-import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import vue2 from '@vitejs/plugin-vue2';
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Cryptographe-PC',
+    outDir: 'dist/Financingy-PC',
   },
   server: {
     port: 5174,
