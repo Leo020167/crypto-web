@@ -476,7 +476,7 @@ export default {
         return 'USD';
       }
 
-      return this.marketType === 'digital' ? 'USDT' : 'USDT';
+      return this.marketType === 'digital' ? 'EUR' : 'USDT';
     },
   },
   data() {
