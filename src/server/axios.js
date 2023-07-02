@@ -992,3 +992,10 @@ export const delAddress = (data) => {
 export const withdrawSubmit = (data) => {
   return func.axiosPost(baseUrl + '/depositeWithdraw/withdrawSubmit.do', data);
 };
+
+export function getArticles(params) {
+  return func.axiosPost(baseUrl + '/article/noticeListWeb.do', params);
+}
+export function getArticle(params) {
+  return func.axiosPost(baseUrl + '/article/detail.do', params);
+}

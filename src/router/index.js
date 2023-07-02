@@ -138,6 +138,15 @@ const router = new VueRouter({
           },
         },
         {
+          path: '/industry-news', // 注册
+          name: 'IndustryNews',
+          component: () => import('@/views/IndustryNews.vue'),
+          meta: {
+            requireAuth: false,
+            title: '行业动态',
+          },
+        },
+        {
           path: '/register', // 注册
           name: 'register',
           component: () => import('@/views/register/Index.vue'),

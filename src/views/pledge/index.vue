@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="text-right">
+    <div class="text-right py-4">
       <router-link to="/pledge-history">{{ $t('pledge.text1') }}</router-link>
     </div>
 

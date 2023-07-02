@@ -271,7 +271,6 @@
 
   .bict-banner {
     width: 100%;
-    margin-top: 50px;
     position: relative;
 
     .image {

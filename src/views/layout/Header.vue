@@ -22,7 +22,7 @@
         <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/pledge">{{ $t('hangyedongtai') }}</router-link>
+        <router-link to="/industry-news">{{ $t('hangyedongtai') }}</router-link>
       </li>
       <li class="nav-item">
         <router-link to="/about">{{ $t('guanyuwomen') }}</router-link>
