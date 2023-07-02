@@ -129,6 +129,15 @@ const router = new VueRouter({
           },
         },
         {
+          path: '/about', // 注册
+          name: 'about',
+          component: () => import('@/views/About.vue'),
+          meta: {
+            requireAuth: false,
+            title: '关于我们',
+          },
+        },
+        {
           path: '/register', // 注册
           name: 'register',
           component: () => import('@/views/register/Index.vue'),

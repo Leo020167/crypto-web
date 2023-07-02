@@ -21,6 +21,12 @@
       <li class="nav-item">
         <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
       </li>
+      <li class="nav-item">
+        <router-link to="/pledge">{{ $t('hangyedongtai') }}</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/about">{{ $t('guanyuwomen') }}</router-link>
+      </li>
     </ul>
 
     <ul class="login-and-register-container flex items-center">
@@ -150,7 +156,6 @@ import { useLocaleStore } from '../../stores/locale';
 export default {
   setup() {
     const localeStorage = useLocaleStore();
-
     return {
       localeStorage,
     };
