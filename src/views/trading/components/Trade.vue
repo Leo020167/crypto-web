@@ -459,7 +459,7 @@ export default {
         return 'USD';
       }
 
-      return this.marketType === 'digital' ? 'USDT' : 'EUR';
+      return this.marketType === 'digital' ? 'USDT' : 'USDT';
     },
     transUnit() {
       if (
