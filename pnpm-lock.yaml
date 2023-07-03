@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -115,9 +115,6 @@ devDependencies:
   vite:
     specifier: ^3.0.2
     version: 3.0.2(sass@1.62.1)(terser@5.17.7)
-  vite-plugin-electron:
-    specifier: ^0.10.4
-    version: 0.10.4
 
 packages:
 
@@ -2188,10 +2185,6 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
-    dev: true
-
-  /vite-plugin-electron@0.10.4:
-    resolution: {integrity: sha512-GrTFfkdavF4BTuqujSL5JvMTHVh4HsnBbnHjnsRB+mPBtS1jnmWxXgWsct7Ys4eOJ86/1tgJAPuCh6+GC40E4Q==}
     dev: true
 
   /vite@3.0.2(sass@1.62.1)(terser@5.17.7):
