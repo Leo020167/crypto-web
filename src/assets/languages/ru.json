@@ -154,7 +154,10 @@
     "text44": "Цена подписки",
     "text45": "Принимаемые валюты",
     "text46": "Время начала",
-    "text47": "Время окончания"
+    "text47": "Время окончания",
+
+    "text48": "portée d'achat unique",
+    "text49": "Veuillez entrer la portée d'achat correcte {min}~{max}"
   },
   "regVerify": {
     "checkMobile": {

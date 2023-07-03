@@ -154,7 +154,10 @@
     "text44": "Prix de l'abonnement",
     "text45": "Devises acceptées",
     "text46": "Heure de début",
-    "text47": "Heure de fin"
+    "text47": "Heure de fin",
+
+    "text48": "alcance de compra único",
+    "text49": "Ingrese el alcance correcto de la compra {min}~{max}"
   },
   "regVerify": {
     "checkMobile": {

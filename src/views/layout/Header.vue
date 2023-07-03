@@ -95,6 +95,9 @@
             </el-dropdown-menu>
           </el-dropdown>
         </li>
+        <li class="ml-6">
+          {{ currentUserInfos.user.userRealName }}
+        </li>
         <li class="nav-header">
           <el-dropdown @command="handleCommand">
             <span class="el-dropdown-links">

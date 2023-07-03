@@ -156,7 +156,10 @@
     "text44": "Subscription Price",
     "text45": "Accepted currencies",
     "text46": "Start time",
-    "text47": "End time"
+    "text47": "End time",
+
+    "text48": "single purchase scope",
+    "text49": "Please enter the correct scope of purchase {min}~{max}"
   },
   "regVerify": {
     "checkMobile": {

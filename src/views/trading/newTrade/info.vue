@@ -81,6 +81,10 @@
         <p class="details-desc">{{ detail.sum }}</p>
       </div>
       <div>
+        <p class="details-title">{{ $t('newCommon2.text48') }}:</p>
+        <p class="details-desc">{{ [detail.min, detail.max].join('~') }}</p>
+      </div>
+      <div>
         <p class="details-title">{{ $t('newCommon2.text29') }}:</p>
         <p class="details-desc">{{ detail.alCount }}</p>
       </div>
@@ -271,7 +275,6 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.query);
     this.subscribeId = this.$route.query.id;
     this.gerInfo();
   },
@@ -299,12 +302,25 @@ export default {
       }, 1000);
     },
     getShengou() {
-      console.log('1');
       this.$prompt(this.$t('newCommon2.text21'), this.$t('newCommon2.text24'), {
         confirmButtonText: this.$t('newCommon2.text22'),
         cancelButtonText: this.$t('newCommon2.text23'),
       })
         .then(({ value }) => {
+          if (
+            !value ||
+            Number(value) < Number(this.detail.min) ||
+            Number(value) > Number(this.detail.max)
+          ) {
+            this.$message.error(
+              this.$t('newCommon2.text49', {
+                min: this.detail.min,
+                max: this.detail.max,
+              })
+            );
+            return;
+          }
+
           assetsApi
             .getDataListSubInfoApply(
               this.subscribeId,
@@ -312,7 +328,6 @@ export default {
               this.$store.state.user.userInfos.user.userId
             )
             .then((res) => {
-              console.log(res);
               if (res.code == 400) {
                 this.$message.error(res.msg);
               } else {

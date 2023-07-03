@@ -155,7 +155,10 @@
     "text44": "Precio de Suscripción",
     "text45": "Divisas aceptadas",
     "text46": "Hora de inicio",
-    "text47": "Hora de finalización"
+    "text47": "Hora de finalización",
+
+    "text48": "alcance de compra único",
+    "text49": "Ingrese el alcance correcto de la compra {min}~{max}"
   },
   "regVerify": {
     "checkMobile": {
