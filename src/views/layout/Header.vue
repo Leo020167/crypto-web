@@ -85,8 +85,11 @@
                 </div>
               </div>
 
-              <PrimaryCertificationDropdownItem />
-              <AdvancedCertificationDropdownItem />
+              <router-link to="/user/authentication">
+                <el-dropdown-item divided>{{
+                  $t('header.verify')
+                }}</el-dropdown-item>
+              </router-link>
               <router-link to="/user/myCommunity">
                 <el-dropdown-item>{{
                   $t('header.my_community')
@@ -120,12 +123,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import { security } from '@/server/axios.js';
-import { useLocaleStore } from '../../stores/locale';
 import { useCertificationStore } from '@/stores/certification';
-import PrimaryCertificationDropdownItem from './PrimaryCertificationDropdownItem.vue';
-import AdvancedCertificationDropdownItem from './AdvancedCertificationDropdownItem.vue';
+import { mapGetters } from 'vuex';
+import { useLocaleStore } from '../../stores/locale';
 import BindEmailDropdownItem from './BindEmailDropdownItem.vue';
 export default {
   setup() {
@@ -215,8 +216,6 @@ export default {
     },
   },
   components: {
-    PrimaryCertificationDropdownItem,
-    AdvancedCertificationDropdownItem,
     BindEmailDropdownItem,
   },
 };
