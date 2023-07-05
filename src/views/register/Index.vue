@@ -188,6 +188,7 @@ import { security } from '@/server/axios.js';
 import { useLocaleStore } from '@/stores/locale';
 import { validateCode } from '@/utils/RegVerify.js';
 import { storeToRefs } from 'pinia';
+
 import Validation from '../layout/Validation.vue';
 export default {
   setup() {

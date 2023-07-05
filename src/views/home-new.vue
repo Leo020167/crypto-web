@@ -106,6 +106,7 @@
 import HomeBanner from '@/components/HomeBanner.vue';
 import MarketTrend from '@/components/MarketTrend.vue';
 import { mapGetters } from 'vuex';
+
 export default {
   data() {
     return {};
@@ -115,6 +116,7 @@ export default {
       currentUserInfos: 'getCurrentUserInfos',
     }),
   },
+
   methods: {
     handleClick() {
       if (this.currentUserInfos.token) {

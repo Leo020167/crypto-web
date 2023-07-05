@@ -36,6 +36,7 @@ export const locales = [
     label: 'Español',
   },
 ];
+
 export const useLocaleStore = defineStore({
   id: 'locale',
   state: () => ({

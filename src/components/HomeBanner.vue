@@ -18,8 +18,9 @@
 
 <script setup>
 import { homeConfig } from '@/server/axios';
-
-import { onMounted, ref } from 'vue';
+import { useLocaleStore } from '@/stores/locale';
+import { storeToRefs } from 'pinia';
+import { onMounted, ref, watch } from 'vue';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 const swiperOption = {
@@ -31,16 +32,21 @@ const swiperOption = {
   },
 };
 
-const bannerSliders = ref([]);
-onMounted(async () => {
+const store = useLocaleStore();
+
+const { locale } = storeToRefs(store);
+
+const getBanners = async () => {
   const res = await homeConfig({});
 
   if (res.code === '200') {
     bannerSliders.value = res.data.banner;
   }
-});
+};
+const bannerSliders = ref([]);
+onMounted(getBanners);
 
-console.log(bannerSliders);
+watch(locale, getBanners);
 </script>
 
 <style lang="scss" scoped>
