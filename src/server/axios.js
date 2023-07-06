@@ -738,8 +738,8 @@ export const legalPurchaseApi = {
   },
   // 热搜榜
   resouBang: () => {
-    let url = newUrl + '/quote/cloutData.do';
-    return func.axiosPost(url, {});
+    // let url = newUrl + '/quote/cloutData.do';
+    // return func.axiosPost(url, {});
   },
   // 市场
   marketAdv: (buySell, filterPayWay, filterCny, pageNo, type, currencyType) => {
