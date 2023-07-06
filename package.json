@@ -30,6 +30,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",
     "qs": "^6.11.2",
+    "query-string": "^8.1.0",
     "swiper": "^5.4.5",
     "vue": "^2.7.14",
     "vue-awesome-swiper": "4",

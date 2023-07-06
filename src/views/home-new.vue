@@ -99,15 +99,62 @@
         </div>
       </div>
     </footer>
+
+    <a
+      :href="link"
+      target="_blank"
+      class="bg-white fixed right-20 bottom-20 w-12 h-12 rounded-full overflow-hidden"
+    >
+      <img
+        src="/img/tab1_menu4.png"
+        alt=""
+        class="w-full h-full object-cover"
+      />
+    </a>
   </div>
 </template>
 
 <script>
 import HomeBanner from '@/components/HomeBanner.vue';
 import MarketTrend from '@/components/MarketTrend.vue';
+import { useUserStore } from '@/stores/user';
+import queryString from 'query-string';
 import { mapGetters } from 'vuex';
-
 export default {
+  setup() {
+    const store = useUserStore();
+
+    const userInfo = store.userInfo?.user;
+
+    const metadata = userInfo
+      ? JSON.stringify({
+          userId: userInfo?.userId,
+          userName: userInfo?.userName,
+          phone: userInfo?.phone,
+          email: userInfo?.email,
+          inviteName: userInfo?.inviteName,
+          agencyCode: userInfo?.agencyCode,
+        })
+      : null;
+
+    const link =
+      `https://chat.ichatlink.net/widget/standalone.html?` +
+      queryString.stringify(
+        {
+          eid: '8b926d40eb1e1074e5a3012d394451df',
+          clientid: userInfo?.userId,
+          language: 'en',
+          metadata,
+        },
+        {
+          encode: false,
+          skipEmptyString: true,
+          skipNull: true,
+        }
+      );
+
+    return { link };
+  },
   data() {
     return {};
   },
