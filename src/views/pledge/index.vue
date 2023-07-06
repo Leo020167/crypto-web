@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="text-right">
+    <div class="text-right mb-5">
       <router-link to="/pledge-history">{{ $t('pledge.text1') }}</router-link>
     </div>
 
@@ -8,7 +8,7 @@
       <el-col :span="8" v-for="v in pledges" :key="v.id" class="mb-6">
         <el-card class="box-card">
           <div slot="header" class="flex items-center justify-between">
-            <span>{{ v.symbol }}</span>
+            <span>{{ v.pledgeName }}</span>
             <el-button type="primary" size="small" @click="handleClick(v)">{{
               $t('pledge.text2')
             }}</el-button>
