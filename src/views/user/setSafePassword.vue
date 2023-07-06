@@ -52,11 +52,12 @@
 
 <script setup>
 import { setPayPass } from '@/server/axios';
+import { useUserStore } from '@/stores/user';
 import { Message } from 'element-ui';
-import { computed, inject, reactive, ref } from 'vue';
+import { storeToRefs } from 'pinia';
+import { reactive, ref } from 'vue';
 import { useI18n } from 'vue-i18n-composable';
 import { useRouter } from 'vue-router/composables';
-
 const { t } = useI18n();
 
 const model = reactive({
@@ -67,9 +68,9 @@ const formRef = ref(null);
 
 const loading = ref(false);
 
-const store = inject('vuex-store'); // TODO
+const store = useUserStore();
 
-const userInfo = computed(() => store.getters.getCurrentUserInfos);
+const { userInfo } = storeToRefs(store);
 
 const rules = reactive({
   oldPayPass: [
@@ -120,12 +121,12 @@ const submit = () => {
           ...model,
         });
         if (res.code === '200') {
+          store.getUser();
           Message.success(res.msg);
           router.replace('/trading');
         } else {
           Message.error(res.msg);
         }
-        console.log(res);
       } catch (error) {
         //
         console.log(error);
