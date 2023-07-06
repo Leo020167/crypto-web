@@ -270,12 +270,13 @@ export default {
   },
   created() {
     legalPurchaseApi.ceshi().then((res) => {
-      this.accountInfo = res.data.spotAccount;
+      this.accountInfo = res?.data?.spotAccount;
     });
 
     this.getMyCoinInterval = setInterval(() => {
       this.getMyCoin();
     }, ReflashRealSeconds);
+
     let desc = sessionStorage.getItem('riskRateDesc');
     this.riskRateDesc = desc;
   },
