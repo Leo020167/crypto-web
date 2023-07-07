@@ -13,7 +13,7 @@
             <el-form-item>
               <el-input
                 type="input"
-                placeholder="请输入邮箱"
+                :placeholder="$t('qingshuruyouxiang')"
                 v-model="registerForm.email"
               ></el-input>
             </el-form-item>
@@ -261,8 +261,8 @@ export default {
               '',
               '',
               this.registerForm.smsCode,
-              this.locationx,
-              this.dragImgKey,
+              '',
+              '',
               this.registerForm.password,
               this.registerForm.secordPassword,
               this.registerForm.inviteCode,
@@ -275,10 +275,6 @@ export default {
                 this.$message.success(res.msg);
                 this.$store.dispatch('changeCurrentUerInfos', res.data); // vuex备存
                 this.$router.replace('/trading'); // 页面跳转到行情页
-              } else if (res.code === '40016') {
-                // 重新拖动一次图片
-                this.getValid = true;
-                this.onlyValid = true;
               } else {
                 this.$message.error(res.msg);
               }
@@ -294,7 +290,7 @@ export default {
       if (this.isCoding) {
         return;
       } else if (!this.registerForm.email) {
-        this.$message('请输入邮箱');
+        this.$message(this.$t('qingshuruyouxiang'));
       } else if (this.dragImgKey) {
         // 已经拖动了，直接获取验证码
         this.getSmsCode();
