@@ -90,11 +90,7 @@
                   $t('header.verify')
                 }}</el-dropdown-item>
               </router-link>
-              <router-link to="/user/myCommunity">
-                <el-dropdown-item>{{
-                  $t('header.my_community')
-                }}</el-dropdown-item>
-              </router-link>
+
               <router-link to="/user/changeLoginPassword">
                 <el-dropdown-item>{{
                   $t('header.modify_pw')
