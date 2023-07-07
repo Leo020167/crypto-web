@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "私たちに関しては",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=64"
+    },
+    {
+      "title": "ユーザー規約",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=204"
+    },
+    {
+      "title": "規約同意",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=212"
+    },
+    {
+      "title": "プライバシーポリシー",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=220"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "6桁の取引パスワードを入力してください",
+  "jiaoyimimaguanli": "トランザクションパスワード管理",
+  "qingshurujiaoyimima": "取引パスワードを入力してください",
+  "qingxuanzetibidizhi": "出金アドレスを選択してください",
+  "qingshurutibishuliang": "出金額を入力してください",
+  "tibishuliangbuzu": "引き出し金額が不十分です",
+
   "yincangxiaoyue": "少額の残高を非表示",
   "chuangxinshiyanqu": "最初の取引",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "アカウントのセキュリティを確保するために、本人確認を行ってください",

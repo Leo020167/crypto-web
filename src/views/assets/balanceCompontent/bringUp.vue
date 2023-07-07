@@ -183,24 +183,24 @@
 
 <script>
 import {
-  security,
-  coinList,
-  getWithdrawConfigs,
   addressList,
-  withdrawSubmit,
+  coinList,
   getUserInfo,
+  getWithdrawConfigs,
+  security,
+  withdrawSubmit,
 } from '@/server/axios.js';
 
-import Validation from '../../layout/Validation.vue';
 import PayPasswordToast from '@/components/payPasswordToast.vue';
 import md5 from 'js-md5';
+import Validation from '../../layout/Validation.vue';
 
 export default {
   components: {
     Validation,
     PayPasswordToast,
   },
-  data() {
+  data(vm) {
     return {
       addressStr: '',
       smsText: this.$t('login.sms_tip1'), // 验证码文字
@@ -237,7 +237,7 @@ export default {
       //
       showPayPwd: false,
       showError: false, //40032
-      message: 'Please enter the 6-digit payment password',
+      message: vm.$t('qingshuru6weijiaoyimima'),
       payPass: '',
     };
   },
@@ -539,16 +539,16 @@ export default {
 
     onSubmit() {
       if (!this.addressStr && !this.addressId) {
-        this.$message.error('請選擇提幣地址');
+        this.$message.error(this.$t('qingxuanzetibidizhi'));
         return;
       }
 
       if (!this.amount || !this.amount.trim().length) {
-        this.$message.error('請輸入提幣數量');
+        this.$message.error(this.$t('qingshurutibishuliang'));
         return;
       }
       if (Number(this.amount) < Number(this.configs?.data?.fee)) {
-        this.$message.error('提幣數量不足');
+        this.$message.error(this.$t('tibishuliangbuzu'));
         return;
       }
 

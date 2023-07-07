@@ -2,7 +2,12 @@
   <div class="pwd-container">
     <div class="bg" @click="hidePwd"></div>
     <div class="input-container">
-      <h2>请输入交易密码:<i class="el-icon-close" @click="hidePwd"></i></h2>
+      <h2>
+        {{ $t('qingshurujiaoyimima') }}:<i
+          class="el-icon-close"
+          @click="hidePwd"
+        ></i>
+      </h2>
       <form autocomplete="off" class="setPwd-container">
         <div class="setPwd1">
           <input
@@ -14,7 +19,7 @@
             ref="pwd1"
             name="pwd1"
             class="phone"
-            placeholder="请输入6位支付密码"
+            :placeholder="$t('qingshuru6weijiaoyimima')"
           />
           <ul class="pwd-wrap" @click="focusPwd1">
             <li :class="pwd1.length == 0 && showPwd1Brink ? 'psd-blink' : ''">
@@ -40,9 +45,11 @@
       </form>
       <div class="pwd-tips">
         <p :class="errormsg ? 'Msg error' : 'Msg'">
-          {{ errormsg ? errormsg : '请输入6位交易密码' }}
+          {{ errormsg ? errormsg : $t('qingshuru6weijiaoyimima') }}
         </p>
-        <span class="forget" @click="forgetPwd">交易密码管理</span>
+        <span class="forget" @click="forgetPwd">
+          {{ $t('jiaoyimimaguanli') }}</span
+        >
       </div>
     </div>
   </div>

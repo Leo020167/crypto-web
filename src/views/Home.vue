@@ -1,22 +1,26 @@
 <template>
   <div class="home-container">
-    <VHeader></VHeader>
+    <GlobalHeader />
     <div class="main">
       <div class="content-container">
         <router-view />
       </div>
     </div>
+    <GlobalFooter />
   </div>
 </template>
 
 <script>
-import Header from './layout/Header.vue';
-import { mapGetters } from 'vuex';
-import { ReflashAccountSeconds } from '@/utils/Enums';
+import GlobalFooter from '@/components/GlobalFooter.vue';
 import { security } from '@/server/axios.js';
+import { ReflashAccountSeconds } from '@/utils/Enums';
+import { mapGetters } from 'vuex';
+import Header from './layout/Header.vue';
+
 export default {
   components: {
-    VHeader: Header,
+    GlobalHeader: Header,
+    GlobalFooter,
   },
   data() {
     return {

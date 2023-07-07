@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "about Us",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=63"
+    },
+    {
+      "title": "User Agreement",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=203"
+    },
+    {
+      "title": "terms agreement",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=211"
+    },
+    {
+      "title": "Privacy Policy",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=219"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "Please enter the 6-digit transaction password",
+  "jiaoyimimaguanli": "Transaction password management",
+  "qingshurujiaoyimima": "Please enter the transaction password",
+  "qingxuanzetibidizhi": "Please select the withdrawal address",
+  "qingshurutibishuliang": "Please enter the withdrawal amount",
+  "tibishuliangbuzu": "Insufficient withdrawal amount",
+
   "yincangxiaoyue": "Hide small balance",
   "chuangxinshiyanqu": "First transaction",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "In order to ensure the security of your account, please verify your identity",
@@ -638,7 +664,7 @@
       "sell_amount_label": "Open lot size:",
       "sell_amount_ph": "Please enter the opening lot size",
       "buy_on_best_price": "Open at the best price in the market",
-      "sell_on_best_price": "Open a position at the best price in the market",
+      "sell_on_best_price": "Open at the best price in the market",
       "message": "Please enter your 6-digit trading password",
       "tips1": "Please enter the opening price",
       "tips2": "Please enter the number of lots to open",

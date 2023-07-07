@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "关于我们",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=60"
+    },
+    {
+      "title": "用户协议",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=200"
+    },
+    {
+      "title": "条款协议",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=208"
+    },
+    {
+      "title": "隐私条款",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=216"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "请输入6位交易密码",
+  "jiaoyimimaguanli": "交易密码管理",
+  "qingshurujiaoyimima": "请输入交易密码",
+  "qingxuanzetibidizhi": "请选择提币地址",
+  "qingshurutibishuliang": "请输入提币数量",
+  "tibishuliangbuzu": "提币数量不足",
+
   "yincangxiaoyue": "隐藏小余额",
   "chuangxinshiyanqu": "首发交易",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "为了保证您的帐号安全，请验证身份",

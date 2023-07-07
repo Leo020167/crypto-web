@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "о нас",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=65"
+    },
+    {
+      "title": "Пользовательское Соглашение",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=205"
+    },
+    {
+      "title": "соглашение об условиях",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=213"
+    },
+    {
+      "title": "политика конфиденциальности",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=221"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "Пожалуйста, введите 6-значный пароль транзакции",
+  "jiaoyimimaguanli": "Управление паролями транзакций",
+  "qingshurujiaoyimima": "Пожалуйста, введите пароль транзакции",
+  "qingxuanzetibidizhi": "Пожалуйста, выберите адрес вывода",
+  "qingshurutibishuliang": "Пожалуйста, введите сумму вывода",
+  "tibishuliangbuzu": "Недостаточная сумма вывода",
+
   "yincangxiaoyue": "Скрыть небольшой баланс",
   "chuangxinshiyanqu": "Первая транзакция",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "В целях обеспечения безопасности вашей учетной записи, пожалуйста, подтвердите свою личность",
@@ -594,7 +620,7 @@
       "buy": "Бычий (длинный)",
       "sell": "Медвежьи (короткие)",
       "login": "Нажмите, чтобы загрузить приложение и торговлю клиентами",
-      "sell_price_label": "Цена открытой позиции:",
+      "sell_price_label": "Открытая цена:",
       "sell_price_ph": "Пожалуйста, введите цену открытия",
       "sell_amount_label": "Открытый размер лота:",
       "sell_amount_ph": "Пожалуйста, введите размер открытия",

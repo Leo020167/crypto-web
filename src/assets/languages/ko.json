@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "회사 소개",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=62"
+    },
+    {
+      "title": "사용자 계약",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=202"
+    },
+    {
+      "title": "이용약관",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=210"
+    },
+    {
+      "title": "개인 정보 정책",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=218"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "거래비밀번호 6자리를 입력해주세요",
+  "jiaoyimimaguanli": "거래 비밀번호 관리",
+  "qingshurujiaoyimima": "거래 비밀번호를 입력해주세요",
+  "qingxuanzetibidizhi": "출금주소를 선택해주세요",
+  "qingshurutibishuliang": "출금금액을 입력해주세요",
+  "tibishuliangbuzu": "부족한 인출 금액",
+
   "yincangxiaoyue": "소액 잔액 숨기기",
   "chuangxinshiyanqu": "첫 거래",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "귀하의 계정 보안을 위해 귀하의 신원을 확인하십시오.",

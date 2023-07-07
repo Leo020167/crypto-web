@@ -1,4 +1,30 @@
 {
+  "footer": [
+    {
+      "title": "sobre nosotros",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=66"
+    },
+    {
+      "title": "Acuerdo del Usuario",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=206"
+    },
+    {
+      "title": "acuerdo de términos",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=214"
+    },
+    {
+      "title": "política de privacidad",
+      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=222"
+    }
+  ],
+
+  "qingshuru6weijiaoyimima": "Ingrese la contraseña de transacción de 6 dígitos",
+  "jiaoyimimaguanli": "Gestión de contraseñas de transacciones",
+  "qingshurujiaoyimima": "Por favor ingrese la contraseña de la transacción",
+  "qingxuanzetibidizhi": "Por favor seleccione la dirección de retiro",
+  "qingshurutibishuliang": "Por favor ingrese el monto del retiro",
+  "tibishuliangbuzu": "Cantidad de retiro insuficiente",
+
   "yincangxiaoyue": "Ocultar saldo pequeño",
   "chuangxinshiyanqu": "Primera transacción",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "Para garantizar la seguridad de su cuenta, verifique su identidad",

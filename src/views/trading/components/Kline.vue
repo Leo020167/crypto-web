@@ -108,6 +108,8 @@ export default {
           'go_to_date',
           'header_compare',
           'timeframes_toolbar',
+          'create_volume_indicator_by_default',
+          'create_volume_indicator_by_default_once',
         ],
         enabled_features: ['study_templates'],
         client_id: this.clientId,
@@ -117,7 +119,6 @@ export default {
         autosize: this.autosize,
         studies_overrides: this.studiesOverrides,
         custom_css_url: 'bundles/modify.css',
-        // toolbar_bg: "#171b2b", //工具栏背景颜色
         loading_screen: { backgroundColor: '#171b2b' },
         overrides: {
           'paneProperties.background': '#171b2b',
