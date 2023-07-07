@@ -165,7 +165,7 @@ export default {
         .then((res) => {
           if (res.code === '200') {
             this.transferSymbols = res.data;
-            this.symbol = res.data?.[0];
+            this.symbol = res.data?.includes('USDT') ? 'USDT' : res.data?.[0];
           }
         });
     },
