@@ -1,4 +1,6 @@
 {
+  "hangyedongtai": "行业动态",
+  "guanyuwomen": "关于我们",
   "Top Global Asset Management": "全球頂級資產管理",
   "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments.": "通過由900余名投資專家組成的全球網絡，我們能夠確保客戶的投資取得成功。",
   "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments. In Hong Kong, Fwdetsc leverages the scale and operational excellence of its global sources to create bespoke solutions for clients. Our commitment to client service is supported by extensive investment capabilities across virtually every asset class (digital currency, equities, fixed income, global real estate and multi-asset solutions). Our in-depth investment knowledge means we can provide you access to the understanding and flexibility you need to achieve your investment objectives.": "通過由900余名投資專家組成的全球網絡，我們能夠確保客戶的投資取得成功。在香港，Fwdetsc利用自身全球源的規模和卓越運營為客戶創建量身定制的解決方案。我們為客戶服務的承諾得到了幾乎所有資產類別（數字貨幣、股票、固定收益、全球房地產和多資產解決方案）的廣泛投資能力的支持。我們深厚的投資知識意味著我們可以為您提供實現投資目標所需的理解力和靈活性。",
@@ -50,8 +52,6 @@
   "Multi-language support": "多語言支持",
   "Platform-wide client support": "全平臺用戶端支持",
 
-  "hangyedongtai": "行业动态",
-  "guanyuwomen": "关于我们",
   "common": {
     "login_btn": "登 录",
     "regist_btn": "注 册",
