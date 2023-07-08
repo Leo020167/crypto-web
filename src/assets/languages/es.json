@@ -657,7 +657,7 @@
       "buy": "Alcista (largo)",
       "sell": "Bajista (corto)",
       "login": "Haga clic para descargar la aplicación y el comercio de clientes",
-      "sell_price_label": "Precio de posición abierto:",
+      "sell_price_label": "Precio de apertura:",
       "sell_price_ph": "Ingrese el precio de apertura",
       "sell_amount_label": "Tamaño del lote abierto:",
       "sell_amount_ph": "Ingrese el tamaño de lote de apertura",

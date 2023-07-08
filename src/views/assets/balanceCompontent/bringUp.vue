@@ -174,7 +174,7 @@
     <pay-password-toast
       v-if="showPayPwd"
       :showError="showError"
-      :errormsg="message"
+      :errormsg="$t('qingshuru6weijiaoyimima')"
       @hidePwd="hidePwd"
       @getPwd="getPwd"
     />
