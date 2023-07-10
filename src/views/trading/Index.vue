@@ -142,7 +142,7 @@
             ></dish-in-time>
           </div>
           <div class="min-trading" v-else>
-            <p class="dish-min-tab">
+            <p class="dish-min-tab flex items-center">
               <span
                 :class="dishTabIndex === 0 ? 'dish-tab act' : 'dish-tab'"
                 @click="changDishTab(0)"

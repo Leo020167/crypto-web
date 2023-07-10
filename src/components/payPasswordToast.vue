@@ -44,9 +44,9 @@
         </div>
       </form>
       <div class="pwd-tips">
-        <p :class="errormsg ? 'Msg error' : 'Msg'">
+        <!-- <p :class="errormsg ? 'Msg error' : 'Msg'">
           {{ errormsg ? errormsg : $t('qingshuru6weijiaoyimima') }}
-        </p>
+        </p> -->
         <span class="forget" @click="forgetPwd">
           {{ $t('jiaoyimimaguanli') }}</span
         >
