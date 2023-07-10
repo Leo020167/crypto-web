@@ -274,8 +274,8 @@ export default {
               this.countryValue,
               this.registerForm.phone,
               this.registerForm.smsCode,
-              this.locationx,
-              this.dragImgKey,
+              '',
+              '',
               this.registerForm.password,
               this.registerForm.secordPassword,
               this.registerForm.inviteCode,
@@ -288,10 +288,6 @@ export default {
                 this.$message.success(res.msg);
                 this.$store.dispatch('changeCurrentUerInfos', res.data); // vuex备存
                 this.$router.replace('/trading'); // 页面跳转到行情页
-              } else if (res.code === '40016') {
-                // 重新拖动一次图片
-                this.getValid = true;
-                this.onlyValid = true;
               } else {
                 this.$message.error(res.msg);
               }
