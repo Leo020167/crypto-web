@@ -26,7 +26,6 @@
   "tibishuliangbuzu": "提币数量不足",
 
   "yincangxiaoyue": "隐藏小余额",
-  "chuangxinshiyanqu": "首发交易",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "为了保证您的帐号安全，请验证身份",
   "dianjihuoquyouxiangma": "点击获取邮箱码",
   "youxiangzhuce": "邮箱注册",
@@ -242,7 +241,7 @@
     "subscribe": "金牌机构",
     "otc": "法币交易",
     "new_purchase": "新币申购",
-    "chuangxinshiyanqu": "首发交易",
+    "chuangxinshiyanqu": "创新试验区",
     "assets": "总资产",
     "digital_account": "数字货币账户",
     "stock_account": "股指期货账户",
@@ -903,7 +902,7 @@
     "text4": "质押周期",
     "text5": "天",
     "text6": "预计收益",
-    "text7": "年化收益",
+    "text7": "每日利息",
     "text8": "质押数量",
     "text9": "取消",
     "text10": "确认"

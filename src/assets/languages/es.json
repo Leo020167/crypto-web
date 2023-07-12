@@ -26,7 +26,6 @@
   "tibishuliangbuzu": "Cantidad de retiro insuficiente",
 
   "yincangxiaoyue": "Ocultar saldo pequeño",
-  "chuangxinshiyanqu": "Primera transacción",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "Para garantizar la seguridad de su cuenta, verifique su identidad",
   "dianjihuoquyouxiangma": "Haga clic para obtener el código de correo electrónico",
   "youxiangzhuce": "registro de email",
@@ -913,7 +912,7 @@
     "text4": "Período de compromiso",
     "texto5": "día",
     "text6": "Ingresos estimados",
-    "text7": "Ingreso anualizado",
+    "text7": "Intereses diarios",
     "text8": "Cantidad de la promesa",
     "text9": "Cancelar",
     "text10": "Confirmar"

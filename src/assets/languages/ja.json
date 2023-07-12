@@ -26,7 +26,6 @@
   "tibishuliangbuzu": "引き出し金額が不十分です",
 
   "yincangxiaoyue": "少額の残高を非表示",
-  "chuangxinshiyanqu": "最初の取引",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "アカウントのセキュリティを確保するために、本人確認を行ってください",
   "dianjihuoquyouxiangma": "クリックしてメールコードを取得します",
   "youxiangzhuce": "メール登録",
@@ -908,7 +907,7 @@
     "text4": "誓約期間",
     "text5": "日",
     "text6": "推定収入",
-    "text7": "年収",
+    "text7": "毎日の興味",
     "text8": "誓約金額",
     "text9": "キャンセル",
     "text10": "確認"

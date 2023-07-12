@@ -29,14 +29,14 @@
                 </div>
               </div>
             </el-col>
-            <!-- <el-col :span="6">
+            <el-col :span="6">
               <div>
                 <div>{{ $t('pledge.text6') }}</div>
                 <div style="margin-top: 4px">
                   {{ Number(v.minCount) * Number(v.profitRate) * 0.01 }}
                 </div>
               </div>
-            </el-col> -->
+            </el-col> 
             <el-col :span="6">
               <div>
                 <div>{{ $t('pledge.text7') }}</div>

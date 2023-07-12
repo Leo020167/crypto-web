@@ -26,7 +26,6 @@
   "tibishuliangbuzu": "Insufficient withdrawal amount",
 
   "yincangxiaoyue": "Hide small balance",
-  "chuangxinshiyanqu": "First transaction",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "In order to ensure the security of your account, please verify your identity",
   "dianjihuoquyouxiangma": "Click to get email code",
   "youxiangzhuce": "email registration",
@@ -915,7 +914,7 @@
     "text4": "Pledge Period",
     "text5": "day",
     "text6": "Estimated income",
-    "text7": "Annualized income",
+    "text7": "Daily interest",
     "text8": "Pledge Amount",
     "text9": "Cancel",
     "text10": "Confirm"

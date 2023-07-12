@@ -26,7 +26,6 @@
   "tibishuliangbuzu": "Montant de retrait insuffisant",
 
   "yincangxiaoyue": "Masquer le petit solde",
-  "chuangxinshiyanqu": "Première transaction",
   "weilebaozhengnidezhanghaoanquanqingyanzhengshenfen": "Afin d'assurer la sécurité de votre compte, veuillez vérifier votre identité",
   "dianjihuoquyouxiangma": "Cliquez pour obtenir le code e-mail",
   "youxiangzhuce": "inscription par e-mail",
@@ -914,7 +913,7 @@
     "text4": "Période de mise en gage",
     "text5": "jour",
     "text6": "Revenu estimé",
-    "text7": "Revenu annualisé",
+    "text7": "Interet journalier",
     "text8": "Montant de l'engagement",
     "text9": "Annuler",
     "text10": "Confirmer"
