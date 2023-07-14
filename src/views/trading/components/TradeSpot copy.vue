@@ -299,8 +299,8 @@
 </template>
 
 <script>
-import { assetsApi, proOrderConfig } from '@/server/axios.js';
 import PayPasswordToast from '@/components/payPasswordToast.vue';
+import { assetsApi, proOrderConfig } from '@/server/axios.js';
 import { mapGetters } from 'vuex';
 import OpenRateList from './OpenRateList.vue';
 

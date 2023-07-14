@@ -351,8 +351,8 @@
 </template>
 
 <script>
-import { assetsApi, getConfigTrad } from '@/server/axios.js';
 import PayPasswordToast from '@/components/payPasswordToast.vue';
+import { assetsApi, getConfigTrad } from '@/server/axios.js';
 import { mapGetters } from 'vuex';
 export default {
   props: {

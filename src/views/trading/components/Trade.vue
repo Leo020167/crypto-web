@@ -817,7 +817,8 @@ export default {
           this.leverageBuyVal,
           type,
           this.payPass,
-          parseInt(this.NewMultiNum1)
+          parseInt(this.NewMultiNum1),
+          hand
         )
         .then((res) => {
           this.currentBuySell = 'buy';
@@ -894,7 +895,8 @@ export default {
           this.leverageBuyVal,
           type,
           this.payPass,
-          parseInt(this.NewMultiNum)
+          parseInt(this.NewMultiNum),
+          hand
         )
         .then((res) => {
           this.currentBuySell = 'sell';

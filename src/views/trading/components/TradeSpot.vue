@@ -741,6 +741,11 @@ export default {
           ? this.buyLimit.openHand
           : this.buyMarket.openHand;
 
+      let usdtAmount =
+        type === 'limit'
+          ? Number(this.lookUpForm.amount)
+          : Number(this.lookUpFormMarket.amount);
+
       assetsApi
         .openPosition(
           this.coinType,
@@ -751,7 +756,8 @@ export default {
           type,
           this.payPass,
           '1',
-          '2'
+          '2',
+          usdtAmount
         )
         .then((res) => {
           this.currentBuySell = 'buy';
@@ -832,7 +838,8 @@ export default {
           type,
           this.payPass,
           '1',
-          '2'
+          '2',
+          hand
         )
         .then((res) => {
           this.currentBuySell = 'sell';

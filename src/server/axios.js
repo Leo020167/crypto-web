@@ -518,7 +518,8 @@ export const assetsApi = {
     orderType,
     payPass,
     multiNum,
-    type
+    type,
+    usdtAmount
   ) => {
     let url = baseUrl + '/pro/order/open.do';
     let payPsw = payPass ? md5(payPass).toUpperCase() : payPass;
@@ -532,6 +533,7 @@ export const assetsApi = {
       payPass: payPsw,
       multiNum: multiNum,
       type: type ? type : '0',
+      usdtAmount,
     });
   },
   // 止盈
