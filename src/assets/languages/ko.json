@@ -135,17 +135,13 @@
     "text50": "따라야 할 주문을 하나 이상 선택하십시오",
     "text51": "전통 중국어",
     "text52": [
-      {
-        "title": "minute",
-        "resolution": 1,
-        "ChartType": 3
-      },
-      { "title": "1 분", "resolution": 1, "ChartType": 1 },
-      { "title": "15 분", "resolution": 15, "ChartType": 1 },
-      { "title": "1 시간", "resolution": 60, "ChartType": 1 },
-      { "title": "4 시간", "resolution": 240, "ChartType": 1 },
-      { "title": "1 일", "resolution": "1D", "ChartType": 1 },
-      { "title": "1 주", "resolution": "1W", "ChartType": 1 }
+      { "title": "시분할", "resolution": "1", "chartType": 3 },
+      { "title": "1점", "resolution": "1", "chartType": 1 },
+      { "title": "15점", "resolution": "15", "chartType": 1 },
+      { "title": "1시간", "resolution": "60", "chartType": 1 },
+      { "title": "4시간", "resolution": "240", "chartType": 1 },
+      { "title": "1일", "resolution": "1D", "chartType": 1 },
+      { "title": "일주", "resolution": "1W", "chartType": 1 }
     ],
     "text53": "min5",
     "text54": ["머니 레코드", "철수 기록", "이송 레코드", "피아트 통화 레코드"],
