@@ -35,6 +35,7 @@ export const locales = [
     value: 'es',
     label: 'Español',
   },
+  { value: 'va', label: 'Việt Nam' },
 ];
 
 export const useLocaleStore = defineStore({

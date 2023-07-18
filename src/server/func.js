@@ -1,8 +1,8 @@
-import axios from 'axios';
-import * as params from './params';
-import store from '@/store';
 import router from '@/router';
+import store from '@/store';
+import axios from 'axios';
 import { Message } from 'element-ui';
+import * as params from './params';
 
 export const localeHash = {
   'zh-CN': 'cn',
@@ -12,6 +12,7 @@ export const localeHash = {
   fr: 'fr',
   ja: 'ja',
   ko: 'ko',
+  va: 'va',
   'ru-RU': 'ru',
 };
 
