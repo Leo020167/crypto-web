@@ -43,7 +43,7 @@
             <img
               src="/img/adicon-3.e3712dc4.png"
               alt=""
-              class="mx-auto my-4 mb-8 h-40 w-60"
+              class="mx-auto my-4 mb-8 h-40 w-60 object-contain"
             />
             <div>
               <p class="text-xl">{{ $t('quanqiubuju') }}</p>
@@ -56,7 +56,7 @@
             <img
               src="/img/adicon-2.ec6e0988.png"
               alt=""
-              class="mx-auto mb-8 mt-4 h-40 w-60"
+              class="mx-auto mb-8 mt-4 h-40 w-60 object-contain"
             />
             <div>
               <p class="text-xl">{{ $t('xitonganquan') }}</p>
@@ -69,7 +69,7 @@
             <img
               src="/img/adicon-1.0363c6da.png"
               alt=""
-              class="my-4 mb-8 h-40 w-auto"
+              class="my-4 mb-8 h-40 w-auto object-contain"
             />
             <div style="width: 100%; text-align: center">
               <p class="text-xl">{{ $t('liuchangdejiaoyitiyan') }}</p>
