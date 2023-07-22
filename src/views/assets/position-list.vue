@@ -120,7 +120,7 @@ export default {
   computed: {
     items() {
       if (this.zeroAssets) {
-        return this.rowData.filter((v) => Number(v.availableAmount) > 0);
+        return this.rowData.filter((v) => Number(v.amount) > 0);
       }
       return this.rowData;
     },
