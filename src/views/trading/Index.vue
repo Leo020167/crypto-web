@@ -396,7 +396,7 @@ export default {
     },
     // 从（资产组件）获取当前交易对，以此获取其他信息
     getCurrentCoinType(type, marketType, row) {
-      this.compots = row.coinType;
+      // this.compots = row.coinType;
       if (type === this.symbol) {
         return;
       }

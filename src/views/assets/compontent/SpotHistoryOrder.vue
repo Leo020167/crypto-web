@@ -45,7 +45,7 @@
           align="left"
         ></el-table-column>
         <el-table-column
-          prop="fee"
+          prop="sum"
           :label="$t('newCommon.text29') + '(USDT)'"
           align="left"
         ></el-table-column>
