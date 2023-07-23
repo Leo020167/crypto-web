@@ -24,6 +24,7 @@
           @select="handleSelectCoin"
           :placeholder="$t('trade.totalAssets.search')"
           size="small"
+          :trigger-on-focus="false"
         >
           <template slot-scope="{ item }">
             <div class="suggestions-name">
@@ -48,7 +49,7 @@
         <!-- 沪深、港股，排序按钮不要了，这两列加个分页，page -->
         <el-table
           ref="coinTable"
-          :data="quotes"
+          :data="filteredQuotes"
           :height="height"
           @sort-change="handleSortChange"
           highlight-current-row
@@ -260,12 +261,25 @@ export default {
       default: 396,
     },
   },
+  watch: {
+    searchCoinName(newValue) {
+      if (!newValue) {
+        this.symbol = undefined;
+      }
+    },
+  },
   computed: {
     ...mapGetters({
       totalAsset: 'getTotalAsset', // 总资产
     }),
     marketTab() {
       return this.$t('newCommon.text37');
+    },
+    filteredQuotes() {
+      if (this.symbol) {
+        return this.quotes.filter((v) => v.symbol === this.symbol);
+      }
+      return this.quotes;
     },
   },
   created() {
@@ -423,6 +437,7 @@ export default {
     // 搜索框选择
     handleSelectCoin(item) {
       this.$emit('getCurrentCointype', item.symbolPair);
+      this.symbol = item.symbolPair;
     },
     // 更换tab的序号
     handleChangeTabIndex(i) {

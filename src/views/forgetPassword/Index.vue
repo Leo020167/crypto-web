@@ -1,7 +1,7 @@
 <template>
   <FadeComponent>
     <div class="forget-password" v-document-title :data-title="documentTitle">
-      <p class="forget-title">{{ $t("forgetPassword.title") }}</p>
+      <p class="forget-title">{{ $t('forgetPassword.title') }}</p>
       <el-form ref="forgetForm" :model="forgetForm" class="forget-form">
         <el-row>
           <el-col :span="8">
@@ -56,7 +56,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="9" :offset="1">
-            <el-button type="primary" @click="handleClickSms">{{
+            <el-button type="primary" class="" @click="handleClickSms">{{
               smsText
             }}</el-button>
           </el-col>
@@ -106,7 +106,7 @@
               class="next-button"
               size="large"
               @click="handleChangepsw"
-              >{{ $t("forgetPassword.submit_btn") }}</el-button
+              >{{ $t('forgetPassword.submit_btn') }}</el-button
             >
           </el-col>
         </el-row>
@@ -121,24 +121,24 @@
 </template>
 
 <script>
-import { validateCode } from "@/utils/RegVerify.js";
-import Validation from "../layout/Validation.vue";
-import { security } from "@/server/axios.js";
+import { security } from '@/server/axios.js';
+import { validateCode } from '@/utils/RegVerify.js';
+import Validation from '../layout/Validation.vue';
 export default {
   data() {
     return {
       forgetForm: {
-        phone: "",
+        phone: '',
         smsCode: null,
-        newPassword: "",
-        newPasswordAgain: "",
+        newPassword: '',
+        newPasswordAgain: '',
       },
-      countryArray: [{ label: "+86 中国", value: "+86", name: "中国" }], //国家集合
-      countryValue: this.$t("newCommon.text56"),
+      countryArray: [{ label: '+86 中国', value: '+86', name: '中国' }], //国家集合
+      countryValue: this.$t('newCommon.text56'),
       getValid: false, // 拖动滑块验证事件
       locationx: 0,
-      dragImgKey: "",
-      smsText: this.$t("regist.smsText2"), // 验证码文字
+      dragImgKey: '',
+      smsText: this.$t('regist.smsText2'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
       showPassword: true,
@@ -150,9 +150,9 @@ export default {
   computed: {
     documentTitle() {
       return this.getTitleValueByLang(
-        "忘记密码?",
-        "忘記密碼?",
-        "Forgot Password?"
+        '忘记密码?',
+        '忘記密碼?',
+        'Forgot Password?'
       );
     },
   },
@@ -165,9 +165,9 @@ export default {
     initCountryCode() {
       security.getNewCountryCode().then((res) => {
         console.log(res);
-        if (res.code === "200") {
+        if (res.code === '200') {
           var arr = [];
-          if (this.$t("newCommon.text56") == "+49 Deutschland") {
+          if (this.$t('newCommon.text56') == '+49 Deutschland') {
             let data = res.data;
             for (let i = 0; i < data.length; i++) {
               let label = `${data[i].areaCode}  ${data[i].deName}`;
@@ -176,7 +176,7 @@ export default {
               let obj = { label: label, value: value, name: name };
               arr.push(obj);
             }
-          } else if (this.$t("newCommon.text56") == "+44 United Kiongdom") {
+          } else if (this.$t('newCommon.text56') == '+44 United Kiongdom') {
             let data = res.data;
             for (let i = 0; i < data.length; i++) {
               let label = `${data[i].areaCode}  ${data[i].enName}`;
@@ -217,7 +217,7 @@ export default {
       if (this.isCoding) {
         return;
       } else if (!this.forgetForm.phone || this.forgetForm.phone.length != 11) {
-        this.$message(this.$t("regist.message1"));
+        this.$message(this.$t('regist.message1'));
       } else if (this.dragImgKey) {
         // 已经拖动了，直接获取验证码
         this.getSmsCode();
@@ -246,19 +246,19 @@ export default {
     // 获取手机验证码的倒计时
     countDown() {
       const TIME_COUNT = 60;
-      this.smsText = this.$t("regist.smsText1");
+      this.smsText = this.$t('regist.smsText1');
       if (!this.timer) {
         this.codeTime = TIME_COUNT;
         this.isCoding = true;
         this.timer = setInterval(() => {
           if (this.codeTime > 0 && this.codeTime <= TIME_COUNT) {
             this.codeTime--;
-            this.smsText = `${this.codeTime}s${this.$t("regist.smsText3")}`;
+            this.smsText = `${this.codeTime}s${this.$t('regist.smsText3')}`;
           } else {
             this.isCoding = false;
             clearInterval(this.timer);
             this.timer = null;
-            this.smsText = this.$t("regist.smsText2");
+            this.smsText = this.$t('regist.smsText2');
           }
         }, 1000);
       }
@@ -266,11 +266,11 @@ export default {
     // 确定
     handleChangepsw() {
       if (!this.forgetForm.smsCode) {
-        this.$message.error(this.$t("forgetPassword.message1"));
+        this.$message.error(this.$t('forgetPassword.message1'));
         return;
       }
       if (this.forgetForm.newPassword !== this.forgetForm.newPasswordAgain) {
-        this.$message.error(this.$t("forgetPassword.message2"));
+        this.$message.error(this.$t('forgetPassword.message2'));
         return;
       }
       // phone, smsCode, userPass, dragImgKey, locationx
@@ -284,9 +284,9 @@ export default {
           this.locationx
         )
         .then((res) => {
-          if (res.code === "200") {
+          if (res.code === '200') {
             this.$message.success(res.msg);
-            this.$router.push("/login");
+            this.$router.push('/login');
           } else {
             this.$message.error(res.msg);
           }
@@ -334,5 +334,9 @@ export default {
       width: 100%;
     }
   }
+}
+
+.el-button {
+  white-space: normal;
 }
 </style>

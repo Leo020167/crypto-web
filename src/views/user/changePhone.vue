@@ -155,9 +155,9 @@
 </template>
 
 <script>
+import { security } from '@/server/axios.js';
 import { mapGetters } from 'vuex';
 import Validation from '../layout/Validation.vue';
-import { security } from '@/server/axios.js';
 export default {
   data() {
     return {
@@ -433,5 +433,9 @@ export default {
       }
     }
   }
+}
+
+.el-button {
+  white-space: normal;
 }
 </style>
