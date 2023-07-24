@@ -1,11 +1,11 @@
-import './style.css';
-import 'swiper/css/swiper.css';
+import moment from 'moment';
 import { createPinia, PiniaVuePlugin } from 'pinia';
+import 'swiper/css/swiper.css';
 import Vue, { provide } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import moment from 'moment';
+import './style.css';
 
 import func from '@/utils/func';
 import ElementUI from 'element-ui';
@@ -30,36 +30,34 @@ Vue.component(VueQrcode.name, VueQrcode);
 Vue.use(ElementUI);
 
 /**
- *  fontawesome字体图标
- *  用法:
- *  1.将所需要的图标import进来，要以fa前缀开头，如：
- *    import { faUserSecret } from '@fortawesome/free-solid-svg-icons'，
- *    图标网址网址 https://fontawesome.com/icons?d=gallery&s=solid&m=free
- *  2.library.add()加上引进的图标
- *  3.组件中使用： <font-awesome-icon icon='user-secret' /> (!!!此处要去掉前缀fa,然后改成非驼峰式小写命名)
+ * Fontawesome字体图标 用法: 1.将所需要的图标import进来，要以fa前缀开头，如： import { faUserSecret }
+ * from '@fortawesome/free-solid-svg-icons'， 图标网址网址
+ * https://fontawesome.com/icons?d=gallery&s=solid&m=free 2.library.add()加上引进的图标
+ * 3.组件中使用： <font-awesome-icon icon='user-secret' />
+ * (!!!此处要去掉前缀fa,然后改成非驼峰式小写命名)
  */
 import { library } from '@fortawesome/fontawesome-svg-core';
-import VueQriously from 'vue-qriously';
-Vue.use(VueQriously);
 import {
-  faComments,
   faChalkboardTeacher,
-  faUserPlus,
-  faUserShield,
+  faCheckCircle,
+  faCircleNotch,
+  faComments,
+  faEdit,
   faJournalWhills,
-  faUserEdit,
-  faPhoneAlt,
   faMapMarkerAlt,
+  faPhoneAlt,
+  faSearch,
+  faStar,
   faTrashAlt,
   faUpload,
-  faCheckCircle,
-  faEdit,
-  faSearch,
-  faCircleNotch,
-  faStar,
   faUser,
+  faUserEdit,
+  faUserPlus,
+  faUserShield,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import VueQriously from 'vue-qriously';
+Vue.use(VueQriously);
 library.add(
   faUser,
   faCircleNotch,

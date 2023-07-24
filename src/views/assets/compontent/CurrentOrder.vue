@@ -144,26 +144,28 @@
               <!-- 平仓盈亏(USDT) -->
               <span class="item-title">{{ $t('assets.closeOut_lose') }}</span>
             </li>
-            <li v-if="item.closeDetails.length === 0" class="nothing">
-              {{ $t('assets.no_data') }}
-            </li>
-            <li
-              class="arrow-list-item"
-              v-else
-              v-for="(arrowItem, indexs) in item.closeDetails"
-              :key="indexs"
-            >
-              <span class="item-des">{{
-                transallTime(arrowItem.closeTime)
-              }}</span>
-              <span class="item-des">{{ arrowItem.closePrice }}</span>
-              <span class="item-des"
-                >{{ arrowItem.closeHand }}{{ $t('assets.hand') }}</span
+            <template v-if="item.closeDetails.length === 0">
+              <li class="nothing">
+                {{ $t('assets.no_data') }}
+              </li>
+            </template>
+            <template v-else>
+              <li
+                class="arrow-list-item"
+                v-for="(arrowItem, indexs) in item.closeDetails"
+                :key="indexs"
               >
-              <span class="item-des">{{ arrowItem.closeFee }}</span>
-              <!-- <span class="item-des">{{ arrowItem.profitShare }}</span> -->
-              <span class="item-des">{{ arrowItem.profit }}</span>
-            </li>
+                <span class="item-des">{{
+                  transallTime(arrowItem.closeTime)
+                }}</span>
+                <span class="item-des">{{ arrowItem.closePrice }}</span>
+                <span class="item-des"
+                  >{{ arrowItem.closeHand }}{{ $t('assets.hand') }}
+                </span>
+                <span class="item-des">{{ arrowItem.closeFee }}</span>
+                <span class="item-des">{{ arrowItem.profit }}</span>
+              </li>
+            </template>
           </ul>
         </div>
       </li>
@@ -222,11 +224,11 @@
 </template>
 
 <script>
-import { transforTime } from '@/utils/time.js';
-import { assetsApi } from '@/server/axios.js';
+import PayPasswordToast from '@/components/payPasswordToast.vue';
 import StopLossDialog from '@/components/stopLoss.vue';
 import StopWinDialog from '@/components/stopWin.vue';
-import PayPasswordToast from '@/components/payPasswordToast.vue';
+import { assetsApi } from '@/server/axios.js';
+import { transforTime } from '@/utils/time.js';
 export default {
   name: 'CurrentOrder',
   props: {
