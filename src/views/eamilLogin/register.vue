@@ -291,12 +291,8 @@ export default {
         return;
       } else if (!this.registerForm.email) {
         this.$message(this.$t('qingshuruyouxiang'));
-      } else if (this.dragImgKey) {
-        // 已经拖动了，直接获取验证码
-        this.getSmsCode();
       } else {
-        // 还没有拖动，拖动弹窗准备
-        this.getValid = true;
+        this.getSmsCode();
       }
     },
     // 正式获取手机验证码

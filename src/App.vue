@@ -1,12 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" :key="locale">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n-composable';
+
 export default {
   name: 'TradingView',
+  setup: () => {
+    const { t, locale } = useI18n();
+    console.log(locale);
+    return { t, locale };
+  },
 };
 </script>
 

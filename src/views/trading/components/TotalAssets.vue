@@ -63,7 +63,7 @@
             :label="$t('trade.totalAssets.label1')"
             prop="name"
             :sortable="sortTypes"
-            width="100px"
+            width="70px"
           >
             <template slot-scope="scope">
               <div class="symbol-and-option">
@@ -82,18 +82,17 @@
             :label="$t('trade.totalAssets.label2')"
             prop="price"
             :sortable="sortTypes"
-            width="80px"
+            width="100px"
           >
             <template slot-scope="scope">
               <span class="label2-price">{{ scope.row.price }}</span>
             </template>
           </el-table-column>
-          <!-- width="80px"  -->
+
           <el-table-column
             :label="$t('trade.totalAssets.label3')"
             prop="gains"
             :sortable="sortTypes"
-            width="80px"
           >
             <template slot-scope="scope">
               <span v-if="scope.row.rate == 'noData'"></span>
@@ -497,8 +496,7 @@ export default {
   }
 }
 .table-list-box {
-  margin: 0 auto;
-  width: 260px;
+  width: 100%;
 }
 .coinTable {
   .el-loading-mask {
