@@ -956,7 +956,7 @@
   },
   "currency-account": {
     "title": "잔액 계정",
-    "tabs": ["포지션", "구매 기록"]
+    "tabs": ["포지션", "구매 기록", "입금 기록", "출금 기록"]
   },
   "position-list": {
     "text1": "통화",

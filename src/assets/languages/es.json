@@ -972,7 +972,12 @@
   },
   "currency-account": {
     "title": "Cuenta de saldo",
-    "tabs": ["Posición", "Registro de compra"]
+    "tabs": [
+      "Posición",
+      "Registro de compra",
+      "Registros de depósitos",
+      "Registros de retiros"
+    ]
   },
   "position-list": {
     "text1": "Moneda",

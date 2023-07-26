@@ -973,7 +973,12 @@
   },
   "currency-account": {
     "title": "Solde du compte",
-    "tabs": ["Position", "Enregistrement d'achat"]
+    "tabs": [
+      "Position",
+      "Enregistrement d'achat",
+      "Enregistrements de dépôt",
+      "Enregistrements de retrait"
+    ]
   },
   "position-list": {
     "text1": "Devise",

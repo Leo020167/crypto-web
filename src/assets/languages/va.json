@@ -967,7 +967,7 @@
   },
   "currency-account": {
     "title": "Số dư tài khoản",
-    "tab": ["Vị trí", "Hồ sơ mua hàng"]
+    "tab": ["Vị trí", "Hồ sơ mua hàng", "Hồ sơ tiền gửi", "Hồ sơ rút tiền"]
   },
   "position-list": {
     "text1": "Tiền tệ",
