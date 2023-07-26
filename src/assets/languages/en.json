@@ -974,7 +974,12 @@
   },
   "currency-account": {
     "title": "Balance Account",
-    "tabs": ["Position", "Purchase Record"]
+    "tabs": [
+      "Position",
+      "Purchase Record",
+      "Deposit Records",
+      "Withdrawal Records"
+    ]
   },
   "position-list": {
     "text1": "Currency",

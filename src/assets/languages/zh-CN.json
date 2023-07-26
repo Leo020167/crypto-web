@@ -957,7 +957,7 @@
   },
   "currency-account": {
     "title": "余额账户",
-    "tabs": ["持仓", "申购记录"]
+    "tabs": ["持仓", "申购记录", "充币记录", "提币记录"]
   },
   "position-list": {
     "text1": "币种",

@@ -960,7 +960,7 @@
   },
   "currency-account": {
     "title": "餘額賬戶",
-    "tabs": ["持倉", "申購記錄"]
+    "tabs": ["持倉", "申購記錄", "充幣記錄", "提幣記錄"]
   },
   "position-list": {
     "text1": "幣種",

@@ -60,6 +60,16 @@
               v-if="currentTabNumber === 1"
               @showLoading="showLoading"
             ></Subscription>
+
+            <!-- 提币记录 -->
+            <up-in-record
+              v-if="currentTabNumber === 2 || currentTabNumber === 3"
+              @changeUpInPage="changeUpInPage"
+              :recordsList="CWrecordsList"
+              :total="totalRecords"
+              :pageNo="pageNo"
+              :pageSize="pageSize"
+            ></up-in-record>
           </div>
         </div>
         <!-- 弹窗 -->
@@ -97,6 +107,7 @@ import AssetsButtonGroup from './AssetsButtonGroup.vue';
 import MetionDialog from './balanceCompontent/MetionDialog.vue'; // 提币弹窗
 import TransferDialog from './balanceCompontent/TransferDialog.vue'; //划转弹窗
 import TopUpDialog from './balanceCompontent/topUpDialog.vue'; //充币弹窗
+import upInRecord from './balanceCompontent/upInRecord.vue'; //充提记录
 import Subscription from './compontent/Subscription.vue'; // 申请记录
 import PositionList from './position-list.vue';
 
@@ -156,7 +167,7 @@ export default {
   methods: {
     // 获取充币、提币信息
     getCWrecordData() {
-      let state = this.currentTabNumber === 0 ? '1' : '-1';
+      let state = this.currentTabNumber === 2 ? '1' : '-1';
       assetsApi.getCWRecord(state, this.pageNo).then((res) => {
         setTimeout(() => {
           this.recordShow = false;
@@ -173,43 +184,13 @@ export default {
       this.pageNo = i;
       this.getCWrecordData();
     },
-    // 获取划转信息列表
-    getTransferRecordData() {
-      assetsApi
-        .getTransferRecords(this.accountType, this.accountType, this.pageNo)
-        .then((res) => {
-          setTimeout(() => {
-            this.recordShow = false;
-          }, 500);
-          if (res.code === '200') {
-            this.transferList = res.data.data;
-            this.totalRecords = Number(res.data.total);
-            this.pageSize = Number(res.data.pageSize);
-          }
-        });
-    },
-    // 修改划转的页码
-    changeTransferPage(i) {
-      this.pageNo = i;
-      this.getTransferRecordData();
-    },
     // 切换tab标签
     changeTabIndex(i) {
-      if (i === this.currentTabNumber) {
-        //法币记录在自己页获得请求
-        return;
-      } else {
-        this.recordShow = true;
-        this.currentTabNumber = i;
-        this.pageNo = 1;
-        if (i === 3 || i == 4) {
-          return;
-        } else if (i === 2) {
-          // 划转记录
-          this.getTransferRecordData();
-        } else {
-          this.getCWrecordData();
-        }
+      this.recordShow = true;
+      this.currentTabNumber = i;
+      this.pageNo = 1;
+      if (i === 2 || i == 3) {
+        this.getCWrecordData();
       }
     },
     // 充币、提币的链类型改变，重新触发====充币、提币的相关链的信息
@@ -258,6 +239,7 @@ export default {
     },
   },
   components: {
+    upInRecord,
     AssetsButtonGroup,
     TopUpDialog,
     MetionDialog,
