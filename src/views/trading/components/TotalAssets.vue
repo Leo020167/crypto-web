@@ -67,11 +67,10 @@
           >
             <template slot-scope="scope">
               <div class="symbol-and-option">
-                <img
-                  :src="scope.row.image"
-                  alt=""
-                  class="h-3.5 w-3.5 object-contain"
-                />
+                <OptionalIcon
+                  :symbol="scope.row.symbol"
+                  v-show="scope.row.symbol != ''"
+                ></OptionalIcon>
                 <div class="symbol-content">
                   <p class="symbol">{{ scope.row.splitData }}</p>
                   <p class="name">{{ scope.row.name }}</p>
