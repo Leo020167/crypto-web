@@ -5,7 +5,18 @@
 </template>
 
 <script>
-export default {};
+
+import { useI18n } from 'vue-i18n-composable';
+
+export default {
+  name: 'TradingView',
+  setup: () => {
+    const { t, locale } = useI18n();
+
+    return { t, locale };
+  },
+};
+
 </script>
 
 <style>

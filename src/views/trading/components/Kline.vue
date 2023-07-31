@@ -26,7 +26,7 @@ export default {
       type: String,
     },
     libraryPath: {
-      default: 'static/charting_library/',
+      default: 'charting_library/',
       type: String,
     },
     height: {
@@ -117,8 +117,9 @@ export default {
         theme: 'Dark',
         autosize: this.autosize,
         studies_overrides: this.studiesOverrides,
-        custom_css_url: 'bundles/modify.css',
-        // toolbar_bg: "#171b2b", //工具栏背景颜色
+
+        // custom_css_url: 'bundles/modify.css',
+
         loading_screen: { backgroundColor: '#171b2b' },
         overrides: {
           'paneProperties.background': '#171b2b',
@@ -204,7 +205,7 @@ export default {
       this.tvWidget = tvWidget;
       let that = this;
       tvWidget.onChartReady(() => {
-        that.createStudy();
+        // that.createStudy();
         tvWidget.headerReady().then(() => {
           this.buttons.forEach(function (v) {
             console.log(v);

@@ -91,8 +91,8 @@
           </div>
 
           <div class="trading-top-middle-top">
-            {{ symbol }}
             <!--K线组件-->
+            <!-- <Charting :symbol="symbol" /> -->
             <kline
               :symbol="symbol"
               :height="centerTop"
@@ -250,10 +250,9 @@ import CurrentOrder1 from '../assets/compontent/CurrentOrder1.vue';
 // 历史开仓
 import HistoryOrder from '../assets/compontent/HistoryOrder.vue';
 import SpotHistoryOrder from '../assets/compontent/SpotHistoryOrder.vue';
-import TransferDialog from '../assets/balanceCompontent/TransferDialog.vue'; //划转弹窗
-import { mapGetters } from 'vuex';
-import { ReflashRealSeconds } from '@/utils/Enums';
-import { assetsApi, getDish, legalPurchaseApi } from '@/server/axios.js';
+
+
+
 export default {
   components: {
     Kline,

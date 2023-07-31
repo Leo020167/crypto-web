@@ -19,12 +19,14 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/procoin-file': {
+
         target: 'http://upload.tyresd.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/api': {
         target: 'http://web.tyresd.com',
+
         changeOrigin: true,
       },
     },
