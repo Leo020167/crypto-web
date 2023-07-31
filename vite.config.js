@@ -18,12 +18,12 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.financingy.com',
+        target: 'https://upload.financingy.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'http://api.financingy.com',
+        target: 'https://api.financingy.com',
         changeOrigin: true,
       },
     },

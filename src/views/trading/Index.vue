@@ -91,8 +91,8 @@
           </div>
 
           <div class="trading-top-middle-top">
-            {{ symbol }}
             <!--K线组件-->
+            <!-- <Charting :symbol="symbol" /> -->
             <kline
               :symbol="symbol"
               :height="centerTop"
@@ -254,6 +254,7 @@ import { mapGetters } from 'vuex';
 import TransferDialog from '../assets/balanceCompontent/TransferDialog.vue'; //划转弹窗
 import HistoryOrder from '../assets/compontent/HistoryOrder.vue';
 import SpotHistoryOrder from '../assets/compontent/SpotHistoryOrder.vue';
+
 export default {
   components: {
     Kline,

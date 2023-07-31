@@ -11,7 +11,7 @@ export default {
   name: 'TradingView',
   setup: () => {
     const { t, locale } = useI18n();
-    console.log(locale);
+
     return { t, locale };
   },
 };
