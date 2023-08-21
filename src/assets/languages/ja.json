@@ -602,7 +602,7 @@
     "histroryTitle": "履歴トランザクション",
     "histroryTitle2": "直近の15件の取引を表示",
     "allRecords": "すべての歴史",
-    "currentTab": "カレントオープン」、「カレントオーダー",
+    "currentTab": ["現在募集中のポジション", "現在の手数料"],
     "dish": {
       "title": "未決注文帳",
       "price": "価格",

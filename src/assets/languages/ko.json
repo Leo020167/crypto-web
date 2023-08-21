@@ -598,7 +598,7 @@
     "histroryTitle": "역사",
     "histroryTitle2": "지난 15 번의 거래를 보여줍니다",
     "allRecords": "모든 역사",
-    "currentTab": ["현재 오픈 위치 ", "현재 순서"],
+    "currentTab": ["현재 오픈 위치", "현재 순서"],
     "dish": {
       "title": "목록",
       "price": "가격",

@@ -31,7 +31,7 @@
                   <el-tag size="mini">{{ $t('newCommon2.text5') }}</el-tag>
                 </div>
                 <el-progress
-                  :percentage="item.progress || 0"
+                  :percentage="Number(item.progress || 0)"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">
@@ -83,7 +83,7 @@
                   <el-tag size="mini">{{ $t('newCommon2.text4') }}</el-tag>
                 </div>
                 <el-progress
-                  :percentage="item.progress || 0"
+                  :percentage="Number(item.progress || 0)"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">
@@ -135,7 +135,7 @@
                   <el-tag size="mini">{{ $t('newCommon2.text6') }}</el-tag>
                 </div>
                 <el-progress
-                  :percentage="item.progress || 0"
+                  :percentage="Number(item.progress || 0)"
                   color="#5ccc65"
                 ></el-progress>
                 <div class="title_left_box">

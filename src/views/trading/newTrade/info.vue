@@ -38,7 +38,7 @@
           <span>{{ $t('newCommon2.text42') }}</span>
         </p>
         <el-progress
-          :percentage="percentage"
+          :percentage="Number(percentage || 0)"
           color="#5ccc65"
           :show-text="false"
         ></el-progress>
