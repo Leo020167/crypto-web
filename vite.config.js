@@ -6,7 +6,7 @@ import vue2 from '@vitejs/plugin-vue2';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Fwdetsc-PC',
+    outDir: 'dist/AIDTC-PC',
   },
   server: {
     port: 5174,

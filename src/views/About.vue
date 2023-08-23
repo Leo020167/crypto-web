@@ -27,51 +27,7 @@
         </div>
         <div class="bict-about-detail">
           <p class="text">
-            {{
-              $t(
-                'Fwdetsc is a global asset management company and one of the fastest-growing asset management companies in the Asia-Pacific region.'
-              )
-            }}
-          </p>
-          <p class="text">
-            {{
-              $t(
-                "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments. In Hong Kong, Fwdetsc leverages the scale and operational excellence of its global sources to create bespoke solutions for clients. Our commitment to client service is supported by extensive investment capabilities across virtually every asset class (digital currency, equities, fixed income, global real estate and multi-asset solutions). Our in-depth investment knowledge means we can provide you access to the understanding and flexibility you need to achieve your investment objectives."
-              )
-            }}
-          </p>
-        </div>
-        <div class="bict-about-content">
-          <p class="text">
-            {{
-              $t(
-                'Fwdetsc is a leading global digital asset service platform based in London, UK and headquartered in Hong Kong, Asia Pacific. It is licensed to trade digital currency in the US and provides 24-hour service to 3 million+ users. The core members of the company have been working in the financial and technology sectors for many years, providing technical and business consulting services to many financial institutions, with rich resources of global financial institutions and rich experience in risk management.'
-              )
-            }}
-            {{
-              $t(
-                "The Fwdetsc Smart Trading System provides users with a safer encrypted digital trading environment by applying the world's leading risk control system for banking securities, adopting underlying security technology, establishing an internal monitoring and alert system, and setting up a risk reserve fund mechanism."
-              )
-            }}
-            {{
-              $t(
-                'The Fwdetsc Smart Trade System has opened a global station and a Hong Kong sub-station, while regional business units are being set up in different regions to advance the global strategic layout.'
-              )
-            }}
-          </p>
-        </div>
-        <div class="bict-about-content2">
-          <p class="text">
-            {{
-              $t(
-                'The Fwdetsc Smart Trading System is an independent platform for cryptocurrency trading for users in Hong Kong. It uses the matching engine and technical wallet support licensed by Fwdetsc Global Station to facilitate cryptocurrency smart trading using USDT, BTC and ETH for local users.'
-              )
-            }}
-            {{
-              $t(
-                'Fwdetsc Hong Kong employs the same risk control system and the same underlying security technology as Fwdetsc Global, establishing an internal monitoring and alert system and setting up a risk reserve mechanism to provide a safer environment for users to trade cryptographic digital currency intelligently.'
-              )
-            }}
+            {{ $t('Group Introduction') }}
           </p>
         </div>
       </div>
@@ -112,7 +68,7 @@
             </div>
             <div class="bict-culture-note">
               <p class="text">
-                {{ $t('Make Fwdetsc spread to every country in the world') }}
+                {{ $t('Make AIDTC spread to every country in the world') }}
               </p>
             </div>
           </el-col>
