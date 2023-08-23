@@ -15,16 +15,16 @@ export default defineConfig({
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
 
       '/procoin-market': {
-        target: 'http://market.twtwe.com',
+        target: 'http://market.tyresd.com',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.twtwe.com',
+        target: 'http://upload.tyresd.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/api': {
-        target: 'http://web.twtwe.com',
+        target: 'http://web.tyresd.com',
         changeOrigin: true,
       },
     },
