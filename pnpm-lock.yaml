@@ -59,6 +59,9 @@ dependencies:
   vue-i18n:
     specifier: '8'
     version: 8.0.0(vue@2.7.7)
+  vue-i18n-composable:
+    specifier: ^2.0.0
+    version: 2.0.0(vue-i18n@8.0.0)(vue@2.7.7)
   vue-qriously:
     specifier: ^1.1.1
     version: 1.1.1(vue@2.7.7)
@@ -74,7 +77,6 @@ devDependencies:
     specifier: ^1.1.0
     version: 1.1.0
   '@vitejs/plugin-legacy':
-<<<<<<< HEAD
     specifier: ^2.0.0
     version: 2.0.0(terser@5.17.7)(vite@3.0.2)
   '@vitejs/plugin-vue2':
@@ -83,16 +85,6 @@ devDependencies:
   '@vue/eslint-config-prettier':
     specifier: ^7.0.0
     version: 7.1.0(eslint@8.42.0)(prettier@2.8.8)
-=======
-    specifier: ^4.0.2
-    version: 4.0.2(terser@5.16.9)(vite@4.4.7)
-  '@vitejs/plugin-vue2':
-    specifier: ^2.2.0
-    version: 2.2.0(vite@4.4.7)(vue@2.7.14)
-  '@vue/eslint-config-prettier':
-    specifier: ^7.1.0
-    version: 7.1.0(eslint@8.45.0)(prettier@2.8.8)
->>>>>>> 1531a91 (新TradeView Charting)
   autoprefixer:
     specifier: ^10.4.13
     version: 10.4.14(postcss@8.4.24)
@@ -100,28 +92,16 @@ devDependencies:
     specifier: ^7.6.0
     version: 7.6.0
   eslint:
-<<<<<<< HEAD
     specifier: ^8.5.0
     version: 8.42.0
   eslint-plugin-vue:
     specifier: ^9.0.0
     version: 9.14.1(eslint@8.42.0)
-=======
-    specifier: ^8.45.0
-    version: 8.45.0
-  eslint-plugin-vue:
-    specifier: ^9.15.1
-    version: 9.15.1(eslint@8.45.0)
->>>>>>> 1531a91 (新TradeView Charting)
   postcss:
     specifier: ^8.4.19
     version: 8.4.24
   prettier:
-<<<<<<< HEAD
     specifier: ^2.5.1
-=======
-    specifier: ^2.8.7
->>>>>>> 1531a91 (新TradeView Charting)
     version: 2.8.8
   sass:
     specifier: ^1.56.1
@@ -136,13 +116,8 @@ devDependencies:
     specifier: ^5.14.2
     version: 5.17.7
   vite:
-<<<<<<< HEAD
     specifier: ^3.0.2
     version: 3.0.2(sass@1.62.1)(terser@5.17.7)
-=======
-    specifier: ^4.4.7
-    version: 4.4.7(sass@1.61.0)(terser@5.16.9)
->>>>>>> 1531a91 (新TradeView Charting)
 
 packages:
 
@@ -195,103 +170,8 @@ packages:
       vue: 2.7.7
     dev: false
 
-<<<<<<< HEAD
   /@esbuild/linux-loong64@0.14.54:
     resolution: {integrity: sha512-bZBrLAIX1kpWelV0XemxBZllyRmM6vgFQQG2GdNb+r3Fkp0FOh1NJSvekXDs7jq70k4euu1cryLMfU+mTXlEpw==}
-=======
-  /@esbuild/android-arm64@0.18.17:
-    resolution: {integrity: sha512-9np+YYdNDed5+Jgr1TdWBsozZ85U1Oa3xW0c7TWqH0y2aGghXtZsuT8nYRbzOMcl0bXZXjOGbksoTtVOlWrRZg==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/android-arm@0.18.17:
-    resolution: {integrity: sha512-wHsmJG/dnL3OkpAcwbgoBTTMHVi4Uyou3F5mf58ZtmUyIKfcdA7TROav/6tCzET4A3QW2Q2FC+eFneMU+iyOxg==}
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/android-x64@0.18.17:
-    resolution: {integrity: sha512-O+FeWB/+xya0aLg23hHEM2E3hbfwZzjqumKMSIqcHbNvDa+dza2D0yLuymRBQQnC34CWrsJUXyH2MG5VnLd6uw==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/darwin-arm64@0.18.17:
-    resolution: {integrity: sha512-M9uJ9VSB1oli2BE/dJs3zVr9kcCBBsE883prage1NWz6pBS++1oNn/7soPNS3+1DGj0FrkSvnED4Bmlu1VAE9g==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/darwin-x64@0.18.17:
-    resolution: {integrity: sha512-XDre+J5YeIJDMfp3n0279DFNrGCXlxOuGsWIkRb1NThMZ0BsrWXoTg23Jer7fEXQ9Ye5QjrvXpxnhzl3bHtk0g==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/freebsd-arm64@0.18.17:
-    resolution: {integrity: sha512-cjTzGa3QlNfERa0+ptykyxs5A6FEUQQF0MuilYXYBGdBxD3vxJcKnzDlhDCa1VAJCmAxed6mYhA2KaJIbtiNuQ==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/freebsd-x64@0.18.17:
-    resolution: {integrity: sha512-sOxEvR8d7V7Kw8QqzxWc7bFfnWnGdaFBut1dRUYtu+EIRXefBc/eIsiUiShnW0hM3FmQ5Zf27suDuHsKgZ5QrA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-arm64@0.18.17:
-    resolution: {integrity: sha512-c9w3tE7qA3CYWjT+M3BMbwMt+0JYOp3vCMKgVBrCl1nwjAlOMYzEo+gG7QaZ9AtqZFj5MbUc885wuBBmu6aADQ==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-arm@0.18.17:
-    resolution: {integrity: sha512-2d3Lw6wkwgSLC2fIvXKoMNGVaeY8qdN0IC3rfuVxJp89CRfA3e3VqWifGDfuakPmp90+ZirmTfye1n4ncjv2lg==}
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-ia32@0.18.17:
-    resolution: {integrity: sha512-1DS9F966pn5pPnqXYz16dQqWIB0dmDfAQZd6jSSpiT9eX1NzKh07J6VKR3AoXXXEk6CqZMojiVDSZi1SlmKVdg==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-loong64@0.18.17:
-    resolution: {integrity: sha512-EvLsxCk6ZF0fpCB6w6eOI2Fc8KW5N6sHlIovNe8uOFObL2O+Mr0bflPHyHwLT6rwMg9r77WOAWb2FqCQrVnwFg==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
@@ -299,122 +179,14 @@ packages:
     dev: true
     optional: true
 
-<<<<<<< HEAD
   /@eslint-community/eslint-utils@4.4.0(eslint@8.42.0):
-=======
-  /@esbuild/linux-mips64el@0.18.17:
-    resolution: {integrity: sha512-e0bIdHA5p6l+lwqTE36NAW5hHtw2tNRmHlGBygZC14QObsA3bD4C6sXLJjvnDIjSKhW1/0S3eDy+QmX/uZWEYQ==}
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-ppc64@0.18.17:
-    resolution: {integrity: sha512-BAAilJ0M5O2uMxHYGjFKn4nJKF6fNCdP1E0o5t5fvMYYzeIqy2JdAP88Az5LHt9qBoUa4tDaRpfWt21ep5/WqQ==}
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-riscv64@0.18.17:
-    resolution: {integrity: sha512-Wh/HW2MPnC3b8BqRSIme/9Zhab36PPH+3zam5pqGRH4pE+4xTrVLx2+XdGp6fVS3L2x+DrsIcsbMleex8fbE6g==}
-    engines: {node: '>=12'}
-    cpu: [riscv64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-s390x@0.18.17:
-    resolution: {integrity: sha512-j/34jAl3ul3PNcK3pfI0NSlBANduT2UO5kZ7FCaK33XFv3chDhICLY8wJJWIhiQ+YNdQ9dxqQctRg2bvrMlYgg==}
-    engines: {node: '>=12'}
-    cpu: [s390x]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-x64@0.18.17:
-    resolution: {integrity: sha512-QM50vJ/y+8I60qEmFxMoxIx4de03pGo2HwxdBeFd4nMh364X6TIBZ6VQ5UQmPbQWUVWHWws5MmJXlHAXvJEmpQ==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/netbsd-x64@0.18.17:
-    resolution: {integrity: sha512-/jGlhWR7Sj9JPZHzXyyMZ1RFMkNPjC6QIAan0sDOtIo2TYk3tZn5UDrkE0XgsTQCxWTTOcMPf9p6Rh2hXtl5TQ==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [netbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/openbsd-x64@0.18.17:
-    resolution: {integrity: sha512-rSEeYaGgyGGf4qZM2NonMhMOP/5EHp4u9ehFiBrg7stH6BYEEjlkVREuDEcQ0LfIl53OXLxNbfuIj7mr5m29TA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [openbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/sunos-x64@0.18.17:
-    resolution: {integrity: sha512-Y7ZBbkLqlSgn4+zot4KUNYst0bFoO68tRgI6mY2FIM+b7ZbyNVtNbDP5y8qlu4/knZZ73fgJDlXID+ohY5zt5g==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [sunos]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/win32-arm64@0.18.17:
-    resolution: {integrity: sha512-bwPmTJsEQcbZk26oYpc4c/8PvTY3J5/QK8jM19DVlEsAB41M39aWovWoHtNm78sd6ip6prilxeHosPADXtEJFw==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/win32-ia32@0.18.17:
-    resolution: {integrity: sha512-H/XaPtPKli2MhW+3CQueo6Ni3Avggi6hP/YvgkEe1aSaxw+AeO8MFjq8DlgfTd9Iz4Yih3QCZI6YLMoyccnPRg==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/win32-x64@0.18.17:
-    resolution: {integrity: sha512-fGEb8f2BSA3CW7riJVurug65ACLuQAzKq0SSqkY2b2yHHH0MzDfbLyKIGzHwOI/gkHcxM/leuSW6D5w/LMNitA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@eslint-community/eslint-utils@4.4.0(eslint@8.45.0):
->>>>>>> 1531a91 (新TradeView Charting)
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
-<<<<<<< HEAD
       eslint: 8.42.0
       eslint-visitor-keys: 3.4.1
-=======
-      eslint: 8.45.0
-      eslint-visitor-keys: 3.4.2
->>>>>>> 1531a91 (新TradeView Charting)
     dev: true
 
   /@eslint-community/regexpp@4.5.1:
@@ -439,13 +211,8 @@ packages:
       - supports-color
     dev: true
 
-<<<<<<< HEAD
   /@eslint/js@8.42.0:
     resolution: {integrity: sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==}
-=======
-  /@eslint/js@8.44.0:
-    resolution: {integrity: sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
@@ -571,15 +338,9 @@ packages:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: false
 
-<<<<<<< HEAD
   /@vitejs/plugin-legacy@2.0.0(terser@5.17.7)(vite@3.0.2):
     resolution: {integrity: sha512-cuc45C4BQo2VlOsHZML4fc3MPfSjOEFeezHxr+WWlOOmi+muy1rz2snnFiePtyjVc1CYGTsnxk13cXpzQvMZaw==}
     engines: {node: '>=14.18.0'}
-=======
-  /@vitejs/plugin-legacy@4.0.2(terser@5.16.9)(vite@4.4.7):
-    resolution: {integrity: sha512-ivnt9sCkgwJTYTWLjuvY6H/HTuiQC1EgzAPkiAvi0yNAssiqOJjyjhG3hAK5LFUUorE0w9kGxn8K0f/74DlbxQ==}
-    engines: {node: ^14.18.0 || >=16.0.0}
->>>>>>> 1531a91 (新TradeView Charting)
     peerDependencies:
       terser: ^5.4.0
       vite: ^3.0.0
@@ -589,7 +350,6 @@ packages:
       magic-string: 0.26.7
       regenerator-runtime: 0.13.11
       systemjs: 6.14.1
-<<<<<<< HEAD
       terser: 5.17.7
       vite: 3.0.2(sass@1.62.1)(terser@5.17.7)
     dev: true
@@ -597,28 +357,12 @@ packages:
   /@vitejs/plugin-vue2@1.1.2(vite@3.0.2)(vue@2.7.7):
     resolution: {integrity: sha512-y6OEA+2UdJ0xrEQHodq20v9r3SpS62IOHrgN92JPLvVpNkhcissu7yvD5PXMzMESyazj0XNWGsc8UQk8+mVrjQ==}
     engines: {node: '>=14.6.0'}
-=======
-      terser: 5.16.9
-      vite: 4.4.7(sass@1.61.0)(terser@5.16.9)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@vitejs/plugin-vue2@2.2.0(vite@4.4.7)(vue@2.7.14):
-    resolution: {integrity: sha512-1km7zEuZ/9QRPvzXSjikbTYGQPG86Mq1baktpC4sXqsXlb02HQKfi+fl8qVS703JM7cgm24Ga9j+RwKmvFn90A==}
-    engines: {node: ^14.18.0 || >= 16.0.0}
->>>>>>> 1531a91 (新TradeView Charting)
     peerDependencies:
       vite: '>=2.5.10'
       vue: ^2.7.0-0
     dependencies:
-<<<<<<< HEAD
       vite: 3.0.2(sass@1.62.1)(terser@5.17.7)
       vue: 2.7.7
-=======
-      vite: 4.4.7(sass@1.61.0)(terser@5.16.9)
-      vue: 2.7.14
->>>>>>> 1531a91 (新TradeView Charting)
     dev: true
 
   /@vue/compiler-sfc@2.7.7:
@@ -632,25 +376,15 @@ packages:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
     dev: false
 
-<<<<<<< HEAD
   /@vue/eslint-config-prettier@7.1.0(eslint@8.42.0)(prettier@2.8.8):
-=======
-  /@vue/eslint-config-prettier@7.1.0(eslint@8.45.0)(prettier@2.8.8):
->>>>>>> 1531a91 (新TradeView Charting)
     resolution: {integrity: sha512-Pv/lVr0bAzSIHLd9iz0KnvAr4GKyCEl+h52bc4e5yWuDVtLgFwycF7nrbWTAQAS+FU6q1geVd07lc6EWfJiWKQ==}
     peerDependencies:
       eslint: '>= 7.28.0'
       prettier: '>= 2.0.0'
     dependencies:
-<<<<<<< HEAD
       eslint: 8.42.0
       eslint-config-prettier: 8.8.0(eslint@8.42.0)
       eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.42.0)(prettier@2.8.8)
-=======
-      eslint: 8.45.0
-      eslint-config-prettier: 8.8.0(eslint@8.45.0)
-      eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.45.0)(prettier@2.8.8)
->>>>>>> 1531a91 (新TradeView Charting)
       prettier: 2.8.8
     dev: true
 
@@ -1061,7 +795,6 @@ packages:
     resolution: {integrity: sha512-ucAnuBEhUK4boH2HjVYG5Q2mQyPorvv0u/ocS+zhdw0S8AlHYY+GOFhP1Gio5z4icpP2ivFSvhtFjQi8+T9ppw==}
     dev: false
 
-<<<<<<< HEAD
   /esbuild-android-64@0.14.54:
     resolution: {integrity: sha512-Tz2++Aqqz0rJ7kYBfz+iqyE3QMycD4vk7LBRyWaAVFgFtQ/O8EJOnVmTOiDWYZ/uYzB4kvP+bqejYdVKzE5lAQ==}
     engines: {node: '>=12'}
@@ -1244,15 +977,10 @@ packages:
 
   /esbuild@0.14.54:
     resolution: {integrity: sha512-Cy9llcy8DvET5uznocPyqL3BFRrFXSVqbgpMJ9Wz8oVjZlh/zUSNbPRbov0VX7VxN2JH1Oa0uNxZ7eLRb62pJA==}
-=======
-  /esbuild@0.18.17:
-    resolution: {integrity: sha512-1GJtYnUxsJreHYA0Y+iQz2UEykonY66HNWOb0yXYZi9/kNrORUEHVg87eQsCtqh59PEJ5YVZJO98JHznMJSWjg==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-<<<<<<< HEAD
       '@esbuild/linux-loong64': 0.14.54
       esbuild-android-64: 0.14.54
       esbuild-android-arm64: 0.14.54
@@ -1274,30 +1002,6 @@ packages:
       esbuild-windows-32: 0.14.54
       esbuild-windows-64: 0.14.54
       esbuild-windows-arm64: 0.14.54
-=======
-      '@esbuild/android-arm': 0.18.17
-      '@esbuild/android-arm64': 0.18.17
-      '@esbuild/android-x64': 0.18.17
-      '@esbuild/darwin-arm64': 0.18.17
-      '@esbuild/darwin-x64': 0.18.17
-      '@esbuild/freebsd-arm64': 0.18.17
-      '@esbuild/freebsd-x64': 0.18.17
-      '@esbuild/linux-arm': 0.18.17
-      '@esbuild/linux-arm64': 0.18.17
-      '@esbuild/linux-ia32': 0.18.17
-      '@esbuild/linux-loong64': 0.18.17
-      '@esbuild/linux-mips64el': 0.18.17
-      '@esbuild/linux-ppc64': 0.18.17
-      '@esbuild/linux-riscv64': 0.18.17
-      '@esbuild/linux-s390x': 0.18.17
-      '@esbuild/linux-x64': 0.18.17
-      '@esbuild/netbsd-x64': 0.18.17
-      '@esbuild/openbsd-x64': 0.18.17
-      '@esbuild/sunos-x64': 0.18.17
-      '@esbuild/win32-arm64': 0.18.17
-      '@esbuild/win32-ia32': 0.18.17
-      '@esbuild/win32-x64': 0.18.17
->>>>>>> 1531a91 (新TradeView Charting)
     dev: true
 
   /escalade@3.1.1:
@@ -1310,27 +1014,16 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-<<<<<<< HEAD
   /eslint-config-prettier@8.8.0(eslint@8.42.0):
-=======
-  /eslint-config-prettier@8.8.0(eslint@8.45.0):
->>>>>>> 1531a91 (新TradeView Charting)
     resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-<<<<<<< HEAD
       eslint: 8.42.0
     dev: true
 
   /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0)(eslint@8.42.0)(prettier@2.8.8):
-=======
-      eslint: 8.45.0
-    dev: true
-
-  /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0)(eslint@8.45.0)(prettier@2.8.8):
->>>>>>> 1531a91 (新TradeView Charting)
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -1341,29 +1034,18 @@ packages:
       eslint-config-prettier:
         optional: true
     dependencies:
-<<<<<<< HEAD
       eslint: 8.42.0
       eslint-config-prettier: 8.8.0(eslint@8.42.0)
-=======
-      eslint: 8.45.0
-      eslint-config-prettier: 8.8.0(eslint@8.45.0)
->>>>>>> 1531a91 (新TradeView Charting)
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
     dev: true
 
-<<<<<<< HEAD
   /eslint-plugin-vue@9.14.1(eslint@8.42.0):
     resolution: {integrity: sha512-LQazDB1qkNEKejLe/b5a9VfEbtbczcOaui5lQ4Qw0tbRBbQYREyxxOV5BQgNDTqGPs9pxqiEpbMi9ywuIaF7vw==}
-=======
-  /eslint-plugin-vue@9.15.1(eslint@8.45.0):
-    resolution: {integrity: sha512-CJE/oZOslvmAR9hf8SClTdQ9JLweghT6JCBQNrT2Iel1uVw0W0OLJxzvPd6CxmABKCvLrtyDnqGV37O7KQv6+A==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
     dependencies:
-<<<<<<< HEAD
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.42.0)
       eslint: 8.42.0
       natural-compare: 1.4.0
@@ -1371,15 +1053,6 @@ packages:
       postcss-selector-parser: 6.0.13
       semver: 7.5.1
       vue-eslint-parser: 9.3.0(eslint@8.42.0)
-=======
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.45.0)
-      eslint: 8.45.0
-      natural-compare: 1.4.0
-      nth-check: 2.1.1
-      postcss-selector-parser: 6.0.13
-      semver: 7.5.4
-      vue-eslint-parser: 9.3.1(eslint@8.45.0)
->>>>>>> 1531a91 (新TradeView Charting)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -1398,7 +1071,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-<<<<<<< HEAD
   /eslint@8.42.0:
     resolution: {integrity: sha512-ulg9Ms6E1WPf67PHaEY4/6E2tEn5/f7FXGzr3t9cBMugOmf1INYvuUwwh1aXQN4MfJ6a5K2iNwP3w4AColvI9A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -1408,17 +1080,6 @@ packages:
       '@eslint-community/regexpp': 4.5.1
       '@eslint/eslintrc': 2.0.3
       '@eslint/js': 8.42.0
-=======
-  /eslint@8.45.0:
-    resolution: {integrity: sha512-pd8KSxiQpdYRfYa9Wufvdoct3ZPQQuVuU5O6scNgMuOMYuxvH0IGaYK0wUFjo4UYYQQCUndlXiMbnxopwvvTiw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    hasBin: true
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.45.0)
-      '@eslint-community/regexpp': 4.6.2
-      '@eslint/eslintrc': 2.1.1
-      '@eslint/js': 8.44.0
->>>>>>> 1531a91 (新TradeView Charting)
       '@humanwhocodes/config-array': 0.11.10
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
@@ -2136,15 +1797,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /postcss@8.4.27:
-    resolution: {integrity: sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: true
-
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -2538,36 +2190,17 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-<<<<<<< HEAD
   /vite@3.0.2(sass@1.62.1)(terser@5.17.7):
     resolution: {integrity: sha512-TAqydxW/w0U5AoL5AsD9DApTvGb2iNbGs3sN4u2VdT1GFkQVUfgUldt+t08TZgi23uIauh1TUOQJALduo9GXqw==}
-=======
-  /uvu@0.5.6:
-    resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
-    engines: {node: '>=8'}
-    hasBin: true
-    dependencies:
-      dequal: 2.0.3
-      diff: 5.1.0
-      kleur: 4.1.5
-      sade: 1.8.1
-    dev: true
-
-  /vite@4.4.7(sass@1.61.0)(terser@5.16.9):
-    resolution: {integrity: sha512-6pYf9QJ1mHylfVh39HpuSfMPojPSKVxZvnclX1K1FyZ1PXDOcLBibdq5t1qxJSnL63ca8Wf4zts6mD8u8oc9Fw==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
       less: '*'
-      lightningcss: ^1.21.0
       sass: '*'
       stylus: '*'
       terser: ^5.4.0
     peerDependenciesMeta:
       less:
-        optional: true
-      lightningcss:
         optional: true
       sass:
         optional: true
@@ -2576,20 +2209,12 @@ packages:
       terser:
         optional: true
     dependencies:
-<<<<<<< HEAD
       esbuild: 0.14.54
       postcss: 8.4.24
       resolve: 1.22.2
       rollup: 2.79.1
       sass: 1.62.1
       terser: 5.17.7
-=======
-      esbuild: 0.18.17
-      postcss: 8.4.27
-      rollup: 3.26.2
-      sass: 1.61.0
-      terser: 5.16.9
->>>>>>> 1531a91 (新TradeView Charting)
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -2609,52 +2234,33 @@ packages:
       vue: 2.7.7
     dev: false
 
-<<<<<<< HEAD
   /vue-eslint-parser@9.3.0(eslint@8.42.0):
     resolution: {integrity: sha512-48IxT9d0+wArT1+3wNIy0tascRoywqSUe2E1YalIC1L8jsUGe5aJQItWfRok7DVFGz3UYvzEI7n5wiTXsCMAcQ==}
-=======
-  /vue-echarts@6.5.4(echarts@5.4.3)(vue@2.7.14):
-    resolution: {integrity: sha512-pLJTk2hfhauoWdmiZGXByAtcO6bpfnAS+jkJqKimSBSV5I5ckh2nka9duLlIVbTvQOEb2tFa0XiXjACQNcEfpA==}
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.5
-      echarts: ^5.4.1
-      vue: ^2.6.12 || ^3.1.1
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      echarts: 5.4.3
-      resize-detector: 0.3.0
-      vue: 2.7.14
-      vue-demi: 0.13.11(vue@2.7.14)
-    dev: false
-
-  /vue-eslint-parser@9.3.1(eslint@8.45.0):
-    resolution: {integrity: sha512-Clr85iD2XFZ3lJ52/ppmUDG/spxQu6+MAeHXjjyI4I1NUYZ9xmenQp4N0oaHJhrA8OOxltCVxMRfANGa70vU0g==}
->>>>>>> 1531a91 (新TradeView Charting)
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
       debug: 4.3.4
-<<<<<<< HEAD
       eslint: 8.42.0
       eslint-scope: 7.2.0
       eslint-visitor-keys: 3.4.1
       espree: 9.5.2
-=======
-      eslint: 8.45.0
-      eslint-scope: 7.2.2
-      eslint-visitor-keys: 3.4.2
-      espree: 9.6.1
->>>>>>> 1531a91 (新TradeView Charting)
       esquery: 1.5.0
       lodash: 4.17.21
       semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-i18n-composable@2.0.0(vue-i18n@8.0.0)(vue@2.7.7):
+    resolution: {integrity: sha512-oCiX+xoNZKISv7/G1ZtSpi4/E16mQnI5DkZlBlEt++YVj6PZBCyqaiNotfzqDXz8TODnugi8sM39x+MRe+8ziA==}
+    peerDependencies:
+      vue: '>=2.7 <3'
+      vue-i18n: '>=8 <9'
+    dependencies:
+      vue: 2.7.7
+      vue-i18n: 8.0.0(vue@2.7.7)
+    dev: false
 
   /vue-i18n@8.0.0(vue@2.7.7):
     resolution: {integrity: sha512-Xi4xQEhL96zqXfPcfEM8Dusqmxu2jJBR88t+KGCxT7WoeDa7YHFtN7tauf9ZJQQEKt9kT6PH1+krVMB8tnl7TA==}

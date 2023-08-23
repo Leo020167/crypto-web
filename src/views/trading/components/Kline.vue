@@ -118,7 +118,7 @@ export default {
         autosize: this.autosize,
         studies_overrides: this.studiesOverrides,
 
-        // custom_css_url: 'bundles/modify.css',
+        custom_css_url: 'bundles/modify.css',
 
         loading_screen: { backgroundColor: '#171b2b' },
         overrides: {
@@ -208,22 +208,28 @@ export default {
         // that.createStudy();
         tvWidget.headerReady().then(() => {
           this.buttons.forEach(function (v) {
-            console.log(v);
+           
             var button = tvWidget.createButton();
+
+       
             if (v.resolution == '1' && v.chartType == '3') {
               button.classList.add('active');
               tvWidget.chart().setChartType(3);
               that.toggleStudy(3);
             }
+
             button.textContent = v.title;
             button.setAttribute('title', v.title);
             button.setAttribute('data-chart-type', v.chartType);
             button.setAttribute('data-resolution', v.resolution);
             button.addEventListener('click', function () {
-              // tvWidget.chart().setChartType(v.chartType);
-              // tvWidget.chart().setResolution(v.resolution)
+      
               let chartType = button.getAttribute('data-chart-type') * 1;
+
               button.classList.add('active');
+
+            
+
               var list = that.TVjsApisibling(this.parentNode.parentNode);
               for (var i = 0; i < list.length; i++) {
                 if (list[i].childNodes[0]) {
@@ -331,3 +337,5 @@ export default {
   },
 };
 </script>
+
+
