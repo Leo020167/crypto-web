@@ -58,7 +58,7 @@
             <p>{{ transallTime(scope.row.createTime) }}</p>
           </template>
         </el-table-column>
-        <el-table-column label="盈虧" align="left">
+        <el-table-column :label="$t('position-list.text15')" align="left">
           <template slot-scope="scope">
             <p
               v-if="scope.row.buySell === 'sell'"
