@@ -11,37 +11,49 @@
       >
         <el-table-column
           prop="symbol"
-          label="幣種"
+          :label="$t('position-list.text1')"
           align="left"
         ></el-table-column>
-        <el-table-column prop="buySell" label="買賣方向" align="left">
+        <el-table-column
+          prop="buySell"
+          :label="$t('assets.maimaifangxiang')"
+          align="left"
+        >
           <template slot-scope="scope">
             <p :class="scope.row.buySell === 'buy' ? 'redText' : 'greenText'">
-              {{ scope.row.buySell === 'buy' ? '買入' : '賣出' }}
+              {{
+                scope.row.buySell === 'buy'
+                  ? $t('assets.mairu')
+                  : $t('assets.maichu')
+              }}
             </p>
           </template>
         </el-table-column>
         <el-table-column
+          :label="$t('assets.fee')"
           prop="fee"
-          label="手續費"
           align="left"
         ></el-table-column>
         <el-table-column
           prop="amount"
-          label="數量"
+          :label="$t('assets.shuliang')"
           align="left"
         ></el-table-column>
         <el-table-column
           prop="price"
-          label="價格"
+          :label="$t('position-list.text8')"
           align="left"
         ></el-table-column>
         <el-table-column
           prop="sum"
-          label="金額（USDT）"
+          :label="$t('newCommon.text29') + '(USDT)'"
           align="left"
         ></el-table-column>
-        <el-table-column prop="createTime" label="時間" align="left">
+        <el-table-column
+          prop="createTime"
+          :label="$t('newCommon.text30')"
+          align="left"
+        >
           <template slot-scope="scope">
             <p>{{ transallTime(scope.row.createTime) }}</p>
           </template>
