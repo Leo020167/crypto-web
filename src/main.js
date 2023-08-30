@@ -29,13 +29,11 @@ Vue.component(VueQrcode.name, VueQrcode);
 Vue.use(ElementUI);
 
 /**
- *  fontawesome字体图标
- *  用法:
- *  1.将所需要的图标import进来，要以fa前缀开头，如：
- *    import { faUserSecret } from '@fortawesome/free-solid-svg-icons'，
- *    图标网址网址 https://fontawesome.com/icons?d=gallery&s=solid&m=free
- *  2.library.add()加上引进的图标
- *  3.组件中使用： <font-awesome-icon icon='user-secret' /> (!!!此处要去掉前缀fa,然后改成非驼峰式小写命名)
+ * Fontawesome字体图标 用法: 1.将所需要的图标import进来，要以fa前缀开头，如： import { faUserSecret }
+ * from '@fortawesome/free-solid-svg-icons'， 图标网址网址
+ * https://fontawesome.com/icons?d=gallery&s=solid&m=free 2.library.add()加上引进的图标
+ * 3.组件中使用： <font-awesome-icon icon='user-secret' />
+ * (!!!此处要去掉前缀fa,然后改成非驼峰式小写命名)
  */
 import { library } from '@fortawesome/fontawesome-svg-core';
 import VueQriously from 'vue-qriously';
@@ -110,11 +108,11 @@ Vue.use(func);
 Vue.prototype.getTitleValueByLang = function (cnValue, twValue, enValue) {
   if (typeof this.$i18n == 'undefined') return '';
   if (this.$i18n.locale == 'zh_CN') {
-    return cnValue + ' - AI Trading Center';
+    return cnValue + ' - FireGlobal';
   } else if (this.$i18n.locale == 'zh_TW') {
-    return twValue + ' - AI Trading Center';
+    return twValue + ' - FireGlobal';
   } else {
-    return enValue + ' AI Trading Center';
+    return enValue + ' FireGlobal';
   }
 };
 

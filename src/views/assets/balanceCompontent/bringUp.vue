@@ -90,7 +90,7 @@
           class="bg-[#F6F7F9] py-4 px-5 mt-5 text-xs text-[#3E4660] rounded-md leading-6 w-[550px]"
         >
           <div class="flex items-center justify-between">
-            <span>{{ $t('withdrawCoins.text8') }} (ATC)</span>
+            <span>{{ $t('withdrawCoins.text8') }} (FGEC)</span>
             <span>{{ configs?.fee }}</span>
           </div>
           <div class="flex items-center justify-between mt-3">

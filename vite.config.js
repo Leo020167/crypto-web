@@ -6,7 +6,7 @@ import vue2 from '@vitejs/plugin-vue2';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/AI-Trading-Center-PC',
+    outDir: 'dist/FireGlobal-PC',
   },
   server: {
     port: 5174,
@@ -15,16 +15,16 @@ export default defineConfig({
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
 
       '/procoin-market': {
-        target: 'https://market.kaobaochina.cn',
+        target: 'https://market.tongxuncheng.cn',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.kaobaochina.cn',
+        target: 'http://upload.tongxuncheng.cn',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://web.kaobaochina.cn/api/',
+        target: 'https://web.tongxuncheng.cn/api/',
         changeOrigin: true,
       },
     },

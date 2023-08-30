@@ -184,14 +184,14 @@
   },
   "community": {
     "team_count": "社区人数",
-    "sum_amount": "总佣金(ATC)",
+    "sum_amount": "总佣金(FGEC)",
     "shequzongjiangli": "社区总奖励",
     "invite_count": "邀请码数量",
     "table": {
       "label1": "邀请码",
       "label2": "状态",
       "label3": "成员",
-      "label4": "奖励（ATC）"
+      "label4": "奖励（FGEC）"
     },
     "used": "已使用",
     "notUsed": "未使用",
@@ -282,7 +282,7 @@
     "weishixianyingkui": "未实现盈亏",
     "openBail": "冻结",
     "kaicangbaozhengjin": "开仓保证金",
-    "openBailTfu": "冻结(ATC)",
+    "openBailTfu": "冻结(FGEC)",
     "chicangbaozhengjin": "持仓保证金",
     "zongyingkui": "总盈亏",
     "weituojine": "委托金额",

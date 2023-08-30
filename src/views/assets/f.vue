@@ -11,7 +11,7 @@
             <div class="left">
               <!-- 总资产(USDT) -->
               <p class="upper-title">
-                {{ $t('assets.total_assets') }}（AI Trading Center）
+                {{ $t('assets.total_assets') }}（FireGlobal）
               </p>
               <p class="upper-data">
                 {{ digitalAccountVuex.assets }}
@@ -21,7 +21,7 @@
               </p>
               <!-- 可用保证金(USDT) -->
               <p class="lower-title">
-                {{ $t('assets.eableBail') }}（AI Trading Center）
+                {{ $t('assets.eableBail') }}（FireGlobal）
               </p>
               <p class="last-data">{{ digitalAccountVuex.eableBail }}</p>
             </div>

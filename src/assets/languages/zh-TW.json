@@ -54,7 +54,7 @@
     "text41": "余額賬戶",
     "text42": "外匯賬戶",
     "text43": "國際期貨賬戶",
-    "text44": "AI Trading Center帳戶",
+    "text44": "FireGlobal帳戶",
     "text45": "天",
     "text46": "跟單倍數設置",
     "text47": "提示",
@@ -184,14 +184,14 @@
   },
   "community": {
     "team_count": "社區人數",
-    "sum_amount": "總傭金(ATC)",
+    "sum_amount": "總傭金(FGEC)",
     "shequzongjiangli": "社區總獎勵",
     "invite_count": "邀請碼數量",
     "table": {
       "label1": "邀請碼",
       "label2": "狀態",
       "label3": "成員",
-      "label4": "獎勵（AI Trading Center）"
+      "label4": "獎勵（FireGlobal）"
     },
     "used": "已使用",
     "notUsed": "未使用",
@@ -281,7 +281,7 @@
     "weishixianyingkui": "未實現盈虧",
     "openBail": "凍結",
     "kaicangbaozhengjin": "開倉保證金",
-    "openBailTfu": "凍結(ATC)",
+    "openBailTfu": "凍結(FGEC)",
     "chicangbaozhengjin": "持倉保證金",
     "zongyingkui": "總盈虧",
     "weituojine": "委託金額",
