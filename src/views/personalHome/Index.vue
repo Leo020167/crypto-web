@@ -108,9 +108,7 @@
                 size="mini"
                 @click="changePersonalBind(personalData.myIsFollow)"
                 >{{
-                  personalData.myIsFollow === '0'
-                    ? $t('personalHome.applyBind')
-                    : $t('personalHome.applyRemoveBind')
+                    $t('personalHome.applyBind')
                 }}</el-button
               >
             </div>
@@ -508,7 +506,7 @@ export default {
         //     this.$message.error(res.msg);
         //   }
         // });
-      } else {
+      }/* else {
         homePageApi.cancelFollow(this.userId).then((res) => {
           if (res.code === '200') {
             this.personalData.myIsFollow = '0';
@@ -517,7 +515,7 @@ export default {
             this.$message.error(res.msg);
           }
         });
-      }
+      }*/
     },
     // 修改tab,收益
     changeProfitTab(i) {
