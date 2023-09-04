@@ -447,36 +447,36 @@ export default {
     unit() {
       if (
         this.marketType === 'stock' &&
-        ['IC2302', 'IH2302', 'IF2302'].includes(this.coinType)
+        ['IC2309', 'IH2309', 'IF2309'].includes(this.coinType)
       ) {
         return 'CNY';
       }
 
       if (
         this.marketType === 'stock' &&
-        ['SPX', 'IXIC', 'DJI'].includes(this.coinType)
+        ['ESMAIN', 'YMMAIN', 'NQMAIN'].includes(this.coinType)
       ) {
         return 'USD';
       }
 
-      return this.marketType === 'digital' ? 'USDT' : 'USDT';
+      return 'USDT';
     },
     transUnit() {
       if (
         this.marketType === 'stock' &&
-        ['IC2302', 'IH2302', 'IF2302'].includes(this.coinType)
+        ['IC2309', 'IH2309', 'IF2309'].includes(this.coinType)
       ) {
         return 'CNY';
       }
 
       if (
         this.marketType === 'stock' &&
-        ['SPX', 'IXIC', 'DJI'].includes(this.coinType)
+        ['ESMAIN', 'YMMAIN', 'NQMAIN'].includes(this.coinType)
       ) {
         return 'USD';
       }
 
-      return this.marketType === 'digital' ? 'EUR' : 'USDT';
+      return 'USDT';
     },
   },
   data() {
