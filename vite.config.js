@@ -6,7 +6,7 @@ import vue2 from '@vitejs/plugin-vue2';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Fwdetsc-PC',
+    outDir: 'dist/Gliedt-PC',
   },
   server: {
     port: 5174,
@@ -15,16 +15,16 @@ export default defineConfig({
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
 
       '/procoin-market': {
-        target: 'http://market.twtwe.com',
+        target: 'http://market.xjhyf.cn',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.twtwe.com',
+        target: 'http://upload.xjhyf.cn',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
-      '/api': {
-        target: 'http://web.twtwe.com',
+      '/procoin': {
+        target: 'http://api.xjhyf.cn',
         changeOrigin: true,
       },
     },

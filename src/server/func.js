@@ -44,14 +44,6 @@ export default {
           resData = resData.data;
           if (resData.code == 40009) {
             store.dispatch('removeCurrentUserInfo');
-            router.push({ path: '/user/authentication' });
-          } else if (resData.code == 40090) {
-            //实名验证
-            router.push({ path: '/user/authentication' });
-            Message({
-              message: resData.msg,
-              type: 'info',
-            });
           }
           resolve(resData);
         })
