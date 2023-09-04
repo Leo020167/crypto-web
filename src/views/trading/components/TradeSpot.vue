@@ -274,7 +274,7 @@
                 :disabled="true"
                 :placeholder="lookDownFormMarket.price"
               >
-                <template slot="suffix">{{ coinType }}</template>
+                <template slot="suffix">USDT</template>
               </el-input>
             </el-form-item>
           </div>

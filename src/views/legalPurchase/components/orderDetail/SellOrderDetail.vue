@@ -64,38 +64,38 @@
                 {{ orderData.alertTip }}
               </span>
             </div>
-            <div
-              class="way-content"
-              v-if="
-                orderData.state == 0 ||
-                orderData.state == 1 ||
-                orderData.state == 2 ||
-                orderData.state == 3
-              "
-            >
-              <div
-                class="way-item"
-                v-for="(item, index) in payWays"
-                :key="index"
-              >
-                <img :src="item.receiptLogo" alt="" class="way-icon" />
-                <span class="way-name" v-if="orderData.receiptName">{{
-                  orderData.receiptName
-                }}</span
-                ><span class="way-number" v-if="item.receiptNo">{{
-                  item.receiptNo
-                }}</span>
-                <img
-                  v-if="item.receiptType != 3"
-                  src="../../../../assets/newIcons/ewm.png"
-                  class="way-icon"
-                  @click="showEwm(item.qrCode)"
-                />
-                <span class="bank-name" v-show="item.receiptType == 3">{{
-                  item.bankName
-                }}</span>
-              </div>
-            </div>
+<!--            <div-->
+<!--              class="way-content"-->
+<!--              v-if="-->
+<!--                orderData.state == 0 ||-->
+<!--                orderData.state == 1 ||-->
+<!--                orderData.state == 2 ||-->
+<!--                orderData.state == 3-->
+<!--              "-->
+<!--            >-->
+<!--              <div-->
+<!--                class="way-item"-->
+<!--                v-for="(item, index) in payWays"-->
+<!--                :key="index"-->
+<!--              >-->
+<!--                <img :src="item.receiptLogo" alt="" class="way-icon" />-->
+<!--                <span class="way-name" v-if="orderData.receiptName">{{-->
+<!--                  orderData.receiptName-->
+<!--                }}</span-->
+<!--                ><span class="way-number" v-if="item.receiptNo">{{-->
+<!--                  item.receiptNo-->
+<!--                }}</span>-->
+<!--                <img-->
+<!--                  v-if="item.receiptType != 3"-->
+<!--                  src="../../../../assets/newIcons/ewm.png"-->
+<!--                  class="way-icon"-->
+<!--                  @click="showEwm(item.qrCode)"-->
+<!--                />-->
+<!--                <span class="bank-name" v-show="item.receiptType == 3">{{-->
+<!--                  item.bankName-->
+<!--                }}</span>-->
+<!--              </div>-->
+<!--            </div>-->
             <!-- 购买状态-待付款 -->
             <!-- 状态描述： 我确认已收到付款（此态暂不可用）， 1申诉（专有）、我确认已收到付款， 2从“我确认已收到付款”点击后->完成， 3申诉， -1过期， -2已撤销，-3系统撤销 -->
             <div
