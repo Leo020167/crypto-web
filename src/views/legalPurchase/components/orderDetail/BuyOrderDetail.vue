@@ -9,7 +9,7 @@
             <span class="header-title">{{ $t('orderDetail.buy') }}USDT</span>
             <!-- 订单号 -->
             <span class="header-order-num"
-              >{{ $t('orderDetail.orderNumber') }}：{{ orderData.orderId }}
+              ><!--{{ $t('orderDetail.orderNumber') }}：{{ orderData.orderId }}-->
               <!-- 订单时间 -->
               <span class="header-order-num2" style="margin-left: 20px"
                 >{{ $t('orderDetail.orderTime') }}：{{

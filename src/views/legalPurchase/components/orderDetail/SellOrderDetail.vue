@@ -7,7 +7,7 @@
           <div class="content-header">
             <span class="header-title">{{ $t('orderDetail.sell') }}USDT</span
             ><span class="header-order-num"
-              >{{ $t('orderDetail.orderNumber') }}：{{ orderData.orderId }}
+              ><!--{{ $t('orderDetail.orderNumber') }}：{{ orderData.orderId }}-->
               <span class="header-order-num2" style="margin-left: 20px"
                 >{{ $t('orderDetail.orderTime') }}：{{
                   (Number(orderData.createTime) * 1000)
