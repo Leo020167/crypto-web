@@ -315,7 +315,7 @@
                 :disabled="true"
                 :placeholder="lookDownFormMarket.price"
               >
-                <template slot="suffix">USDT</template>
+                <template slot="suffix">{{ unit }}</template>
               </el-input>
               <el-select
                 v-if="marketType == 'digital'"
