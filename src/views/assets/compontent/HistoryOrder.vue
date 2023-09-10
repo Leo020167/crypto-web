@@ -119,9 +119,9 @@
                   <span class="title-item">{{
                     $t('assets.closeOut_fee')
                   }}</span>
-                  <span class="title-item">{{
-                    $t('assets.closeOut_win')
-                  }}</span>
+<!--                  <span class="title-item">{{-->
+<!--                    $t('assets.closeOut_win')-->
+<!--                  }}</span>-->
                   <span class="title-item">{{
                     $t('assets.closeOut_lose')
                   }}</span>
@@ -139,7 +139,7 @@
                     >{{ item.closeHand }}{{ $t('assets.hand') }}</span
                   >
                   <span class="des-item">{{ item.closeFee }}</span>
-                  <span class="des-item">{{ item.profitShare }}</span>
+<!--                  <span class="des-item">{{ item.profitShare }}</span>-->
                   <span class="des-item">{{ item.profit }}</span>
                 </li>
               </ul>
@@ -225,7 +225,7 @@ export default {
   background-color: #fafafb;
   padding: 20px;
   .more-title {
-    color: black;
+    color: #b0b8db!important;
     font-weight: bold;
   }
   .table-more {
@@ -242,7 +242,7 @@ export default {
       line-height: 30px;
       .des-item {
         flex: 1;
-        color: black;
+        color: #b0b8db!important;
       }
     }
   }
