@@ -14,16 +14,16 @@ export default defineConfig({
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
       '/procoin-market': {
-        target: 'http://market.financingy.com',
+        target: 'http://market.financingychain.com',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.financingy.com',
+        target: 'https://upload.financingychain.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'http://api.financingy.com',
+        target: 'https://api.financingychain.com',
         changeOrigin: true,
       },
     },
