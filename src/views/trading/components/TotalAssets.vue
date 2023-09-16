@@ -63,7 +63,6 @@
             :label="$t('trade.totalAssets.label1')"
             prop="name"
             :sortable="sortTypes"
-            width="70px"
           >
             <template slot-scope="scope">
               <div class="symbol-and-option">
@@ -82,7 +81,6 @@
             :label="$t('trade.totalAssets.label2')"
             prop="price"
             :sortable="sortTypes"
-            width="100px"
           >
             <template slot-scope="scope">
               <span class="label2-price">{{ scope.row.price }}</span>

@@ -254,6 +254,7 @@ export default {
       const map = {
         'zh-CN': 'zh',
         'zh-TW': 'zh_TW',
+        va: 'vi',
       };
       return map[this.$i18n.locale]
         ? map[this.$i18n.locale]
