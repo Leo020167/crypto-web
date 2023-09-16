@@ -91,7 +91,6 @@
           </div>
 
           <div class="trading-top-middle-top">
-            {{ symbol }}
             <!--K线组件-->
             <kline
               :symbol="symbol"
