@@ -1,4 +1,6 @@
 {
+  "xitonganquan2": "전문 분산 아키텍처 및 DoS 방지 공격 시스템, 핫 월렛과 콜드 월렛 분리, 사용자 자산의 다차원적 보호",
+  "quanqiubuju2": "전 세계 여러 국가에 지역 서비스 센터가 설립되어 여러 비즈니스 형태를 하나로 통합했습니다.",
   "footer": [
     {
       "title": "회사 소개",
@@ -595,8 +597,8 @@
     "amount": "거래량",
     "dishTab1": "보류중인 주문서",
     "dishTab2": "실시간 거래",
-    "histroryTitle": "역사",
-    "histroryTitle2": "지난 15 번의 거래를 보여줍니다",
+    "historyTitle": "역사",
+    "historyTitle2": "지난 15 번의 거래를 보여줍니다",
     "allRecords": "모든 역사",
     "currentTab": ["현재 오픈 위치", "현재 순서"],
     "dish": {

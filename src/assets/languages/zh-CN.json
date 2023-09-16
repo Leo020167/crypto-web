@@ -596,8 +596,8 @@
     "amount": "交易量",
     "dishTab1": "挂单簿",
     "dishTab2": "实时成交",
-    "histroryTitle": "历史交易记录",
-    "histroryTitle2": "显示最近15条",
+    "historyTitle": "历史交易记录",
+    "historyTitle2": "显示最近15条",
     "allRecords": "全部历史交易记录",
     "currentTab": ["当前开仓", "当前委托"],
     "dish": {

@@ -598,8 +598,8 @@
     "amount": "交易量",
     "dishTab1": "掛單簿",
     "dishTab2": "實時成交",
-    "histroryTitle": "歷史交易記錄",
-    "histroryTitle2": "顯示最近15條",
+    "historyTitle": "歷史交易記錄",
+    "historyTitle2": "顯示最近15條",
     "allRecords": "全部歷史交易記錄",
     "currentTab": ["當前開倉", "當前委託"],
     "dish": {
