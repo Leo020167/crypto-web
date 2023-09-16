@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="text-right">
+    <div class="text-right mb-4">
       <router-link to="/pledge-history">{{ $t('pledge.text1') }}</router-link>
     </div>
 
@@ -36,7 +36,7 @@
                   {{ Number(v.minCount) * Number(v.profitRate) * 0.01 }}
                 </div>
               </div>
-            </el-col> 
+            </el-col>
             <el-col :span="6">
               <div>
                 <div>{{ $t('pledge.text7') }}</div>

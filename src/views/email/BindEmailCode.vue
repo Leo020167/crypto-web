@@ -65,19 +65,23 @@ const submitForm = () => {
   formRef.value.validate((valid) => {
     if (valid) {
       loading.value = true;
-      updateEmail({ ...model.value, email: route.query.email }).then((res) => {
-        if (res.code === '200') {
-          getUser();
+      updateEmail({ ...model.value, email: route.query.email })
+        .then((res) => {
+          if (res.code === '200') {
+            getUser();
 
-          Message.success(res.msg);
+            Message.success(res.msg);
 
-          router.replace({
-            path: '/trading',
-          });
-        } else {
-          Message.error(res.msg);
-        }
-      });
+            router.replace({
+              path: '/trading',
+            });
+          } else {
+            Message.error(res.msg);
+          }
+        })
+        .finally(() => {
+          loading.value = false;
+        });
     } else {
       console.log('error submit!!');
       return false;
