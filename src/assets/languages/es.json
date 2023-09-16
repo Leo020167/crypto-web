@@ -1,4 +1,5 @@
 {
+  "xitonganquan2": "Arquitectura distribuida profesional y sistema de ataque anti-DoS, separación de billeteras frías y calientes, protección multidimensional de los activos de los usuarios",
   "footer": [
     {
       "title": "sobre nosotros",
@@ -601,8 +602,8 @@
     "amount": "Volumen de comercio",
     "dishTab1": "Libro de pedidos pendiente",
     "dishTab2": "Comercio en tiempo real",
-    "histroryTitle": "Historia",
-    "histroryTitle2": "Mostrar las últimas 15 oficios",
+    "historyTitle": "Historia",
+    "historyTitle2": "Mostrar las últimas 15 oficios",
     "allRecords": "Toda la historia",
     "currentTab": ["Posición abierta actual ", " Orden actual"],
     "dish": {

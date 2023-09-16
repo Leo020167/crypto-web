@@ -1,4 +1,5 @@
 {
+  "xitonganquan2": "プロフェッショナルな分散アーキテクチャと DoS 攻撃対策システム、ホット ウォレットとコールド ウォレットの分離、ユーザー資産の多次元保護",
   "footer": [
     {
       "title": "私たちに関しては",
@@ -599,8 +600,8 @@
     "amount": "ボリューム",
     "dishTab1": "未決済の注文書",
     "dishTab2": "リアルタイムのお得な情報",
-    "histroryTitle": "履歴トランザクション",
-    "histroryTitle2": "直近の15件の取引を表示",
+    "historyTitle": "履歴トランザクション",
+    "historyTitle2": "直近の15件の取引を表示",
     "allRecords": "すべての歴史",
     "currentTab": "カレントオープン」、「カレントオーダー",
     "dish": {

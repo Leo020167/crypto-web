@@ -1,4 +1,5 @@
 {
+  "xitonganquan2": "Kiến trúc phân tán chuyên nghiệp và hệ thống chống tấn công DoS, tách biệt ví nóng và ví lạnh, bảo vệ tài sản người dùng đa chiều",
   "footer": [
     {
       "title": "Giới thiệu",
@@ -104,7 +105,7 @@
     "text19": "Cảnh báo rủi ro",
     "text20": "Giới thiệu dự án",
     "text21": "Vui lòng nhập số lượng mua",
-    "text22": "OK",
+    "text22": "Chắc chắn",
     "text23": "Hủy",
     "text24": "Lời nhắc",
     "text25": "Mua tiền Singapore",
@@ -130,7 +131,7 @@
     "text45": "ngày",
     "text46": "Tài liệu nhiều cài đặt",
     "text47": "Lời nhắc",
-    "text48": "OK",
+    "text48": "Chắc chắn",
     "text49": "Hủy",
     "text50": "Chọn ít nhất một bản sao",
     "text51": "Truyền thống",
@@ -198,7 +199,7 @@
     "text19": "Cảnh báo rủi ro",
     "text20": "Giới thiệu dự án",
     "text21": "Vui lòng nhập số lượng mua",
-    "text22": "OK",
+    "text22": "Chắc chắn",
     "text23": "Hủy",
     "text24": "Lời nhắc",
     "text25": "Mua tiền Singapore",
@@ -413,7 +414,7 @@
     "common_close_out_dialog_num": "Hãy nhập số lượng ván bài để đóng",
     "common_close_out_dialog_hold_num": "Số vị thế mở",
     "cancel": "Hủy",
-    "sure": "OK",
+    "sure": "Chắc chắn",
     "message1": "Vui lòng không nhập tỷ lệ",
     "message2": "Giá trị lớn",
     "confirm_title": "Có nên đóng nhanh lệnh này không",
@@ -538,7 +539,7 @@
     "clickToUpload": "Nhấp vào nút tải lên ở trên để tải tệp lên",
     "tips1": "Tải lên không thành công! Vui lòng chọn đúng định dạng tệp! (ví dụ:",
     "tipsBtn": "Mẹo",
-    "sure": "OK",
+    "sure": "Chắc chắn",
     "tips2": "Tệp không hợp lệ, vui lòng chọn lại",
     "tips3": "Không tải lên tệp lớn hơn 10M"
   },
@@ -547,7 +548,7 @@
     "oldPwd_ph": "Vui lòng nhập mật khẩu cũ",
     "newPwd_ph": "Vui lòng nhập mật khẩu mới",
     "newPwdTwice_ph": "Vui lòng nhập lại mật khẩu mới",
-    "sure": "OK"
+    "sure": "Chắc chắn"
   },
   "changePhone": {
     "title1": "Thay đổi số điện thoại đăng nhập",
@@ -572,7 +573,7 @@
     "title3": "Đặt mật khẩu giao dịch",
     "pwd1_ph": "Vui lòng nhập mật khẩu giao dịch gồm 6 chữ số",
     "pwd2_ph": "Vui lòng nhập lại mật khẩu giao dịch gồm 6 chữ số",
-    "sure": "OK"
+    "sure": "Chắc chắn"
   },
   "changeUserData": {
     "id": "UID",
@@ -798,7 +799,7 @@
     "addTip": "Hãy đảm bảo sử dụng cùng một tài khoản tên thật với số điện thoại di động đã đăng ký của bạn",
     "confirmAdd": "Xác nhận Thêm",
     "addTip1": "Bạn có muốn xóa phương thức thanh toán này không?",
-    "enter": "OK",
+    "enter": "Chắc chắn",
     "undelete": "Phục hồi xóa",
     "addTip2": "Vui lòng chọn phương thức thanh toán",
     "addTip3": "Vui lòng điền thông tin người thụ hưởng hoặc tài khoản người thụ hưởng",
@@ -980,7 +981,7 @@
     "text8": "Giá",
     "text9": "Số lượng",
     "text10": "Hủy",
-    "text11": "OK",
+    "text11": "Chắc chắn",
     "text12": "Giao dịch",
     "text13": "Số lượng/Có sẵn",
     "text14": "Chi phí",

@@ -214,7 +214,7 @@
         <div class="history-stocks">
           <!--历史开仓-->
           <div class="title">
-            {{ $t('trade.histroryTitle') }}
+            {{ $t('trade.historyTitle') }}
           </div>
           <template v-if="symbolType == 'spot'">
             <SpotHistoryOrder :history-list="historyList" />

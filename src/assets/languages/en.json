@@ -1,4 +1,5 @@
 {
+  "xitonganquan2": "Professional distributed architecture and anti-DoS attack system, separation of hot and cold wallets, multi-dimensional protection of user assets",
   "footer": [
     {
       "title": "about Us",
@@ -601,8 +602,8 @@
     "amount": "Trading Volume",
     "dishTab1": "Pending Order Book",
     "dishTab2": "Real Time Trading",
-    "histroryTitle": "History",
-    "histroryTitle2": "Show last 15 trades",
+    "historyTitle": "History",
+    "historyTitle2": "Show last 15 trades",
     "allRecords": "All history",
     "currentTab": ["Current Open Position", "Current Order"],
     "dish": {
