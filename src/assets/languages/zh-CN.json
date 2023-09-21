@@ -2,19 +2,19 @@
   "footer": [
     {
       "title": "关于我们",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=60"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=60"
     },
     {
       "title": "用户协议",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=200"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=200"
     },
     {
       "title": "条款协议",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=208"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=208"
     },
     {
       "title": "隐私条款",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=216"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=216"
     }
   ],
 

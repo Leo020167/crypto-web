@@ -89,11 +89,9 @@
         <div class="text-xs lg:flex lg:items-center lg:justify-between">
           <img src="/img/logo.png" alt="" class="h-6 lg:h-12" />
           <div class="lg:text-right">
-            <div class="mt-4">
-              Financingy{{ $t('quanqiuyouzhishuzizichan') }}
-            </div>
+            <div class="mt-4">Bitaegis{{ $t('quanqiuyouzhishuzizichan') }}</div>
             <div class="mt-2">
-              Copyright © 2021 - Financingy All rights reserved.
+              Copyright © 2021 - Bitaegis All rights reserved.
             </div>
           </div>
         </div>
@@ -141,7 +139,7 @@ export default {
       `https://chat.ichatlink.net/widget/standalone.html?` +
       queryString.stringify(
         {
-          eid: '8b926d40eb1e1074e5a3012d394451df',
+          eid: 'bddc07a2a2af8729822e70d4f153ed8a',
           clientid: userInfo?.userId,
           language: 'en',
           metadata,

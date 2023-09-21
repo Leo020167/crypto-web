@@ -22,7 +22,7 @@ const router = new VueRouter({
       path: '/',
       name: 'home', // 首页
       component: () => import('@/views/Home.vue'),
-      redirect: '/Login',
+      redirect: '/home',
       children: [
         {
           path: '/email-auth-code',

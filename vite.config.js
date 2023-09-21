@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Financingy-PC',
+    outDir: 'dist/Bitaegis-PC',
   },
   server: {
     port: 5174,
@@ -14,16 +14,16 @@ export default defineConfig({
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
       '/procoin-market': {
-        target: 'http://market.financingychain.com',
+        target: 'http://market.bitaeex.com',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'https://upload.financingychain.com',
+        target: 'https://upload.bitaeex.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://api.financingychain.com',
+        target: 'https://api.bitaeex.com',
         changeOrigin: true,
       },
     },

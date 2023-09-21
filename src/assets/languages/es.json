@@ -3,19 +3,19 @@
   "footer": [
     {
       "title": "sobre nosotros",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=66"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=66"
     },
     {
       "title": "Acuerdo del Usuario",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=206"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=206"
     },
     {
       "title": "acuerdo de términos",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=214"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=214"
     },
     {
       "title": "política de privacidad",
-      "url": "http://api.financingy.com/procoin/article/#/passgeDetail?article_id=222"
+      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=222"
     }
   ],
 
