@@ -76,7 +76,7 @@
         <!-- 设置新的手机 -->
         <div class="id-verify" v-else>
           <p class="main-title">{{ $t('changePhone.title3') }}</p>
-          <el-form ref="IDForms" class="login-form">
+          <el-form ref="IDForms" :model="newPhoneForm" class="login-form">
             <el-row>
               <el-col :span="8" class="prephone">
                 <el-select v-model="countryValue">
@@ -90,6 +90,7 @@
               </el-col>
               <el-col :span="15" :offset="1">
                 <el-form-item
+                  prop="newPhone"
                   :rules="[
                     {
                       required: true,
@@ -100,28 +101,17 @@
                 >
                   <el-input
                     :placeholder="$t('changePhone.newPhone_ph')"
-                    v-model="newPhone"
+                    v-model="newPhoneForm.newPhone"
                   ></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
             <el-row>
               <el-col :span="14">
-                <el-form-item
-                  prop="newSmsCode"
-                  label
-                  :status-icon="true"
-                  :rules="[
-                    {
-                      required: true,
-                      message: $t('changePhone.newCode_ph'),
-                      trigger: 'blur',
-                    },
-                  ]"
-                >
+                <el-form-item prop="newSmsCode" label :status-icon="true">
                   <el-input
                     :placeholder="$t('changePhone.newCode_ph')"
-                    v-model="newSmsCode"
+                    v-model="newPhoneForm.newSmsCode"
                   ></el-input>
                 </el-form-item>
               </el-col>
@@ -170,13 +160,25 @@ export default {
       smsText: this.$t('changePhone.getCode'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
-      newPhone: '',
       newSmsCode: '',
-      countryArray: [
-        { label: '+44 United Kiongdom', value: '+44', name: 'United Kiongdom' },
-      ], //国家集合
-      countryValue: '+44',
+      countryArray: [], //国家集合
+      countryValue: '',
+      newPhoneForm: {
+        newPhone: '',
+        newSmsCode: '',
+      },
     };
+  },
+  created() {
+    this.initCountryCode();
+  },
+  mounted() {
+    if (!this.currentUserInfos?.user?.phone) {
+      this.stepActive = 2;
+      this.dragType = 'new';
+    }
+
+    this.countryValue = this.currentUserInfos?.user?.countryCode;
   },
   computed: {
     ...mapGetters({
@@ -196,33 +198,13 @@ export default {
       security.getNewCountryCode().then((res) => {
         if (res.code === '200') {
           var arr = [];
-          if (this.$t('newCommon.text56') == '+49 Deutschland') {
-            let data = res.data;
-            for (let i = 0; i < data.length; i++) {
-              let label = `${data[i].areaCode}  ${data[i].deName}`;
-              let value = data[i].areaCode;
-              let name = data[i].deName;
-              let obj = { label: label, value: value, name: name };
-              arr.push(obj);
-            }
-          } else if (this.$t('newCommon.text56') == '+44 United Kiongdom') {
-            let data = res.data;
-            for (let i = 0; i < data.length; i++) {
-              let label = `${data[i].areaCode}  ${data[i].enName}`;
-              let value = data[i].areaCode;
-              let name = data[i].enName;
-              let obj = { label: label, value: value, name: name };
-              arr.push(obj);
-            }
-          } else {
-            let data = res.data;
-            for (let i = 0; i < data.length; i++) {
-              let label = `${data[i].areaCode}  ${data[i].tcName}`;
-              let value = data[i].areaCode;
-              let name = data[i].tcName;
-              let obj = { label: label, value: value, name: name };
-              arr.push(obj);
-            }
+          let data = res.data;
+          for (let i = 0; i < data.length; i++) {
+            let label = `${data[i].areaCode}  ${data[i].tcName}`;
+            let value = data[i].areaCode;
+            let name = data[i].tcName;
+            let obj = { label: label, value: value, name: name };
+            arr.push(obj);
           }
 
           this.countryArray = arr;
@@ -324,7 +306,7 @@ export default {
             this.timer = null;
             this.smsText = this.$t('regist.smsText2');
           } else if (res.code === '40016') {
-            this.dragType = 'fristStep';
+            // this.dragType = 'fristStep';
             this.getValid = false;
           } else {
             this.$message.error(res.msg);
@@ -336,7 +318,13 @@ export default {
       this.$refs.IDForms.validate((valid) => {
         if (valid) {
           security
-            .getSms(this.newPhone, '', this.locationx, this.dragImgKey)
+            .getSms(
+              this.newPhoneForm.newPhone,
+              this.countryValue,
+              this.locationx,
+              this.dragImgKey,
+              1
+            )
             .then((res) => {
               if (res.code == 200) {
                 this.countDown();
@@ -353,19 +341,19 @@ export default {
     },
     //修改 newPhone, newSmsCode, dragImgKey, locationx, oldPhone, oldSmsCode
     handleClickChange() {
-      if (!this.newPhone) {
+      if (!this.newPhoneForm.newPhone) {
         this.$message.error(this.$t('changePhone.newPhone_ph'));
         return;
       }
-      if (!this.newSmsCode) {
+      if (!this.newPhoneForm.newSmsCode) {
         this.$message.error(this.$t('changePhone.newCode_ph'));
         return;
       }
       security
         .updateNewPhone(
           this.countryValue,
-          this.newPhone,
-          this.newSmsCode,
+          this.newPhoneForm.newPhone,
+          this.newPhoneForm.newSmsCode,
           this.dragImgKey,
           this.locationx,
           this.currentUserInfos.user.phone,
@@ -373,7 +361,7 @@ export default {
         )
         .then((res) => {
           if (res.code === '200') {
-            this.$store.dispatch('changeUserPhone', this.newPhone); // vuex备存
+            this.$store.dispatch('changeUserPhone', this.newPhoneForm.newPhone); // vuex备存
             this.$message.success(res.msg);
           } else if (res.code === '40016') {
             this.dragType = 'enter';
