@@ -166,7 +166,7 @@ export default {
       getValid: false, // 是否开始拖动验证
       locationx: 0,
       dragImgKey: '',
-      dragType: null,
+      dragType: 'old',
       smsText: this.$t('changePhone.getCode'), // 验证码文字
       codeTime: 60,
       isCoding: false, //验证码正在发送过程中
@@ -194,7 +194,6 @@ export default {
     // 初始化，获取国家区号
     initCountryCode() {
       security.getNewCountryCode().then((res) => {
-        console.log(res);
         if (res.code === '200') {
           var arr = [];
           if (this.$t('newCommon.text56') == '+49 Deutschland') {
@@ -247,9 +246,10 @@ export default {
       security
         .getSms(
           this.currentUserInfos.user.phone,
-          '',
+          this.currentUserInfos.user.countryCode,
           this.locationx,
-          this.dragImgKey
+          this.dragImgKey,
+          1
         )
         .then((res) => {
           if (res.code == 200) {

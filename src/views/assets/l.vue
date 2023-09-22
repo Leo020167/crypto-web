@@ -29,8 +29,8 @@
               <p class="upper-data">{{ spotAccountVuex.frozenBail }}</p>
               <!-- <p class="upper-title" style="margin-top: 26px">
                 {{ $t('assets.zongyingkui') }}
-              </p> -->
-              <p class="upper-data">{{ spotAccountVuex.profit }}</p>
+              </p>
+              <p class="upper-data">{{ spotAccountVuex.profit }}</p> -->
             </div>
             <div class="right flex justify-end">
               <AssetsButtonGroup />
