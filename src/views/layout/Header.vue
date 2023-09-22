@@ -179,7 +179,7 @@ export default {
             store.primaryCertification = null;
             store.advancedCertification = null;
             this.$store.dispatch('removeCurrentUserInfo'); // vuex备存
-            this.$router.push('/peopleList');
+            this.$router.push('/home');
             // this.$router.push("/login");
           }
         });

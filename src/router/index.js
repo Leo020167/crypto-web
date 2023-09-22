@@ -43,6 +43,9 @@ const router = new VueRouter({
         {
           path: '/home',
           component: () => import('@/views/home-new.vue'),
+          meta: {
+            requireAuth: false,
+          },
         },
         {
           path: '/f',
