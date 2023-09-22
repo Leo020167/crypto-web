@@ -235,7 +235,8 @@ export default {
     .gzlogo {
       vertical-align: middle;
       margin-right: 20px;
-      height: 30px;
+      width: 46px;
+      height: auto;
     }
     .gzname {
       font-size: $h3;
