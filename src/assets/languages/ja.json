@@ -1,4 +1,5 @@
 {
+  "yanzhengmayifasongzhi": "確認コードが送信されました",
   "xitonganquan2": "プロフェッショナルな分散アーキテクチャと DoS 攻撃対策システム、ホット ウォレットとコールド ウォレットの分離、ユーザー資産の多次元保護",
   "footer": [
     {
@@ -137,14 +138,14 @@
     "text51": "トラディショナル",
     "text52": [
       { "title": "分", "resolution": "1", "chartType": 3 },
-      { "title": "1min", "resolution": "1", "chartType": 1 },
+      { "title": "1分", "resolution": "1", "chartType": 1 },
 
-      { "title": "15min", "resolution": "15", "chartType": 1 },
+      { "title": "15分", "resolution": "15", "chartType": 1 },
 
       { "title": "1時間足", "resolution": "60", "chartType": 1 },
       { "title": "4時間", "resolution": "240", "chartType": 1 },
 
-      { "title": "1 day", "resolution": "1D", "chartType": 1 },
+      { "title": "1日", "resolution": "1D", "chartType": 1 },
 
       { "title": "1週間", "resolution": "1W", "chartType": 1 }
     ],
@@ -603,7 +604,7 @@
     "historyTitle": "履歴トランザクション",
     "historyTitle2": "直近の15件の取引を表示",
     "allRecords": "すべての歴史",
-    "currentTab": "カレントオープン」、「カレントオーダー",
+    "currentTab": ["カレントオープン", "カレントオーダー"],
     "dish": {
       "title": "未決注文帳",
       "price": "価格",
@@ -959,12 +960,7 @@
   },
   "capital-account": {
     "title": "残高口座",
-    "tabs": [
-      "Assets",
-      "Deposit Records",
-      "Withdrawal Records",
-      "Fiat Currency Records"
-    ]
+    "tabs": ["資産", "入金記録", "出金記録", "法定通貨記録"]
   },
   "currency-account": {
     "title": "残高口座",

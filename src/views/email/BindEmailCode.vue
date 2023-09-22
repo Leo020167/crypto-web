@@ -2,7 +2,7 @@
   <div>
     <div class="container bg-white mt-10 p-4">
       <div class="text-orange-400 mb-5">
-        驗證碼已發送至，{{ route.query.email }}
+        {{ t('yanzhengmayifasongzhi') }} {{ route.query.email }}
       </div>
 
       <el-form

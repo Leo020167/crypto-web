@@ -137,7 +137,7 @@
             $t('newCommon.text70')
           }}</span>
 
-          <el-popover
+          <!-- <el-popover
             placement="left-end"
             title=""
             width="260"
@@ -152,7 +152,15 @@
               {{ $t('trade.totalAssets.dangerRate') }}
               <i class="el-icon-question"></i>
             </span>
-          </el-popover>
+          </el-popover> -->
+
+          <span
+            class="content-item1-span"
+            style="cursor: pointer"
+            slot="reference"
+          >
+            {{ $t('trade.totalAssets.dangerRate') }}
+          </span>
         </div>
         <div class="content-item item2">
           <span class="content-item3-span">{{

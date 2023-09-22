@@ -309,12 +309,12 @@ export default {
         this.getSmsCode();
       } else {
         // 还没有拖动，拖动弹窗准备
-        this.getValid = true;
+        // this.getValid = true;
+        this.getSmsCode();
       }
     },
     // 正式获取手机验证码
     getSmsCode() {
-      console.log(this.countryValue);
       security
         .getSms(
           this.registerForm.phone,

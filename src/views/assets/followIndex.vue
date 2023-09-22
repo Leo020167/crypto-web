@@ -247,14 +247,14 @@
 </template>
 
 <script>
-import CurrentOrder from './compontent/CurrentOrder.vue';
+import FollowTime from '@/components/followTimes.vue';
+import { assetsApi } from '@/server/axios.js';
+import { mapGetters } from 'vuex';
+import TransferDialog from './balanceCompontent/TransferDialog.vue'; //划转弹窗
 import CurrentEntrust from './compontent/CurrentEntrust.vue';
+import CurrentOrder from './compontent/CurrentOrder.vue';
 import HistoryOrder from './compontent/HistoryOrder.vue';
 import TransferRecord from './compontent/TransferRecord.vue'; //划转记录
-import TransferDialog from './balanceCompontent/TransferDialog.vue'; //划转弹窗
-import FollowTime from '@/components/followTimes.vue';
-import { mapGetters } from 'vuex';
-import { assetsApi } from '@/server/axios.js';
 export default {
   data() {
     return {

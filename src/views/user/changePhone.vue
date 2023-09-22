@@ -237,8 +237,9 @@ export default {
         // 已经拖动了，直接获取验证码
         this.getSmsCode();
       } else {
+        this.getSmsCode();
         // 还没有拖动，拖动弹窗准备
-        this.getValid = true;
+        this.getValid = false;
       }
     },
     // 正式获取手机验证码
@@ -257,7 +258,7 @@ export default {
             this.$message.success(res.msg);
           } else if (res.code === '40016') {
             this.dragType = 'old';
-            this.getValid = true;
+            this.getValid = false;
           } else {
             this.$message.error(res.msg);
           }
@@ -324,7 +325,7 @@ export default {
             this.smsText = this.$t('regist.smsText2');
           } else if (res.code === '40016') {
             this.dragType = 'fristStep';
-            this.getValid = true;
+            this.getValid = false;
           } else {
             this.$message.error(res.msg);
           }
@@ -342,7 +343,7 @@ export default {
                 this.$message.success(res.msg);
               } else if (res.code === '40016') {
                 this.dragType = 'new';
-                this.getValid = true;
+                this.getValid = false;
               } else {
                 this.$message.error(res.msg);
               }
@@ -376,7 +377,7 @@ export default {
             this.$message.success(res.msg);
           } else if (res.code === '40016') {
             this.dragType = 'enter';
-            this.getValid = true;
+            this.getValid = false;
           } else {
             this.$message.error(res.msg);
           }
