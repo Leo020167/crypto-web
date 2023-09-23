@@ -231,11 +231,11 @@
   },
   "regVerify": {
     "checkMobile": {
-      "error1": "Please enter your mobile phone number",
+      "error1": "携帯電話番号を入力してください",
       "error2": "携帯電話番号を正しいフォーマットで入力してください"
     },
     "validateCode": {
-      "error1": "Please enter your password",
+      "error1": "パスワードを入力してください",
       "error2": "パスワードは8～16文字のアルファベットと数字の組み合わせでなければなりません"
     }
   },

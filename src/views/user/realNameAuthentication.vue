@@ -23,7 +23,7 @@
         <el-form
           v-model="authenticationForm"
           label-width="150px"
-          :disabled="realText == '审核中' || realText == '审核通过'"
+          :disabled="realState == 0 || realState == 1"
         >
           <el-row>
             <el-col :span="13">
@@ -65,7 +65,7 @@
                 @onAddFile="getPortraitFile"
                 :oldFile="portraitUrl"
                 :canDelete="false"
-                :canUpload="realText != '审核中' && realText != '审核通过'"
+                :canUpload="realState != 0 && realState != 1"
                 :fileName="'上传人像页'"
               ></single-file-upload>
             </el-col>
@@ -74,7 +74,7 @@
                 @onAddFile="getNationalemblemFile"
                 :oldFile="nationalemblemUrl"
                 :canDelete="false"
-                :canUpload="realText != '审核中' && realText != '审核通过'"
+                :canUpload="realState != 0 && realState != 1"
                 :fileName="'上传国徽页'"
               ></single-file-upload>
             </el-col>
@@ -82,7 +82,7 @@
         </div>
         <el-row
           class="submit-container"
-          v-if="realText != '审核中' && realText != '审核通过'"
+          v-if="realState != 0 && realState != 1"
         >
           <el-col :span="10" :offset="2">
             <el-button
