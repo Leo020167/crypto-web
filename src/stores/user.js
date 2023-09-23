@@ -15,8 +15,6 @@ export const useUserStore = defineStore('user', () => {
     }
   );
 
-  console.log(userInfo);
-
   const getUser = async () => {
     const res = await getUserInfo();
 
@@ -24,7 +22,7 @@ export const useUserStore = defineStore('user', () => {
       userInfo.value.user = res.data;
     }
   };
-  console.log(userInfo);
+
   return {
     userInfo,
     getUser,

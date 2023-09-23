@@ -14,6 +14,7 @@ export const localeHash = {
   ko: 'ko',
   va: 'va',
   'ru-RU': 'ru',
+  ru: 'ru',
 };
 
 const instance = axios.create({

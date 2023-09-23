@@ -106,7 +106,7 @@ import { security, uploadImage } from '@/server/axios.js';
 export default {
   data() {
     return {
-      realState: '0',
+      realState: '-1',
       realText: '',
       hasReal: false, //是否已经实名
       authenticationForm: {
@@ -140,7 +140,6 @@ export default {
     getRealData() {
       security.getRealNameData().then((res) => {
         if (res.code === '200') {
-          console.log(res);
           let data = res.data.identityAuth;
           if (data) {
             this.authenticationForm = {
