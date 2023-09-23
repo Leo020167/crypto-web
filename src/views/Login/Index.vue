@@ -181,11 +181,11 @@ export default {
     handleClickLogin() {
       this.$refs.loginForm.validate((valid) => {
         // 存在答应,滑动验证
-        if (valid && !this.passwordError) {
-          this.getValid = true;
-        } else if (valid && this.passwordError) {
+        // if (valid && !this.passwordError) {
+        //   this.getValid = true;
+        // } else if (valid && this.passwordError) {
           this.gotoLogin();
-        }
+        // }
         // 否则自动校准
       });
     },
@@ -210,10 +210,10 @@ export default {
             //   this.$router.replace("/trading"); // 页面跳转到行情页
             // }
             this.$router.replace("/trading"); // 页面跳转到行情页
-          } else if (res.code === "40016") {
+          }/* else if (res.code === "40016") {
             // 滑块拖动验证
             this.getValid = true;
-          } else if (res.code === "40015") {
+          } */else if (res.code === "40015") {
             // 错误次数过多，需要验证码
             this.showSmsBox = true;
             this.smsRequireRule = [
@@ -244,11 +244,11 @@ export default {
             if (res.code === "200") {
               this.countDown();
               this.$message.success(res.msg);
-            } else if (res.code === "40016") {
+            }/* else if (res.code === "40016") {
               // 滑块拖动验证
               this.getValid = true;
               this.triggeringState = 1;
-            } else {
+            } */else {
               this.$message.error(res.msg);
             }
           });
