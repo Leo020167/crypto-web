@@ -4,6 +4,7 @@ import fr from './assets/languages/fr.json';
 import ja from './assets/languages/ja.json';
 import ko from './assets/languages/ko.json';
 import ru from './assets/languages/ru.json';
+import th from './assets/languages/th.json';
 import va from './assets/languages/va.json';
 import zh_CN from './assets/languages/zh-CN.json';
 import zh_TW from './assets/languages/zh-TW.json';
@@ -14,6 +15,7 @@ import frLocale from 'element-ui/lib/locale/lang/fr';
 import jaLocale from 'element-ui/lib/locale/lang/ja';
 import koLocale from 'element-ui/lib/locale/lang/ko';
 import ruRULocale from 'element-ui/lib/locale/lang/ru-RU';
+import thLocale from 'element-ui/lib/locale/lang/th';
 import viLocale from 'element-ui/lib/locale/lang/vi';
 import zhCNLocale from 'element-ui/lib/locale/lang/zh-CN';
 import zhTWLocale from 'element-ui/lib/locale/lang/zh-TW';
@@ -39,6 +41,7 @@ const i18n = createI18n({
     va: Object.assign(va, viLocale),
     'zh-CN': Object.assign(zh_CN, zhCNLocale),
     'zh-TW': Object.assign(zh_TW, zhTWLocale),
+    th: Object.assign(th, thLocale),
   },
 });
 
