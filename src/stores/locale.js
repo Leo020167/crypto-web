@@ -37,7 +37,7 @@ export const locales = [
   },
   { value: 'va', label: 'Việt Nam' },
   {
-    label: 'แบบไทย',
+    label: 'ภาษาไทย',
     value: 'th',
   },
 ];
