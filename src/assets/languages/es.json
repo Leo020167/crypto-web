@@ -917,7 +917,16 @@
     "text7": "Intereses diarios",
     "text8": "Cantidad de la promesa",
     "text9": "Cancelar",
-    "text10": "Confirmar"
+    "text10": "Confirmar",
+    "text11": "Registro de promesa",
+    "text12": "En progreso",
+    "text13": "Terminado",
+    "text14": "Moneda",
+    "text15": "Cantidad de la promesa",
+    "text16": "Ingresos acumulados",
+    "text17": "Hora de inicio del replanteo",
+    "text18": "Ciclo de compromiso",
+    "text19": "Tiempo de vencimiento del compromiso"
   },
   "withdrawCoins": {
     "title": "Retirar",

@@ -917,7 +917,16 @@
     "text7": "Thu nhập hàng năm",
     "text8": "Số tiền cam kết",
     "text9": "Hủy",
-    "text10": "Xác nhận"
+    "text10": "Xác nhận",
+    "text11": "Bản ghi cam kết",
+    "text12": "Đang tiến hành",
+    "text13": "Đã kết thúc",
+    "text14": "Tiền tệ",
+    "text15": "Số lượng cam kết",
+    "text16": "Thu nhập tích lũy",
+    "text17": "Thời gian bắt đầu đặt cược",
+    "text18": "Chu kỳ cam kết",
+    "text19": "Thời gian hết hạn cam kết"
   },
   "withdrawCoins": {
     "title": "Rút tiền",
