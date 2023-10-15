@@ -2,27 +2,43 @@
   <div class="px-12 py-7">
     <div class="flex items-center px-4 py-2.5 mb-4 bg-white">
       <img src="../../assets/logo.png" class="w-8 h-8" />
-      <span class="ml-1 text-black">質押記錄</span>
+      <span class="ml-1 text-black">{{ $t('pledge.text11') }}</span>
     </div>
     <div class="bg-white px-6 pb-6">
       <el-tabs v-model="status">
-        <el-tab-pane label="進行中" name="0" />
-        <el-tab-pane label="已結束" name="1" />
+        <el-tab-pane :label="$t('pledge.text12')" name="0" />
+        <el-tab-pane :label="$t('pledge.text13')" name="1" />
       </el-tabs>
 
       <el-table :data="rowData" style="width: 100%">
-        <el-table-column prop="symbol" label="幣種" align="center" />
-        <el-table-column prop="count" label="質押數量" />
-        <el-table-column prop="preProfit" label="纍計收益" />
-        <el-table-column prop="startTime" label="質押開始時間" align="center">
+        <el-table-column
+          prop="symbol"
+          :label="$t('pledge.text14')"
+          align="center"
+        />
+        <el-table-column prop="count" :label="$t('pledge.text15')" />
+        <el-table-column prop="preProfit" :label="$t('pledge.text16')" />
+        <el-table-column
+          prop="startTime"
+          :label="$t('pledge.text17')"
+          align="center"
+        >
           <template v-slot="{ row }">
             {{ returnAllTime(row.startTime) }}
           </template>
         </el-table-column>
-        <el-table-column prop="duration" label="質押周期" align="center">
+        <el-table-column
+          prop="duration"
+          :label="$t('pledge.text18')"
+          align="center"
+        >
           <template v-slot="{ row }"> {{ row.duration }}天 </template>
         </el-table-column>
-        <el-table-column prop="endTime" label="質押到期時間" align="center">
+        <el-table-column
+          prop="endTime"
+          :label="$t('pledge.text19')"
+          align="center"
+        >
           <template v-slot="{ row }">
             {{ returnAllTime(row.endTime) }}
           </template>

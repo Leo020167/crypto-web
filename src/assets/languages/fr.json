@@ -844,7 +844,16 @@
     "text7": "Revenu annualisé",
     "text8": "Montant de l'engagement",
     "text9": "Annuler",
-    "text10": "Confirmer"
+    "text10": "Confirmer",
+    "text11": "Enregistrement de promesse de don",
+    "text12": "En cours",
+    "text13": "Terminé",
+    "text14": "Devise",
+    "text15": "Quantité promise",
+    "text16": "Revenu cumulé",
+    "text17": "Heure de début du jalonnement",
+    "text18": "Cycle d'engagement",
+    "text19": "Délai d'expiration de l'engagement"
   },
   "withdrawCoins": {
     "title": "Retirer",

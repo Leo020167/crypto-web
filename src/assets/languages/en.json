@@ -846,7 +846,16 @@
     "text7": "Annualized income",
     "text8": "Pledge Amount",
     "text9": "Cancel",
-    "text10": "Confirm"
+    "text10": "Confirm",
+    "text11": "Pledge Record",
+    "text12": "In progress",
+    "text13": "Ended",
+    "text14": "Currency",
+    "text15": "Pledge quantity",
+    "text16": "Cumulative income",
+    "text17": "Staking start time",
+    "text18": "Pledge cycle",
+    "text19": "Pledge expiration time"
   },
   "withdrawCoins": {
     "title": "Withdraw",
