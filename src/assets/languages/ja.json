@@ -187,14 +187,14 @@
   },
   "community": {
     "team_count": "コミュニティサイズ",
-    "sum_amount": "トータル・コミッション（FGEC）",
+    "sum_amount": "トータル・コミッション（ECC）",
     "shequzongjiangli": "コミュニティ賞合計",
     "invite_count": "招待コード数",
     "table": {
       "label1": "Invitation Code",
       "label2": "ステータス",
       "label3": "メンバー",
-      "label4": "賞（FGEC）"
+      "label4": "賞（ECC）"
     },
     "used": "中古",
     "notUsed": "未使用",
@@ -285,7 +285,7 @@
     "weishixianyingkui": "未実現利益と損失",
     "openBail": "凍結",
     "kaicangbaozhengjin": "開始証拠金",
-    "openBailTfu": "フリーズ(FGEC)",
+    "openBailTfu": "フリーズ(ECC)",
     "chicangbaozhengjin": "ポジションマージン",
     "zongyingkui": "損益合計",
     "weituojine": "受託額",

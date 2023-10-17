@@ -54,7 +54,7 @@
     "text41": "잔액 계정",
     "text42": "외환 계좌",
     "text43": "국제 선물 계정",
-    "text44": "FGEC 계정",
+    "text44": "ECC 계정",
     "text45": "날",
     "text46": "승수 설정을 주문하십시오",
     "text47": "팁",
@@ -187,14 +187,14 @@
   },
   "community": {
     "team_count": "커뮤니티 규모",
-    "sum_amount": "총 커미션 (FGEC)",
+    "sum_amount": "총 커미션 (ECC)",
     "shequzongjiangli": "총 커뮤니티 보상",
     "invite_count": "초대장 코드 수",
     "table": {
       "Label1": "초대장",
       "label2": "상태",
       "label3": "회원",
-      "Label4": "상 (FGEC) "
+      "Label4": "상 (ECC) "
     },
     "used": "사용된",
     "notUsed": "사용되지 않았습니다",
@@ -285,7 +285,7 @@
     "weishixianyingkui": "실현되지 않은 이익과 손실",
     "openBail": "얼다",
     "kaicangbaozhengjin": "오프닝 마진",
-    "openBailTfu": "동결 (FGEC)",
+    "openBailTfu": "동결 (ECC)",
     "chicangbaozhengjin": "위치 마진",
     "zongyingkui": "총 P & L",
     "weituojine": "위탁 금액",
