@@ -15,16 +15,16 @@ export default defineConfig({
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
 
       '/procoin-market': {
-        target: 'https://market.tongxuncheng.cn',
+        target: 'https://market.wwhwuy.cn',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.tongxuncheng.cn',
+        target: 'http://upload.wwhwuy.cn',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://web.tongxuncheng.cn/api/',
+        target: 'https://web.wwhwuy.cn/api/',
         changeOrigin: true,
       },
     },
