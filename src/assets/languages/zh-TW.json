@@ -54,7 +54,7 @@
     "text41": "余額賬戶",
     "text42": "外匯賬戶",
     "text43": "國際期貨賬戶",
-    "text44": "FireGlobal帳戶",
+    "text44": "ECloud帳戶",
     "text45": "天",
     "text46": "跟單倍數設置",
     "text47": "提示",
@@ -191,7 +191,7 @@
       "label1": "邀請碼",
       "label2": "狀態",
       "label3": "成員",
-      "label4": "獎勵（FireGlobal）"
+      "label4": "獎勵（ECloud）"
     },
     "used": "已使用",
     "notUsed": "未使用",
