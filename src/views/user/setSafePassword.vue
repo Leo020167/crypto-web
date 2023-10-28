@@ -9,7 +9,7 @@
           ref="formRef"
           label-width="100px"
         >
-          <el-form-item prop="oldPayPass" v-if="userInfo.user.payPass">
+          <el-form-item prop="oldPayPass" v-if="userInfo?.user?.payPass">
             <el-input
               oninput="value=value.replace(/[^0-9]/g, '')"
               v-model="model.oldPayPass"

@@ -196,7 +196,7 @@ export default {
         .then((res) => {
           if (res.code === '200') {
             this.$store.dispatch('changeCurrentUerInfos', res.data); // vuex备存
-            console.log(123123);
+
             this.$router.replace('/home'); // 页面跳转到行情页
           } else if (res.code === '40016') {
             // 滑块拖动验证
