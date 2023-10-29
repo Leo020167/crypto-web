@@ -1,8 +1,5 @@
 <template>
   <div class="tardeIndex">
-    <!--    <img style="width: 100%;height:300px"-->
-    <!--         src="../../../assets/Caylebanner.png"-->
-    <!--         alt="">-->
     <!-- 内容 -->
     <div class="newCollege">
       <el-tabs v-model="activeName" class="demo-tabs">

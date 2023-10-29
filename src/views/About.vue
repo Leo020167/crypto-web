@@ -29,14 +29,14 @@
           <p class="text">
             {{
               $t(
-                'Global Center for encrypted digital trading (Gliedt) was established in August 2018, headquartered in Hong Kong, and has branches in 13 countries around the world. It is a global professional encrypted digital trading platform, providing users with diversified encrypted financial derivatives transactions , 7*24 hours of high-quality service and user education, a professional team with rich experience in the financial industry and top blockchain technology, adheres to the concept of user first, safe and compliant operation, and has obtained digital licenses such as Singapore, the United States, and Canada MSB.'
+                'Stdelit The world of encrypted digital transactions was established in August 2019 and is headquartered in Singapore. (Singapore 10 Anson Road #12-18, International Plaza, Singapore 079909) is a global professional encrypted digital trading platform. It was launched in Hong Kong in September 2020. Establishing its Asian headquarters, Stdelit provides users with diversified crypto financial derivatives transactions, 7*24 hours high-quality services and user education. It has a professional team with rich experience in the financial industry and blockchain technology, adheres to the concept of user first, and operates safely and compliantly. , and also holds digital licenses from Singapore, the United States, and Canada MSB.'
               )
             }}
           </p>
 <!--          <p class="text">-->
 <!--            {{-->
 <!--              $t(-->
-<!--                "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments. In Hong Kong, Gliedt leverages the scale and operational excellence of its global sources to create bespoke solutions for clients. Our commitment to client service is supported by extensive investment capabilities across virtually every asset class (digital currency, equities, fixed income, global real estate and multi-asset solutions). Our in-depth investment knowledge means we can provide you access to the understanding and flexibility you need to achieve your investment objectives."-->
+<!--                "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments. In Hong Kong, Stdelit leverages the scale and operational excellence of its global sources to create bespoke solutions for clients. Our commitment to client service is supported by extensive investment capabilities across virtually every asset class (digital currency, equities, fixed income, global real estate and multi-asset solutions). Our in-depth investment knowledge means we can provide you access to the understanding and flexibility you need to achieve your investment objectives."-->
 <!--              )-->
 <!--            }}-->
 <!--          </p>-->
@@ -45,17 +45,17 @@
 <!--          <p class="text">-->
 <!--            {{-->
 <!--              $t(-->
-<!--                'Gliedt is a leading global digital asset service platform based in London, UK and headquartered in Hong Kong, Asia Pacific. It is licensed to trade digital currency in the US and provides 24-hour service to 3 million+ users. The core members of the company have been working in the financial and technology sectors for many years, providing technical and business consulting services to many financial institutions, with rich resources of global financial institutions and rich experience in risk management.'-->
+<!--                'Stdelit is a leading global digital asset service platform based in London, UK and headquartered in Hong Kong, Asia Pacific. It is licensed to trade digital currency in the US and provides 24-hour service to 3 million+ users. The core members of the company have been working in the financial and technology sectors for many years, providing technical and business consulting services to many financial institutions, with rich resources of global financial institutions and rich experience in risk management.'-->
 <!--              )-->
 <!--            }}-->
 <!--            {{-->
 <!--              $t(-->
-<!--                "The Gliedt Smart Trading System provides users with a safer encrypted digital trading environment by applying the world's leading risk control system for banking securities, adopting underlying security technology, establishing an internal monitoring and alert system, and setting up a risk reserve fund mechanism."-->
+<!--                "The Stdelit Smart Trading System provides users with a safer encrypted digital trading environment by applying the world's leading risk control system for banking securities, adopting underlying security technology, establishing an internal monitoring and alert system, and setting up a risk reserve fund mechanism."-->
 <!--              )-->
 <!--            }}-->
 <!--            {{-->
 <!--              $t(-->
-<!--                'The Gliedt Smart Trade System has opened a global station and a Hong Kong sub-station, while regional business units are being set up in different regions to advance the global strategic layout.'-->
+<!--                'The Stdelit Smart Trade System has opened a global station and a Hong Kong sub-station, while regional business units are being set up in different regions to advance the global strategic layout.'-->
 <!--              )-->
 <!--            }}-->
 <!--          </p>-->
@@ -64,12 +64,12 @@
 <!--          <p class="text">-->
 <!--            {{-->
 <!--              $t(-->
-<!--                'The Gliedt Smart Trading System is an independent platform for cryptocurrency trading for users in Hong Kong. It uses the matching engine and technical wallet support licensed by Gliedt Global Station to facilitate cryptocurrency smart trading using USDT, BTC and ETH for local users.'-->
+<!--                'The Stdelit Smart Trading System is an independent platform for cryptocurrency trading for users in Hong Kong. It uses the matching engine and technical wallet support licensed by Stdelit Global Station to facilitate cryptocurrency smart trading using USDT, BTC and ETH for local users.'-->
 <!--              )-->
 <!--            }}-->
 <!--            {{-->
 <!--              $t(-->
-<!--                'Gliedt Hong Kong employs the same risk control system and the same underlying security technology as Gliedt Global, establishing an internal monitoring and alert system and setting up a risk reserve mechanism to provide a safer environment for users to trade cryptographic digital currency intelligently.'-->
+<!--                'Stdelit Hong Kong employs the same risk control system and the same underlying security technology as Stdelit Global, establishing an internal monitoring and alert system and setting up a risk reserve mechanism to provide a safer environment for users to trade cryptographic digital currency intelligently.'-->
 <!--              )-->
 <!--            }}-->
 <!--          </p>-->
@@ -112,7 +112,7 @@
             </div>
             <div class="bict-culture-note">
               <p class="text">
-                {{ $t('Make Gliedt spread to every country in the world') }}
+                {{ $t('Make Stdelit spread to every country in the world') }}
               </p>
             </div>
           </el-col>

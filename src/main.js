@@ -110,11 +110,11 @@ Vue.use(func);
 Vue.prototype.getTitleValueByLang = function (cnValue, twValue, enValue) {
   if (typeof this.$i18n == 'undefined') return '';
   if (this.$i18n.locale == 'zh_CN') {
-    return cnValue + ' - Gliedt';
+    return cnValue + ' - Stdelit';
   } else if (this.$i18n.locale == 'zh_TW') {
-    return twValue + ' - Gliedt';
+    return twValue + ' - Stdelit';
   } else {
-    return enValue + ' Gliedt';
+    return enValue + ' Stdelit';
   }
 };
 

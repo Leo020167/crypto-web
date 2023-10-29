@@ -262,7 +262,7 @@ export default {
   .header-logo {
     cursor: pointer;
     .gzlogo {
-      height: 30px;
+      height: 40px;
       margin-right: 20px;
       vertical-align: middle;
     }

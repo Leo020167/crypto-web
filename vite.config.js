@@ -3,28 +3,23 @@ import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import vue2 from '@vitejs/plugin-vue2';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Gliedt-PC',
+    outDir: 'dist/Stdelit-PC',
   },
   server: {
     port: 5174,
     proxy: {
-      // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
-      // http://api.worldcoinservice.com/procoin/swagger/index.html#/
-
       '/procoin-market': {
-        target: 'http://market.xjhyf.cn',
+        target: 'http://market.lloo18.cn',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.xjhyf.cn',
+        target: 'http://upload.lloo18.cn',
         changeOrigin: true,
       },
-      //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'http://api.xjhyf.cn',
+        target: 'http://api.lloo18.cn',
         changeOrigin: true,
       },
     },
