@@ -89,9 +89,11 @@
         <div class="text-xs lg:flex lg:items-center lg:justify-between">
           <img src="/img/logo.png" alt="" class="h-6 lg:h-12" />
           <div class="lg:text-right">
-            <div class="mt-4">Bitaegis{{ $t('quanqiuyouzhishuzizichan') }}</div>
+            <div class="mt-4">
+              Nicheswap{{ $t('quanqiuyouzhishuzizichan') }}
+            </div>
             <div class="mt-2">
-              Copyright © 2021 - Bitaegis All rights reserved.
+              Copyright © 2021 - Nicheswap All rights reserved.
             </div>
           </div>
         </div>
