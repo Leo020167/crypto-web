@@ -4,19 +4,19 @@
   "footer": [
     {
       "title": "о нас",
-      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=65"
+      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=65"
     },
     {
       "title": "Пользовательское Соглашение",
-      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=205"
+      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=205"
     },
     {
       "title": "соглашение об условиях",
-      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=213"
+      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=213"
     },
     {
       "title": "политика конфиденциальности",
-      "url": "http://api.bitaeex.com/procoin/article/#/passgeDetail?article_id=221"
+      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=221"
     }
   ],
 

@@ -14,16 +14,16 @@ export default defineConfig({
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
       '/procoin-market': {
-        target: 'http://market.bitaeex.com',
+        target: 'http://market.nicheswapex.com',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'https://upload.bitaeex.com',
+        target: 'https://upload.nicheswapex.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://api.bitaeex.com',
+        target: 'https://api.nicheswapex.com',
         changeOrigin: true,
       },
     },
