@@ -3,19 +3,19 @@
   "footer": [
     {
       "title": "關於我們",
-      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=61"
+      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=61"
     },
     {
       "title": "用戶協議",
-      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=201"
+      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=201"
     },
     {
       "title": "條款協議",
-      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=209"
+      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=209"
     },
     {
       "title": "隱私條款",
-      "url": "http://api.nicheswapex.com/procoin/article/#/passgeDetail?article_id=217"
+      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=217"
     }
   ],
 

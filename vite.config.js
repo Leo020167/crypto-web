@@ -14,16 +14,16 @@ export default defineConfig({
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
       '/procoin-market': {
-        target: 'http://market.nicheswapex.com',
+        target: 'http://market.electraswap.net',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'https://upload.nicheswapex.com',
+        target: 'https://upload.electraswap.net',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://api.nicheswapex.com',
+        target: 'https://api.electraswap.net',
         changeOrigin: true,
       },
     },

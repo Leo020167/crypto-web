@@ -149,7 +149,7 @@
                   $t('regist.agreeProtocol_btn')
                 }}</span>
                 <a
-                  href="https://api.nicheswapex.com/trade/article/#/passgeDetail?article_id=48"
+                  href="https://api.electraswap.net/trade/article/#/passgeDetail?article_id=48"
                   target="_blank"
                   class="text-main"
                   >《{{ $t('regist.agreeProtocol_title') }}》</a
