@@ -90,10 +90,10 @@
           <img src="/img/logo.png" alt="" class="h-6 lg:h-12" />
           <div class="lg:text-right">
             <div class="mt-4">
-              Nicheswap{{ $t('quanqiuyouzhishuzizichan') }}
+              ElectraSwap{{ $t('quanqiuyouzhishuzizichan') }}
             </div>
             <div class="mt-2">
-              Copyright © 2021 - Nicheswap All rights reserved.
+              Copyright © 2021 - ElectraSwap All rights reserved.
             </div>
           </div>
         </div>
