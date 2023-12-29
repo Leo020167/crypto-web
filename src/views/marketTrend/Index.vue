@@ -4,12 +4,25 @@
       <!--导航栏和搜索框-->
       <div class="marketTrend-header">
         <ul class="header-nav">
-          <li :class="activeNav === 1 ? 'activeNav' : ''" @click="handleChangeNav(1)">
+          <li
+            :class="activeNav === 1 ? 'activeNav' : ''"
+            @click="handleChangeNav(1)"
+          >
             <font-awesome-icon icon="star" class="icon-star" />
             <span class="own-market">自选</span>
           </li>
-          <li :class="activeNav === 3 ? 'activeNav' : ''" @click="handleChangeNav(3)">数字货币</li>
-          <li :class="activeNav === 2 ? 'activeNav' : ''" @click="handleChangeNav(2)">股指期货</li>
+          <li
+            :class="activeNav === 3 ? 'activeNav' : ''"
+            @click="handleChangeNav(3)"
+          >
+            数字货币
+          </li>
+          <li
+            :class="activeNav === 2 ? 'activeNav' : ''"
+            @click="handleChangeNav(2)"
+          >
+            股指期货
+          </li>
         </ul>
         <div class="header-search">
           <el-input
@@ -22,7 +35,10 @@
           ></el-input>
         </div>
       </div>
-      <Optional @showDrawer="handleShowDrawer" v-if="activeNav === 1"></Optional>
+      <Optional
+        @showDrawer="handleShowDrawer"
+        v-if="activeNav === 1"
+      ></Optional>
       <Digital @showDrawer="handleShowDrawer" v-if="activeNav === 3"></Digital>
       <Stock @showDrawer="handleShowDrawer" v-if="activeNav === 2"></Stock>
       <!--币种介绍弹框-->
@@ -37,11 +53,11 @@
 </template>
 
 <script>
-import IntroductionDrawer from './IntroductionDrawer';
+import { getCoinInfo, seachCoin } from '@/server/axios';
 import Digital from './Digital';
-import Stock from './Stock';
+import IntroductionDrawer from './IntroductionDrawer';
 import Optional from './Optional';
-import { findMyCoin, getCoinInfo, seachCoin } from '@/server/axios';
+import Stock from './Stock';
 export default {
   data() {
     return {

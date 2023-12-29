@@ -434,10 +434,10 @@ export default {
               marketType: marketType,
             });
           }
-          cb(arr);
-        } else {
-          // this.$message.error("搜索失败，请确认所输入的币种是否存在");
+          return cb(arr);
         }
+
+        return cb();
       });
     },
     // 搜索框选择
