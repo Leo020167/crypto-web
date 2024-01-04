@@ -782,15 +782,7 @@ export default {
     // 开仓 (买) symbol, price, buySell, hand, multiNum, orderType
     openPositionBuy(type) {
       if (!this.currentUserInfos.token) {
-        // 改成跳去下载
-        let lang =
-          this.$i18n.locale == 'zh_CN'
-            ? 'cn'
-            : this.$i18n.locale == 'zh_TW'
-            ? 'tw'
-            : 'en';
-        window.location.href = `https://www.wwctrade.com/?lang=${lang}&download=1`;
-        return;
+        this.$router.push('/login');
       } else if (type === 'limit' && !this.lookUpForm.price) {
         this.$message.error(this.$t('trade.transaction.tips1'));
         return;
@@ -859,15 +851,7 @@ export default {
     // 开仓（卖）
     openPositionSell(type) {
       if (!this.currentUserInfos.token) {
-        // 改成跳去下载
-        let lang =
-          this.$i18n.locale == 'zh_CN'
-            ? 'cn'
-            : this.$i18n.locale == 'zh_TW'
-            ? 'tw'
-            : 'en';
-        window.location.href = `https://www.wwctrade.com/?lang=${lang}&download=1`;
-        return;
+        this.$router.push('/login');
       } else if (type === 'limit' && !this.lookDownForm.price) {
         this.$message.error(this.$t('trade.transaction.tips3'));
         return;

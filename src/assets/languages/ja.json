@@ -588,7 +588,7 @@
       "openBail": "ポジションマージン:",
       "buy": "強気(多くを行う)",
       "sell": "弱気(ショート)",
-      "login": "アプリとクライアントの取引をダウンロードするにはクリック",
+      "login": "Log in now to start trading",
       "sell_price_label": "オープン価格:",
       "sell_price_ph": "オープン価格を入力してください",
       "sell_amount_label": "オープンロットサイズ:",

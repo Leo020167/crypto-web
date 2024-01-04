@@ -209,8 +209,8 @@ export default {
         security.loginOut().then((res) => {
           if (res.code === '200') {
             this.$store.dispatch('removeCurrentUserInfo'); // vuex备存
-            this.$router.push('/peopleList');
-            // this.$router.push("/login");
+            // this.$router.push('/peopleList');
+            this.$router.push("/login");
           }
         });
       } else {

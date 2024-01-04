@@ -6,20 +6,20 @@
       </div>
       <div class="bict-banner-box">
         <div class="bict-title">
-          <h3 class="bict-h3">{{ $t('Top Global Asset Management') }}</h3>
-          <h3 class="bict-sub">
-            {{
-              $t(
-                "Through a global network of more than 1,000 investment experts, we can ensure the success of user investments and provide users with the safest, most efficient and most convenient transactions."
-              )
-            }}
-          </h3>
+          <h3 class="bict-h3">{{ $t('Global encrypted digital services') }}</h3>
+<!--          <h3 class="bict-sub">-->
+<!--            {{-->
+<!--              $t(-->
+<!--                "Through a global network of more than 1,000 investment experts, we can ensure the success of user investments and provide users with the safest, most efficient and most convenient transactions."-->
+<!--              )-->
+<!--            }}-->
+<!--          </h3>-->
         </div>
       </div>
     </div>
     <div class="bict-about">
       <div class="bict-about-image">
-        <img src="../assets/icon/icon_logo.png" alt="" class="image" />
+        <img src="../assets/logo.png" alt="" class="image" />
       </div>
       <div class="bict-about-box">
         <div class="bict-about-title">
@@ -29,17 +29,24 @@
           <p class="text">
             {{
               $t(
-                'Stdelit The world of encrypted digital transactions was established in August 2019 and is headquartered in Singapore. (Singapore 10 Anson Road #12-18, International Plaza, Singapore 079909) is a global professional encrypted digital trading platform. It was launched in Hong Kong in September 2020. Establishing its Asian headquarters, Stdelit provides users with diversified crypto financial derivatives transactions, 7*24 hours high-quality services and user education. It has a professional team with rich experience in the financial industry and blockchain technology, adheres to the concept of user first, and operates safely and compliantly. , and also holds digital licenses from Singapore, the United States, and Canada MSB.'
+                "Liegt encrypted digital exchange is one of the world's top encrypted digital service platforms and the fastest growing encrypted digital exchange in the Asia-Pacific region."
               )
             }}
           </p>
-<!--          <p class="text">-->
-<!--            {{-->
-<!--              $t(-->
-<!--                "Through a global network of over 900 investment professionals, we can ensure the success of our customers' investments. In Hong Kong, Stdelit leverages the scale and operational excellence of its global sources to create bespoke solutions for clients. Our commitment to client service is supported by extensive investment capabilities across virtually every asset class (digital currency, equities, fixed income, global real estate and multi-asset solutions). Our in-depth investment knowledge means we can provide you access to the understanding and flexibility you need to achieve your investment objectives."-->
-<!--              )-->
-<!--            }}-->
-<!--          </p>-->
+          <p class="text">
+            {{
+              $t(
+                "Through a global network of more than 900 investment experts, it can ensure that users' investments are efficient, convenient and safe. In Hong Kong, Liegt crypto digital exchange uses its global scale and excellent operations to create tailor-made solutions for users. , deeply favored by users and widely supported by users."
+              )
+            }}
+          </p>
+          <p class="text">
+            {{
+              $t(
+                "Liegt Encrypted Digital Exchange's global headquarters is located in London, UK, and its Asia-Pacific regional headquarters is located in Hong Kong. It is the world's leading digital asset service platform. It has obtained digital currency trading licenses from the United States, Turkey, Europe, Singapore, etc., and provides comprehensive services to 3 million+ users 24 hours a day. Directional services, core members of the exchange have been deeply involved in the fields of finance and technology for many years, providing technical security guarantees for many users. The Liegt encrypted digital exchange system applies the world's top bank and securities risk control management system mechanism, and adopts the dual security of underlying security technology + supervision and early warning system To ensure that it provides users with a more secure encrypted digital trading environment, the Liegt encrypted digital exchange system has opened a global system and an Asia-Pacific regional system, and has also successively established regional business units around the world to comprehensively and efficiently promote the implementation of the global strategic layout."
+              )
+            }}
+          </p>
         </div>
 <!--        <div class="bict-about-content">-->
 <!--          <p class="text">-->
@@ -112,7 +119,7 @@
             </div>
             <div class="bict-culture-note">
               <p class="text">
-                {{ $t('Make Stdelit spread to every country in the world') }}
+                {{ $t('Make Liegt spread to every country in the world') }}
               </p>
             </div>
           </el-col>
@@ -202,7 +209,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {
