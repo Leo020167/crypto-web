@@ -4,19 +4,19 @@
   "footer": [
     {
       "title": "私たちに関しては",
-      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=64"
+      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=64"
     },
     {
       "title": "ユーザー規約",
-      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=204"
+      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=204"
     },
     {
       "title": "規約同意",
-      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=212"
+      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=212"
     },
     {
       "title": "プライバシーポリシー",
-      "url": "http://api.electraswap.net/procoin/article/#/passgeDetail?article_id=220"
+      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=220"
     }
   ],
 

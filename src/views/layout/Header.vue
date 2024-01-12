@@ -79,7 +79,7 @@
                 </div>
                 <div class="dropdown-right">
                   <img
-                    :src="currentUserInfos.user.headUrl"
+                    src="../../assets/logo.png"
                     class="phone-avatar"
                   />
                 </div>

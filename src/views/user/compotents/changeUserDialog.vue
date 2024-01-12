@@ -5,15 +5,15 @@
       :visible.sync="ifShowDialog"
       @close="closeDialog"
     >
-      <p class="mini-title">{{ $t('changeUserData.dialog.headCount') }}</p>
-      <div class="box">
-        <single-file-upload
-          @onAddFile="getAvtarFile"
-          :oldFile="headUrl"
-          :canDelete="false"
-          :fileName="'上传我的头像'"
-        ></single-file-upload>
-      </div>
+<!--      <p class="mini-title">{{ $t('changeUserData.dialog.headCount') }}</p>-->
+<!--      <div class="box">-->
+<!--        <single-file-upload-->
+<!--          @onAddFile="getAvtarFile"-->
+<!--          :oldFile="headUrl"-->
+<!--          :canDelete="false"-->
+<!--          :fileName="'上传我的头像'"-->
+<!--        ></single-file-upload>-->
+<!--      </div>-->
       <div class="tab">
         <span class="left">{{ $t('changeUserData.dialog.name') }}</span>
         <el-input

@@ -2,7 +2,7 @@
   <FadeComponent>
     <div class="user-home" v-document-title :data-title="documentTitle">
       <div class="img">
-        <img :src="currentUserInfos.user.headUrl" class="avartar" />
+        <img src="../../assets/logo.png" class="avartar" />
       </div>
       <p class="name">{{ currentUserInfos.user.userName }}</p>
       <p class="id">

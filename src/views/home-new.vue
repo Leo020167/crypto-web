@@ -141,7 +141,7 @@ export default {
       `https://chat.ichatlink.net/widget/standalone.html?` +
       queryString.stringify(
         {
-          eid: '914b28b19ffc9b3dda4924057b2239a3',
+          eid: '694c1702452b522646c9c3358a011141',
           clientid: userInfo?.userId,
           language: 'en',
           metadata,
