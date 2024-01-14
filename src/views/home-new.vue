@@ -90,10 +90,10 @@
           <img src="/img/logo.png" alt="" class="h-6 lg:h-12" />
           <div class="lg:text-right">
             <div class="mt-4">
-              ElectraSwap{{ $t('quanqiuyouzhishuzizichan') }}
+              Dinacview{{ $t('quanqiuyouzhishuzizichan') }}
             </div>
             <div class="mt-2">
-              Copyright © 2021 - ElectraSwap All rights reserved.
+              Copyright © 2021 - Dinacview All rights reserved.
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default {
       `https://chat.ichatlink.net/widget/standalone.html?` +
       queryString.stringify(
         {
-          eid: '694c1702452b522646c9c3358a011141',
+          eid: '8b926d40eb1e1074e5a3012d394451df',
           clientid: userInfo?.userId,
           language: 'en',
           metadata,

@@ -4,19 +4,19 @@
   "footer": [
     {
       "title": "sobre nosotros",
-      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=66"
+      "url": "https://api.dinacview.com/procoin/article/#/passgeDetail?article_id=66"
     },
     {
       "title": "Acuerdo del Usuario",
-      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=206"
+      "url": "https://api.dinacview.com/procoin/article/#/passgeDetail?article_id=206"
     },
     {
       "title": "acuerdo de términos",
-      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=214"
+      "url": "https://api.dinacview.com/procoin/article/#/passgeDetail?article_id=214"
     },
     {
       "title": "política de privacidad",
-      "url": "https://api.electraswap.net/procoin/article/#/passgeDetail?article_id=222"
+      "url": "https://api.dinacview.com/procoin/article/#/passgeDetail?article_id=222"
     }
   ],
 
