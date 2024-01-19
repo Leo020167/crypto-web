@@ -6,7 +6,8 @@
     "regist_btn": "Registro",
     "no_data": "Sin registro",
     "message": "Notificación del sistema",
-    "loginPlease": "Por favor ingresa primero"
+    "loginPlease": "Por favor ingresa primero",
+    "stateSuccess": "tuvo éxito"
   },
   "newCommon": {
     "login_btn_email_message": "¿Registro de buzón?",

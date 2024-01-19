@@ -5,21 +5,21 @@ import vue2 from '@vitejs/plugin-vue2';
 
 export default defineConfig({
   build: {
-    outDir: 'dist/Liegt-PC',
+    outDir: 'dist/ACGT-PC',
   },
   server: {
     port: 5174,
     proxy: {
       '/procoin-market': {
-        target: 'http://market.yulexing.cn',
+        target: 'http://market.jafhm.top',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'http://upload.yulexing.cn',
+        target: 'http://upload.jafhm.top',
         changeOrigin: true,
       },
       '/procoin': {
-        target: 'http://api.yulexing.cn',
+        target: 'http://api.jafhm.top',
         changeOrigin: true,
       },
     },

@@ -7,7 +7,8 @@
     "regist_btn": "등록하다",
     "no_data": "어떤 기록도 없다",
     "message": "시스템 알림",
-    "loginPlease": "먼저 로그인하시기 바랍니다"
+    "loginPlease": "먼저 로그인하시기 바랍니다",
+    "stateSuccess": "성공했다"
   },
   "newCommon": {
     "login_btn_email_message": "사서함 등록?",

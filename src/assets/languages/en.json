@@ -6,7 +6,8 @@
     "regist_btn": "Register",
     "no_data": "No record",
     "message": "System Notification",
-    "loginPlease": "Please login first"
+    "loginPlease": "Please login first",
+    "stateSuccess": "succeeded"
   },
   "newCommon": {
     "login_btn_email_message": "Mailbox registration?",

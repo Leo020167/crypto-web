@@ -6,7 +6,8 @@
     "regist_btn": "S'inscrire",
     "no_data": "Aucun enregistrement",
     "message": "Notification système",
-    "loginPlease": "S'il vous plait Connectez-vous d'abord"
+    "loginPlease": "S'il vous plait Connectez-vous d'abord",
+    "stateSuccess": "réussi"
   },
   "newCommon": {
     "login_btn_email_message": "Inscription à la boîte aux lettres?",

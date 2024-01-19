@@ -29,21 +29,21 @@
           <p class="text">
             {{
               $t(
-                "Liegt encrypted digital exchange is one of the world's top encrypted digital service platforms and the fastest growing encrypted digital exchange in the Asia-Pacific region."
+                "ACGT encrypted digital exchange is one of the world's top encrypted digital service platforms and the fastest growing encrypted digital exchange in the Asia-Pacific region."
               )
             }}
           </p>
           <p class="text">
             {{
               $t(
-                "Through a global network of more than 900 investment experts, it can ensure that users' investments are efficient, convenient and safe. In Hong Kong, Liegt crypto digital exchange uses its global scale and excellent operations to create tailor-made solutions for users. , deeply favored by users and widely supported by users."
+                "Through a global network of more than 900 investment experts, it can ensure that users' investments are efficient, convenient and safe. In Hong Kong, ACGT crypto digital exchange uses its global scale and excellent operations to create tailor-made solutions for users. , deeply favored by users and widely supported by users."
               )
             }}
           </p>
           <p class="text">
             {{
               $t(
-                "Liegt Encrypted Digital Exchange's global headquarters is located in London, UK, and its Asia-Pacific regional headquarters is located in Hong Kong. It is the world's leading digital asset service platform. It has obtained digital currency trading licenses from the United States, Turkey, Europe, Singapore, etc., and provides comprehensive services to 3 million+ users 24 hours a day. Directional services, core members of the exchange have been deeply involved in the fields of finance and technology for many years, providing technical security guarantees for many users. The Liegt encrypted digital exchange system applies the world's top bank and securities risk control management system mechanism, and adopts the dual security of underlying security technology + supervision and early warning system To ensure that it provides users with a more secure encrypted digital trading environment, the Liegt encrypted digital exchange system has opened a global system and an Asia-Pacific regional system, and has also successively established regional business units around the world to comprehensively and efficiently promote the implementation of the global strategic layout."
+                "ACGT Encrypted Digital Exchange's global headquarters is located in London, UK, and its Asia-Pacific regional headquarters is located in Hong Kong. It is the world's leading digital asset service platform. It has obtained digital currency trading licenses from the United States, Turkey, Europe, Singapore, etc., and provides comprehensive services to 3 million+ users 24 hours a day. Directional services, core members of the exchange have been deeply involved in the fields of finance and technology for many years, providing technical security guarantees for many users. The ACGT encrypted digital exchange system applies the world's top bank and securities risk control management system mechanism, and adopts the dual security of underlying security technology + supervision and early warning system To ensure that it provides users with a more secure encrypted digital trading environment, the ACGT encrypted digital exchange system has opened a global system and an Asia-Pacific regional system, and has also successively established regional business units around the world to comprehensively and efficiently promote the implementation of the global strategic layout."
               )
             }}
           </p>
@@ -119,7 +119,7 @@
             </div>
             <div class="bict-culture-note">
               <p class="text">
-                {{ $t('Make Liegt spread to every country in the world') }}
+                {{ $t('Make ACGT spread to every country in the world') }}
               </p>
             </div>
           </el-col>

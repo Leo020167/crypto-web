@@ -6,7 +6,8 @@
     "regist_btn": "登録する",
     "no_data": "記録なし",
     "message": "システム通知",
-    "loginPlease": "まずログインしてください"
+    "loginPlease": "まずログインしてください",
+    "stateSuccess": "成功しました"
   },
   "newCommon": {
     "login_btn_email_message": "メールログイン？",

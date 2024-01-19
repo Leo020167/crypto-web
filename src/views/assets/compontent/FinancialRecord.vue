@@ -27,7 +27,7 @@
           <div class="item-des normal">
             {{ item.amount }}
           </div>
-          <div class="item-des normal">已成功</div>
+          <div class="item-des normal">已中签</div>
         </div>
       </li>
     </ul>

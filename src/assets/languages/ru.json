@@ -7,7 +7,8 @@
     "regist_btn": "регистр",
     "no_data": "Нет записи",
     "message": "Системное уведомление",
-    "loginPlease": "Пожалуйста, войдите сначала"
+    "loginPlease": "Пожалуйста, войдите сначала",
+    "stateSuccess": "удалось"
   },
   "newCommon": {
     "login_btn_email_message": "Регистрация почтового ящика?",
