@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'dist/Dinacview-PC',
+    outDir: 'dist/Scapewap-PC',
   },
   server: {
     port: 5174,
@@ -14,16 +14,16 @@ export default defineConfig({
       // http://api.piglobalexchanges.com/procoin/swagger/index.html#/
       // http://api.worldcoinservice.com/procoin/swagger/index.html#/
       '/procoin-market': {
-        target: 'http://market.dinacview.com',
+        target: 'http://market.scapewap.com',
         changeOrigin: true,
       },
       '/procoin-file': {
-        target: 'https://upload.dinacview.com',
+        target: 'https://upload.scapewap.com',
         changeOrigin: true,
       },
       //  http://api.cryptographexx.com/procoin/meiqia
       '/procoin': {
-        target: 'https://api.dinacview.com',
+        target: 'https://api.scapewap.com',
         changeOrigin: true,
       },
     },
