@@ -370,6 +370,13 @@ export const assetsApi = {
       type: type,
     });
   },
+  // 获取申购记录
+  getSubscribeRecord: (pageNo) => {
+    let url = baseUrl + '/subscribe/getRecordList.do';
+    return func.axiosPost(url, {
+      pageNo: pageNo
+    });
+  },
   // 获取充币记录、提币记录
   getRecordList: (pageNo) => {
     let url = baseUrl + '/account/recordList.do';

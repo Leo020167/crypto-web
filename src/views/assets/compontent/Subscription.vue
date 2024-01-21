@@ -11,58 +11,51 @@
         :row-class-name="setClassName"
       >
         <!-- 类型 -->
-        <el-table-column :label="$t('Subscription.type')">
+        <el-table-column :label="$t('orderDetail.Subscription.title')">
           <template slot-scope="scope">
-            <p v-if="scope.row.inOut == '2'">
-              {{ $t('orderDetail.Subscription.inOut3') }}（{{
-                scope.row.subSymbol
+            <p>
+              {{ $t('orderDetail.Subscription.subscribe') }}（{{
+                scope.row.symbol
               }}
-              - {{ scope.row.subTitle }}）
-            </p>
-            <p v-else-if="scope.row.inOut == '3'">
-              {{ $t('orderDetail.Subscription.inOut4') }}（{{
-                scope.row.subSymbol
-              }}
-              - {{ scope.row.subTitle }}）
-            </p>
-            <p v-else-if="scope.row.inOut == '4'">
-              {{ $t('orderDetail.Subscription.inOut5') }}（{{
-                scope.row.subSymbol
-              }}
-              - {{ scope.row.subTitle }}）
+              - {{ scope.row.title }}）
             </p>
           </template>
         </el-table-column>
         <!-- 数量 -->
-        <el-table-column :label="$t('Subscription.amount')">
+        <el-table-column :label="$t('orderDetail.Subscription.amount')">
           <template slot-scope="scope">
-            <p>{{ scope.row.amount }}</p>
+            <p>{{ scope.row.count }}</p>
           </template>
         </el-table-column>
         <!-- 状态 -->
-        <el-table-column :label="$t('Subscription.inOut')" prop="inOut">
+        <el-table-column :label="$t('orderDetail.Subscription.creatTime')">
+          <template slot-scope="scope">
+            <p>{{ (scope.row.time * 1000) | transferTime }}</p>
+          </template>
+        </el-table-column>
+        <el-table-column :label="$t('orderDetail.Subscription.luckyCount')">
+          <template slot-scope="scope">
+            <p>{{ scope.row.luckyCount }}</p>
+          </template>
+        </el-table-column>
+        <el-table-column :label="$t('orderDetail.Subscription.inOut')">
           <template slot-scope="scope">
             <p>{{ scope.row.stateDesc }}</p>
           </template>
         </el-table-column>
-        <!-- 时间 -->
-        <el-table-column :label="$t('Subscription.creatTime')" align="left">
+        <el-table-column :label="$t('orderDetail.Subscription.paidAmount')">
           <template slot-scope="scope">
-            <p v-if="scope.row.inOut == '2'">
-              {{ (scope.row.createTime * 1000) | transferTime }}
-            </p>
-            <p v-else-if="scope.row.inOut == '3'">
-              {{ (scope.row.createTime * 1000) | transferTime }}
-            </p>
-            <p v-else-if="scope.row.inOut == '4'">
-              {{ (scope.row.createTime * 1000) | transferTime }}
-            </p>
-            <p v-else></p>
+            <p>{{ scope.row.paidAmount }}</p>
           </template>
         </el-table-column>
-        <el-table-column :label="$t('Subscription.transferTime')" align="left">
+        <el-table-column :label="$t('orderDetail.Subscription.unpaidAmount')">
           <template slot-scope="scope">
-            <p>{{ (scope.row.transferTime * 1000) | transferTime }}</p>
+            <p>{{ scope.row.unpaidAmount }}</p>
+          </template>
+        </el-table-column>
+        <el-table-column :label="$t('orderDetail.Subscription.tradeTime')">
+          <template slot-scope="scope">
+            <p>{{ scope.row.tradeTime * 1000 | transferTime }}</p>
           </template>
         </el-table-column>
       </el-table>
@@ -98,17 +91,10 @@ export default {
   methods: {
     getRecord() {
       // pageNo
-      assetsApi.getCWRecord2('', this.pageNo, '2').then((res) => {
+      assetsApi.getSubscribeRecord(this.pageNo).then((res) => {
         this.$emit('showLoading');
         if (res.code == 200) {
-          this.SubscriptionList = res.data.data.filter(function (data) {
-            console.log('data', data);
-            //只返回id是偶数的
-            return (
-              data.inOut === '2' || data.inOut === '3' || data.inOut === '4'
-            ); //只显示状态 234的数据
-          });
-          // this.SubscriptionList = res.data.data
+          this.SubscriptionList = res.data.data
           this.pageSize = Number(res.data.pageSize);
           this.total = Number(res.data.total);
         }

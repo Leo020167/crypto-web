@@ -7,9 +7,9 @@
       <li class="nav-item">
         <router-link to="/trading">{{ $t('header.trading') }}</router-link>
       </li>
-      <li class="nav-item" v-if="currentUserInfos.token">
-        <router-link to="/focusBrand">{{ $t('header.subscribe') }}</router-link>
-      </li>
+<!--      <li class="nav-item" v-if="currentUserInfos.token">-->
+<!--        <router-link to="/focusBrand">{{ $t('header.subscribe') }}</router-link>-->
+<!--      </li>-->
       <li class="nav-item">
         <router-link to="/legalPurchase">{{ $t('header.otc') }}</router-link>
       </li>
@@ -18,15 +18,15 @@
           $t('header.chuangxinshiyanqu')
         }}</router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>
-      </li>
+<!--      <li class="nav-item">-->
+<!--        <router-link to="/pledge">{{ $t('pledge.title') }}</router-link>-->
+<!--      </li>-->
       <li class="nav-item">
         <router-link to="/industry-news">{{ $t('hangyedongtai') }}</router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/about">{{ $t('guanyuwomen') }}</router-link>
-      </li>
+<!--      <li class="nav-item">-->
+<!--        <router-link to="/about">{{ $t('guanyuwomen') }}</router-link>-->
+<!--      </li>-->
     </ul>
 
     <ul class="login-and-register-container flex items-center">
@@ -80,12 +80,12 @@
                 $t('newCommon.text41')
               }}</el-dropdown-item>
 
-              <el-dropdown-item command="g">{{
-                $t('newCommon.text66')
-              }}</el-dropdown-item>
-              <el-dropdown-item command="h">{{
-                $t('newCommon.text68')
-              }}</el-dropdown-item>
+<!--              <el-dropdown-item command="g">{{-->
+<!--                $t('newCommon.text66')-->
+<!--              }}</el-dropdown-item>-->
+<!--              <el-dropdown-item command="h">{{-->
+<!--                $t('newCommon.text68')-->
+<!--              }}</el-dropdown-item>-->
               <el-dropdown-item command="k">{{
                 $t('newCommon.text69')
               }}</el-dropdown-item>

@@ -99,12 +99,12 @@
               <span
                 style="color: #d74e5a"
                 v-else-if="parseFloat(scope.row.rate) > 0"
-                >+{{ scope.row.rate }}%</span
+              >+{{ scope.row.rate }}%</span
               >
               <span
                 style="color: #41b37d"
                 v-else-if="parseFloat(scope.row.rate) <= 0"
-                >{{ scope.row.rate }}%</span
+              >{{ scope.row.rate }}%</span
               >
             </template>
           </el-table-column>
@@ -115,6 +115,10 @@
     <div class="trading-top-left-bottom" v-if="userState.token">
       <!--股指期货账户-->
       <div class="futures-account-header">
+        <!--        <span-->
+        <!--          class="futures-account-header-title"-->
+        <!--          v-if="contentIndex == 0"-->
+        <!--        ></span>-->
         <span
           class="futures-account-header-title"
           v-if="contentIndex == 0"
@@ -123,28 +127,24 @@
           class="futures-account-header-title"
           v-if="contentIndex == 1"
         ></span>
-        <span
-          class="futures-account-header-title"
-          v-if="contentIndex == 2"
-        ></span>
         <!-- <span class="futures-account-header-title"
               v-if="contentIndex == 3"></span> -->
         <!-- 划转 -->
         <span class="futures-account-header-btn" @click="showTransferBox">{{
-          $t('trade.totalAssets.transfer')
-        }}</span>
+            $t('trade.totalAssets.transfer')
+          }}</span>
       </div>
       <div class="futures-account-content">
         <div class="content-item">
+          <!--          <span class="content-item1-span" v-if="contentIndex == 0">{{-->
+          <!--            $t('newCommon.text75')-->
+          <!--          }}</span>-->
           <span class="content-item1-span" v-if="contentIndex == 0">{{
-            $t('newCommon.text75')
-          }}</span>
+              $t('newCommon.text69')
+            }}</span>
           <span class="content-item1-span" v-if="contentIndex == 1">{{
-            $t('newCommon.text69')
-          }}</span>
-          <span class="content-item1-span" v-if="contentIndex == 2">{{
-            $t('newCommon.text70')
-          }}</span>
+              $t('newCommon.text70')
+            }}</span>
           <!-- <span class="content-item1-span"
                 v-if="contentIndex == 3">{{$t('newCommon.text41')}}</span> -->
           <el-popover
@@ -166,29 +166,29 @@
         </div>
         <div class="content-item item2">
           <span class="content-item3-span">{{
-            accountInfo && accountInfo.assets
-          }}</span>
+              accountInfo && accountInfo.assets
+            }}</span>
           <span class="content-item4-span"
-            >{{ accountInfo && accountInfo.riskRate }}%</span
+          >{{ accountInfo && accountInfo.riskRate }}%</span
           >
         </div>
         <div class="content-item item2-1">
           <span class="content-item21-span">{{
-            accountInfo && accountInfo.assetsCny
-          }}</span>
+              accountInfo && accountInfo.assetsCny
+            }}</span>
         </div>
         <div class="content-item item3">
           <span class="content-item1-span">{{
-            $t('trade.totalAssets.eableBail')
-          }}</span>
+              $t('trade.totalAssets.eableBail')
+            }}</span>
           <span class="content-item2-span">{{
-            $t('trade.totalAssets.unProfit')
-          }}</span>
+              $t('trade.totalAssets.unProfit')
+            }}</span>
         </div>
         <div class="content-item item4">
           <span class="content-item5-span">{{
-            accountInfo && accountInfo.eableBail
-          }}</span>
+              accountInfo && accountInfo.eableBail
+            }}</span>
           <span
             :class="
               accountInfo && accountInfo.profit > 0
@@ -197,7 +197,7 @@
                 ? 'content-item5-span color-green'
                 : 'content-item5-span'
             "
-            >{{
+          >{{
               accountInfo && accountInfo.profit > 0
                 ? `+${accountInfo.profit}`
                 : accountInfo && accountInfo.profit
@@ -206,19 +206,19 @@
         </div>
         <div class="content-item item3">
           <span class="content-item1-span">{{
-            $t('trade.totalAssets.openBail')
-          }}</span>
+              $t('trade.totalAssets.openBail')
+            }}</span>
           <span class="content-item2-span">{{
-            $t('trade.totalAssets.frozenBail')
-          }}</span>
+              $t('trade.totalAssets.frozenBail')
+            }}</span>
         </div>
         <div class="content-item item4">
           <span class="content-item5-span">{{
-            accountInfo && accountInfo.openBail
-          }}</span>
+              accountInfo && accountInfo.openBail
+            }}</span>
           <span class="content-item5-span">{{
-            accountInfo && accountInfo.frozenBail
-          }}</span>
+              accountInfo && accountInfo.frozenBail
+            }}</span>
         </div>
       </div>
     </div>
@@ -226,10 +226,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { findMyCoin, seachCoin, legalPurchaseApi } from '@/server/axios';
-import { ReflashRealSeconds } from '@/utils/Enums';
+import {mapGetters} from 'vuex';
+import {findMyCoin, legalPurchaseApi, seachCoin} from '@/server/axios';
+import {ReflashRealSeconds} from '@/utils/Enums';
 import OptionalIcon from '@/components/Optional/OptionalIcon.vue';
+
 export default {
   data() {
     return {
@@ -241,11 +242,10 @@ export default {
       sortField: '', // 将要排序的列名
       sortType: 0, // 排序方式：0正常， 2升序，1降序
       riskRateDesc: '', //风险率
-      // coinType: ["optional", "stock", "digital"],
-      coinType: ['stock', 'digital', 'spot'],
+      coinType: ['digital', 'spot'],
       sortTypes: 'digital',
       pageNo: 1,
-      contentIndex: 1,
+      contentIndex: 0,
       accountInfo: {},
       ceshiTest: true,
     };
@@ -254,7 +254,7 @@ export default {
     userState: {
       type: Object,
       default: function () {
-        return { token: '' };
+        return {token: ''};
       },
     },
     tabIndexNum: {
@@ -314,7 +314,7 @@ export default {
             data[i].splitData = op;
             arr.push(data[i]);
           }
-          if (this.tabIndexNum == 1 || this.tabIndexNum == 2) {
+          if (this.tabIndexNum == 0 || this.tabIndexNum == 1) {
             arr.push({
               symbol: '',
               splitData: '',
@@ -380,19 +380,19 @@ export default {
         // this.currentCoinType = row.symbol;
       }
     },
-    handleSetRowClass({ row }) {
+    handleSetRowClass({row}) {
       if (row.symbol == this.currentCoinType) {
         return 'coinTableRowClass act_row';
       } else {
         return 'coinTableRowClass';
       }
     },
-    handleSetHeaderCellName({ row, column, rowIndex, columnIndex }) {
+    handleSetHeaderCellName({row, column, rowIndex, columnIndex}) {
       if (columnIndex == 2) {
         return 'coinTableHeaderCellClass';
       }
     },
-    handleSetCellName({ row, column, rowIndex, columnIndex }) {
+    handleSetCellName({row, column, rowIndex, columnIndex}) {
       if (columnIndex == 2) {
         return 'coinTableCellClass';
       }
@@ -471,27 +471,28 @@ export default {
         }
       }
       // ["stock", "digital", "spot"]
-      if (i === 0) {
+      /*if (i === 0) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
           this.accountInfo = res.data.stockAccount;
         });
-      } else if (i === 1) {
+      } else */
+      if (i === 0) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
           this.accountInfo = res.data.digitalAccount;
         });
-      } else if (i === 2) {
+      } else if (i === 1) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
           this.accountInfo = res.data.spotAccount;
         });
-      } else if (i === 3) {
+      }/* else if (i === 3) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
           this.accountInfo = res.data.digitalAccount;
         });
-      }
+      }*/
     },
   },
   beforeDestroy() {
@@ -508,36 +509,44 @@ export default {
 .total-asset-box {
   height: 100%;
 }
+
 .suggestions-name {
   font-size: 17px;
+
   .name {
     margin-left: 10px;
     font-size: 13px;
   }
 }
+
 .tabList {
   margin-top: 15px;
   display: flex;
   padding: 0 17px;
+
   .tabList-item {
     font-size: 12px;
     line-height: 20px;
     margin-right: 15px;
     cursor: pointer;
+
     &.act {
       border-bottom: 2px solid #6175ae;
     }
   }
 }
+
 .table-list-box {
   width: 260px;
   margin: 0 auto;
 }
+
 .coinTable {
   .el-loading-mask {
     background-color: #171b2b !important;
   }
 }
+
 .io {
   display: inline-block;
   font-size: 12px;

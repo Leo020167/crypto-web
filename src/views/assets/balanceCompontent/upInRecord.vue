@@ -6,11 +6,11 @@
           <p>{{ transAllTime(scope.row.time) }}</p>
         </template>
       </el-table-column>
-      <el-table-column
-        prop="type"
-        :label="$t('assets.type')"
-        align="center"
-      ></el-table-column>
+<!--      <el-table-column-->
+<!--        prop="type"-->
+<!--        :label="$t('assets.type')"-->
+<!--        align="center"-->
+<!--      ></el-table-column>-->
       <el-table-column
         prop="fee"
         :label="$t('assets.fee')"

@@ -46,7 +46,7 @@
               <el-input v-model="formData.remark"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary" @click="showPayPwd = true">{{
+              <el-button type="primary" @click="onSubmit">{{
                 $t('address-list.text6')
               }}</el-button>
             </el-form-item>

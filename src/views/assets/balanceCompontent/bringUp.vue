@@ -89,10 +89,10 @@
         <div
           class="bg-[#F6F7F9] py-4 px-5 mt-5 text-xs text-[#3E4660] rounded-md leading-6 w-[550px]"
         >
-          <div class="flex items-center justify-between">
-            <span>{{ $t('withdrawCoins.text8') }} (ATC)</span>
-            <span>{{ configs?.fee }}</span>
-          </div>
+<!--          <div class="flex items-center justify-between">-->
+<!--            <span>{{ $t('withdrawCoins.text8') }} (ACB)</span>-->
+<!--            <span>{{ configs?.fee }}</span>-->
+<!--          </div>-->
           <div class="flex items-center justify-between mt-3">
             <span>{{ $t('withdrawCoins.text9') }}({{ symbol }})</span>
             <span>
@@ -475,8 +475,21 @@ export default {
         this.$message.error('提幣數量不足');
         return;
       }
+      withdrawSubmit({
+        amount: this.amount,
+        addressId: this.addressId,
+      }).then((res1) => {
+        if (res1.code == 200) {
+          this.$message.success(res1.msg);
+          setTimeout(() => {
+            this.$router.go(-1);
+          }, 1000);
+        } else {
+          this.$message.error(res1.msg);
+        }
+      });
 
-      this.showFlag = true;
+      // this.showFlag = true;
     },
   },
 };
