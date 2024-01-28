@@ -80,32 +80,32 @@
           </el-col>
         </el-row>
         <!-- 验证码 -->
-        <el-row>
-          <el-col :span="14">
-            <el-form-item
-              prop="smsCode"
-              label
-              :status-icon="true"
-              :rules="[
-                {
-                  required: true,
-                  message: $t('regist.smsCode_ph'),
-                  trigger: 'blur',
-                },
-              ]"
-            >
-              <el-input
-                :placeholder="$t('regist.smsCode_ph')"
-                v-model="registerForm.smsCode"
-              ></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="9" :offset="1">
-            <el-button type="primary" @click="handleClickSms">{{
-              smsText
-            }}</el-button>
-          </el-col>
-        </el-row>
+<!--        <el-row>-->
+<!--          <el-col :span="14">-->
+<!--            <el-form-item-->
+<!--              prop="smsCode"-->
+<!--              label-->
+<!--              :status-icon="true"-->
+<!--              :rules="[-->
+<!--                {-->
+<!--                  required: true,-->
+<!--                  message: $t('regist.smsCode_ph'),-->
+<!--                  trigger: 'blur',-->
+<!--                },-->
+<!--              ]"-->
+<!--            >-->
+<!--              <el-input-->
+<!--                :placeholder="$t('regist.smsCode_ph')"-->
+<!--                v-model="registerForm.smsCode"-->
+<!--              ></el-input>-->
+<!--            </el-form-item>-->
+<!--          </el-col>-->
+<!--          <el-col :span="9" :offset="1">-->
+<!--            <el-button type="primary" @click="handleClickSms">{{-->
+<!--              smsText-->
+<!--            }}</el-button>-->
+<!--          </el-col>-->
+<!--        </el-row>-->
         <!-- 邀请码 -->
         <el-row>
           <el-col :span="14">

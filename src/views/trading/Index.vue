@@ -300,7 +300,7 @@ export default {
       showDishTitle: false,
       dishTabIndex: 0,
       assetTabIndex: 1,
-      symbolType: 'digital',
+      symbolType: 'spot',
       documentTitle: '',
       // 动态控制top的交易比例
       topHeight: 0,
@@ -374,7 +374,7 @@ export default {
   methods: {
     getList() {
       legalPurchaseApi.ceshi().then((res) => {
-        this.newAccountInfo = res.data.digitalAccount;
+        this.newAccountInfo = res.data.spotAccount;
       });
     },
     // 切换语言
@@ -489,10 +489,8 @@ export default {
       this.digitalAccountVuexNull = setInterval(() => {
         legalPurchaseApi.ceshi().then((res) => {
           if (i == 0) {
-            this.newAccountInfo = res.data.stockAccount;
-          } else if (i == 1) {
             this.newAccountInfo = res.data.digitalAccount;
-          } else if (i == 2) {
+          } else if (i == 1) {
             this.newAccountInfo = res.data.spotAccount;
           } else {
             this.newAccountInfo = {};

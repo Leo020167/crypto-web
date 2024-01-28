@@ -44,7 +44,6 @@
         </li>
       </ul>
       <div class="table-list-box">
-        <!-- v-loading="showTableLoading" -->
         <!-- 沪深、港股，排序按钮不要了，这两列加个分页，page -->
         <el-table
           ref="coinTable"
@@ -115,20 +114,9 @@
     <div class="trading-top-left-bottom" v-if="userState.token">
       <!--股指期货账户-->
       <div class="futures-account-header">
-        <!--        <span-->
-        <!--          class="futures-account-header-title"-->
-        <!--          v-if="contentIndex == 0"-->
-        <!--        ></span>-->
         <span
           class="futures-account-header-title"
-          v-if="contentIndex == 0"
         ></span>
-        <span
-          class="futures-account-header-title"
-          v-if="contentIndex == 1"
-        ></span>
-        <!-- <span class="futures-account-header-title"
-              v-if="contentIndex == 3"></span> -->
         <!-- 划转 -->
         <span class="futures-account-header-btn" @click="showTransferBox">{{
             $t('trade.totalAssets.transfer')
@@ -136,17 +124,12 @@
       </div>
       <div class="futures-account-content">
         <div class="content-item">
-          <!--          <span class="content-item1-span" v-if="contentIndex == 0">{{-->
-          <!--            $t('newCommon.text75')-->
-          <!--          }}</span>-->
           <span class="content-item1-span" v-if="contentIndex == 0">{{
               $t('newCommon.text69')
             }}</span>
           <span class="content-item1-span" v-if="contentIndex == 1">{{
               $t('newCommon.text70')
             }}</span>
-          <!-- <span class="content-item1-span"
-                v-if="contentIndex == 3">{{$t('newCommon.text41')}}</span> -->
           <el-popover
             placement="left-end"
             title=""
@@ -241,11 +224,11 @@ export default {
       quotes: [], // 行情列表
       sortField: '', // 将要排序的列名
       sortType: 0, // 排序方式：0正常， 2升序，1降序
-      riskRateDesc: '', //风险率
+      riskRateDesc: '', // 风险率
       coinType: ['digital', 'spot'],
-      sortTypes: 'digital',
+      sortTypes: 'spot',
       pageNo: 1,
-      contentIndex: 0,
+      contentIndex: 1,
       accountInfo: {},
       ceshiTest: true,
     };
@@ -259,7 +242,7 @@ export default {
     },
     tabIndexNum: {
       type: Number,
-      default: 0,
+      default: 1,
     },
     currentCoinType: {
       type: String,
@@ -280,9 +263,7 @@ export default {
   },
   created() {
     legalPurchaseApi.ceshi().then((res) => {
-      // console.log("res", res.data)
-      this.accountInfo = res.data.digitalAccount;
-      // console.log("this", this.tabIndexNum, this.accountInfo)
+      this.accountInfo = res.data.spotAccount;
     });
     this.getMyCoinInterval = setInterval(() => {
       this.getMyCoin();
@@ -324,7 +305,7 @@ export default {
             });
           }
           this.quotes = arr;
-          // console.log("this.quotes=======>", this.quotes)
+
           if (this.ceshiTest) {
             this.$emit(
               'returnFirstSymbol',
@@ -341,7 +322,7 @@ export default {
       });
     },
     // 排序
-    handleSortChange(column, prop, order) {
+    handleSortChange(column) {
       if (column.column.order === 'ascending') {
         // 升序
         this.sortType = 2;
@@ -377,7 +358,6 @@ export default {
         return;
       } else {
         this.$emit('getCurrentCointype', row.symbol, row.marketType, row); //返回上级，获取相应的k线、历史记录、开仓记录等
-        // this.currentCoinType = row.symbol;
       }
     },
     handleSetRowClass({row}) {
@@ -388,12 +368,12 @@ export default {
       }
     },
     handleSetHeaderCellName({row, column, rowIndex, columnIndex}) {
-      if (columnIndex == 2) {
+      if (columnIndex == 1) {
         return 'coinTableHeaderCellClass';
       }
     },
     handleSetCellName({row, column, rowIndex, columnIndex}) {
-      if (columnIndex == 2) {
+      if (columnIndex == 1) {
         return 'coinTableCellClass';
       }
     },
@@ -427,26 +407,11 @@ export default {
             });
           }
           cb(arr);
-        } else {
-          // this.$message.error("搜索失败，请确认所输入的币种是否存在");
         }
       });
     },
     // 搜索框选择
     handleSelectCoin(item) {
-      // if (item.marketType == 'digital' && this.tabIndexNum != 1) {
-      //   this.$emit('changeTabIndex', 1, 'digital')
-      //   this.sortTypes ='custom'
-      // } else if (item.marketType == 'stock' && this.tabIndexNum != 2) {
-      //   this.$emit('changeTabIndex', 2, 'stock')
-      //   this.sortTypes ='custom'
-      // } else if (item.marketType == 'shsz' && this.tabIndexNum != 3) {
-      //   this.$emit('changeTabIndex', 3, 'shsz')
-      //   this.sortTypes = false
-      // } else if (item.marketType == 'hk' && this.tabIndexNum != 4) {
-      //   this.$emit('changeTabIndex', 4, 'hk')
-      //   this.sortTypes = false
-      // }
       this.$emit('getCurrentCointype', item.symbolPair);
     },
     // 更换tab的序号
@@ -458,25 +423,17 @@ export default {
       } else {
         this.pageNo = 1;
         let type = this.coinType[i]; //null是表示不修改当前的type
-        if (i === 1 || i === 2) {
+        if (i === 0 || i === 1) {
           this.sortTypes = false;
         } else {
           this.sortTypes = 'custom';
         }
-        // console.log("changeTabIndex", i, type)
         this.$emit('changeTabIndex', i, type);
         if (i !== 0) {
           // 为了获取相对应的资产资料
           this.$store.dispatch('changeAssetTab', i);
         }
       }
-      // ["stock", "digital", "spot"]
-      /*if (i === 0) {
-        legalPurchaseApi.ceshi().then((res) => {
-          console.log(res);
-          this.accountInfo = res.data.stockAccount;
-        });
-      } else */
       if (i === 0) {
         legalPurchaseApi.ceshi().then((res) => {
           console.log(res);
@@ -487,12 +444,7 @@ export default {
           console.log(res);
           this.accountInfo = res.data.spotAccount;
         });
-      }/* else if (i === 3) {
-        legalPurchaseApi.ceshi().then((res) => {
-          console.log(res);
-          this.accountInfo = res.data.digitalAccount;
-        });
-      }*/
+      }
     },
   },
   beforeDestroy() {

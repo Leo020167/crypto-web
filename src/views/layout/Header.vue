@@ -131,16 +131,16 @@
                   $t('header.modify_pw')
                 }}</el-dropdown-item>
               </router-link>
-              <router-link to="/user/changePhone">
-                <el-dropdown-item>{{
-                  $t('header.modify_phone')
-                }}</el-dropdown-item>
-              </router-link>
-              <router-link to="/user/safePassword">
-                <el-dropdown-item>{{
-                  $t('header.set_password')
-                }}</el-dropdown-item>
-              </router-link>
+<!--              <router-link to="/user/changePhone">-->
+<!--                <el-dropdown-item>{{-->
+<!--                  $t('header.modify_phone')-->
+<!--                }}</el-dropdown-item>-->
+<!--              </router-link>-->
+<!--              <router-link to="/user/safePassword">-->
+<!--                <el-dropdown-item>{{-->
+<!--                  $t('header.set_password')-->
+<!--                }}</el-dropdown-item>-->
+<!--              </router-link>-->
               <el-dropdown-item command="layOut">{{
                 $t('header.logout')
               }}</el-dropdown-item>
